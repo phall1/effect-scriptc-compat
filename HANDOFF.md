@@ -15,10 +15,11 @@ These are measured paths, not whole-module compatibility claims. A deferred buil
 
 ## Get the complete project
 
-**The GitHub tree is still incomplete at this handoff. Do not assume a clone contains the fixtures, reports, or checkpoints.** Use the latest complete Library attachment, `effect-scriptc-compat-progress-11.zip`, rather than an older partial GitHub checkout. It contains source, fixtures, lockfile, reports, completed checkpoints, and this file. It also contains `transfer.bundle`, a Git bundle of the matching committed snapshot. No npm packages, compiler/linker binaries, native executables, or credentials are bundled.
+**The GitHub tree is still incomplete at this handoff. Do not assume a clone contains the fixtures, reports, or checkpoints.** Use the two latest Library attachments, `effect-scriptc-compat-transfer-source.zip` and `effect-scriptc-compat-transfer-git-bundle.zip`, rather than an older partial GitHub checkout. The source ZIP contains the complete source, fixtures, lockfile, reports, completed checkpoints, and this file. The separate bundle ZIP contains `transfer.bundle`, a Git bundle of the matching committed snapshot. Both are below 15 MiB to fit attachment limits. No npm packages, compiler/linker binaries, native executables, or credentials are bundled.
 
 ```sh
-unzip effect-scriptc-compat-progress-11.zip
+unzip effect-scriptc-compat-transfer-source.zip
+unzip effect-scriptc-compat-transfer-git-bundle.zip
 # Inspect effect-scriptc-compat/HANDOFF.md and reports/summary.md first.
 git clone effect-scriptc-compat/transfer.bundle effect-scriptc-compat-newhost
 cd effect-scriptc-compat-newhost
