@@ -1,0 +1,611 @@
+[
+  {
+    "id": "module-brand",
+    "module": "Brand",
+    "entrypoint": "effect/Brand",
+    "family": "Brand",
+    "file": "cases/module-brand.ts",
+    "status": "ready",
+    "api": [
+      "nominal"
+    ],
+    "expectedStdout": "brand:42\n"
+  },
+  {
+    "id": "module-bytesize",
+    "module": "ByteSize",
+    "entrypoint": "effect/ByteSize",
+    "family": "ByteSize",
+    "file": "cases/module-bytesize.ts",
+    "status": "ready",
+    "api": [
+      "kibibytes",
+      "toBigInt"
+    ],
+    "expectedStdout": "bytes:2048\n"
+  },
+  {
+    "id": "module-channelschema",
+    "module": "ChannelSchema",
+    "entrypoint": "effect/ChannelSchema",
+    "family": "ChannelSchema",
+    "file": "cases/module-channelschema.ts",
+    "status": "ready",
+    "api": [
+      "decode"
+    ],
+    "expectedStdout": "channelSchema:1,2\n"
+  },
+  {
+    "id": "module-effectable",
+    "module": "Effectable",
+    "entrypoint": "effect/Effectable",
+    "family": "Effectable",
+    "file": "cases/module-effectable.ts",
+    "status": "ready",
+    "api": [
+      "Mixin"
+    ],
+    "expectedStdout": "effectable:42\n"
+  },
+  {
+    "id": "module-filesystem",
+    "module": "FileSystem",
+    "entrypoint": "effect/FileSystem",
+    "family": "FileSystem",
+    "file": "cases/module-filesystem.ts",
+    "status": "ready",
+    "api": [
+      "makeNoop"
+    ],
+    "expectedStdout": "filesystem.fake:true\n"
+  },
+  {
+    "id": "module-hashring",
+    "module": "HashRing",
+    "entrypoint": "effect/HashRing",
+    "family": "HashRing",
+    "file": "cases/module-hashring.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "add",
+      "get"
+    ],
+    "expectedStdout": "ring:node-a\n"
+  },
+  {
+    "id": "module-partitionedsemaphore",
+    "module": "PartitionedSemaphore",
+    "entrypoint": "effect/PartitionedSemaphore",
+    "family": "PartitionedSemaphore",
+    "file": "cases/module-partitionedsemaphore.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "withPermit"
+    ],
+    "expectedStdout": "partitioned:ok\n"
+  },
+  {
+    "id": "module-pipeable",
+    "module": "Pipeable",
+    "entrypoint": "effect/Pipeable",
+    "family": "Pipeable",
+    "file": "cases/module-pipeable.ts",
+    "status": "ready",
+    "api": [
+      "Class"
+    ],
+    "expectedStdout": "pipeable:42\n"
+  },
+  {
+    "id": "module-platformerror",
+    "module": "PlatformError",
+    "entrypoint": "effect/PlatformError",
+    "family": "PlatformError",
+    "file": "cases/module-platformerror.ts",
+    "status": "ready",
+    "api": [
+      "badArgument"
+    ],
+    "expectedStdout": "platformError:true\n"
+  },
+  {
+    "id": "module-primarykey",
+    "module": "PrimaryKey",
+    "entrypoint": "effect/PrimaryKey",
+    "family": "PrimaryKey",
+    "file": "cases/module-primarykey.ts",
+    "status": "ready",
+    "api": [
+      "value",
+      "symbol"
+    ],
+    "expectedStdout": "product-42\n"
+  },
+  {
+    "id": "module-redactable",
+    "module": "Redactable",
+    "entrypoint": "effect/Redactable",
+    "family": "Redactable",
+    "file": "cases/module-redactable.ts",
+    "status": "ready",
+    "api": [
+      "redact",
+      "symbolRedactable"
+    ],
+    "expectedStdout": "redacted-value\n"
+  },
+  {
+    "id": "module-resource",
+    "module": "Resource",
+    "entrypoint": "effect/Resource",
+    "family": "Resource",
+    "file": "cases/module-resource.ts",
+    "status": "ready",
+    "api": [
+      "manual",
+      "refresh",
+      "get"
+    ],
+    "expectedStdout": "resource:1,2\n"
+  },
+  {
+    "id": "module-scheduler",
+    "module": "Scheduler",
+    "entrypoint": "effect/Scheduler",
+    "family": "Scheduler",
+    "file": "cases/module-scheduler.ts",
+    "status": "ready",
+    "api": [
+      "MixedScheduler"
+    ],
+    "expectedStdout": "scheduler:42\n"
+  },
+  {
+    "id": "module-schemaparser",
+    "module": "SchemaParser",
+    "entrypoint": "effect/SchemaParser",
+    "family": "SchemaParser",
+    "file": "cases/module-schemaparser.ts",
+    "status": "ready",
+    "api": [
+      "decodeUnknownSync"
+    ],
+    "expectedStdout": "schemaParser:42\n"
+  },
+  {
+    "id": "module-scopedcache",
+    "module": "ScopedCache",
+    "entrypoint": "effect/ScopedCache",
+    "family": "ScopedCache",
+    "file": "cases/module-scopedcache.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "get"
+    ],
+    "expectedStdout": "cache:3,3:1\n"
+  },
+  {
+    "id": "module-scopedref",
+    "module": "ScopedRef",
+    "entrypoint": "effect/ScopedRef",
+    "family": "ScopedRef",
+    "file": "cases/module-scopedref.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "set",
+      "get"
+    ],
+    "expectedStdout": "scopedRef:42\n"
+  },
+  {
+    "id": "module-synchronizedref",
+    "module": "SynchronizedRef",
+    "entrypoint": "effect/SynchronizedRef",
+    "family": "SynchronizedRef",
+    "file": "cases/module-synchronizedref.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "updateEffect",
+      "get"
+    ],
+    "expectedStdout": "synchronizedRef:42\n"
+  },
+  {
+    "id": "module-take",
+    "module": "Take",
+    "entrypoint": "effect/Take",
+    "family": "Take",
+    "file": "cases/module-take.ts",
+    "status": "ready",
+    "api": [
+      "toPull"
+    ],
+    "expectedStdout": "take:1,2,3\n"
+  },
+  {
+    "id": "module-undefinedor",
+    "module": "UndefinedOr",
+    "entrypoint": "effect/UndefinedOr",
+    "family": "UndefinedOr",
+    "file": "cases/module-undefinedor.ts",
+    "status": "ready",
+    "api": [
+      "map",
+      "getOrThrow"
+    ],
+    "expectedStdout": "undefinedOr:42\n"
+  },
+  {
+    "id": "module-arbitrary",
+    "module": "Arbitrary",
+    "entrypoint": "effect/Arbitrary",
+    "family": "Arbitrary",
+    "file": "cases/module-arbitrary.ts",
+    "status": "ready",
+    "api": [
+      "Constant",
+      "isArbitrary"
+    ],
+    "reason": "Only constant arbitrary construction and its documented guard are exercised; random generation is intentionally excluded.",
+    "expectedStdout": "arbitrary.constant:true\n"
+  },
+  {
+    "id": "module-array",
+    "module": "Array",
+    "entrypoint": "effect/Array",
+    "family": "Array",
+    "file": "cases/module-array.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "map"
+    ],
+    "expectedStdout": "array:2,4,6\n"
+  },
+  {
+    "id": "module-bigint",
+    "module": "BigInt",
+    "entrypoint": "effect/BigInt",
+    "family": "BigInt",
+    "file": "cases/module-bigint.ts",
+    "status": "ready",
+    "api": [
+      "sum"
+    ],
+    "expectedStdout": "bigint:42\n"
+  },
+  {
+    "id": "module-number",
+    "module": "Number",
+    "entrypoint": "effect/Number",
+    "family": "Number",
+    "file": "cases/module-number.ts",
+    "status": "ready",
+    "api": [
+      "sum"
+    ],
+    "expectedStdout": "number:42\n"
+  },
+  {
+    "id": "module-string",
+    "module": "String",
+    "entrypoint": "effect/String",
+    "family": "String",
+    "file": "cases/module-string.ts",
+    "status": "ready",
+    "api": [
+      "toUpperCase"
+    ],
+    "expectedStdout": "string:STABLE\n"
+  },
+  {
+    "id": "module-http--findmyway--internal--querystring",
+    "module": "http/FindMyWay/internal/queryString",
+    "entrypoint": "effect/http/FindMyWay/internal/queryString",
+    "family": "http/FindMyWay/internal/queryString",
+    "file": "cases/module-http--findmyway--internal--querystring.ts",
+    "status": "ready",
+    "api": [
+      "parse",
+      "stringify"
+    ],
+    "expectedStdout": "[{\"a\":\"1\",\"b\":\"two words\"},\"a=1&b=two%20words\"]\n"
+  },
+  {
+    "id": "module-http--httpeffect",
+    "module": "http/HttpEffect",
+    "entrypoint": "effect/http/HttpEffect",
+    "family": "http/HttpEffect",
+    "file": "cases/module-http--httpeffect.ts",
+    "status": "ready",
+    "api": [
+      "toWebHandler"
+    ],
+    "expectedStdout": "[200,\"handled\"]\n"
+  },
+  {
+    "id": "module-http--httpincomingmessage",
+    "module": "http/HttpIncomingMessage",
+    "entrypoint": "effect/http/HttpIncomingMessage",
+    "family": "http/HttpIncomingMessage",
+    "file": "cases/module-http--httpincomingmessage.ts",
+    "status": "ready",
+    "api": [
+      "schemaBodyJson"
+    ],
+    "expectedStdout": "{\"value\":42}\n"
+  },
+  {
+    "id": "module-http--httpmiddleware",
+    "module": "http/HttpMiddleware",
+    "entrypoint": "effect/http/HttpMiddleware",
+    "family": "http/HttpMiddleware",
+    "file": "cases/module-http--httpmiddleware.ts",
+    "status": "ready",
+    "api": [
+      "cors"
+    ],
+    "expectedStdout": "[\"https://client.test\",\"cors\"]\n"
+  },
+  {
+    "id": "module-http--httpplatform",
+    "module": "http/HttpPlatform",
+    "entrypoint": "effect/http/HttpPlatform",
+    "family": "http/HttpPlatform",
+    "file": "cases/module-http--httpplatform.ts",
+    "status": "ready",
+    "api": [
+      "makeCompressionWeb"
+    ],
+    "expectedStdout": "[200,null]\n"
+  },
+  {
+    "id": "module-http--httpserverrespondable",
+    "module": "http/HttpServerRespondable",
+    "entrypoint": "effect/http/HttpServerRespondable",
+    "family": "http/HttpServerRespondable",
+    "file": "cases/module-http--httpserverrespondable.ts",
+    "status": "ready",
+    "api": [
+      "toResponse",
+      "symbol"
+    ],
+    "expectedStdout": "[201,\"Uint8Array\"]\n"
+  },
+  {
+    "id": "module-http--internal--mimetypes",
+    "module": "http/internal/mimeTypes",
+    "entrypoint": "effect/http/internal/mimeTypes",
+    "family": "http/internal/mimeTypes",
+    "file": "cases/module-http--internal--mimetypes.ts",
+    "status": "ready",
+    "api": [
+      "default"
+    ],
+    "expectedStdout": "[[\"json\",\"map\"],[\"txt\",\"text\",\"conf\",\"def\",\"list\",\"log\",\"in\",\"ini\"]]\n"
+  },
+  {
+    "id": "module-http--multipartparser",
+    "module": "http/MultipartParser",
+    "entrypoint": "effect/http/MultipartParser",
+    "family": "http/MultipartParser",
+    "file": "cases/module-http--multipartparser.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"answer:42\",\"done\"]\n"
+  },
+  {
+    "id": "module-http--multipartparser--internal--multipart",
+    "module": "http/MultipartParser/internal/multipart",
+    "entrypoint": "effect/http/MultipartParser/internal/multipart",
+    "family": "http/MultipartParser/internal/multipart",
+    "file": "cases/module-http--multipartparser--internal--multipart.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"answer:42\",\"done\"]\n"
+  },
+  {
+    "id": "module-http--multipartparser--headersparser",
+    "module": "http/MultipartParser/HeadersParser",
+    "entrypoint": "effect/http/MultipartParser/HeadersParser",
+    "family": "http/MultipartParser/HeadersParser",
+    "file": "cases/module-http--multipartparser--headersparser.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n"
+  },
+  {
+    "id": "module-http--multipartparser--internal--headers",
+    "module": "http/MultipartParser/internal/headers",
+    "entrypoint": "effect/http/MultipartParser/internal/headers",
+    "family": "http/MultipartParser/internal/headers",
+    "file": "cases/module-http--multipartparser--internal--headers.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n"
+  },
+  {
+    "id": "module-http--multipartparser--internal--contenttype",
+    "module": "http/MultipartParser/internal/contentType",
+    "entrypoint": "effect/http/MultipartParser/internal/contentType",
+    "family": "http/MultipartParser/internal/contentType",
+    "file": "cases/module-http--multipartparser--internal--contenttype.ts",
+    "status": "ready",
+    "api": [
+      "parse"
+    ],
+    "expectedStdout": "{\"value\":\"text/plain\",\"parameters\":{\"charset\":\"utf-8\"}}\n"
+  },
+  {
+    "id": "module-http--multipartparser--search",
+    "module": "http/MultipartParser/Search",
+    "entrypoint": "effect/http/MultipartParser/Search",
+    "family": "http/MultipartParser/Search",
+    "file": "cases/module-http--multipartparser--search.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n"
+  },
+  {
+    "id": "module-http--multipartparser--internal--search",
+    "module": "http/MultipartParser/internal/search",
+    "entrypoint": "effect/http/MultipartParser/internal/search",
+    "family": "http/MultipartParser/internal/search",
+    "file": "cases/module-http--multipartparser--internal--search.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n"
+  },
+  {
+    "id": "module-http--multipart",
+    "module": "http/Multipart",
+    "entrypoint": "effect/http/Multipart",
+    "family": "http/Multipart",
+    "file": "cases/module-http--multipart.ts",
+    "status": "ready",
+    "api": [
+      "makeChannel"
+    ],
+    "expectedStdout": "[[\"answer\",\"42\"]]\n"
+  },
+  {
+    "id": "module-observability--internal--otlpenv",
+    "module": "observability/internal/otlpEnv",
+    "entrypoint": "effect/observability/internal/otlpEnv",
+    "family": "observability/internal/otlpEnv",
+    "file": "cases/module-observability--internal--otlpenv.ts",
+    "status": "ready",
+    "api": [
+      "headers",
+      "endpoint"
+    ],
+    "expectedStdout": "[{\"x-key\":\"fixed\"},\"https://example.test/logs\"]\n"
+  },
+  {
+    "id": "module-http-api--httpapibuilder",
+    "module": "http-api/HttpApiBuilder",
+    "entrypoint": "effect/http-api/HttpApiBuilder",
+    "family": "http-api/HttpApiBuilder",
+    "file": "cases/module-http-api--httpapibuilder.ts",
+    "status": "ready",
+    "api": [
+      "group"
+    ],
+    "expectedStdout": "hello-api\n"
+  },
+  {
+    "id": "module-http-api--httpapitest",
+    "module": "http-api/HttpApiTest",
+    "entrypoint": "effect/http-api/HttpApiTest",
+    "family": "http-api/HttpApiTest",
+    "file": "cases/module-http-api--httpapitest.ts",
+    "status": "ready",
+    "api": [
+      "groups"
+    ],
+    "expectedStdout": "hello-api\n"
+  },
+  {
+    "id": "module-http-api--httpapimiddleware",
+    "module": "http-api/HttpApiMiddleware",
+    "entrypoint": "effect/http-api/HttpApiMiddleware",
+    "family": "http-api/HttpApiMiddleware",
+    "file": "cases/module-http-api--httpapimiddleware.ts",
+    "status": "ready",
+    "api": [
+      "Service"
+    ],
+    "expectedStdout": "[\"hello-api\",[\"checked\"]]\n"
+  },
+  {
+    "id": "module-http-api--httpapiscalar",
+    "module": "http-api/HttpApiScalar",
+    "entrypoint": "effect/http-api/HttpApiScalar",
+    "family": "http-api/HttpApiScalar",
+    "file": "cases/module-http-api--httpapiscalar.ts",
+    "status": "ready",
+    "api": [
+      "layer"
+    ],
+    "expectedStdout": "[200,\"text/html\",3127658,true]\n"
+  },
+  {
+    "id": "module-http-api--httpapiswagger",
+    "module": "http-api/HttpApiSwagger",
+    "entrypoint": "effect/http-api/HttpApiSwagger",
+    "family": "http-api/HttpApiSwagger",
+    "file": "cases/module-http-api--httpapiswagger.ts",
+    "status": "ready",
+    "api": [
+      "layer"
+    ],
+    "expectedStdout": "[200,\"text/html\",1939427,true]\n"
+  },
+  {
+    "id": "module-observability--otlplogger",
+    "module": "observability/OtlpLogger",
+    "entrypoint": "effect/observability/OtlpLogger",
+    "family": "observability/OtlpLogger",
+    "file": "cases/module-observability--otlplogger.ts",
+    "status": "ready",
+    "api": [
+      "layer"
+    ],
+    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]}]\n"
+  },
+  {
+    "id": "module-observability--otlpmetrics",
+    "module": "observability/OtlpMetrics",
+    "entrypoint": "effect/observability/OtlpMetrics",
+    "family": "observability/OtlpMetrics",
+    "file": "cases/module-observability--otlpmetrics.ts",
+    "status": "ready",
+    "api": [
+      "layer"
+    ],
+    "expectedStdout": "[{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n"
+  },
+  {
+    "id": "module-observability--otlp",
+    "module": "observability/Otlp",
+    "entrypoint": "effect/observability/Otlp",
+    "family": "observability/Otlp",
+    "file": "cases/module-observability--otlp.ts",
+    "status": "ready",
+    "api": [
+      "layerJson"
+    ],
+    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n"
+  },
+  {
+    "id": "module-observability--otlptracer",
+    "module": "observability/OtlpTracer",
+    "entrypoint": "effect/observability/OtlpTracer",
+    "family": "observability/OtlpTracer",
+    "file": "cases/module-observability--otlptracer.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "reason": "Exercises unsampled span lifecycle and attributes with explicit fixed nanoseconds; no random trace/span IDs are read or generated, and no transport export is expected.",
+    "expectedStdout": "[[\"unsampled\",\"Ended\",[[\"fixed\",42]]],0]\n"
+  }
+]
