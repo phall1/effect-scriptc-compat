@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "node": "24.19.0",
+  "pnpm": "11.19.0",
+  "typescript": "7.0.2",
+  "nodeTypes": "24.10.1",
+  "effect": "4.0.1",
+  "scriptc": {
+    "npmVersion": "0.2.3",
+    "githubReleaseTag": "v0.2.3",
+    "githubCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+    "releaseUrl": "https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3",
+    "contributingUrl": "https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md",
+    "issuesUrl": "https://github.com/vercel-labs/scriptc/issues"
+  },
+  "runner": "node --experimental-strip-types",
+  "hostFirst": true
+}

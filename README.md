@@ -1,5 +1,3 @@
-> Checkpoint backup: the complete working tree and four-commit Git history are saved in `effect-scriptc-compat-progress-4.tar.gz` and `effect-scriptc-compat-progress-4.bundle`. To resume immediately, run `git clone effect-scriptc-compat-progress-4.bundle effect-scriptc-compat-work`, or extract the tarball. Snapshot commit: `fdf7651e7c22401e3af1093bc8e37fea414f5746`. Unpacked-source publication is pending.
-
 # Effect 4 × scriptc compatibility harness
 
 > **In-progress checkpoint:** the host map is running. See `reports/checkpoint.json` for measured/pending counts. The initial reports are explicitly partial; a full differential and reduction pass has not finished yet. Verified partial differentials and upstream packets are saved as they complete.

@@ -1,0 +1,7 @@
+node_modules/
+bin/
+.work/
+*.tgz
+*.bundle
+*.zip
+.DS_Store

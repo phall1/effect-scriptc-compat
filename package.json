@@ -1,0 +1,29 @@
+{
+  "name": "effect-scriptc-compat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pinned host-first Effect 4 compatibility and differential harness for scriptc",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "generate": "node scripts/generate.ts",
+    "typecheck": "tsc --noEmit",
+    "map": "node scripts/map.ts",
+    "diff": "node scripts/diff.ts",
+    "reduce": "node scripts/reduce.ts",
+    "test": "node --test tests/*.test.ts",
+    "check": "pnpm typecheck && pnpm test",
+    "merge": "node scripts/merge.ts",
+    "checkpoint": "node scripts/checkpoint.ts"
+  },
+  "dependencies": {
+    "effect": "4.0.1"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "24.10.1"
+  }
+}

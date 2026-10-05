@@ -1,0 +1,264 @@
+name: Manual host compatibility shards
+run-name: Effect/scriptc host shards · ${{ github.ref_name }} · ${{ inputs.shards }} shards
+
+# Deliberately no push, pull_request, schedule, workflow_run, or reusable trigger.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: 'Total fixed modulo shards, 1–64'
+        type: string
+        default: '8'
+      parallel:
+        description: 'Maximum simultaneous shard hosts, 1–64'
+        type: string
+        default: '4'
+      jobs:
+        description: 'Compiler cases per host, 1–8'
+        type: string
+        default: '2'
+      job_minutes:
+        description: 'Hard per-host job limit, 60–360 minutes; total upper bound = selected hosts × limit + 30'
+        type: string
+        default: '90'
+      compile_timeout_ms:
+        description: 'Per build/coverage deadline, 30001–900000 ms; runtime stays 30000 ms'
+        type: string
+        default: '180000'
+      shard_indices:
+        description: 'Optional zero-based comma-separated subset; blank runs every shard'
+        type: string
+        default: ''
+      resume_run_id:
+        description: 'Optional prior run ID in this repository at the identical commit'
+        type: string
+        default: ''
+      resume_attempt:
+        description: 'Prior run attempt containing the requested artifacts'
+        type: string
+        default: '1'
+      run_reducer:
+        description: 'Also reduce repros (many additional compiler invocations/minutes)'
+        type: boolean
+        default: false
+      capacity_checked:
+        description: 'I checked authorization, included runner minutes and artifact storage; this can consume paid quota'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  TZ: UTC
+  LC_ALL: C
+  NO_COLOR: '1'
+  FORCE_COLOR: '0'
+
+jobs:
+  plan:
+    if: ${{ inputs.capacity_checked }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      config: ${{ steps.plan.outputs.config }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+      snapshot: ${{ steps.plan.outputs.snapshot }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24.19.0'
+          package-manager-cache: false
+      - name: Validate manual inputs and freeze corpus
+        id: plan
+        env:
+          INPUT_CAPACITY_CHECKED: ${{ inputs.capacity_checked }}
+          INPUT_SHARDS: ${{ inputs.shards }}
+          INPUT_PARALLEL: ${{ inputs.parallel }}
+          INPUT_JOBS: ${{ inputs.jobs }}
+          INPUT_JOB_MINUTES: ${{ inputs.job_minutes }}
+          INPUT_COMPILE_TIMEOUT_MS: ${{ inputs.compile_timeout_ms }}
+          INPUT_SHARD_INDICES: ${{ inputs.shard_indices }}
+          INPUT_RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+          INPUT_RESUME_ATTEMPT: ${{ inputs.resume_attempt }}
+          INPUT_RUN_REDUCER: ${{ inputs.run_reducer }}
+        run: node .github/scripts/host-shards.mjs plan
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: effect-host-plan-attempt-${{ github.run_attempt }}
+          path: .work/shard-plan.json
+          if-no-files-found: error
+          retention-days: 3
+
+  shard:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: ${{ fromJSON(needs.plan.outputs.config).jobMinutes }}
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(needs.plan.outputs.config).parallel }}
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      SHARD_CONFIG: ${{ needs.plan.outputs.config }}
+      EXPECTED_SNAPSHOT: ${{ needs.plan.outputs.snapshot }}
+      MAP_SHARD_INDEX: ${{ matrix.index }}
+      MAP_SHARD_TOTAL: ${{ fromJSON(needs.plan.outputs.config).total }}
+      MAP_SHARD_NAME: ${{ matrix.name }}
+      MAP_JOBS: ${{ fromJSON(needs.plan.outputs.config).jobs }}
+      DIFF_JOBS: ${{ fromJSON(needs.plan.outputs.config).jobs }}
+      COMPILE_TIMEOUT_MS: ${{ fromJSON(needs.plan.outputs.config).timeoutMs }}
+      COVERAGE_TIMEOUT_MS: ${{ fromJSON(needs.plan.outputs.config).timeoutMs }}
+      MAP_REPORT: ${{ matrix.map }}
+      DIFF_REPORT: reports/shards/${{ matrix.name }}.differentials.json
+      # Runner image packages may update; exact version/path/hash are recorded per host.
+      SCRIPTC_LINKER: /usr/bin/clang-18
+      MAP_RESUME: ${{ fromJSON(needs.plan.outputs.config).resumeRunId != '' && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24.19.0'
+          package-manager-cache: false
+      - name: Verify snapshot and isolate this host's evidence
+        id: prepare
+        run: node .github/scripts/host-shards.mjs prepare
+      - name: Install exact published packages and record compiler/linker provenance
+        id: install
+        timeout-minutes: 10
+        run: |
+          npm install --global --no-audit --no-fund pnpm@11.19.0 scriptc@0.2.3 2>&1 | tee reports/ci/install-global.log
+          pnpm install --frozen-lockfile --ignore-scripts 2>&1 | tee reports/ci/install-dependencies.log
+          npm view scriptc@0.2.3 dist --json > reports/ci/npm-scriptc-dist.json
+          npm view pnpm@11.19.0 dist --json > reports/ci/npm-pnpm-dist.json
+          test -x "$SCRIPTC_LINKER"
+          dpkg-query -W clang-18 libllvm18 binutils > reports/ci/linker-packages.txt
+          node .github/scripts/host-shards.mjs provenance
+      - name: Verify harness before measuring
+        id: check
+        timeout-minutes: 5
+        run: |
+          env -u MAP_SHARD_INDEX -u MAP_SHARD_TOTAL -u MAP_SHARD_NAME -u MAP_RESUME \
+            -u MAP_REPORT -u DIFF_REPORT pnpm check 2>&1 | tee reports/ci/check.log
+          node --test .github/tests/*.test.mjs 2>&1 | tee reports/ci/workflow-tests.log
+      - name: Download explicitly selected resume evidence
+        if: ${{ success() && fromJSON(needs.plan.outputs.config).resumeRunId != '' }}
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ fromJSON(needs.plan.outputs.config).resumeRunId }}
+          name: effect-host-shard-${{ matrix.index }}-of-${{ fromJSON(needs.plan.outputs.config).total }}-attempt-${{ fromJSON(needs.plan.outputs.config).resumeAttempt }}
+          path: .work/resume
+          digest-mismatch: error
+      - name: Validate resume identity and restore raw checkpoints only
+        if: ${{ success() && fromJSON(needs.plan.outputs.config).resumeRunId != '' }}
+        run: node .github/scripts/host-shards.mjs restore
+      - name: Measure compiler coverage and builds
+        id: map
+        continue-on-error: true
+        timeout-minutes: ${{ fromJSON(needs.plan.outputs.config).mapMinutes }}
+        run: pnpm map 2>&1 | tee reports/ci/map.log
+      - name: Preserve completed checkpoints after interrupted mapping
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        env:
+          MAP_OUTCOME: ${{ steps.map.outcome }}
+        run: node .github/scripts/host-shards.mjs finish
+      - name: Compare available native binaries with Node (30 seconds per process)
+        id: diff
+        if: ${{ !cancelled() && steps.check.outcome == 'success' && (steps.map.outcome == 'success' || steps.map.outcome == 'failure') }}
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          test -f "$MAP_REPORT"
+          pnpm diff 2>&1 | tee reports/ci/diff.log
+      - name: Reduce local repro packets (explicit opt-in)
+        id: reduce
+        if: ${{ !cancelled() && fromJSON(needs.plan.outputs.config).runReducer && (steps.diff.outcome == 'success' || steps.diff.outcome == 'failure') }}
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          test -f "$MAP_REPORT"
+          test -f "$DIFF_REPORT"
+          pnpm reduce 2>&1 | tee reports/ci/reduce.log
+      - name: Record final phase outcomes
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        env:
+          MAP_OUTCOME: ${{ steps.map.outcome }}
+          DIFF_OUTCOME: ${{ steps.diff.outcome }}
+          REDUCE_OUTCOME: ${{ steps.reduce.outcome }}
+        run: node .github/scripts/host-shards.mjs finish
+      - name: Upload evidence even when the compiler or differential fails
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: effect-host-shard-${{ matrix.index }}-of-${{ fromJSON(needs.plan.outputs.config).total }}-attempt-${{ github.run_attempt }}
+          path: reports/
+          retention-days: 3
+          if-no-files-found: error
+          compression-level: 6
+      - name: Surface findings and incomplete phases after uploading
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        env:
+          MAP_OUTCOME: ${{ steps.map.outcome }}
+          DIFF_OUTCOME: ${{ steps.diff.outcome }}
+          REDUCE_OUTCOME: ${{ steps.reduce.outcome }}
+          RUN_REDUCER: ${{ fromJSON(needs.plan.outputs.config).runReducer }}
+        run: |
+          test "$MAP_OUTCOME" = success
+          test "$DIFF_OUTCOME" = success
+          if [[ "$RUN_REDUCER" == true ]]; then test "$REDUCE_OUTCOME" = success; fi
+
+  aggregate:
+    needs: [plan, shard]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      SHARD_CONFIG: ${{ needs.plan.outputs.config }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24.19.0'
+          package-manager-cache: false
+      - name: Clear checked-in evidence from aggregation output
+        run: |
+          rm -rf reports
+          mkdir -p reports/ci
+      - name: Download this run's independently named host artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: effect-host-shard-*-of-${{ fromJSON(needs.plan.outputs.config).total }}-attempt-*
+          path: .work/imported
+          merge-multiple: false
+          digest-mismatch: error
+      - name: Validate every snapshot and aggregate without discarding provenance
+        run: |
+          node .github/scripts/host-shards.mjs collect
+          node scripts/merge.ts .work/imported
+      - name: Upload aggregate and missing-host status
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: effect-host-aggregate-attempt-${{ github.run_attempt }}
+          path: |
+            reports/aggregate.json
+            reports/aggregate.md
+            reports/ci/
+          retention-days: 3
+          if-no-files-found: error
