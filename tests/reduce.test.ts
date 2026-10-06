@@ -61,6 +61,11 @@ test('reduction completeness requires every exact current binary pair and a nonp
   assert.equal(complete(diff, map, 0, 1), false);
   assert.equal(complete(diff, map, 1, 1), true);
   assert.equal(complete(diff), true);
+  const noBinaries = { ...map, cases: [] };
+  const absentRows = { ...diff, results: undefined } as unknown as DiffReport;
+  assert.equal(complete(absentRows, noBinaries), false, 'absent report rows are not a valid empty differential');
+  assert.equal(differentialCoverage(noBinaries, absentRows).reportRowsPresent, false);
+  assert.equal(complete({ ...diff, results: [] }, noBinaries), true, 'an explicit empty differential covers a no-binary map');
   const twoModes = { ...map, cases: [{ ...c, dynamicAttempt: { ...c.staticAttempt!, mode: 'dynamic' as const, binary: 'bin/static.dynamic' } }] };
   assert.equal(complete(diff, twoModes), false);
   assert.equal(complete({ ...diff, results: [row, { ...row, mode: 'dynamic' }] }, twoModes), true);

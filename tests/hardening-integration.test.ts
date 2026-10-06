@@ -58,6 +58,9 @@ fs.writeFileSync(output, '#!/bin/sh\\nprintf "%s\\\\n" '+JSON.stringify(value)+'
   const valid = read('reports/differentials.json');
   write('reports/differentials.json', { ...valid, results: [] });
   assert.equal(invoke('reduce').status, 0); assert.equal(index().complete, false);
+  write('reports/differentials.json', { ...valid, results: undefined });
+  assert.equal(invoke('reduce').status, 0); assert.equal(index().complete, false);
+  assert.equal(index().differentialCoverage.reportRowsPresent, false);
   write('reports/differentials.json', { ...valid, results: valid.results.map((r: any) => ({ ...r, baselineValid: false, equal: false, finding: null })) });
   const invalid = invoke('reduce');
   assert.equal(invalid.status, 2, invalid.stdout + invalid.stderr);

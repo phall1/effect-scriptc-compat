@@ -220,7 +220,11 @@ function validDifferentialBaseline(c: CaseResult, d: Differential): boolean {
   return d.baselineValid === true && fixtureMatches(c, d.node);
 }
 
-export function differentialCoverage(map: MapReport, diff: DiffReport | null): { complete: boolean; expected: number; missing: string[]; invalidNodeBaselines: string[]; reportPresent: boolean; reportPartial: boolean } {
+function differentialRowsPresent(diff: DiffReport | null): diff is DiffReport {
+  return diff !== null && Array.isArray(diff.results);
+}
+
+export function differentialCoverage(map: MapReport, diff: DiffReport | null): { complete: boolean; expected: number; missing: string[]; invalidNodeBaselines: string[]; reportPresent: boolean; reportRowsPresent: boolean; reportPartial: boolean } {
   const expected = map.cases.flatMap(c => [c.staticAttempt, c.dynamicAttempt].filter(a => a?.binary).map(a => ({ c, a: a! })));
   const missing: string[] = [], invalidNodeBaselines: string[] = [];
   for (const { c, a } of expected) {
@@ -229,8 +233,9 @@ export function differentialCoverage(map: MapReport, diff: DiffReport | null): {
     if (!rows.length) missing.push(pair);
     else if (!rows.every(d => validDifferentialBaseline(c, d))) invalidNodeBaselines.push(pair);
   }
-  return { complete: diff !== null && !diff.partial && missing.length === 0 && invalidNodeBaselines.length === 0,
-    expected: expected.length, missing, invalidNodeBaselines, reportPresent: diff !== null, reportPartial: Boolean(diff?.partial) };
+  return { complete: differentialRowsPresent(diff) && !diff.partial && missing.length === 0 && invalidNodeBaselines.length === 0,
+    expected: expected.length, missing, invalidNodeBaselines, reportPresent: diff !== null,
+    reportRowsPresent: differentialRowsPresent(diff), reportPartial: Boolean(diff?.partial) };
 }
 
 export function reductionComplete(map: MapReport, coverage: ReturnType<typeof differentialCoverage>, total: number, verified: number): boolean {
