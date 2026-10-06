@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { assertProvenance, cacheIdentityFor, commandText, fileSha, json, ok, pins, provenance, raw, readJson, ROOT, run, sameBytes, sha, SCRIPTC, typecheckCommand } from './common.ts';
 import { diagnostics, parseCoverage } from './coverage.ts';
 import { deltaSignature } from './diff.ts';
+import { fixtureMatches } from './validate.ts';
 import type { Attempt, CaseResult, Differential, DiffReport, MapReport, Run } from './types.ts';
 
 type Classification = 'missing lowering' | 'deferred runtime trap' | 'semantic divergence' | 'crash/hang' | 'false coverage';
@@ -19,45 +20,51 @@ function compilerDetail(a: Attempt, code: string | null): string {
   const message = code ? ds.find(d => d.code === code)?.message ?? '' : a.build.stderr || a.build.stdout || (a.build.timedOut ? 'timeout' : a.build.spawnError ?? 'no binary produced');
   return message.replace(/^.*? - error SC\d{4}:\s*/gm, '').replace(/(?:\/[^\s:]+)+\.ts:\d+(?::\d+)?/g, '<source>').trim();
 }
+function addCompilerFailures(groups: Map<string, Failure>, c: CaseResult, a: Attempt): void {
+  const codes = a.diagnostics.length ? [...new Set(a.diagnostics.map(d => d.code))] : [null];
+  for (const code of codes) {
+    const detail = compilerDetail(a, code);
+    // SC3004 is an umbrella diagnostic: retain message as part of the key.
+    const key = `compiler:${c.family}:${code ?? 'uncoded'}${code === 'SC3004' || code === null ? ':' + detail : ''}`;
+    const previous = groups.get(key);
+    if (previous) { previous.relatedCases.push(`${c.id}:${a.mode}`); continue; }
+    const id = `${(code ?? 'compiler-failure').toLowerCase()}-${c.family.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 45)}-${sha(key).slice(0, 8)}`;
+    groups.set(key, { key, id, kind: 'compiler', code, family: c.family, caseResult: c, attempt: a,
+      classification: compilerClassification(a, code), detail, relatedCases: [`${c.id}:${a.mode}`] });
+  }
+}
+function compilerClassification(a: Attempt, code: string | null): Classification {
+  return a.build.timedOut || a.build.signal || code === 'SC3004' || code === null ? 'crash/hang' : 'missing lowering';
+}
+function addDeferredFailures(groups: Map<string, Failure>, c: CaseResult, a: Attempt): void {
+  const codes = [...new Set(a.parsedCoverage.deferredSites.flatMap(site => site.match(/\bSC\d{4}\b/g) ?? []))];
+  for (const code of codes) {
+    const key = `deferred:${c.family}:${code}`;
+    const previous = groups.get(key);
+    if (previous) { previous.relatedCases.push(`${c.id}:${a.mode}`); continue; }
+    const id = `deferred-${code.toLowerCase()}-${c.family.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 35)}-${sha(key).slice(0, 8)}`;
+    groups.set(key, { key, id, kind: 'deferred', code, family: c.family, caseResult: c, attempt: a,
+      classification: 'missing lowering', detail: a.parsedCoverage.deferredSites.filter(site => site.includes(code)).join('\n'), relatedCases: [`${c.id}:${a.mode}`] });
+  }
+}
+function addDifferentialFailure(groups: Map<string, Failure>, c: CaseResult, d: Differential): void {
+  if (d.equal || !validDifferentialBaseline(c, d)) return;
+  const a = d.mode === 'static' ? c.staticAttempt! : c.dynamicAttempt!;
+  const key = `differential:${d.signature}`;
+  const previous = groups.get(key);
+  if (previous) { previous.relatedCases.push(`${c.id}:${a.mode}`); return; }
+  const id = `diff-${d.signature}`;
+  groups.set(key, { key, id, kind: 'differential', code: null, family: c.family, caseResult: c, attempt: a, differential: d,
+    classification: d.finding ?? 'semantic divergence', detail: d.differences.join(', '), relatedCases: [`${c.id}:${a.mode}`] });
+}
 export function signatures(map: MapReport, diff: DiffReport | null): Failure[] {
   const groups = new Map<string, Failure>();
-  for (const c of map.cases) {
-    for (const a of [c.staticAttempt, c.dynamicAttempt]) {
-      if (!a || a.binary) continue;
-      const codes = a.diagnostics.length ? [...new Set(a.diagnostics.map(d => d.code))] : [null];
-      for (const code of codes) {
-        const detail = compilerDetail(a, code);
-        // SC3004 is an umbrella diagnostic: retain message as part of the key.
-        const key = `compiler:${c.family}:${code ?? 'uncoded'}${code === 'SC3004' || code === null ? ':' + detail : ''}`;
-        const previous = groups.get(key);
-        if (previous) { previous.relatedCases.push(`${c.id}:${a.mode}`); continue; }
-        const id = `${(code ?? 'compiler-failure').toLowerCase()}-${c.family.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 45)}-${sha(key).slice(0, 8)}`;
-        groups.set(key, { key, id, kind: 'compiler', code, family: c.family, caseResult: c, attempt: a,
-          classification: a.build.timedOut || a.build.signal || code === 'SC3004' || code === null ? 'crash/hang' : 'missing lowering', detail, relatedCases: [`${c.id}:${a.mode}`] });
-      }
-    }
-  }
   for (const c of map.cases) for (const a of [c.staticAttempt, c.dynamicAttempt]) {
-    if (!a?.binary || !a.parsedCoverage.deferredSites.length) continue;
-    const codes = [...new Set(a.parsedCoverage.deferredSites.flatMap(site => site.match(/\bSC\d{4}\b/g) ?? []))];
-    for (const code of codes) {
-      const key = `deferred:${c.family}:${code}`;
-      if (groups.has(key)) { groups.get(key)!.relatedCases.push(`${c.id}:${a.mode}`); continue; }
-      const id = `deferred-${code.toLowerCase()}-${c.family.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 35)}-${sha(key).slice(0, 8)}`;
-      groups.set(key, { key, id, kind: 'deferred', code, family: c.family, caseResult: c, attempt: a,
-        classification: 'missing lowering', detail: a.parsedCoverage.deferredSites.filter(site => site.includes(code)).join('\n'), relatedCases: [`${c.id}:${a.mode}`] });
-    }
+    if (!a) continue;
+    if (a.binary) addDeferredFailures(groups, c, a);
+    else addCompilerFailures(groups, c, a);
   }
-  for (const d of diff?.results ?? []) {
-    if (d.equal || !d.baselineValid) continue;
-    const c = map.cases.find(c => c.id === d.caseId)!;
-    const a = d.mode === 'static' ? c.staticAttempt! : c.dynamicAttempt!;
-    const key = `differential:${d.signature}`;
-    if (groups.has(key)) { groups.get(key)!.relatedCases.push(`${c.id}:${a.mode}`); continue; }
-    const id = `diff-${d.signature}`;
-    groups.set(key, { key, id, kind: 'differential', code: null, family: c.family, caseResult: c, attempt: a, differential: d,
-      classification: d.finding ?? 'semantic divergence', detail: d.differences.join(', '), relatedCases: [`${c.id}:${a.mode}`] });
-  }
+  for (const d of diff?.results ?? []) addDifferentialFailure(groups, map.cases.find(c => c.id === d.caseId)!, d);
   return [...groups.values()].sort((a, b) => a.id.localeCompare(b.id));
 }
 export async function ddmin(lines: string[], predicate: (s: string) => Promise<boolean>, budget: number): Promise<{ source: string; attempts: number; exhausted: boolean }> {
@@ -174,12 +181,14 @@ function currentDifferential(map: MapReport): DiffReport | null {
   if (!existsSync(resolve(ROOT, path))) return null;
   const diff = readJson<DiffReport>(path);
   assertProvenance(map.provenance, diff.provenance);
-  for (const d of diff.results) {
-    const c = map.cases.find(c => c.id === d.caseId);
-    const a = d.mode === 'static' ? c?.staticAttempt : c?.dynamicAttempt;
-    if (!a || a.binarySha256 !== d.binarySha256) throw new Error(`Differential ${d.caseId} is stale; run pnpm diff`);
-  }
+  for (const d of diff.results ?? []) assertCurrentBinary(map, d);
   return diff;
+}
+
+function assertCurrentBinary(map: MapReport, d: Differential): void {
+  const c = map.cases.find(c => c.id === d.caseId);
+  const a = d.mode === 'static' ? c?.staticAttempt : c?.dynamicAttempt;
+  if (!a?.binary || a.mode !== d.mode || a.binarySha256 !== d.binarySha256) throw new Error(`Differential ${d.caseId} is stale; run pnpm diff`);
 }
 
 export function requestedFailures(all: Failure[], requested = process.env.REDUCE_SIGNATURES): Failure[] {
@@ -207,19 +216,44 @@ function priorVerifications(all: Failure[], selected: Failure[], identity: strin
   });
 }
 
-function saveIndex(map: MapReport, all: Failure[], selected: Failure[], results: PacketResult[]): void {
+function validDifferentialBaseline(c: CaseResult, d: Differential): boolean {
+  return d.baselineValid === true && fixtureMatches(c, d.node);
+}
+
+export function differentialCoverage(map: MapReport, diff: DiffReport | null): { complete: boolean; expected: number; missing: string[]; invalidNodeBaselines: string[]; reportPresent: boolean; reportPartial: boolean } {
+  const expected = map.cases.flatMap(c => [c.staticAttempt, c.dynamicAttempt].filter(a => a?.binary).map(a => ({ c, a: a! })));
+  const missing: string[] = [], invalidNodeBaselines: string[] = [];
+  for (const { c, a } of expected) {
+    const rows = (diff?.results ?? []).filter(d => d.caseId === c.id && d.mode === a.mode && d.binarySha256 === a.binarySha256);
+    const pair = `${c.id}:${a.mode}:${a.binarySha256}`;
+    if (!rows.length) missing.push(pair);
+    else if (!rows.every(d => validDifferentialBaseline(c, d))) invalidNodeBaselines.push(pair);
+  }
+  return { complete: diff !== null && !diff.partial && missing.length === 0 && invalidNodeBaselines.length === 0,
+    expected: expected.length, missing, invalidNodeBaselines, reportPresent: diff !== null, reportPartial: Boolean(diff?.partial) };
+}
+
+export function reductionComplete(map: MapReport, coverage: ReturnType<typeof differentialCoverage>, total: number, verified: number): boolean {
+  return !map.partial && coverage.complete && verified === total;
+}
+
+function saveIndex(map: MapReport, coverage: ReturnType<typeof differentialCoverage>, all: Failure[], selected: Failure[], results: PacketResult[]): void {
   const verified = results.filter(r => r.verified === true).length;
-  json('reports/upstream/index.json', { schemaVersion: 1, partial: Boolean(map.partial) || selected.length !== all.length,
+  const complete = reductionComplete(map, coverage, all.length, verified);
+  json('reports/upstream/index.json', { schemaVersion: 1, partial: !complete,
     generatedAt: new Date().toISOString(), distinctSignatures: all.length, totalDiscoveredSignatures: all.length,
     selectedSignatures: selected.length, verifiedSignatures: verified, pendingSignatures: all.length - verified,
-    complete: !map.partial && verified === all.length, results });
+    complete, differentialCoverage: coverage,
+    harnessErrors: coverage.invalidNodeBaselines.map(pair => `Invalid Node baseline: ${pair}`), results });
 }
 
 export async function main(): Promise<void> {
   const map = readJson<MapReport>(process.env.MAP_REPORT ?? 'reports/coverage-map.json');
   assertProvenance(map.provenance, await provenance());
   verifyMapSources(map);
-  const all = signatures(map, currentDifferential(map)), selected = requestedFailures(all);
+  const diff = currentDifferential(map), coverage = differentialCoverage(map, diff);
+  const all = signatures(map, diff), selected = requestedFailures(all);
+  for (const pair of coverage.invalidNodeBaselines) console.error(`HARNESS ERROR: Invalid Node baseline: ${pair}`);
   const identity = cacheIdentityFor(map.provenance, map.options);
   const budget = Number(process.env.REDUCE_BUDGET ?? 24);
   if (!Number.isSafeInteger(budget) || budget < 0) throw new Error('REDUCE_BUDGET must be a nonnegative integer');
@@ -228,9 +262,10 @@ export async function main(): Promise<void> {
   const results = priorVerifications(all, selected, identity);
   for (const f of selected) {
     results.push({ ...await reduceFailure(f, map, budget), verificationIdentity: identity, originSourceSha256: f.caseResult.sourceSha256 });
-    saveIndex(map, all, selected, results);
+    saveIndex(map, coverage, all, selected, results);
   }
   if (results.some(r => r.verified !== true)) process.exitCode = 1;
-  if (!selected.length) saveIndex(map, all, selected, results);
+  if (!selected.length) saveIndex(map, coverage, all, selected, results);
+  if (coverage.invalidNodeBaselines.length) process.exitCode = 2;
 }
 if (process.argv[1] && resolve(process.argv[1]) === resolve(import.meta.filename)) await main();

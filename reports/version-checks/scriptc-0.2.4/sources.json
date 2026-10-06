@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "note": "Snapshots preserve exact candidate input bytes; historical command paths in results/raw evidence are unchanged.",
+  "inputs": [
+    {
+      "id": "control",
+      "originalPath": ".work/compiler-control.ts",
+      "snapshot": "reports/version-checks/scriptc-0.2.4/sources/control.ts",
+      "sourceSha256": "a5581225bc55b06b619f056345842fb68348f5ffe10a7f69bd1c98ffcdd9ee45"
+    },
+    {
+      "id": "import-effect",
+      "originalPath": "reports/triage/import-effect.ts",
+      "snapshot": "reports/version-checks/scriptc-0.2.4/sources/import-effect.ts",
+      "sourceSha256": "f3219124242ec8fb5cf966da09906a29b6e85f63392105cd58ef88c61bd68843"
+    },
+    {
+      "id": "succeed",
+      "originalPath": "reports/triage/succeed.ts",
+      "snapshot": "reports/version-checks/scriptc-0.2.4/sources/succeed.ts",
+      "sourceSha256": "3dc1ecf05179e9faeb32e7ce909cd5d6981cf4b68267bfba1f3e8bbe68a8fc55"
+    },
+    {
+      "id": "hash",
+      "originalPath": "reports/upstream/repro/diff-a2274461f4682d2f.ts",
+      "snapshot": "reports/version-checks/scriptc-0.2.4/sources/hash.ts",
+      "sourceSha256": "38888e17d0f52aaf56e433525897b9e1cbb5b12bd0c5b681364d07f1d1c5f553"
+    },
+    {
+      "id": "number",
+      "originalPath": "cases/module-number.ts",
+      "snapshot": "reports/version-checks/scriptc-0.2.4/sources/number.ts",
+      "sourceSha256": "1d6e72bbabd4e88b9119f67e802074e1c25ffcb4f83dc734dfb38df1e8506b4b"
+    }
+  ]
+}

@@ -77,13 +77,15 @@ scriptc build cases/<case>.ts --npm-static=effect --dynamic -o bin/<case>.dynami
 
 All cases strict-typecheck against the published package before classification. The parser recognizes actual pinned-CLI output, respects deferred groups even if a footer says fully static, distinguishes unreached groups, and fails conservatively when coverage is missing or invalid. Both commands' complete raw stdout/stderr, exit codes/signals, deadlines, command arguments and elapsed times are retained under `reports/raw/`. Binaries live in ignored `bin/`; reports include byte size and SHA-256. Native binaries must be rebuilt on your host.
 
-The differential runner executes Node and every built binary with a 30-second deadline. It compares **stdout bytes, stderr bytes, and exit code**, additionally flagging signals, launch errors and hangs. Base64 fields retain invalid UTF-8 exactly; human-readable strings are supplemental. There is no output normalization. Runtime is informative; maximum RSS is null where unsampled and never gates compatibility. Source/binary/provenance changes require remapping rather than reusing stale results.
+The differential runner requires a defined exact expected stdout, empty Node stderr and successful Node execution; invalid baselines have no native finding and exit 2. It executes Node and every built binary with a 30-second deadline. It compares **stdout bytes, stderr bytes, and exit code**, additionally flagging signals, launch errors and hangs. Base64 fields retain invalid UTF-8 exactly; human-readable strings are supplemental. There is no output normalization. Runtime is informative; maximum RSS is null where unsampled and never gates compatibility. Source/binary/provenance changes require remapping rather than reusing stale results.
 
 ## Repro packets
 
 `reports/upstream/index.json` lists one packet per distinct compiler diagnostic/API family, deferred SC/API family, or exact runtime delta. Because `SC3004` is a general compiler-failure wrapper, its diagnostic message is part of the grouping key. Deferred-but-equal packets explicitly say their fence was not demonstrated to execute.
 
 The reducer deletes source lines while preserving strict typechecking, the exact successful Node terminal value, and the compiler/deferred/differential failure predicate. It verifies the final file again at its committed repro path. It never edits Effect or rewrites idioms to fit scriptc. Bounded line reduction is not a claim of global minimality; packets record attempts, exhausted budgets, byte counts and whether verification succeeded. Unverified reductions are visibly marked and cause a nonzero reducer exit.
+
+Index `complete:true` requires a nonpartial map, a nonpartial current differential covering every `(caseId, mode, binarySha256)` with a valid Node baseline, and all discovered signatures verified. Missing reports/rows and representative-only reductions remain explicitly partial; invalid Node baselines are recorded as harness errors and exit 2, never native failure signatures. Bounded compiler-only reductions remain usable without exhaustive runtime evidence.
 
 Packets include versions, host triple, minimal command, complete diagnostic/differential, reduced `.ts`, classification, and the suggested scriptc `tests/` differential corpus destination. Upstream's [contributing notes](https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md) and [test harness notes](https://github.com/vercel-labs/scriptc/blob/v0.2.3/tests/harness/README.md) describe comparing Node with native execution. Issues belong at [Issues · vercel-labs/scriptc](https://github.com/vercel-labs/scriptc/issues).
 
@@ -101,7 +103,7 @@ Packets include versions, host triple, minimal command, complete diagnostic/diff
 | `MAP_RESUME` | off | Reuse verified case checkpoints for interrupted same-toolchain runs |
 | `MAP_CASES` | all | Comma-separated exact case IDs; empty/unknown IDs fail before modifying evidence |
 | `MAP_REPORT` | host/shard default | JSON map destination inside `reports/`; shared by diff and reduce |
-| `DIFF_REPORT` | `reports/differentials.json` | Differential destination |
+| `DIFF_REPORT` | `reports/differentials.json` | Default or isolated `reports/**/*.differentials.json`; map/metadata/raw evidence destinations are rejected before execution |
 
 Default mapping performs a fresh run. Resume is optional and requires unchanged source, compiler/Node/linker executable hashes, linker outputs, and deadlines. Malformed, incomplete or legacy records rerun rather than relying on manually asserted context. Result checkpoints are atomically published; stale binaries and LLVM output are removed before rebuilding. The reducer and differential runner keep runtime deadlines fixed at 30 seconds. All execution is host-local; no cases use sockets, spawn, signals, or a remote service as their program input.
 

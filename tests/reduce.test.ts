@@ -3,8 +3,9 @@ import { test } from 'node:test';
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
-import { fileSha } from '../scripts/common.ts';
-import { ddmin, deferredNames, requestedFailures, retainedPacket } from '../scripts/reduce.ts';
+import { fileSha, run } from '../scripts/common.ts';
+import type { CaseResult, Differential, DiffReport, MapReport } from '../scripts/types.ts';
+import { ddmin, deferredNames, differentialCoverage, reductionComplete, requestedFailures, retainedPacket } from '../scripts/reduce.ts';
 
 test('line reduction preserves original predicate', async () => {
   const result = await ddmin(['noise', 'import', 'extra', 'failure', 'more'], async s => s.includes('import') && s.includes('failure'), 50);
@@ -39,4 +40,30 @@ test('deferred signatures preserve construct names rather than only SC code', ()
   const b = deferredNames(['×1 different unsupported thing SC2020'], 'SC2020');
   assert.notDeepEqual(a, b);
   assert.deepEqual(a, deferredNames(['×1  first   unsupported thing SC2020'], 'SC2020'));
+});
+
+test('reduction completeness requires every exact current binary pair and a nonpartial report', async () => {
+  const node = await run([process.execPath, '-e', 'console.log("stable")']);
+  const c = { id: 'static', expectedStdout: 'stable\n', staticAttempt: { mode: 'static', binary: 'bin/static', binarySha256: 'current-hash' }, dynamicAttempt: null } as unknown as CaseResult;
+  const map = { partial: false, cases: [c] } as MapReport;
+  const row = { caseId: c.id, mode: 'static', binarySha256: 'current-hash', baselineValid: true, node, equal: true } as Differential;
+  const diff = { partial: false, results: [row] } as DiffReport;
+  const complete = (d: DiffReport | null, m = map, verified = 0, total = 0) => reductionComplete(m, differentialCoverage(m, d), total, verified);
+  assert.equal(complete(null), false);
+  assert.equal(complete({ ...diff, results: [] }), false);
+  assert.equal(complete({ ...diff, results: [{ ...row, binarySha256: 'old-hash' }] }), false);
+  assert.equal(complete({ ...diff, results: [{ ...row, mode: 'dynamic' }] }), false);
+  assert.equal(complete({ ...diff, results: [{ ...row, baselineValid: false }] }), false);
+  const warning = { ...node, stderr: 'warning\n', stderrBase64: Buffer.from('warning\n').toString('base64') };
+  assert.equal(complete({ ...diff, results: [{ ...row, node: warning }] }), false, 'do not trust a legacy baselineValid flag');
+  assert.equal(complete({ ...diff, partial: true }), false);
+  assert.equal(complete(diff, { ...map, partial: true }), false);
+  assert.equal(complete(diff, map, 0, 1), false);
+  assert.equal(complete(diff, map, 1, 1), true);
+  assert.equal(complete(diff), true);
+  const twoModes = { ...map, cases: [{ ...c, dynamicAttempt: { ...c.staticAttempt!, mode: 'dynamic' as const, binary: 'bin/static.dynamic' } }] };
+  assert.equal(complete(diff, twoModes), false);
+  assert.equal(complete({ ...diff, results: [row, { ...row, mode: 'dynamic' }] }, twoModes), true);
+  assert.deepEqual(differentialCoverage(map, null).missing, ['static:static:current-hash']);
+  assert.deepEqual(differentialCoverage(map, { ...diff, results: [{ ...row, node: warning }] }).invalidNodeBaselines, ['static:static:current-hash']);
 });

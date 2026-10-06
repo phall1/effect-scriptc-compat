@@ -56,3 +56,28 @@ This is the **shared** `/Users/phall/.pi/agent/workflows/state.sqlite`, not repo
 2. Prefer bounded common-blocker triage and differential checks of the 62 built binaries. Select representative signatures deliberately; the API-family grouping otherwise repeats the same SC3004 reduction many times. Preserve all original evidence and explicitly partial/unverified outcomes.
 3. Only if the exhaustive sweep is explicitly requested again, complete the remaining 81 cases and ensure every built binary has a valid differential baseline. Compiler refusals/mismatches are findings; unreproduced predicates remain explicitly unverified. Resetting shared workflow state still requires approval and does not fix compiler compatibility.
 4. Commit/push only intended completed evidence to the owned repo. `origin/main` advanced independently to `9b46de2` with an older handoff and corpus publication; local `main` was safely fast-forwarded to it without checking it out. It is not an ancestor of this branch. After compiler work, merge that history without losing the freshly generated inventory metadata (`cases/documented-cases.json`, `cases/public-exports.json`) or treating its old HANDOFF.md as current state. Do not switch/check out the older main while compilers read this checkout. No force push, upstream publication, hosted Actions dispatch, paid runners, releases or remote deletion. Clean task-created scratch only after results are preserved.
+
+## Bounded candidate and compiler-fork follow-up
+
+The isolated npm **scriptc 0.2.4** check is retained under [reports/version-checks/scriptc-0.2.4](../reports/version-checks/scriptc-0.2.4/README.md), with complete raw commands/bytes, input snapshots/hashes and official release/npm history. Official `v0.2.4` resolves to `b1c11aac19e3336a70daaf637dd537ad3ddc56b9` (read-only tag confirmation). Only **2/5** inputs were byte-equal: the non-Effect control and Number. Unused Effect import and `Effect.succeed` still reject with SC3004; the reduced Hash program builds but reaches the SC1090 native trap. No baseline compiler/package pin or dependency changed, and this is not new exhaustive coverage.
+
+Compiler implementation belongs to the separate Phux lead **@68**, cwd **`/Users/phall/workspace/scriptc-effect`**, owned fork **https://github.com/phall1/scriptc**, branch **`effect-compat`**. Its goal target is the **404 exact runtime probes** in this harness (build and match successful Node stdout/stderr/exit bytes), **not universal Effect support**. This harness writer does not edit that compiler checkout. The baseline remains deliberately stopped and **partial: 323/404 mapped, 81 pending**, with 62 built binaries and only the saved partial reference comparisons. The fork work does not promote those baseline reports. No broad map/reducer sweep, upstream publication or hosted jobs are implied.
+
+### Cleanup hardening validation and complexity
+
+Reducer indexes now share one completion predicate for intermediate and empty-selection writes. They retain missing exact binary-pair coverage and explicit invalid-baseline harness errors instead of treating zero discovered runtime signatures as complete. Differential baselines reuse the corpus fixture contract; report destinations mirror the map's reserved differential-name contract and are checked before provenance execution or any writes. Existing compiler diagnostics and exact byte evidence are unchanged.
+
+ESLint 10.12.0 `complexity` (classic variant) with the TypeScript parser, run through ignored `.work/complexity.mjs`, measured the touched production functions before/after:
+
+| Function | Before | After |
+| --- | ---: | ---: |
+| differential `main` | 10 | 10 |
+| differential comparison callback → `compareBinary` | 23 | 10 |
+| reducer `signatures` | 31 | 8 |
+| reducer `currentDifferential` | 9 | 5 |
+| reducer `saveIndex` | 3 | 1 |
+| reducer `main` | 8 | 10 |
+
+Extracted: `nativeFinding` (8), `interrupted` (3), `addCompilerFailures` (8), `compilerClassification` (5), `addDeferredFailures` (3), `addDifferentialFailure` (6), `assertCurrentBinary` (8). New contract helpers: `differentialDestination` (7), `validDifferentialBaseline` (2), `differentialCoverage` (10), `reductionComplete` (3). No touched function exceeds 10; the pre-existing reduction predicate/packet renderer was left outside this bounded change.
+
+Validation: focused differential/reducer/fake-compiler suites **10/10 passed**; `pnpm check` passed strict typechecking, **35/35 tests** and **404 fixtures each run twice** with exact stable Node baselines. Actionlint, Node syntax checks, launcher shell syntax and `git diff --check` passed. A read-only comparison confirmed all **358** saved failure signatures (including full compiler evidence) are unchanged; the 13-row partial reference differential still leaves **49/62** current binary pairs missing, so completion remains false. Candidate preservation checks verified all five source snapshots, 13 raw command histories and official/local tag identity. Only generated validation timestamp/duration noise was restored after checking semantic equality. No full native map/reducer sweep, compiler change, upgrade, hosted job or push was performed by this cleanup.

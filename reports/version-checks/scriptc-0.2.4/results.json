@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "scope": "Bounded candidate-version check, not replacement map or compatibility corpus",
+  "baselineProvenance": {
+    "nodeVersion": "v24.19.0",
+    "pnpmVersion": "11.19.0",
+    "effectVersion": "4.0.1",
+    "typescriptVersion": "7.0.2",
+    "scriptcVersion": "0.2.3",
+    "scriptcVersionOutput": "0.2.3",
+    "scriptcPrintedCommit": null,
+    "scriptcReleaseTag": "v0.2.3",
+    "scriptcReleaseCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+    "hostTriple": "aarch64-apple-darwin",
+    "platform": "darwin",
+    "arch": "arm64",
+    "kernel": "27.0.0",
+    "toolchainPins": {
+      "schemaVersion": 1,
+      "node": "24.19.0",
+      "pnpm": "11.19.0",
+      "typescript": "7.0.2",
+      "nodeTypes": "24.10.1",
+      "effect": "4.0.1",
+      "scriptc": {
+        "npmVersion": "0.2.3",
+        "githubReleaseTag": "v0.2.3",
+        "githubCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+        "releaseUrl": "https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3",
+        "contributingUrl": "https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md",
+        "issuesUrl": "https://github.com/vercel-labs/scriptc/issues"
+      },
+      "runner": "node --experimental-strip-types",
+      "hostFirst": true
+    },
+    "lockfileSha256": "4aeef7dcdebdf11c8b9441fac76683ffac02527b6762ee19266e387a4081e6ea",
+    "effectPackageJsonSha256": "569fd709b635b26e9d5851b3cf1958082da47a9778ee6d21cf4f47f3dbc41e6f",
+    "cliSha256": "71a7a4ca6c83f5d1f2a9d160fd81f7d1064efd8707239bd819af38be0f598cd3",
+    "executableHashes": {
+      "node": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+      "scriptc": "71a7a4ca6c83f5d1f2a9d160fd81f7d1064efd8707239bd819af38be0f598cd3",
+      "linker": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+      "systemLinker": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2"
+    },
+    "commands": {
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "-v"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.163,
+        "maxRssKb": null,
+        "stdout": "v24.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "djI0LjE5LjAK",
+        "stderrBase64": ""
+      },
+      "scriptc": {
+        "command": [
+          "scriptc",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 6.723,
+        "maxRssKb": null,
+        "stdout": "0.2.3\n",
+        "stderr": "",
+        "stdoutBase64": "MC4yLjMK",
+        "stderrBase64": ""
+      },
+      "pnpm": {
+        "command": [
+          "pnpm",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 173.191,
+        "maxRssKb": null,
+        "stdout": "11.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "MTEuMTkuMAo=",
+        "stderrBase64": ""
+      },
+      "typescript": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 123.829,
+        "maxRssKb": null,
+        "stdout": "Version 7.0.2\n",
+        "stderr": "",
+        "stdoutBase64": "VmVyc2lvbiA3LjAuMgo=",
+        "stderrBase64": ""
+      },
+      "linker": {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.069,
+        "maxRssKb": null,
+        "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+        "stderr": "",
+        "stdoutBase64": "QXBwbGUgY2xhbmcgdmVyc2lvbiAyMS4wLjAgKGNsYW5nLTIxMDAuMy4zNC4yKQpUYXJnZXQ6IGFybTY0LWFwcGxlLWRhcndpbjI3LjAuMApUaHJlYWQgbW9kZWw6IHBvc2l4Ckluc3RhbGxlZERpcjogL0FwcGxpY2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvRGV2ZWxvcGVyL1Rvb2xjaGFpbnMvWGNvZGVEZWZhdWx0LnhjdG9vbGNoYWluL3Vzci9iaW4K",
+        "stderrBase64": ""
+      },
+      "systemLinker": {
+        "command": [
+          "ld",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.335,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "ld: unknown options: --version \n",
+        "stdoutBase64": "",
+        "stderrBase64": "bGQ6IHVua25vd24gb3B0aW9uczogLS12ZXJzaW9uIAo="
+      }
+    }
+  },
+  "candidate": {
+    "version": {
+      "command": [
+        "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+        "--version"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 5.697,
+      "maxRssKb": null,
+      "stdout": "0.2.4\n",
+      "stderr": "",
+      "stdoutBase64": "MC4yLjQK",
+      "stderrBase64": ""
+    },
+    "executableSha256": "8cacd1bd345501ac87a85622ead6aeffa2bb242ee77ba343d91d06982ed36a9d",
+    "releaseTag": "v0.2.4",
+    "releaseCommit": "b1c11aac19e3336a70daaf637dd537ad3ddc56b9",
+    "registryIntegrity": "sha512-ebNuUABCue0USfVx2qgyNeRoF5a0AYXURCb0ronV3tMq9JqqDh9MioZrcvfeJYN2G9YCUFhaRV3Ao3hX/2KNJA=="
+  },
+  "results": [
+    {
+      "id": "control",
+      "file": ".work/compiler-control.ts",
+      "sourceSha256": "a5581225bc55b06b619f056345842fb68348f5ffe10a7f69bd1c98ffcdd9ee45",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          ".work/compiler-control.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 46.077,
+        "maxRssKb": null,
+        "stdout": "scriptc-control:42\n",
+        "stderr": "",
+        "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+        "stderrBase64": ""
+      },
+      "build": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+          "build",
+          ".work/compiler-control.ts",
+          "--npm-static=effect",
+          "-o",
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-control"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 885.844,
+        "maxRssKb": null,
+        "stdout": "/Users/phall/workspace/effect-scriptc-compat/.work/new-control\n",
+        "stderr": "",
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvLndvcmsvbmV3LWNvbnRyb2wK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-control"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 32.529,
+        "maxRssKb": null,
+        "stdout": "scriptc-control:42\n",
+        "stderr": "",
+        "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+        "stderrBase64": ""
+      },
+      "equal": true
+    },
+    {
+      "id": "import-effect",
+      "file": "reports/triage/import-effect.ts",
+      "sourceSha256": "f3219124242ec8fb5cf966da09906a29b6e85f63392105cd58ef88c61bd68843",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "reports/triage/import-effect.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 88.483,
+        "maxRssKb": null,
+        "stdout": "imported\n",
+        "stderr": "",
+        "stdoutBase64": "aW1wb3J0ZWQK",
+        "stderrBase64": ""
+      },
+      "build": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+          "build",
+          "reports/triage/import-effect.ts",
+          "--npm-static=effect",
+          "-o",
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-import-effect"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 3617.506,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "/Users/phall/workspace/effect-scriptc-compat/reports/triage/import-effect.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+        "stdoutBase64": "",
+        "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvcmVwb3J0cy90cmlhZ2UvaW1wb3J0LWVmZmVjdC50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+      },
+      "native": null,
+      "equal": null
+    },
+    {
+      "id": "succeed",
+      "file": "reports/triage/succeed.ts",
+      "sourceSha256": "3dc1ecf05179e9faeb32e7ce909cd5d6981cf4b68267bfba1f3e8bbe68a8fc55",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "reports/triage/succeed.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 73.584,
+        "maxRssKb": null,
+        "stdout": "42\n",
+        "stderr": "",
+        "stdoutBase64": "NDIK",
+        "stderrBase64": ""
+      },
+      "build": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+          "build",
+          "reports/triage/succeed.ts",
+          "--npm-static=effect",
+          "-o",
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-succeed"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 3074.57,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "/Users/phall/workspace/effect-scriptc-compat/reports/triage/succeed.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+        "stdoutBase64": "",
+        "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvcmVwb3J0cy90cmlhZ2Uvc3VjY2VlZC50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+      },
+      "native": null,
+      "equal": null
+    },
+    {
+      "id": "hash",
+      "file": "reports/upstream/repro/diff-a2274461f4682d2f.ts",
+      "sourceSha256": "38888e17d0f52aaf56e433525897b9e1cbb5b12bd0c5b681364d07f1d1c5f553",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "reports/upstream/repro/diff-a2274461f4682d2f.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 49.272,
+        "maxRssKb": null,
+        "stdout": "[true,true,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsdHJ1ZSx0cnVlXQo=",
+        "stderrBase64": ""
+      },
+      "build": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+          "build",
+          "reports/upstream/repro/diff-a2274461f4682d2f.ts",
+          "--npm-static=effect",
+          "-o",
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-hash"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 558.993,
+        "maxRssKb": null,
+        "stdout": "/Users/phall/workspace/effect-scriptc-compat/.work/new-hash\n",
+        "stderr": "",
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvLndvcmsvbmV3LWhhc2gK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-hash"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 62.21,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught Error: 'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[])) [SC1090 at /Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103]\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6ICdpbicgb24gJ251bWJlcltdJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSBbU0MxMDkwIGF0IC9Vc2Vycy9waGFsbC93b3Jrc3BhY2UvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L0hhc2guanM6MTAzXQo="
+      },
+      "equal": false
+    },
+    {
+      "id": "number",
+      "file": "cases/module-number.ts",
+      "sourceSha256": "1d6e72bbabd4e88b9119f67e802074e1c25ffcb4f83dc734dfb38df1e8506b4b",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/module-number.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 55.573,
+        "maxRssKb": null,
+        "stdout": "number:42\n",
+        "stderr": "",
+        "stdoutBase64": "bnVtYmVyOjQyCg==",
+        "stderrBase64": ""
+      },
+      "build": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+          "build",
+          "cases/module-number.ts",
+          "--npm-static=effect",
+          "-o",
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-number"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 2639.17,
+        "maxRssKb": null,
+        "stdout": "/Users/phall/workspace/effect-scriptc-compat/.work/new-number\n",
+        "stderr": "",
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvLndvcmsvbmV3LW51bWJlcgo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/.work/new-number"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 86.314,
+        "maxRssKb": null,
+        "stdout": "number:42\n",
+        "stderr": "",
+        "stdoutBase64": "bnVtYmVyOjQyCg==",
+        "stderrBase64": ""
+      },
+      "equal": true
+    }
+  ]
+}

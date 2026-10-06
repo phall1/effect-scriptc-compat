@@ -23,7 +23,9 @@ The original Linux evidence is preserved under `reports/imported/linux-checkpoin
 
 No dependency or compiler version was upgraded. Effect and scriptc remain unmodified. No upstream issues/PRs, hosted Actions dispatches or billing changes are authorized by this recovery.
 
-## Continue on this host
+## Historical / conditional broad-map recipe
+
+The replacement worker is **deliberately stopped**, not live. The baseline is partial at **323/404**; do not run this broad recipe unless an exhaustive continuation is explicitly requested. See [the active handoff](handoff.md) for the bounded compiler-fork direction and current state.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -51,7 +53,7 @@ The completion pass caught a shared terminal worker inheriting Node 24.21.0 and 
 
 Preserved partial observations are separate in `reports/imported/macos-node24.21-nix-clang/` (44 measured cases, seven equal differentials) and `reports/imported/macos-node24.19-nix-sdk/` (18 measured cases, two equal differentials). Each differential used its exact recorded context. They are not complete or canonical reference runs.
 
-The replacement worker uses a clean environment, explicit reference Node path and Xcode developer directory. Its non-Effect control passed, and recorded Node/Clang/executable/output provenance matched the parent reference before continuing. Live continuation details are in [the active handoff](handoff.md). The post-correction check again passed all 31 tests and 404 repeated Node baselines. No harness/corpus/dependency changes were made while compilers ran.
+The replacement worker used a clean environment, explicit reference Node path and Xcode developer directory. Its non-Effect control passed, and recorded Node/Clang/executable/output provenance matched the parent reference before continuation. That worker was subsequently deliberately stopped; it is not live. Current stopped-state and bounded next-work details are in [the active handoff](handoff.md). The post-correction check again passed all 31 tests and 404 repeated Node baselines. No harness/corpus/dependency changes were made while compilers ran.
 
 ## Complexity evidence
 

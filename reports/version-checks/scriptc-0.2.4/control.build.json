@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/.work/compiler-0.2.4/node_modules/.bin/scriptc",
+    "build",
+    ".work/compiler-control.ts",
+    "--npm-static=effect",
+    "-o",
+    "/Users/phall/workspace/effect-scriptc-compat/.work/new-control"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 885.844,
+  "maxRssKb": null,
+  "stdout": "/Users/phall/workspace/effect-scriptc-compat/.work/new-control\n",
+  "stderr": "",
+  "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvLndvcmsvbmV3LWNvbnRyb2wK",
+  "stderrBase64": ""
+}

@@ -1,0 +1,6 @@
+
+added 2 packages in 2s
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   scriptc@0.2.4 (postinstall: node scripts/install-native.mjs)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
