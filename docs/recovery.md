@@ -34,7 +34,7 @@ pnpm diff
 pnpm reduce
 ```
 
-`pnpm checkpoint` is safe during a long map. After interruption, `MAP_RESUME=1 MAP_JOBS=4 pnpm map` reruns missing, malformed or stale records and reuses valid same-toolchain observations. One map writer per checkout; use independent checkouts for concurrent hosts. `pnpm diff` exit 1 means observed native mismatches, not harness failure; exit 2 means invalid Node baselines. Both retain evidence. Reports, not process presence or a green build, are the acceptance authority.
+`pnpm checkpoint` is safe during a long map. After interruption, `MAP_RESUME=1 MAP_JOBS=4 pnpm map` reruns missing, malformed or stale records and reuses valid same-toolchain observations. One map writer per checkout; use independent checkouts for concurrent hosts. A successfully completed `pnpm diff` report with exit 1 means observed native mismatches; exit 2 means invalid Node baselines. Both retain evidence. An unhandled harness exception can also exit 1 without writing a new report; do not accept that as a differential finding or reuse an older report. Reports, not process presence or a green build, are the acceptance authority.
 
 For a selected smoke run, use an isolated report destination in every phase:
 
@@ -44,6 +44,14 @@ MAP_REPORT=reports/shards/smoke.json DIFF_REPORT=reports/shards/smoke.differenti
 ```
 
 The verified macOS arm64 smoke found `module-number` deferred but byte-equal to Node, and `effect-succeed` rejected with retained compiler diagnostics. Neither observation establishes full Effect compatibility. Full mapping, differentials for every built binary and independently verified repro predicates are still required. Smoke evidence (including the verified Number packet) is archived independently in `reports/imported/macos-smoke/` so full-host runs cannot overwrite its raw files.
+
+## Shared-worker environment drift
+
+The completion pass caught a shared terminal worker inheriting Node 24.21.0 and Nix Clang instead of the reference Node 24.19.0. Selecting `/usr/bin/clang` was not sufficient: inherited DEVELOPER_DIR/SDKROOT redirected that dispatcher to the Nix SDK. The strengthened provenance checks correctly refused both mismatched contexts; no override was used.
+
+Preserved partial observations are separate in `reports/imported/macos-node24.21-nix-clang/` (44 measured cases, seven equal differentials) and `reports/imported/macos-node24.19-nix-sdk/` (18 measured cases, two equal differentials). Each differential used its exact recorded context. They are not complete or canonical reference runs.
+
+The replacement worker uses a clean environment, explicit reference Node path and Xcode developer directory. Its non-Effect control passed, and recorded Node/Clang/executable/output provenance matched the parent reference before continuing. Live continuation details are in [the active handoff](handoff.md). The post-correction check again passed all 31 tests and 404 repeated Node baselines. No harness/corpus/dependency changes were made while compilers ran.
 
 ## Complexity evidence
 

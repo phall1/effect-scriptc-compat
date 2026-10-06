@@ -21,6 +21,8 @@ Host-first, reproducible probes for the published **effect@4.0.1** package and t
 
 Node must be at least 24 for scriptc. `.node-version` and `.nvmrc` pin the reference run. Every map records the actual Node, TypeScript, pnpm, scriptc and native-linker outputs, release tag/commit, host, dependency lockfile and binary hashes. The CLI prints `0.2.3`, without a commit; the independently verified GitHub tag commit is recorded separately. No local Effect checkout or compiler checkout is used.
 
+Shared terminal workers inherit their server's environment; changing cwd does not activate `.node-version` or clear another checkout's Nix shell. Explicitly select the reference Node and preflight the recorded control/provenance. On macOS, even `/usr/bin/clang` is a dispatcher: inherited `DEVELOPER_DIR`/`SDKROOT` can select another toolchain. Use a clean environment and the intended developer directory; never relax the stale-context guard to make a comparison pass.
+
 A supported Clang toolchain and native system libraries must be installed. On Linux, install your distribution's Clang package; on macOS arm64, install the host Command Line Tools. `SCRIPTC_LINKER=/absolute/path/to/clang` is scriptc's supported override. The harness builds and differentially checks a non-Effect control before the map, so missing linkers do not masquerade as Effect findings.
 
 ```sh
@@ -35,7 +37,7 @@ pnpm reduce
 
 `pnpm check` includes strict typechecking, harness/orchestration regressions, and two Node executions of all 404 ready fixtures against exact expected stdout, empty stderr and successful exit. `pnpm validate` runs that corpus baseline check independently.
 
-`pnpm map` regenerates `reports/coverage-map.json` and `.md` from the committed, source-derived corpus. `pnpm generate` re-reads the installed export map and declaration files and regenerates the corpus/manifest. `pnpm diff` regenerates `reports/differentials.json`; exit 1 means a real mismatch, exit 2 means an invalid Node fixture baseline. `pnpm reduce` creates verified local repros and issue packets; it never opens issues or PRs. Mapping reports refusals as data and exits zero unless the harness itself is invalid.
+`pnpm map` regenerates `reports/coverage-map.json` and `.md` from the committed, source-derived corpus. `pnpm generate` re-reads the installed export map and declaration files and regenerates the corpus/manifest. `pnpm diff` regenerates `reports/differentials.json`; in a successfully generated report, exit 1 means a real mismatch and exit 2 means an invalid Node fixture baseline. An unhandled harness exception can also exit 1 without publishing a fresh report; that is not a native finding. `pnpm reduce` creates verified local repros and issue packets; it never opens issues or PRs. Mapping reports refusals as data and exits zero unless the harness itself is invalid.
 
 ## Three execution tiers, plus compile-time rejection
 
