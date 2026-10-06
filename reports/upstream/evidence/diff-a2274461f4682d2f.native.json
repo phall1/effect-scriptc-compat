@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/bin/repro-diff-a2274461f4682d2f"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 32.129,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "Uncaught Error: 'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[])) [SC1090 at /Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103]\n",
+  "stdoutBase64": "",
+  "stderrBase64": "VW5jYXVnaHQgRXJyb3I6ICdpbicgb24gJ251bWJlcltdJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSBbU0MxMDkwIGF0IC9Vc2Vycy9waGFsbC93b3Jrc3BhY2UvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L0hhc2guanM6MTAzXQo="
+}

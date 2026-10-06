@@ -1,0 +1,22 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:15:3 - error SC1090: assignment to non-variables are not supported yet
+
+  14 | function MyClass(this: any, name: string) {
+  15 |   this.name = name
+     |   ^~~~~~~~~
+  16 | }
+
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:17:1 - error SC1090: assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet
+
+  16 | }
+  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)
+     | ^~~~~~~~~~~~~~~~~
+  18 | MyClass.prototype.constructor = MyClass
+
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:18:1 - error SC1090: assignment to non-variables are not supported yet
+
+  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)
+  18 | MyClass.prototype.constructor = MyClass
+     | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  19 | console.log(JSON.stringify(__compatObserved))
+
+3 errors.

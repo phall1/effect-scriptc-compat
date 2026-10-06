@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-combiner.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 736.096,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-combiner.ts\n\n  statements analyzed   8\n  compile statically    8  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWNvbWJpbmVyLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA4CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDggICgxMDAlKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGZ1bGx5IHN0YXRpYyDigJQgdGhpcyBwcm9ncmFtIGhhcyBubyBkeW5hbWljIHJlbWFpbmRlci4K",
+  "stderrBase64": ""
+}

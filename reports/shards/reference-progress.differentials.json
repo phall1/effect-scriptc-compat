@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "partial": true,
+  "generatedAt": "2026-10-06T01:00:43.141Z",
+  "provenance": {
+    "nodeVersion": "v24.19.0",
+    "pnpmVersion": "11.19.0",
+    "effectVersion": "4.0.1",
+    "typescriptVersion": "7.0.2",
+    "scriptcVersion": "0.2.3",
+    "scriptcVersionOutput": "0.2.3",
+    "scriptcPrintedCommit": null,
+    "scriptcReleaseTag": "v0.2.3",
+    "scriptcReleaseCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+    "hostTriple": "aarch64-apple-darwin",
+    "platform": "darwin",
+    "arch": "arm64",
+    "kernel": "27.0.0",
+    "toolchainPins": {
+      "schemaVersion": 1,
+      "node": "24.19.0",
+      "pnpm": "11.19.0",
+      "typescript": "7.0.2",
+      "nodeTypes": "24.10.1",
+      "effect": "4.0.1",
+      "scriptc": {
+        "npmVersion": "0.2.3",
+        "githubReleaseTag": "v0.2.3",
+        "githubCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+        "releaseUrl": "https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3",
+        "contributingUrl": "https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md",
+        "issuesUrl": "https://github.com/vercel-labs/scriptc/issues"
+      },
+      "runner": "node --experimental-strip-types",
+      "hostFirst": true
+    },
+    "lockfileSha256": "4aeef7dcdebdf11c8b9441fac76683ffac02527b6762ee19266e387a4081e6ea",
+    "effectPackageJsonSha256": "569fd709b635b26e9d5851b3cf1958082da47a9778ee6d21cf4f47f3dbc41e6f",
+    "cliSha256": "71a7a4ca6c83f5d1f2a9d160fd81f7d1064efd8707239bd819af38be0f598cd3",
+    "executableHashes": {
+      "node": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+      "scriptc": "71a7a4ca6c83f5d1f2a9d160fd81f7d1064efd8707239bd819af38be0f598cd3",
+      "linker": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+      "systemLinker": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2"
+    },
+    "commands": {
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "-v"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 17.362,
+        "maxRssKb": null,
+        "stdout": "v24.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "djI0LjE5LjAK",
+        "stderrBase64": ""
+      },
+      "scriptc": {
+        "command": [
+          "scriptc",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 9.093,
+        "maxRssKb": null,
+        "stdout": "0.2.3\n",
+        "stderr": "",
+        "stdoutBase64": "MC4yLjMK",
+        "stderrBase64": ""
+      },
+      "pnpm": {
+        "command": [
+          "pnpm",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 208.535,
+        "maxRssKb": null,
+        "stdout": "11.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "MTEuMTkuMAo=",
+        "stderrBase64": ""
+      },
+      "typescript": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 54.861,
+        "maxRssKb": null,
+        "stdout": "Version 7.0.2\n",
+        "stderr": "",
+        "stdoutBase64": "VmVyc2lvbiA3LjAuMgo=",
+        "stderrBase64": ""
+      },
+      "linker": {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 15.513,
+        "maxRssKb": null,
+        "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+        "stderr": "",
+        "stdoutBase64": "QXBwbGUgY2xhbmcgdmVyc2lvbiAyMS4wLjAgKGNsYW5nLTIxMDAuMy4zNC4yKQpUYXJnZXQ6IGFybTY0LWFwcGxlLWRhcndpbjI3LjAuMApUaHJlYWQgbW9kZWw6IHBvc2l4Ckluc3RhbGxlZERpcjogL0FwcGxpY2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvRGV2ZWxvcGVyL1Rvb2xjaGFpbnMvWGNvZGVEZWZhdWx0LnhjdG9vbGNoYWluL3Vzci9iaW4K",
+        "stderrBase64": ""
+      },
+      "systemLinker": {
+        "command": [
+          "ld",
+          "--version"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 16.478,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "ld: unknown options: --version \n",
+        "stdoutBase64": "",
+        "stderrBase64": "bGQ6IHVua25vd24gb3B0aW9uczogLS12ZXJzaW9uIAo="
+      }
+    }
+  },
+  "timeoutMs": 30000,
+  "results": [
+    {
+      "caseId": "chunk-round-trip",
+      "module": "Chunk",
+      "family": "Chunk",
+      "entrypoint": "effect",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/chunk-round-trip",
+      "binarySha256": "4a7d74f3d2d71ba448aaaabbe69c9248d6f7bdf57758158d844a7cefecc07e16",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/chunk-round-trip.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 162.716,
+        "maxRssKb": null,
+        "stdout": "chunk:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "Y2h1bms6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/chunk-round-trip"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 59.194,
+        "maxRssKb": null,
+        "stdout": "chunk:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "Y2h1bms6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-bigdecimal",
+      "module": "BigDecimal",
+      "family": "BigDecimal",
+      "entrypoint": "effect/BigDecimal",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-bigdecimal",
+      "binarySha256": "5e36377464c4f21ede40a50c954627589ce14cd81a60797295a165b5cf761d96",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-bigdecimal.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 65.973,
+        "maxRssKb": null,
+        "stdout": "[false,true,false,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2VdCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-bigdecimal"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 49.686,
+        "maxRssKb": null,
+        "stdout": "[false,true,false,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2VdCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-combiner",
+      "module": "Combiner",
+      "family": "Combiner",
+      "entrypoint": "effect/Combiner",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-combiner",
+      "binarySha256": "a4db2c647d5e1c1b14f0fc91d76dd7702a023d76b8f30c31731b5580913157ff",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-combiner.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 59.107,
+        "maxRssKb": null,
+        "stdout": "[7]\n",
+        "stderr": "",
+        "stdoutBase64": "WzddCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-combiner"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 47.594,
+        "maxRssKb": null,
+        "stdout": "[7]\n",
+        "stderr": "",
+        "stdoutBase64": "WzddCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-duration",
+      "module": "Duration",
+      "family": "Duration",
+      "entrypoint": "effect/Duration",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-duration",
+      "binarySha256": "06a51e72b42c95395fe1f62f1bf86840e597b0f10e694345816d6cd6c3aa6bd3",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-duration.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 65.906,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiRHVyYXRpb24iLCJfdGFnIjoiTWlsbGlzIiwibWlsbGlzIjozMDAwMH0seyJfaWQiOiJEdXJhdGlvbiIsIl90YWciOiJNaWxsaXMiLCJtaWxsaXMiOjg2NDAwMDAwfSx7Il9pZCI6IkR1cmF0aW9uIiwiX3RhZyI6Ik5hbm9zIiwibmFub3MiOiIxMDAwMDAwNTAwIn1dCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-duration"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 68.741,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiRHVyYXRpb24iLCJfdGFnIjoiTWlsbGlzIiwibWlsbGlzIjozMDAwMH0seyJfaWQiOiJEdXJhdGlvbiIsIl90YWciOiJNaWxsaXMiLCJtaWxsaXMiOjg2NDAwMDAwfSx7Il9pZCI6IkR1cmF0aW9uIiwiX3RhZyI6Ik5hbm9zIiwibmFub3MiOiIxMDAwMDAwNTAwIn1dCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-equivalence",
+      "module": "Equivalence",
+      "family": "Equivalence",
+      "entrypoint": "effect/Equivalence",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-equivalence",
+      "binarySha256": "9a8f83ba9889ce8e854d58d06b1e00e4f325e5c566614b8e9e0a982173056899",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-equivalence.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 58.305,
+        "maxRssKb": null,
+        "stdout": "[true,false,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsdHJ1ZV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-equivalence"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 55.708,
+        "maxRssKb": null,
+        "stdout": "[true,false,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsdHJ1ZV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-filter",
+      "module": "Filter",
+      "family": "Filter",
+      "entrypoint": "effect/Filter",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-filter",
+      "binarySha256": "211345dde0268b99e6828a5a610ea400fc4b956500772e7801033aa15be80ac1",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-filter.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 164.563,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiUmVzdWx0IiwiX3RhZyI6IlN1Y2Nlc3MiLCJ2YWx1ZSI6MX0seyJfaWQiOiJSZXN1bHQiLCJfdGFnIjoiU3VjY2VzcyIsInZhbHVlIjoiT0sifV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-filter"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 59.27,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiUmVzdWx0IiwiX3RhZyI6IlN1Y2Nlc3MiLCJ2YWx1ZSI6MX0seyJfaWQiOiJSZXN1bHQiLCJfdGFnIjoiU3VjY2VzcyIsInZhbHVlIjoiT0sifV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-formatter",
+      "module": "Formatter",
+      "family": "Formatter",
+      "entrypoint": "effect/Formatter",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-formatter",
+      "binarySha256": "467488631f497787c9d08bfc2505d62efbe1ad6753706e9df13184e329971f9b",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-formatter.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 59.38,
+        "maxRssKb": null,
+        "stdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJ7XCJhXCI6MSxcImJcIjpbMiwzXX0iXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-formatter"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 61.235,
+        "maxRssKb": null,
+        "stdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJ7XCJhXCI6MSxcImJcIjpbMiwzXX0iXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-function",
+      "module": "Function",
+      "family": "Function",
+      "entrypoint": "effect/Function",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-function",
+      "binarySha256": "955f066b5ed6ed2e9e045c7696fa92895ffb4346fc0a9c9e6a587c4bbe9b04cd",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-function.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 190.106,
+        "maxRssKb": null,
+        "stdout": "[5,5]\n",
+        "stderr": "",
+        "stdoutBase64": "WzUsNV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-function"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 58.253,
+        "maxRssKb": null,
+        "stdout": "[5,5]\n",
+        "stderr": "",
+        "stdoutBase64": "WzUsNV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-hash",
+      "module": "Hash",
+      "family": "Hash",
+      "entrypoint": "effect/Hash",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-hash",
+      "binarySha256": "c55e39aa2562f9048ad359fbc294cc367cf487fdcc4e45c78ce593151bdd7faf",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-hash.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 69.777,
+        "maxRssKb": null,
+        "stdout": "[true,true,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsdHJ1ZSx0cnVlXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-hash"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 95.726,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught Error: 'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[])) [SC1090 at /Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103]\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6ICdpbicgb24gJ251bWJlcltdJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSBbU0MxMDkwIGF0IC9Vc2Vycy9waGFsbC93b3Jrc3BhY2UvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L0hhc2guanM6MTAzXQo="
+      },
+      "equal": false,
+      "differences": [
+        "stdout",
+        "stderr",
+        "exitCode"
+      ],
+      "finding": "deferred runtime trap",
+      "signature": "a2274461f4682d2f",
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-iterable",
+      "module": "Iterable",
+      "family": "Iterable",
+      "entrypoint": "effect/Iterable",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-iterable",
+      "binarySha256": "0355d7be91d0298a0ce2bbc3ef917119f34963205bb8fc20e431636e410df70a",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-iterable.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 73.921,
+        "maxRssKb": null,
+        "stdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLDIsNCw2LDhdLFswLDEsNCw5XSxbMCwxLDIsMyw0LDUsNiw3LDgsOV1dCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-iterable"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 95.742,
+        "maxRssKb": null,
+        "stdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLDIsNCw2LDhdLFswLDEsNCw5XSxbMCwxLDIsMyw0LDUsNiw3LDgsOV1dCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonpatch",
+      "module": "JsonPatch",
+      "family": "JsonPatch",
+      "entrypoint": "effect/JsonPatch",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonpatch",
+      "binarySha256": "1a43a219358849e4b90783e5f66bfc94a5179bcda6368228b8b739dda574fb81",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonpatch.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 60.359,
+        "maxRssKb": null,
+        "stdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siaXRlbXMiOlsiYXBwbGUiXSwiY291bnQiOjV9XQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-jsonpatch"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 47.092,
+        "maxRssKb": null,
+        "stdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siaXRlbXMiOlsiYXBwbGUiXSwiY291bnQiOjV9XQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonpointer",
+      "module": "JsonPointer",
+      "family": "JsonPointer",
+      "entrypoint": "effect/JsonPointer",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonpointer",
+      "binarySha256": "519d1d7e5ca02f0ebbac02ccc438ada20af23657d9b4a9bfb8cda2f837add537",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonpointer.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 60.347,
+        "maxRssKb": null,
+        "stdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhfjFiIiwiY34wZCIsInBhdGh+MXRvfjBrZXkiXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-jsonpointer"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 46.717,
+        "maxRssKb": null,
+        "stdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhfjFiIiwiY34wZCIsInBhdGh+MXRvfjBrZXkiXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonschema",
+      "module": "JsonSchema",
+      "family": "JsonSchema",
+      "entrypoint": "effect/JsonSchema",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonschema",
+      "binarySha256": "69d2e9b84cfa499016a7a4b03076dbe8acefc33a77c8ff598abccb9d3cde14c5",
+      "node": {
+        "command": [
+          "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonschema.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 64.695,
+        "maxRssKb": null,
+        "stdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJkcmFmdC0yMDIwLTEyIix7InR5cGUiOiJzdHJpbmcifSx7IlRyaW1tZWQiOnsidHlwZSI6InN0cmluZyIsIm1pbkxlbmd0aCI6MX19XQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/Users/phall/workspace/effect-scriptc-compat/bin/documented-jsonschema"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 45.81,
+        "maxRssKb": null,
+        "stdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJkcmFmdC0yMDIwLTEyIix7InR5cGUiOiJzdHJpbmcifSx7IlRyaW1tZWQiOnsidHlwZSI6InN0cmluZyIsIm1pbkxlbmd0aCI6MX19XQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    }
+  ],
+  "summary": {
+    "binaries": 13,
+    "equal": 12,
+    "mismatched": 1,
+    "invalidNodeBaselines": 0,
+    "hangs": 0
+  }
+}

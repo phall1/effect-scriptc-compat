@@ -1,0 +1,196 @@
+{
+  "id": "documented-hash",
+  "module": "Hash",
+  "entrypoint": "effect/Hash",
+  "family": "Hash",
+  "file": "cases/documented-hash.ts",
+  "status": "ready",
+  "api": [
+    "Hash.hash"
+  ],
+  "expectedStdout": "[true,true,true]\n",
+  "declaration": "node_modules/effect/dist/Hash.d.ts",
+  "declarationSha256": "187c6da3cf1e02c4585108043e31f7b300f6858c860448aa7399c4d6d4d23b94",
+  "exampleIndex": 1,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "71f324ff54e4757f3a3e3cdae65fa285410b59673ea65c5c7658bf2e6dafec9f",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-hash.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 448.022,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-hash.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2069.343,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-hash.ts\n\n  statements analyzed   151\n  compile statically    148  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   18 sites (JS statements that throw their fence if executed)\n      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                              SC1043\n      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                            SC1043\n      ×2  'number[].toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                  SC2020\n      ×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number))                                                                                                                                                                                                    SC1090\n      ×1  'in' on 'number' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number))      SC1090\n      ×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                            SC1090\n      ×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))      SC1090\n      ×1  'number[]' values where 'number' is expected is not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                        SC1090\n      ×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number[]))                                                                                                                                                                                                  SC1090\n      ×1  'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[]))  SC1090\n      ×1  'number.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                       SC2020\n      ×1  'number.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                   SC2020\n      ×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                      SC2020\n      ×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                       SC2020\n      ×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n      ×1  'number[].getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                   SC2020\n      ×1  'number[].toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                               SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWhhc2gudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDE1MQogIGNvbXBpbGUgc3RhdGljYWxseSAgICAxNDggICg5OCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDE4IHNpdGVzIChKUyBzdGF0ZW1lbnRzIHRoYXQgdGhyb3cgdGhlaXIgZmVuY2UgaWYgZXhlY3V0ZWQpCiAgICAgIMOXMSAgY29tcGFyaW5nIG5vbi1udW1iZXIsIG5vbi1zdHJpbmcgdmFsdWVzIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnbnVtYmVyJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwNDMKICAgICAgw5cxICBjb21wYXJpbmcgbm9uLW51bWJlciwgbm9uLXN0cmluZyB2YWx1ZXMgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdudW1iZXInIHdpdGggKG51bWJlcltdKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA0MwogICAgICDDlzIgICdudW1iZXJbXS50b1N0cmluZycgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChudW1iZXJbXSkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgbWV0aG9kIGNhbGxzIGxpa2UgJ3N0ci5jaGFyQ29kZUF0JyBpcyBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnc3RyaW5nJyB3aXRoIChudW1iZXIpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKICAgICAgw5cxICAnaW4nIG9uICdudW1iZXInIHJlY2VpdmVycyAob25seSBwcm9jZXNzLmVudiwgRXJyb3IgaW5zdGFuY2VzLCByZWNvcmQtdHlwZWQgdmFsdWVzLCBhbmQgdW5pb25zIG9mIGZpeGVkIHJlY29yZCBzaGFwZXMgYW5zd2VyOyBuYXJyb3cgZmlyc3Q6IGNoZWNrIGEgZGlzY3JpbWluYW50IGZpZWxkLCBvciBjb21wYXJlIHdpdGggJyE9PSB1bmRlZmluZWQnLychPT0gbnVsbCcgZm9yIHVuaXQgYXJtcykgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChudW1iZXIpKSAgICAgIFNDMTA5MAogICAgICDDlzEgICdzdHJpbmcnIHZhbHVlcyB3aGVyZSAnbnVtYmVyJyBpcyBleHBlY3RlZCBpcyBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnbnVtYmVyJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luJyBvbiAnc3RyaW5nJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICBTQzEwOTAKICAgICAgw5cxICAnbnVtYmVyW10nIHZhbHVlcyB3aGVyZSAnbnVtYmVyJyBpcyBleHBlY3RlZCBpcyBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnbnVtYmVyJyB3aXRoIChudW1iZXJbXSkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzEgIG1ldGhvZCBjYWxscyBsaWtlICdzdHIuY2hhckNvZGVBdCcgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ3N0cmluZycgd2l0aCAobnVtYmVyW10pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luJyBvbiAnbnVtYmVyW10nIHJlY2VpdmVycyAob25seSBwcm9jZXNzLmVudiwgRXJyb3IgaW5zdGFuY2VzLCByZWNvcmQtdHlwZWQgdmFsdWVzLCBhbmQgdW5pb25zIG9mIGZpeGVkIHJlY29yZCBzaGFwZXMgYW5zd2VyOyBuYXJyb3cgZmlyc3Q6IGNoZWNrIGEgZGlzY3JpbWluYW50IGZpZWxkLCBvciBjb21wYXJlIHdpdGggJyE9PSB1bmRlZmluZWQnLychPT0gbnVsbCcgZm9yIHVuaXQgYXJtcykgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChudW1iZXJbXSkpICBTQzEwOTAKICAgICAgw5cxICAnbnVtYmVyLmdldFRpbWUnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICdudW1iZXIudG9JU09TdHJpbmcnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgJ3N0cmluZy50b1N0cmluZycgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAnc3RyaW5nLmdldFRpbWUnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICdzdHJpbmcudG9JU09TdHJpbmcnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgJ251bWJlcltdLmdldFRpbWUnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAnbnVtYmVyW10udG9JU09TdHJpbmcnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAoK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 151,
+        "static": 148,
+        "dynamic": 0,
+        "unsupported": 3
+      },
+      "deferredSiteCount": 18,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1043",
+          "message": "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                              SC1043\n×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                            SC1043",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2020",
+          "message": "×2  'number[].toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                  SC2020\n×1  'number.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                       SC2020\n×1  'number.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                   SC2020\n×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                      SC2020\n×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                       SC2020\n×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n×1  'number[].getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                   SC2020\n×1  'number[].toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                               SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:86"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number))                                                                                                                                                                                                    SC1090\n×1  'in' on 'number' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number))      SC1090\n×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                            SC1090\n×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))      SC1090\n×1  'number[]' values where 'number' is expected is not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                        SC1090\n×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number[]))                                                                                                                                                                                                  SC1090\n×1  'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[]))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:329",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                              SC1043",
+        "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                            SC1043",
+        "×2  'number[].toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                  SC2020",
+        "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number))                                                                                                                                                                                                    SC1090",
+        "×1  'in' on 'number' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number))      SC1090",
+        "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                            SC1090",
+        "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))      SC1090",
+        "×1  'number[]' values where 'number' is expected is not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                        SC1090",
+        "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number[]))                                                                                                                                                                                                  SC1090",
+        "×1  'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[]))  SC1090",
+        "×1  'number.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                       SC2020",
+        "×1  'number.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                   SC2020",
+        "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                      SC2020",
+        "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                       SC2020",
+        "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+        "×1  'number[].getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                   SC2020",
+        "×1  'number[].toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                               SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   18 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-hash.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-hash"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1808.795,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-hash\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtaGFzaAo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-hash",
+    "binarySize": 371184,
+    "binarySha256": "c55e39aa2562f9048ad359fbc294cc367cf487fdcc4e45c78ce593151bdd7faf"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1043",
+    "SC2020",
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:86",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:329",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                              SC1043",
+    "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                            SC1043",
+    "×2  'number[].toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                  SC2020",
+    "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number))                                                                                                                                                                                                    SC1090",
+    "×1  'in' on 'number' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number))      SC1090",
+    "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                            SC1090",
+    "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))      SC1090",
+    "×1  'number[]' values where 'number' is expected is not supported yet (instantiating 'number' with (number[]))                                                                                                                                                                                        SC1090",
+    "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (number[]))                                                                                                                                                                                                  SC1090",
+    "×1  'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[]))  SC1090",
+    "×1  'number.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                       SC2020",
+    "×1  'number.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number))                                                                                                                                                                   SC2020",
+    "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                      SC2020",
+    "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                       SC2020",
+    "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+    "×1  'number[].getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                                   SC2020",
+    "×1  'number[].toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (number[]))                                                                                                                                                               SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   18 sites (JS statements that throw their fence if executed)"
+  ]
+}

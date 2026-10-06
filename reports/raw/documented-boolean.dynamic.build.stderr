@@ -1,0 +1,15 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-boolean.ts:6:39 - error SC1090: 'number' values where 'string' is expected is not supported yet
+
+  5 | 
+  6 | __compatObserved.push(Boolean.Boolean(1))
+    |                                       ^
+  7 | __compatObserved.push(Boolean.Boolean("false"))
+
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-boolean.ts:8:39 - error SC1090: 'number' values where 'string' is expected is not supported yet
+
+  7 | __compatObserved.push(Boolean.Boolean("false"))
+  8 | __compatObserved.push(Boolean.Boolean(0))
+    |                                       ^
+  9 | console.log(JSON.stringify(__compatObserved))
+
+2 errors.

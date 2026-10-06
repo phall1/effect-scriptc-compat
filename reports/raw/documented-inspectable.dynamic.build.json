@@ -1,0 +1,22 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/documented-inspectable.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-inspectable.dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 1042.351,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:7:18 - error SC2020: 'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet\n\n  6 | // Use as prototype\n  7 | const myObject = Object.create(Inspectable.BaseProto)\n    |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  8 | myObject.name = \"example\"\n\n  hint: prototype reads delegate LIVE in Node (mutating the prototype shows through the created object), which the boundary's deep copy cannot honor — only null and engine-held ('any') prototypes lower\n\n/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:15:3 - error SC1080: 'this' outside a class method is not supported yet\n\n  14 | function MyClass(this: any, name: string) {\n  15 |   this.name = name\n     |   ^~~~\n  16 | }\n\n/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:17:1 - error SC1090: assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet\n\n  16 | }\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n     | ^~~~~~~~~~~~~~~~~\n  18 | MyClass.prototype.constructor = MyClass\n\n/Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts:18:1 - error SC1090: reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }' is not supported yet\n\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n  18 | MyClass.prototype.constructor = MyClass\n     | ^~~~~~~~~~~~~~~~~\n  19 | console.log(JSON.stringify(__compatObserved))\n\n4 errors.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czo3OjE4IC0gZXJyb3IgU0MyMDIwOiAnT2JqZWN0LmNyZWF0ZSBvdmVyICd1bmtub3duJyBwcm90b3R5cGVzJyBpcyBwYXJ0IG9mIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IHR5cGVzIGJ1dCBoYXMgbm8gc2NyaXB0YyBsb3dlcmluZyB5ZXQKCiAgNiB8IC8vIFVzZSBhcyBwcm90b3R5cGUKICA3IHwgY29uc3QgbXlPYmplY3QgPSBPYmplY3QuY3JlYXRlKEluc3BlY3RhYmxlLkJhc2VQcm90bykKICAgIHwgICAgICAgICAgICAgICAgICBefn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICA4IHwgbXlPYmplY3QubmFtZSA9ICJleGFtcGxlIgoKICBoaW50OiBwcm90b3R5cGUgcmVhZHMgZGVsZWdhdGUgTElWRSBpbiBOb2RlIChtdXRhdGluZyB0aGUgcHJvdG90eXBlIHNob3dzIHRocm91Z2ggdGhlIGNyZWF0ZWQgb2JqZWN0KSwgd2hpY2ggdGhlIGJvdW5kYXJ5J3MgZGVlcCBjb3B5IGNhbm5vdCBob25vciDigJQgb25seSBudWxsIGFuZCBlbmdpbmUtaGVsZCAoJ2FueScpIHByb3RvdHlwZXMgbG93ZXIKCi9Vc2Vycy9waGFsbC93b3Jrc3BhY2UvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtaW5zcGVjdGFibGUudHM6MTU6MyAtIGVycm9yIFNDMTA4MDogJ3RoaXMnIG91dHNpZGUgYSBjbGFzcyBtZXRob2QgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgMTQgfCBmdW5jdGlvbiBNeUNsYXNzKHRoaXM6IGFueSwgbmFtZTogc3RyaW5nKSB7CiAgMTUgfCAgIHRoaXMubmFtZSA9IG5hbWUKICAgICB8ICAgXn5+fgogIDE2IHwgfQoKL1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czoxNzoxIC0gZXJyb3IgU0MxMDkwOiBhc3NpZ25pbmcgdGhlIHJlYWQtb25seSBmdW5jdGlvbiBtZW1iZXIgJ3Byb3RvdHlwZScgKHN0cmljdC1tb2RlIEpTIOKAlCBldmVyeSBtb2R1bGUg4oCUIHRocm93cyBUeXBlRXJyb3IgaGVyZSkgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgMTYgfCB9CiAgMTcgfCBNeUNsYXNzLnByb3RvdHlwZSA9IE9iamVjdC5jcmVhdGUoSW5zcGVjdGFibGUuQmFzZVByb3RvKQogICAgIHwgXn5+fn5+fn5+fn5+fn5+fn4KICAxOCB8IE15Q2xhc3MucHJvdG90eXBlLmNvbnN0cnVjdG9yID0gTXlDbGFzcwoKL1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czoxODoxIC0gZXJyb3IgU0MxMDkwOiByZWFkaW5nICdwcm90b3R5cGUnIGZyb20gYSB2YWx1ZSBvZiB0eXBlICd7ICh0aGlzOiBhbnksIG5hbWU6IHN0cmluZyk6IHZvaWQ7IHByb3RvdHlwZTogYW55OyB9JyBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxNyB8IE15Q2xhc3MucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShJbnNwZWN0YWJsZS5CYXNlUHJvdG8pCiAgMTggfCBNeUNsYXNzLnByb3RvdHlwZS5jb25zdHJ1Y3RvciA9IE15Q2xhc3MKICAgICB8IF5+fn5+fn5+fn5+fn5+fn5+CiAgMTkgfCBjb25zb2xlLmxvZyhKU09OLnN0cmluZ2lmeShfX2NvbXBhdE9ic2VydmVkKSkKCjQgZXJyb3JzLgo="
+}

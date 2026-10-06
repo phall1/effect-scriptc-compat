@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "build": {
+    "command": [
+      "scriptc",
+      "build",
+      ".work/compiler-control.ts",
+      "--npm-static=effect",
+      "-o",
+      "bin/compiler-control"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 431.976,
+    "maxRssKb": null,
+    "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/compiler-control\n",
+    "stderr": "",
+    "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2NvbXBpbGVyLWNvbnRyb2wK",
+    "stderrBase64": ""
+  },
+  "node": {
+    "command": [
+      "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+      "--experimental-strip-types",
+      ".work/compiler-control.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 53.442,
+    "maxRssKb": null,
+    "stdout": "scriptc-control:42\n",
+    "stderr": "",
+    "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+    "stderrBase64": ""
+  },
+  "native": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/bin/compiler-control"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 38.14,
+    "maxRssKb": null,
+    "stdout": "scriptc-control:42\n",
+    "stderr": "",
+    "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+    "stderrBase64": ""
+  }
+}

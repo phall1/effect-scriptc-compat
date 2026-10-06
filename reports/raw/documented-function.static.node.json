@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-function.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 190.106,
+  "maxRssKb": null,
+  "stdout": "[5,5]\n",
+  "stderr": "",
+  "stdoutBase64": "WzUsNV0K",
+  "stderrBase64": ""
+}

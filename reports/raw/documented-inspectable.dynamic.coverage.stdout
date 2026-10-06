@@ -1,0 +1,17 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-inspectable.ts
+
+  statements analyzed   240
+  compile statically    211  (87%)
+  compile dynamically   23  (9%) (island sites — the embedded engine runs them)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   2 sites (JS statements that throw their fence if executed)
+      ×2  spread arguments  SC1090
+
+  blockers:
+      ×1  'this' outside a class method                                                                                    SC1080
+      ×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)      SC1090
+      ×1  reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }'                  SC1090
+      ×1  'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet  SC2020

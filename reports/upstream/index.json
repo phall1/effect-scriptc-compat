@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "partial": true,
+  "generatedAt": "2026-10-06T01:02:47.922Z",
+  "distinctSignatures": 64,
+  "totalDiscoveredSignatures": 64,
+  "selectedSignatures": 1,
+  "verifiedSignatures": 1,
+  "pendingSignatures": 63,
+  "complete": false,
+  "results": [
+    {
+      "id": "diff-a2274461f4682d2f",
+      "signature": "differential:a2274461f4682d2f",
+      "classification": "deferred runtime trap",
+      "case": "documented-hash",
+      "relatedCases": [
+        "documented-hash:static"
+      ],
+      "repro": "reports/upstream/repro/diff-a2274461f4682d2f.ts",
+      "packet": "reports/upstream/diff-a2274461f4682d2f.md",
+      "verified": true,
+      "attempts": 23,
+      "budgetExhausted": false,
+      "originalBytes": 453,
+      "reducedBytes": 310,
+      "sourceSha256": "38888e17d0f52aaf56e433525897b9e1cbb5b12bd0c5b681364d07f1d1c5f553",
+      "verificationIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+      "originSourceSha256": "71f324ff54e4757f3a3e3cdae65fa285410b59673ea65c5c7658bf2e6dafec9f"
+    }
+  ]
+}

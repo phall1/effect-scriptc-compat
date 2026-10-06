@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-filter.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 164.563,
+  "maxRssKb": null,
+  "stdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+  "stderr": "",
+  "stdoutBase64": "W3siX2lkIjoiUmVzdWx0IiwiX3RhZyI6IlN1Y2Nlc3MiLCJ2YWx1ZSI6MX0seyJfaWQiOiJSZXN1bHQiLCJfdGFnIjoiU3VjY2VzcyIsInZhbHVlIjoiT0sifV0K",
+  "stderrBase64": ""
+}

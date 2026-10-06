@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/bin/documented-jsonschema"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 45.81,
+  "maxRssKb": null,
+  "stdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+  "stderr": "",
+  "stdoutBase64": "WyJkcmFmdC0yMDIwLTEyIix7InR5cGUiOiJzdHJpbmcifSx7IlRyaW1tZWQiOnsidHlwZSI6InN0cmluZyIsIm1pbkxlbmd0aCI6MX19XQo=",
+  "stderrBase64": ""
+}

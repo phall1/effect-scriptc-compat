@@ -1,0 +1,213 @@
+{
+  "id": "documented-cli--primitive",
+  "module": "cli/Primitive",
+  "entrypoint": "effect/cli/Primitive",
+  "family": "cli/Primitive",
+  "file": "cases/documented-cli--primitive.ts",
+  "status": "ready",
+  "api": [
+    "Primitive.getTypeName",
+    "Primitive.String",
+    "Primitive.Int",
+    "Primitive.Boolean",
+    "Primitive.Date",
+    "Primitive.KeyValuePair",
+    "Primitive.Choice"
+  ],
+  "expectedStdout": "[\"string\",\"integer\",\"boolean\",\"date\",\"key=value\",\"choice\"]\n",
+  "declaration": "node_modules/effect/dist/cli/Primitive.d.ts",
+  "declarationSha256": "1e43a85d45d07cd360374c6ea2c51e0cd51668ae1689395289f7338a2517b872",
+  "exampleIndex": 15,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "d3360ac0dff0505d1046c23f5117989214e1b3add76db28c656e48c89591034f",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-cli--primitive.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 888.948,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-cli--primitive.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 58902.269,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-cli--primitive.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-cli--primitive"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 47097.764,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1jbGktLXByaW1pdGl2ZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-cli--primitive.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 30743.112,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogZXhwZWN0ZWQgbnVsbCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCBhdCAkLnZhbHVlLCBnb3QgdW5kZWZpbmVkCg=="
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-cli--primitive.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-cli--primitive.dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 34013.594,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1 - error SC3004: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1jbGktLXByaW1pdGl2ZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IGV4cGVjdGVkIG51bGwgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgYXQgJC52YWx1ZSwgZ290IHVuZGVmaW5lZAoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; partial counts cannot establish static compatibility"
+  ]
+}

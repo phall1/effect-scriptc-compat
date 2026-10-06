@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-jsonpatch.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 60.359,
+  "maxRssKb": null,
+  "stdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+  "stderr": "",
+  "stdoutBase64": "W3siaXRlbXMiOlsiYXBwbGUiXSwiY291bnQiOjV9XQo=",
+  "stderrBase64": ""
+}

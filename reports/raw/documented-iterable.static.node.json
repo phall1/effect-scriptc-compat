@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-iterable.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 73.921,
+  "maxRssKb": null,
+  "stdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+  "stderr": "",
+  "stdoutBase64": "W1swLDIsNCw2LDhdLFswLDEsNCw5XSxbMCwxLDIsMyw0LDUsNiw3LDgsOV1dCg==",
+  "stderrBase64": ""
+}
