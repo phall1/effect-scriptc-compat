@@ -1,0 +1,54 @@
+{
+  "scope": "Exact source-input bridge only; not runtime-artifact rebuilding, full-gate acceptance or corpus parity",
+  "sourceCommit": "8ab5ed12aa10d362c1d8491b16fd3e6ce3770766",
+  "repository": "https://github.com/phall1/scriptc",
+  "branch": "effect-compat",
+  "previousHead": "d5cdca0e8c6dea870761dade26c2dbb4d317dd8a",
+  "oldTrackedPatchSha256": "91b38c412c2b85dfba6f849508e32d773050c109b5aa2864d8dbac168752a586",
+  "trackedPaths": [
+    "packages/compiler/src/backend/llvm/expr-primitives.ts",
+    "packages/compiler/src/backend/llvm/lib-shared.ts",
+    "packages/compiler/src/backend/llvm/reference-effects.test.ts",
+    "packages/compiler/src/backend/llvm/reference-effects.ts",
+    "packages/compiler/src/backend/may-throw.test.ts",
+    "packages/compiler/src/backend/may-throw.ts",
+    "packages/compiler/src/frontend/lowering/array-values.ts",
+    "packages/compiler/src/frontend/lowering/class-dynamic-dispatch.test.ts",
+    "packages/compiler/src/frontend/lowering/class-dynamic-dispatch.ts",
+    "packages/compiler/src/frontend/lowering/lower-exprs.ts",
+    "packages/compiler/src/frontend/lowering/lower-modules.ts",
+    "packages/compiler/src/frontend/lowering/lowerer.ts",
+    "packages/compiler/src/ir/ir.ts",
+    "packages/compiler/src/ir/runtime-features.test.ts",
+    "packages/compiler/src/ir/runtime-features.ts",
+    "packages/compiler/src/ir/validate.test.ts",
+    "packages/compiler/src/ir/validate.ts",
+    "packages/runtime/src/scr_array.c",
+    "packages/runtime/src/scr_dyn_invoke.c",
+    "packages/runtime/src/scr_json.c",
+    "packages/runtime/src/scr_json.test.c",
+    "packages/runtime/src/scr_runtime.h"
+  ],
+  "untrackedSources": [
+    [
+      "packages/compiler/src/frontend/lowering/array-membership.test.ts",
+      "0df3165fdfb848504aab82c453be5f55c50f9b68398112df6e46ef52cd3762f8"
+    ],
+    [
+      "packages/compiler/src/frontend/lowering/array-membership.ts",
+      "326169b1175c4493e358b97af9cab9ca998b96869005d63f983a1d58ddef278f"
+    ],
+    [
+      "packages/compiler/src/frontend/lowering/array-values.test.ts",
+      "cefe7fad2662835f0c7dd7cbf15595e07d2261d250a647eed73fcbb3bca85e2c"
+    ],
+    [
+      "packages/runtime/src/scr_array_methods.h",
+      "b803d3e857f53b1ef00c275cbc57fd0f247de744caa96dd8f6f642b8fe07d320"
+    ]
+  ],
+  "trackedInputsByteIdentical": true,
+  "untrackedInputsByteIdentical": true,
+  "compilerIdentityRecordedInCampaign": "45a03da99be4ef018da1fb2e44934a429772498a7ed47760bc2abb400a2d104b",
+  "allPackageNativeChangesAccountedFor": true
+}
