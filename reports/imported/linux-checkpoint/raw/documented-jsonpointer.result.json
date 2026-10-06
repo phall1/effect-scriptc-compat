@@ -1,0 +1,120 @@
+{
+  "id": "documented-jsonpointer",
+  "module": "JsonPointer",
+  "entrypoint": "effect/JsonPointer",
+  "family": "JsonPointer",
+  "file": "cases/documented-jsonpointer.ts",
+  "status": "ready",
+  "api": [
+    "JsonPointer.escapeToken"
+  ],
+  "expectedStdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+  "declaration": "node_modules/effect/dist/JsonPointer.d.ts",
+  "declarationSha256": "3eb3b0501cfebc202b082c1fe614e42c2a4514ed374f67002968fa2deb18f5e2",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "8a6b9b9c05aedd3231d467c00b7e86b00fd2ca7dbce2093491f73da5321113d3",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-jsonpointer.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 1059.723,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-jsonpointer.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 852.122,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-jsonpointer.ts\n\n  statements analyzed   6\n  compile statically    6  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1qc29ucG9pbnRlci50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNgogIGNvbXBpbGUgc3RhdGljYWxseSAgICA2ICAoMTAwJSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBmdWxseSBzdGF0aWMg4oCUIHRoaXMgcHJvZ3JhbSBoYXMgbm8gZHluYW1pYyByZW1haW5kZXIuCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 6,
+        "static": 6,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-jsonpointer.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-jsonpointer"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1112.751,
+      "maxRssKb": null,
+      "stdout": "/workspace/shared/effect-scriptc-compat/bin/documented-jsonpointer\n",
+      "stderr": "",
+      "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9kb2N1bWVudGVkLWpzb25wb2ludGVyCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-jsonpointer",
+    "binarySize": 383496,
+    "binarySha256": "bd4865ff759263f4eb981de5d8e0afedaa9f3a65e9696c6940f07a8bda7692c5"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

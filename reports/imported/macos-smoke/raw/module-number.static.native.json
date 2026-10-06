@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/bin/module-number"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 69.249,
+  "maxRssKb": null,
+  "stdout": "number:42\n",
+  "stderr": "",
+  "stdoutBase64": "bnVtYmVyOjQyCg==",
+  "stderrBase64": ""
+}

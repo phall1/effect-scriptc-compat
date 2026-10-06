@@ -1,0 +1,206 @@
+{
+  "id": "module-scopedcache",
+  "module": "ScopedCache",
+  "entrypoint": "effect/ScopedCache",
+  "family": "ScopedCache",
+  "file": "cases/module-scopedcache.ts",
+  "status": "ready",
+  "api": [
+    "make",
+    "get"
+  ],
+  "expectedStdout": "cache:3,3:1\n",
+  "declaration": "node_modules/effect/dist/ScopedCache.d.ts",
+  "declarationSha256": "c3796568054c56a5e02cad2bf27d0ba933d3c19f4f21fd3534adcb5a1f145fc4",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "9ef84f577c3ba9e134c2af634c1881f3b3b857e9c0e2385581b83f4e37e85a9a",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-scopedcache.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 1873.967,
+    "maxRssKb": 333900,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-scopedcache.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 49814.913,
+      "maxRssKb": 320088,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-scopedcache.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-scopedcache"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 62298.005,
+      "maxRssKb": 316016,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/module-scopedcache.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL21vZHVsZS1zY29wZWRjYWNoZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/module-scopedcache.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-scopedcache.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 58564.475,
+      "maxRssKb": 320968,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-scopedcache.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/module-scopedcache.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 57990.118,
+      "maxRssKb": 322460,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/module-scopedcache.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL21vZHVsZS1zY29wZWRjYWNoZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/module-scopedcache.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/module-scopedcache.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; parsed partial counts cannot establish static compatibility"
+  ]
+}

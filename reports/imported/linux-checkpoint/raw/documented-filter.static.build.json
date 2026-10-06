@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-filter.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-filter"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 39466.921,
+  "maxRssKb": null,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/documented-filter\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9kb2N1bWVudGVkLWZpbHRlcgo=",
+  "stderrBase64": ""
+}

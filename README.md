@@ -1,6 +1,6 @@
 # Effect 4 × scriptc compatibility harness
 
-> **In-progress checkpoint:** the host map is running. See `reports/checkpoint.json` for measured/pending counts. The initial reports are explicitly partial; a full differential and reduction pass has not finished yet. Verified partial differentials and upstream packets are saved as they complete.
+> **Recovered checkpoint:** the complete 456-case inventory (404 runnable probes) is now checked in. Historical Linux evidence is preserved separately in `reports/imported/linux-checkpoint/`: 122 measured cases, 39 differentials, and five verified packets, explicitly partial. Current-host progress is saved in `reports/map-session.json`, the selected map report, and `reports/checkpoint.json`; historical binaries are not present or reused. See [recovery notes](docs/recovery.md).
 
 Host-first, reproducible probes for the published **effect@4.0.1** package and the **scriptc@0.2.3** npm CLI. This repository discovers compiler/runtime gaps, compares native behavior with Node, and prepares local upstream reports. It does not modify Effect or vendor scriptc.
 
@@ -17,7 +17,7 @@ Host-first, reproducible probes for the published **effect@4.0.1** package and t
 | Node type declarations | `24.10.1` |
 | pnpm | `11.19.0` |
 | Initial host | Linux x64, `x86_64-unknown-linux-gnu` |
-| Initial native linker | Debian Clang `19.1.7 (3+b1)`; exact package hashes in `reports/linker-provenance.json` |
+| Initial native linker | Debian Clang `19.1.7 (3+b1)`; exact package hashes in `reports/imported/linux-checkpoint/linker-provenance.json` |
 
 Node must be at least 24 for scriptc. `.node-version` and `.nvmrc` pin the reference run. Every map records the actual Node, TypeScript, pnpm, scriptc and native-linker outputs, release tag/commit, host, dependency lockfile and binary hashes. The CLI prints `0.2.3`, without a commit; the independently verified GitHub tag commit is recorded separately. No local Effect checkout or compiler checkout is used.
 
@@ -32,6 +32,8 @@ pnpm map
 pnpm diff
 pnpm reduce
 ```
+
+`pnpm check` includes strict typechecking, harness/orchestration regressions, and two Node executions of all 404 ready fixtures against exact expected stdout, empty stderr and successful exit. `pnpm validate` runs that corpus baseline check independently.
 
 `pnpm map` regenerates `reports/coverage-map.json` and `.md` from the committed, source-derived corpus. `pnpm generate` re-reads the installed export map and declaration files and regenerates the corpus/manifest. `pnpm diff` regenerates `reports/differentials.json`; exit 1 means a real mismatch, exit 2 means an invalid Node fixture baseline. `pnpm reduce` creates verified local repros and issue packets; it never opens issues or PRs. Mapping reports refusals as data and exits zero unless the harness itself is invalid.
 
@@ -95,8 +97,11 @@ Packets include versions, host triple, minimal command, complete diagnostic/diff
 | `DIFF_JOBS` | `2` | Concurrent independent differential pairs |
 | `REDUCE_BUDGET` | `24` | Candidate line-deletion attempts per signature |
 | `MAP_RESUME` | off | Reuse verified case checkpoints for interrupted same-toolchain runs |
+| `MAP_CASES` | all | Comma-separated exact case IDs; empty/unknown IDs fail before modifying evidence |
+| `MAP_REPORT` | host/shard default | JSON map destination inside `reports/`; shared by diff and reduce |
+| `DIFF_REPORT` | `reports/differentials.json` | Differential destination |
 
-Default mapping performs a fresh run. Resume is optional and should only be used with an unchanged toolchain/configuration. The reducer and differential runner keep runtime deadlines fixed at 30 seconds. All execution is host-local; no cases use sockets, spawn, signals, or a remote service as their program input.
+Default mapping performs a fresh run. Resume is optional and requires unchanged source, compiler/Node/linker executable hashes, linker outputs, and deadlines. Malformed, incomplete or legacy records rerun rather than relying on manually asserted context. Result checkpoints are atomically published; stale binaries and LLVM output are removed before rebuilding. The reducer and differential runner keep runtime deadlines fixed at 30 seconds. All execution is host-local; no cases use sockets, spawn, signals, or a remote service as their program input.
 
 ## Files
 
@@ -124,6 +129,6 @@ MAP_REPORT=reports/shards/host-0.json DIFF_REPORT=reports/shards/host-0.differen
 
 Shard assignment uses the sorted committed manifest and modulo; keep that manifest fixed across all jobs. `pnpm merge reports/imported` produces `reports/aggregate.{json,md}` after shard artifacts are placed under `reports/imported/<host>/`. Every observation retains its exact runner provenance. Missing cases and cross-runner disagreements remain visible; this does not overwrite or fabricate a complete single-host map. No workflow is automatically dispatched by these scripts.
 
-`pnpm checkpoint` snapshots only fully completed same-source observations while a long local map continues. It marks pending cases explicitly. It is a progress-saving command, not a substitute for finishing `pnpm map`.
+`pnpm checkpoint` snapshots only fully completed exact-source/toolchain observations from the current map session while a long local map continues. It works on the first interrupted run without an older completed map, honors its selected/shard destination, validates binary hashes, and marks pending cases explicitly. It is a progress-saving command, not a substitute for finishing `pnpm map`.
 
 Manual multi-host workflow setup, cost bounds, artifact recovery and resume safety: [GitHub Actions shard guide](docs/github-actions-shards.md).

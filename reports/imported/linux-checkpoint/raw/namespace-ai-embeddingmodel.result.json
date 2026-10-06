@@ -1,0 +1,208 @@
+{
+  "id": "namespace-ai-embeddingmodel",
+  "module": "ai/EmbeddingModel",
+  "entrypoint": "effect/ai/EmbeddingModel",
+  "family": "ai/EmbeddingModel",
+  "file": "cases/namespace-ai-embeddingmodel.ts",
+  "status": "ready",
+  "api": [
+    "EmbeddingModel.make",
+    "EmbeddingModel.embedMany",
+    "EmbeddingModel.embed"
+  ],
+  "expectedStdout": "[[[1,2],[4,8]],2,[2,4],0,2,\"InvalidOutputError\"]\n",
+  "declaration": "node_modules/effect/dist/ai/EmbeddingModel.d.ts",
+  "declarationSha256": "abe5f9919cd9fad097b9bc6dc12c27c7be61a424dff852dcc0fdfbc4db856838",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "420dbf7914bfb7c0b6faf434a5099b1083c101ffe64c73f6f781adc3c089f70e",
+  "sourceSha256": "22d180e87054ea7a1daace6ccea0e1497acb2de075f72136c15af03892178bfe",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-ai-embeddingmodel.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 3089.769,
+    "maxRssKb": 350956,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/namespace-ai-embeddingmodel.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 65777.114,
+      "maxRssKb": 342492,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/namespace-ai-embeddingmodel.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-ai-embeddingmodel"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 60231.104,
+      "maxRssKb": 352972,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/namespace-ai-embeddingmodel.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL25hbWVzcGFjZS1haS1lbWJlZGRpbmdtb2RlbC50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/namespace-ai-embeddingmodel.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/namespace-ai-embeddingmodel.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 71444.049,
+      "maxRssKb": 346620,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/namespace-ai-embeddingmodel.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/namespace-ai-embeddingmodel.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 61944.637,
+      "maxRssKb": 342840,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/namespace-ai-embeddingmodel.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL25hbWVzcGFjZS1haS1lbWJlZGRpbmdtb2RlbC50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/namespace-ai-embeddingmodel.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/namespace-ai-embeddingmodel.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; parsed partial counts cannot establish static compatibility"
+  ]
+}

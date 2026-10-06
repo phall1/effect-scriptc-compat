@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "coverage",
+    "cases/documented-ordering.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 8438.71,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts\n\n  statements analyzed   75\n  compile statically    73  (97%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  runs with --dynamic   2 sites (embeds a JS engine, ~620KB — static stays the default)\n      ×2  values of type '(a: number, b: number) => Ordering.Ordering' have no static representation but run in the embedded dynamic engine, which this build does not include  SC2011\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1vcmRlcmluZy50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNzUKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNzMgICg5NyUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgcnVucyB3aXRoIC0tZHluYW1pYyAgIDIgc2l0ZXMgKGVtYmVkcyBhIEpTIGVuZ2luZSwgfjYyMEtCIOKAlCBzdGF0aWMgc3RheXMgdGhlIGRlZmF1bHQpCiAgICAgIMOXMiAgdmFsdWVzIG9mIHR5cGUgJyhhOiBudW1iZXIsIGI6IG51bWJlcikgPT4gT3JkZXJpbmcuT3JkZXJpbmcnIGhhdmUgbm8gc3RhdGljIHJlcHJlc2VudGF0aW9uIGJ1dCBydW4gaW4gdGhlIGVtYmVkZGVkIGR5bmFtaWMgZW5naW5lLCB3aGljaCB0aGlzIGJ1aWxkIGRvZXMgbm90IGluY2x1ZGUgIFNDMjAxMQoK",
+  "stderrBase64": ""
+}

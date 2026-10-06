@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/repro-diff-36c4933891f59bd1"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 7.308,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "Uncaught Error: reading 'length' from a value of type 'any' is not supported yet (instantiating 'make' with (string, (unknown, unknown) => unknown, Uint8Array, number)) [SC1090 at /workspace/shared/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/MultipartParser/internal/search.js:112]\n",
+  "stdoutBase64": "",
+  "stderrBase64": "VW5jYXVnaHQgRXJyb3I6IHJlYWRpbmcgJ2xlbmd0aCcgZnJvbSBhIHZhbHVlIG9mIHR5cGUgJ2FueScgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ21ha2UnIHdpdGggKHN0cmluZywgKHVua25vd24sIHVua25vd24pID0+IHVua25vd24sIFVpbnQ4QXJyYXksIG51bWJlcikpIFtTQzEwOTAgYXQgL3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L2h0dHAvTXVsdGlwYXJ0UGFyc2VyL2ludGVybmFsL3NlYXJjaC5qczoxMTJdCg=="
+}

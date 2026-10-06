@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-scheduler.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/module-scheduler.dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 5903.846,
+  "maxRssKb": 65968,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/module-scheduler.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL21vZHVsZS1zY2hlZHVsZXIudHM6MToxIC0gZXJyb3IgU0MzMDA0OiBudWxsIGlzIG5vdCByZXByZXNlbnRhYmxlIGluIHRoZSB0YXJnZXQgdW5pb24gKGEgdmFsdWUgbmFycm93ZWQgb3IgYXNzZXJ0ZWQgcGFzdCBpdCBzdGlsbCBoZWxkIGl0KQoKMSBlcnJvci4K"
+}

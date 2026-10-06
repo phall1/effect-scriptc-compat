@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-channel.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-channel.dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 56308.038,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-channel.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtY2hhbm5lbC50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+}

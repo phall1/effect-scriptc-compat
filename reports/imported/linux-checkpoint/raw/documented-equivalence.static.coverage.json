@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "coverage",
+    "cases/documented-equivalence.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3795.575,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-equivalence.ts\n\n  statements analyzed   100\n  compile statically    100  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1lcXVpdmFsZW5jZS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMTAwCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDEwMCAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+  "stderrBase64": ""
+}

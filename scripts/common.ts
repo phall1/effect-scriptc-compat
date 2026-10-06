@@ -1,6 +1,6 @@
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, realpathSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { delimiter, dirname, resolve } from 'node:path';
 import { arch, platform, release } from 'node:os';
 import type { Case, Provenance, Run } from './types.ts';
@@ -10,7 +10,9 @@ export const SCRIPTC = process.env.SCRIPTC ?? 'scriptc';
 export const pins = JSON.parse(readFileSync(resolve(ROOT, 'toolchain.json'), 'utf8'));
 export function json(path: string, value: unknown): void {
   mkdirSync(dirname(resolve(ROOT, path)), { recursive: true });
-  writeFileSync(resolve(ROOT, path), JSON.stringify(value, null, 2) + '\n');
+  const destination = resolve(ROOT, path), temporary = `${destination}.${process.pid}.tmp`;
+  writeFileSync(temporary, JSON.stringify(value, null, 2) + '\n');
+  renameSync(temporary, destination);
 }
 export function readJson<T>(path: string): T { return JSON.parse(readFileSync(resolve(ROOT, path), 'utf8')); }
 export function sha(data: string | Buffer): string { return createHash('sha256').update(data).digest('hex'); }
@@ -65,7 +67,7 @@ export function cases(): Case[] {
   for (const c of list) {
     if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(c.id) || seen.has(c.id)) throw new Error(`Unsafe or duplicate case id: ${c.id}`);
     seen.add(c.id);
-    if (!c.file.startsWith('cases/') || c.file.includes('..')) throw new Error(`Unsafe case path: ${c.file}`);
+    if (!c.file.startsWith('cases/') || c.file.includes('..') || c.file.includes('\\')) throw new Error(`Unsafe case path: ${c.file}`);
   }
   return list.sort((a, b) => a.id.localeCompare(b.id));
 }
@@ -81,26 +83,38 @@ export async function provenance(): Promise<Provenance> {
     linker: await run([process.env.SCRIPTC_LINKER ?? 'clang', '--version']),
     systemLinker: await run(['ld', '--version']),
   };
-  const npmEffect = readJson<{ version: string }>('node_modules/effect/package.json');
-  const npmTs = readJson<{ version: string }>('node_modules/typescript/package.json');
-  const versionOut = commands.scriptc.stdout.trim() || commands.scriptc.stderr.trim();
-  const scriptcVersion = versionOut.match(/\b\d+\.\d+\.\d+(?:[-+][\w.-]+)?\b/)?.[0] ?? 'unavailable';
-  if (!ok(commands.scriptc)) throw new Error(`scriptc unavailable: ${commands.scriptc.spawnError ?? versionOut}. Install npm install -g scriptc@${pins.scriptc.npmVersion}`);
-  if (scriptcVersion !== pins.scriptc.npmVersion) throw new Error(`scriptc pin mismatch: expected ${pins.scriptc.npmVersion}, got ${versionOut}`);
-  if (npmEffect.version !== pins.effect || npmTs.version !== pins.typescript) throw new Error('Installed Effect / TypeScript does not match toolchain.json');
-  if (Number(process.versions.node.split('.')[0]) < 24) throw new Error('Node >=24 is required');
-  let cliSha256: string | null = null;
-  const cliPath = SCRIPTC.includes('/') ? SCRIPTC : (process.env.PATH ?? '').split(delimiter).map(dir => resolve(dir, SCRIPTC)).find(path => existsSync(path));
-  if (cliPath && existsSync(cliPath)) cliSha256 = fileSha(realpathSync(cliPath));
-  const libc = platform() === 'linux' ? '-gnu' : '';
+  const { effectVersion, typescriptVersion, versionOut, scriptcVersion } = installedVersions(commands.scriptc);
+  const executableHashes = {
+    node: fileSha(process.execPath), scriptc: executableSha(SCRIPTC),
+    linker: executableSha(process.env.SCRIPTC_LINKER ?? 'clang'), systemLinker: executableSha('ld'),
+  };
+  const cliSha256 = executableHashes.scriptc;
   return { nodeVersion: commands.node.stdout.trim(), pnpmVersion: ok(commands.pnpm) ? commands.pnpm.stdout.trim() : null,
-    effectVersion: npmEffect.version, typescriptVersion: npmTs.version, scriptcVersion, scriptcVersionOutput: versionOut,
+    effectVersion, typescriptVersion, scriptcVersion, scriptcVersionOutput: versionOut,
     scriptcPrintedCommit: versionOut.match(/\b[0-9a-f]{7,40}\b/)?.[0] ?? null,
     scriptcReleaseTag: pins.scriptc.githubReleaseTag, scriptcReleaseCommit: pins.scriptc.githubCommit,
-    hostTriple: `${arch() === 'x64' ? 'x86_64' : arch() === 'arm64' ? 'aarch64' : arch()}-${platform() === 'darwin' ? 'apple-darwin' : platform() === 'linux' ? 'unknown-linux' : platform()}${libc}`,
+    hostTriple: hostTriple(),
     platform: platform(), arch: arch(), kernel: release(), toolchainPins: pins,
-    lockfileSha256: fileSha('pnpm-lock.yaml'), effectPackageJsonSha256: fileSha('node_modules/effect/package.json'), cliSha256, commands };
+    lockfileSha256: fileSha('pnpm-lock.yaml'), effectPackageJsonSha256: fileSha('node_modules/effect/package.json'), cliSha256, executableHashes, commands };
 }
+function hostTriple(): string {
+  const cpu = ({ x64: 'x86_64', arm64: 'aarch64' } as Record<string, string>)[arch()] ?? arch();
+  const os = ({ darwin: 'apple-darwin', linux: 'unknown-linux-gnu' } as Record<string, string>)[platform()] ?? platform();
+  return `${cpu}-${os}`;
+}
+
+function installedVersions(scriptc: Run): { effectVersion: string; typescriptVersion: string; versionOut: string; scriptcVersion: string } {
+  const effectVersion = readJson<{ version: string }>('node_modules/effect/package.json').version;
+  const typescriptVersion = readJson<{ version: string }>('node_modules/typescript/package.json').version;
+  const versionOut = scriptc.stdout.trim() || scriptc.stderr.trim();
+  const scriptcVersion = versionOut.match(/\b\d+\.\d+\.\d+(?:[-+][\w.-]+)?\b/)?.[0] ?? 'unavailable';
+  if (!ok(scriptc)) throw new Error(`scriptc unavailable: ${scriptc.spawnError ?? versionOut}. Install npm install -g scriptc@${pins.scriptc.npmVersion}`);
+  if (scriptcVersion !== pins.scriptc.npmVersion) throw new Error(`scriptc pin mismatch: expected ${pins.scriptc.npmVersion}, got ${versionOut}`);
+  if (effectVersion !== pins.effect || typescriptVersion !== pins.typescript) throw new Error('Installed Effect / TypeScript does not match toolchain.json');
+  if (Number(process.versions.node.split('.')[0]) < 24) throw new Error('Node >=24 is required');
+  return { effectVersion, typescriptVersion, versionOut, scriptcVersion };
+}
+
 export async function concurrent<T, U>(items: T[], jobs: number, fn: (x: T, i: number) => Promise<U>): Promise<U[]> {
   const results: U[] = new Array(items.length); let cursor = 0;
   await Promise.all(Array.from({ length: Math.max(1, jobs) }, async () => {
@@ -114,14 +128,34 @@ export function binaryInfo(file: string): { binary: string | null; binarySize: n
   return { binary: file, binarySize: statSync(path).size, binarySha256: fileSha(file) };
 }
 
+export function executableSha(command: string): string | null {
+  const candidates = command.includes('/') ? [resolve(ROOT, command)] : (process.env.PATH ?? '').split(delimiter).map(dir => resolve(dir, command));
+  const path = candidates.find(path => existsSync(path) && statSync(path).isFile());
+  return path ? fileSha(realpathSync(path)) : null;
+}
+
 export function assertProvenance(expected: Provenance, actual: Provenance): void {
   for (const key of ['nodeVersion', 'effectVersion', 'typescriptVersion', 'scriptcVersion', 'scriptcReleaseCommit', 'hostTriple', 'lockfileSha256', 'effectPackageJsonSha256', 'cliSha256'] as const) {
     if (expected[key] !== actual[key]) throw new Error(`Stale map: ${key} changed (${expected[key]} -> ${actual[key]}). Run pnpm map again.`);
   }
+  if (JSON.stringify(expected.executableHashes) !== JSON.stringify(actual.executableHashes)) throw new Error('Stale map: compiler, Node or linker executable changed. Run pnpm map again.');
+  for (const key of ['linker', 'systemLinker']) {
+    if (toolOutputIdentity(expected.commands[key]) !== toolOutputIdentity(actual.commands[key])) throw new Error(`Stale map: ${key} output changed. Run pnpm map again.`);
+  }
+}
+
+export function linkerIdentity(q: Provenance): string {
+  return JSON.stringify([q.executableHashes, toolOutputIdentity(q.commands.linker), toolOutputIdentity(q.commands.systemLinker)]);
+}
+
+function toolOutputIdentity(r: Run | undefined): string {
+  if (!r) return 'missing';
+  return JSON.stringify([r.stdout, r.stderr, r.exitCode, r.signal, r.timedOut, r.spawnError]);
 }
 
 export function cacheIdentityFor(q: Provenance, o: { compileTimeoutMs: number; coverageTimeoutMs: number }): string {
-  return sha(JSON.stringify({ schema: 2, node: q.nodeVersion, effect: q.effectVersion, typescript: q.typescriptVersion,
+  return sha(JSON.stringify({ schema: 3, executables: q.executableHashes, node: q.nodeVersion, effect: q.effectVersion, typescript: q.typescriptVersion,
     scriptc: q.scriptcVersion, host: q.hostTriple, lock: q.lockfileSha256, effectPackage: q.effectPackageJsonSha256,
-    cli: q.cliSha256, linker: q.commands.linker?.stdout, compilerTimeout: o.compileTimeoutMs, coverageTimeout: o.coverageTimeoutMs }));
+    cli: q.cliSha256, linker: toolOutputIdentity(q.commands.linker),
+    systemLinker: toolOutputIdentity(q.commands.systemLinker), compilerTimeout: o.compileTimeoutMs, coverageTimeout: o.coverageTimeoutMs }));
 }

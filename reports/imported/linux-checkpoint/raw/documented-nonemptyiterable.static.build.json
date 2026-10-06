@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-nonemptyiterable.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-nonemptyiterable"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 41797.947,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-nonemptyiterable.ts:10:23 - error SC2020: 'Array.from with this argument shape' is part of the standard library types but has no scriptc lowering yet\n\n   9 | __compatObserved.push(first)\n  10 | __compatObserved.push(globalThis.Array.from({ [Symbol.iterator]: () => rest }))\n     |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  11 | console.log(JSON.stringify(__compatObserved))\n\n  hint: Array.from(array), Array.from(array, mapper), Array.from(aString), Array.from(aString, mapper), and Array.from({ length: n }, mapper) are the lowered forms\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtbm9uZW1wdHlpdGVyYWJsZS50czoxMDoyMyAtIGVycm9yIFNDMjAyMDogJ0FycmF5LmZyb20gd2l0aCB0aGlzIGFyZ3VtZW50IHNoYXBlJyBpcyBwYXJ0IG9mIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IHR5cGVzIGJ1dCBoYXMgbm8gc2NyaXB0YyBsb3dlcmluZyB5ZXQKCiAgIDkgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goZmlyc3QpCiAgMTAgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goZ2xvYmFsVGhpcy5BcnJheS5mcm9tKHsgW1N5bWJvbC5pdGVyYXRvcl06ICgpID0+IHJlc3QgfSkpCiAgICAgfCAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAxMSB8IGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KF9fY29tcGF0T2JzZXJ2ZWQpKQoKICBoaW50OiBBcnJheS5mcm9tKGFycmF5KSwgQXJyYXkuZnJvbShhcnJheSwgbWFwcGVyKSwgQXJyYXkuZnJvbShhU3RyaW5nKSwgQXJyYXkuZnJvbShhU3RyaW5nLCBtYXBwZXIpLCBhbmQgQXJyYXkuZnJvbSh7IGxlbmd0aDogbiB9LCBtYXBwZXIpIGFyZSB0aGUgbG93ZXJlZCBmb3JtcwoKMSBlcnJvci4K"
+}

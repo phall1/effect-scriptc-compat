@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "coverage",
+    "cases/documented-inspectable.ts",
+    "--npm-static=effect",
+    "--dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3136.956,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts\n\n  statements analyzed   240\n  compile statically    211  (87%)\n  compile dynamically   23  (9%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   2 sites (JS statements that throw their fence if executed)\n      ×2  spread arguments  SC1090\n\n  blockers:\n      ×1  'this' outside a class method                                                                                    SC1080\n      ×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)      SC1090\n      ×1  reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }'                  SC1090\n      ×1  'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet  SC2020\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMjQwCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDIxMSAgKDg3JSkKICBjb21waWxlIGR5bmFtaWNhbGx5ICAgMjMgICg5JSkgKGlzbGFuZCBzaXRlcyDigJQgdGhlIGVtYmVkZGVkIGVuZ2luZSBydW5zIHRoZW0pCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDIgc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cyICBzcHJlYWQgYXJndW1lbnRzICBTQzEwOTAKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgJ3RoaXMnIG91dHNpZGUgYSBjbGFzcyBtZXRob2QgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwODAKICAgICAgw5cxICBhc3NpZ25pbmcgdGhlIHJlYWQtb25seSBmdW5jdGlvbiBtZW1iZXIgJ3Byb3RvdHlwZScgKHN0cmljdC1tb2RlIEpTIOKAlCBldmVyeSBtb2R1bGUg4oCUIHRocm93cyBUeXBlRXJyb3IgaGVyZSkgICAgICBTQzEwOTAKICAgICAgw5cxICByZWFkaW5nICdwcm90b3R5cGUnIGZyb20gYSB2YWx1ZSBvZiB0eXBlICd7ICh0aGlzOiBhbnksIG5hbWU6IHN0cmluZyk6IHZvaWQ7IHByb3RvdHlwZTogYW55OyB9JyAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzEgICdPYmplY3QuY3JlYXRlIG92ZXIgJ3Vua25vd24nIHByb3RvdHlwZXMnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAgU0MyMDIwCg==",
+  "stderrBase64": ""
+}

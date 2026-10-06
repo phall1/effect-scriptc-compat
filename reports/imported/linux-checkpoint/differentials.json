@@ -1,0 +1,2082 @@
+{
+  "schemaVersion": 1,
+  "partial": true,
+  "generatedAt": "2026-10-05T17:35:40.498Z",
+  "provenance": {
+    "nodeVersion": "v24.19.0",
+    "pnpmVersion": "11.19.0",
+    "effectVersion": "4.0.1",
+    "typescriptVersion": "7.0.2",
+    "scriptcVersion": "0.2.3",
+    "scriptcVersionOutput": "0.2.3",
+    "scriptcPrintedCommit": null,
+    "scriptcReleaseTag": "v0.2.3",
+    "scriptcReleaseCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+    "hostTriple": "x86_64-unknown-linux-gnu",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.18.44",
+    "toolchainPins": {
+      "schemaVersion": 1,
+      "node": "24.19.0",
+      "pnpm": "11.19.0",
+      "typescript": "7.0.2",
+      "nodeTypes": "24.10.1",
+      "effect": "4.0.1",
+      "scriptc": {
+        "npmVersion": "0.2.3",
+        "githubReleaseTag": "v0.2.3",
+        "githubCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+        "releaseUrl": "https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3",
+        "contributingUrl": "https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md",
+        "issuesUrl": "https://github.com/vercel-labs/scriptc/issues"
+      },
+      "runner": "node --experimental-strip-types",
+      "hostFirst": true
+    },
+    "lockfileSha256": "4aeef7dcdebdf11c8b9441fac76683ffac02527b6762ee19266e387a4081e6ea",
+    "effectPackageJsonSha256": "569fd709b635b26e9d5851b3cf1958082da47a9778ee6d21cf4f47f3dbc41e6f",
+    "cliSha256": "76e3c4d1c326438ee46f29480bf2310407e01f7bcf39fe182e2cd43d2d2a2234",
+    "commands": {
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "-v"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 42.6,
+        "maxRssKb": null,
+        "stdout": "v24.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "djI0LjE5LjAK",
+        "stderrBase64": ""
+      },
+      "scriptc": {
+        "command": [
+          "/tmp/effect-scriptc-tools/bin/scriptc",
+          "--version"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 21.202,
+        "maxRssKb": null,
+        "stdout": "0.2.3\n",
+        "stderr": "",
+        "stdoutBase64": "MC4yLjMK",
+        "stderrBase64": ""
+      },
+      "pnpm": {
+        "command": [
+          "pnpm",
+          "--version"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 1282.715,
+        "maxRssKb": 113628,
+        "stdout": "11.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "MTEuMTkuMAo=",
+        "stderrBase64": ""
+      },
+      "typescript": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+          "--version"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 355.619,
+        "maxRssKb": 76,
+        "stdout": "Version 7.0.2\n",
+        "stderr": "",
+        "stdoutBase64": "VmVyc2lvbiA3LjAuMgo=",
+        "stderrBase64": ""
+      },
+      "linker": {
+        "command": [
+          "/tmp/effect-scriptc-clang/root/usr/bin/clang-19",
+          "--version"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 290.896,
+        "maxRssKb": 33144,
+        "stdout": "Debian clang version 19.1.7 (3+b1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /tmp/effect-scriptc-clang/root/usr/lib/llvm-19/bin\n",
+        "stderr": "",
+        "stdoutBase64": "RGViaWFuIGNsYW5nIHZlcnNpb24gMTkuMS43ICgzK2IxKQpUYXJnZXQ6IHg4Nl82NC1wYy1saW51eC1nbnUKVGhyZWFkIG1vZGVsOiBwb3NpeApJbnN0YWxsZWREaXI6IC90bXAvZWZmZWN0LXNjcmlwdGMtY2xhbmcvcm9vdC91c3IvbGliL2xsdm0tMTkvYmluCg==",
+        "stderrBase64": ""
+      },
+      "systemLinker": {
+        "command": [
+          "ld",
+          "--version"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 11.47,
+        "maxRssKb": null,
+        "stdout": "GNU ld (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+        "stderr": "",
+        "stdoutBase64": "R05VIGxkIChHTlUgQmludXRpbHMgZm9yIERlYmlhbikgMi40NApDb3B5cmlnaHQgKEMpIDIwMjUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uLCBJbmMuClRoaXMgcHJvZ3JhbSBpcyBmcmVlIHNvZnR3YXJlOyB5b3UgbWF5IHJlZGlzdHJpYnV0ZSBpdCB1bmRlciB0aGUgdGVybXMgb2YKdGhlIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHZlcnNpb24gMyBvciAoYXQgeW91ciBvcHRpb24pIGEgbGF0ZXIgdmVyc2lvbi4KVGhpcyBwcm9ncmFtIGhhcyBhYnNvbHV0ZWx5IG5vIHdhcnJhbnR5Lgo=",
+        "stderrBase64": ""
+      }
+    }
+  },
+  "timeoutMs": 30000,
+  "results": [
+    {
+      "caseId": "chunk-round-trip",
+      "module": "Chunk",
+      "family": "Chunk",
+      "entrypoint": "effect",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/chunk-round-trip",
+      "binarySha256": "9647a1653ceb7ac1baee6ef546baaca12517f415f80fd2fd50a4a7281e9d6ead",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/chunk-round-trip.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 999.593,
+        "maxRssKb": 80688,
+        "stdout": "chunk:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "Y2h1bms6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/chunk-round-trip"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 45.861,
+        "maxRssKb": null,
+        "stdout": "chunk:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "Y2h1bms6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-bigdecimal",
+      "module": "BigDecimal",
+      "family": "BigDecimal",
+      "entrypoint": "effect/BigDecimal",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-bigdecimal",
+      "binarySha256": "2551de76142f1d47fe63234ce99e15846f70bd9b56ec3b5a8d18b4d6d4acbb2b",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-bigdecimal.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 238.037,
+        "maxRssKb": null,
+        "stdout": "[false,true,false,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2VdCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-bigdecimal"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 11.472,
+        "maxRssKb": null,
+        "stdout": "[false,true,false,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2VdCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-combiner",
+      "module": "Combiner",
+      "family": "Combiner",
+      "entrypoint": "effect/Combiner",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-combiner",
+      "binarySha256": "0ca1f2274c5f38c170d2f3cf3d0547b90538444ba878beaa074545604d2bcb91",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-combiner.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 200.582,
+        "maxRssKb": null,
+        "stdout": "[7]\n",
+        "stderr": "",
+        "stdoutBase64": "WzddCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-combiner"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 12.145,
+        "maxRssKb": null,
+        "stdout": "[7]\n",
+        "stderr": "",
+        "stdoutBase64": "WzddCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-duration",
+      "module": "Duration",
+      "family": "Duration",
+      "entrypoint": "effect/Duration",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-duration",
+      "binarySha256": "bbbf8ab48736a690fc3c44461bf1098d8244232fea1494707d8d437b8a3b3210",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-duration.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 502.997,
+        "maxRssKb": 41368,
+        "stdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiRHVyYXRpb24iLCJfdGFnIjoiTWlsbGlzIiwibWlsbGlzIjozMDAwMH0seyJfaWQiOiJEdXJhdGlvbiIsIl90YWciOiJNaWxsaXMiLCJtaWxsaXMiOjg2NDAwMDAwfSx7Il9pZCI6IkR1cmF0aW9uIiwiX3RhZyI6Ik5hbm9zIiwibmFub3MiOiIxMDAwMDAwNTAwIn1dCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-duration"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 12.479,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiRHVyYXRpb24iLCJfdGFnIjoiTWlsbGlzIiwibWlsbGlzIjozMDAwMH0seyJfaWQiOiJEdXJhdGlvbiIsIl90YWciOiJNaWxsaXMiLCJtaWxsaXMiOjg2NDAwMDAwfSx7Il9pZCI6IkR1cmF0aW9uIiwiX3RhZyI6Ik5hbm9zIiwibmFub3MiOiIxMDAwMDAwNTAwIn1dCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-equivalence",
+      "module": "Equivalence",
+      "family": "Equivalence",
+      "entrypoint": "effect/Equivalence",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-equivalence",
+      "binarySha256": "0de7b5f3c0fa469910c43075c4d2beaa69ddaeb777cb945830424b2cf81d2123",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-equivalence.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 390.605,
+        "maxRssKb": 34040,
+        "stdout": "[true,false,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsdHJ1ZV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-equivalence"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 7.97,
+        "maxRssKb": null,
+        "stdout": "[true,false,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsdHJ1ZV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-filter",
+      "module": "Filter",
+      "family": "Filter",
+      "entrypoint": "effect/Filter",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-filter",
+      "binarySha256": "65dd40f0cb8bf7b196f255b22981a2a704d06ac2397feb99838043b96014572d",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-filter.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 1444.332,
+        "maxRssKb": 84472,
+        "stdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiUmVzdWx0IiwiX3RhZyI6IlN1Y2Nlc3MiLCJ2YWx1ZSI6MX0seyJfaWQiOiJSZXN1bHQiLCJfdGFnIjoiU3VjY2VzcyIsInZhbHVlIjoiT0sifV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-filter"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 225.094,
+        "maxRssKb": null,
+        "stdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siX2lkIjoiUmVzdWx0IiwiX3RhZyI6IlN1Y2Nlc3MiLCJ2YWx1ZSI6MX0seyJfaWQiOiJSZXN1bHQiLCJfdGFnIjoiU3VjY2VzcyIsInZhbHVlIjoiT0sifV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-formatter",
+      "module": "Formatter",
+      "family": "Formatter",
+      "entrypoint": "effect/Formatter",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-formatter",
+      "binarySha256": "ccc70b85e4a7bcf3ee7f6ce2833ac7731402e7e3a37efc63749a260a499818f7",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-formatter.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 395.771,
+        "maxRssKb": 54812,
+        "stdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJ7XCJhXCI6MSxcImJcIjpbMiwzXX0iXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-formatter"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 271.75,
+        "maxRssKb": null,
+        "stdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJ7XCJhXCI6MSxcImJcIjpbMiwzXX0iXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-function",
+      "module": "Function",
+      "family": "Function",
+      "entrypoint": "effect/Function",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-function",
+      "binarySha256": "7537478efeb42e68198c6bd2ec40a206b2252069ac5a04c7f7b321c3a87bf5de",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-function.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 1165.205,
+        "maxRssKb": 80516,
+        "stdout": "[5,5]\n",
+        "stderr": "",
+        "stdoutBase64": "WzUsNV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-function"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.591,
+        "maxRssKb": null,
+        "stdout": "[5,5]\n",
+        "stderr": "",
+        "stdoutBase64": "WzUsNV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-hash",
+      "module": "Hash",
+      "family": "Hash",
+      "entrypoint": "effect/Hash",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-hash",
+      "binarySha256": "f053f26103dcbfdf29e7745d981d552d415bc0f280a6f4a408cae9711f79f228",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-hash.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 1187.176,
+        "maxRssKb": 34856,
+        "stdout": "[true,true,true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsdHJ1ZSx0cnVlXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-hash"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 5.99,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught Error: 'in' on 'number[]' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (number[])) [SC1090 at /workspace/shared/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103]\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6ICdpbicgb24gJ251bWJlcltdJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAobnVtYmVyW10pKSBbU0MxMDkwIGF0IC93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9ub2RlX21vZHVsZXMvLnBucG0vZWZmZWN0QDQuMC4xL25vZGVfbW9kdWxlcy9lZmZlY3QvZGlzdC9IYXNoLmpzOjEwM10K"
+      },
+      "equal": false,
+      "differences": [
+        "stdout",
+        "stderr",
+        "exitCode"
+      ],
+      "finding": "deferred runtime trap",
+      "signature": "d1ab8340711de15d",
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-iterable",
+      "module": "Iterable",
+      "family": "Iterable",
+      "entrypoint": "effect/Iterable",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-iterable",
+      "binarySha256": "56556bdf9947cc12cb895e8bc6ef58f5298f2bb5bd943fa9e247432817b5c80c",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-iterable.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 523.482,
+        "maxRssKb": 62968,
+        "stdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLDIsNCw2LDhdLFswLDEsNCw5XSxbMCwxLDIsMyw0LDUsNiw3LDgsOV1dCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-iterable"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 13.719,
+        "maxRssKb": null,
+        "stdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLDIsNCw2LDhdLFswLDEsNCw5XSxbMCwxLDIsMyw0LDUsNiw3LDgsOV1dCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonpatch",
+      "module": "JsonPatch",
+      "family": "JsonPatch",
+      "entrypoint": "effect/JsonPatch",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonpatch",
+      "binarySha256": "1f1ad6067a1f305c7d7683b5bc943e0fc3e449e6db9db70c4ed58066f3c48b3f",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonpatch.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 273.12,
+        "maxRssKb": null,
+        "stdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siaXRlbXMiOlsiYXBwbGUiXSwiY291bnQiOjV9XQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-jsonpatch"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.4,
+        "maxRssKb": null,
+        "stdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siaXRlbXMiOlsiYXBwbGUiXSwiY291bnQiOjV9XQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonpointer",
+      "module": "JsonPointer",
+      "family": "JsonPointer",
+      "entrypoint": "effect/JsonPointer",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonpointer",
+      "binarySha256": "bd4865ff759263f4eb981de5d8e0afedaa9f3a65e9696c6940f07a8bda7692c5",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonpointer.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 212.772,
+        "maxRssKb": null,
+        "stdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhfjFiIiwiY34wZCIsInBhdGh+MXRvfjBrZXkiXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-jsonpointer"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 5.012,
+        "maxRssKb": null,
+        "stdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhfjFiIiwiY34wZCIsInBhdGh+MXRvfjBrZXkiXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-jsonschema",
+      "module": "JsonSchema",
+      "family": "JsonSchema",
+      "entrypoint": "effect/JsonSchema",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-jsonschema",
+      "binarySha256": "78a8af92f9dc75ae5d1c0a4653c6b286451dd583a6b18bbca5e5b7efdf30283a",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-jsonschema.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 277.468,
+        "maxRssKb": 55880,
+        "stdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJkcmFmdC0yMDIwLTEyIix7InR5cGUiOiJzdHJpbmcifSx7IlRyaW1tZWQiOnsidHlwZSI6InN0cmluZyIsIm1pbkxlbmd0aCI6MX19XQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-jsonschema"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 7.752,
+        "maxRssKb": null,
+        "stdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJkcmFmdC0yMDIwLTEyIix7InR5cGUiOiJzdHJpbmcifSx7IlRyaW1tZWQiOnsidHlwZSI6InN0cmluZyIsIm1pbkxlbmd0aCI6MX19XQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-match",
+      "module": "Match",
+      "family": "Match",
+      "entrypoint": "effect/Match",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-match",
+      "binarySha256": "11709eb460ee4dff4d998c59df386ccdf6141f0bd6e1b69bebecda88bc55f7c8",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-match.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 269.924,
+        "maxRssKb": 62564,
+        "stdout": "[\"string: some input\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJzdHJpbmc6IHNvbWUgaW5wdXQiXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-match"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 6.519,
+        "maxRssKb": null,
+        "stdout": "[\"string: some input\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJzdHJpbmc6IHNvbWUgaW5wdXQiXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-mutablehashmap",
+      "module": "MutableHashMap",
+      "family": "MutableHashMap",
+      "entrypoint": "effect/MutableHashMap",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-mutablehashmap",
+      "binarySha256": "3c370b11de3cfb64188fb14cdd0f5433cdb40773650a6dbac9cdc4ef1475e76e",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-mutablehashmap.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 425.511,
+        "maxRssKb": 47072,
+        "stdout": "[[[\"count\",42],[\"total\",100]]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1tbImNvdW50Iiw0Ml0sWyJ0b3RhbCIsMTAwXV1dCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-mutablehashmap"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 5.235,
+        "maxRssKb": null,
+        "stdout": "[[[\"count\",42],[\"total\",100]]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1tbImNvdW50Iiw0Ml0sWyJ0b3RhbCIsMTAwXV1dCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-mutablehashset",
+      "module": "MutableHashSet",
+      "family": "MutableHashSet",
+      "entrypoint": "effect/MutableHashSet",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-mutablehashset",
+      "binarySha256": "f6a0001ff221f00f2dad5cdbe2ef117b9b983a8c20a8745b10daed706d7b3797",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-mutablehashset.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 350.318,
+        "maxRssKb": 54252,
+        "stdout": "[true,false,[\"apple\",\"banana\",\"cherry\"],3]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsWyJhcHBsZSIsImJhbmFuYSIsImNoZXJyeSJdLDNdCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-mutablehashset"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 6.738,
+        "maxRssKb": null,
+        "stdout": "[true,false,[\"apple\",\"banana\",\"cherry\"],3]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsZmFsc2UsWyJhcHBsZSIsImJhbmFuYSIsImNoZXJyeSJdLDNdCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-mutablelist",
+      "module": "MutableList",
+      "family": "MutableList",
+      "entrypoint": "effect/MutableList",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-mutablelist",
+      "binarySha256": "439f9a9328c7a5094ea3f8cbe8e4dd64188438c89492158be4a9eb83569ce32f",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-mutablelist.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 310.31,
+        "maxRssKb": 55208,
+        "stdout": "[[0,1,2],0]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLDEsMl0sMF0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-mutablelist"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.228,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught TypeError: expected number at $[0], got undefined\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgVHlwZUVycm9yOiBleHBlY3RlZCBudW1iZXIgYXQgJFswXSwgZ290IHVuZGVmaW5lZAo="
+      },
+      "equal": false,
+      "differences": [
+        "stdout",
+        "stderr",
+        "exitCode"
+      ],
+      "finding": "semantic divergence",
+      "signature": "d97444478386e499",
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-mutableref",
+      "module": "MutableRef",
+      "family": "MutableRef",
+      "entrypoint": "effect/MutableRef",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-mutableref",
+      "binarySha256": "70b2aaaf7d828021ef256147d27fc41f71b75db934e51ce480742659ee099d22",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-mutableref.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 405.41,
+        "maxRssKb": 43768,
+        "stdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "WzQyLDQyLDEwMCx7InRpbWVvdXQiOjEwMDAwLCJyZXRyaWVzIjo1fV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-mutableref"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.014,
+        "maxRssKb": null,
+        "stdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
+        "stderr": "",
+        "stdoutBase64": "WzQyLDQyLDEwMCx7InRpbWVvdXQiOjEwMDAwLCJyZXRyaWVzIjo1fV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-option",
+      "module": "Option",
+      "family": "Option",
+      "entrypoint": "effect/Option",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/documented-option",
+      "binarySha256": "9a5e5b6b668888551fbd3091c8b47e47795b4d4968c363a94cb72c49f6eb2220",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-option.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 394.388,
+        "maxRssKb": 53192,
+        "stdout": "[true,true,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsdHJ1ZSxmYWxzZV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-option"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.519,
+        "maxRssKb": null,
+        "stdout": "[true,true,false]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWUsdHJ1ZSxmYWxzZV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-order",
+      "module": "Order",
+      "family": "Order",
+      "entrypoint": "effect/Order",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-order",
+      "binarySha256": "fadb396613b2027b141bbeb3981fd23dea09a5c56357e0fe79c745d7f7423b14",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-order.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 333.828,
+        "maxRssKb": 53308,
+        "stdout": "[1,-1]\n",
+        "stderr": "",
+        "stdoutBase64": "WzEsLTFdCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-order"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 5.202,
+        "maxRssKb": null,
+        "stdout": "[1,-1]\n",
+        "stderr": "",
+        "stdoutBase64": "WzEsLTFdCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "documented-predicate",
+      "module": "Predicate",
+      "family": "Predicate",
+      "entrypoint": "effect/Predicate",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/documented-predicate",
+      "binarySha256": "a24dcf56303d121fca519713684ad47140643f7f5577f1d87c48c6e2fd0d1ea5",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/documented-predicate.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 356.119,
+        "maxRssKb": 54264,
+        "stdout": "[true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWVdCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/documented-predicate"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 6.209,
+        "maxRssKb": null,
+        "stdout": "[true]\n",
+        "stderr": "",
+        "stdoutBase64": "W3RydWVdCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-array",
+      "module": "Array",
+      "family": "Array",
+      "entrypoint": "effect/Array",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-array",
+      "binarySha256": "2f0931e57ea5f3e8d7874e0939886ceba650b9870f7209956cbf2e6f97e5d8d8",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-array.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 459.446,
+        "maxRssKb": 53088,
+        "stdout": "array:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "YXJyYXk6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-array"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.097,
+        "maxRssKb": null,
+        "stdout": "array:2,4,6\n",
+        "stderr": "",
+        "stdoutBase64": "YXJyYXk6Miw0LDYK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-bigint",
+      "module": "BigInt",
+      "family": "BigInt",
+      "entrypoint": "effect/BigInt",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-bigint",
+      "binarySha256": "2f8035d3f963ea749f43a58f0a2ac2e7c25ff4ed89686f4afe8e219841ac8b82",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-bigint.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 335.913,
+        "maxRssKb": 54996,
+        "stdout": "bigint:42\n",
+        "stderr": "",
+        "stdoutBase64": "YmlnaW50OjQyCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-bigint"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 11.501,
+        "maxRssKb": null,
+        "stdout": "bigint:42\n",
+        "stderr": "",
+        "stdoutBase64": "YmlnaW50OjQyCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-bytesize",
+      "module": "ByteSize",
+      "family": "ByteSize",
+      "entrypoint": "effect/ByteSize",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-bytesize",
+      "binarySha256": "861323d4ea85f9ba7a9a2b5ea0c9c732d539719e7c4d0b1d945da758ed499946",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-bytesize.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 367.219,
+        "maxRssKb": 53232,
+        "stdout": "bytes:2048\n",
+        "stderr": "",
+        "stdoutBase64": "Ynl0ZXM6MjA0OAo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-bytesize"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.978,
+        "maxRssKb": null,
+        "stdout": "bytes:2048\n",
+        "stderr": "",
+        "stdoutBase64": "Ynl0ZXM6MjA0OAo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-hashring",
+      "module": "HashRing",
+      "family": "HashRing",
+      "entrypoint": "effect/HashRing",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-hashring",
+      "binarySha256": "c9af5a7042a047e89284a19fafc3493baf06f4d2008ca124fc496489ad70b720",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-hashring.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 866.412,
+        "maxRssKb": 80552,
+        "stdout": "ring:node-a\n",
+        "stderr": "",
+        "stdoutBase64": "cmluZzpub2RlLWEK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-hashring"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.331,
+        "maxRssKb": null,
+        "stdout": "ring:node-a\n",
+        "stderr": "",
+        "stdoutBase64": "cmluZzpub2RlLWEK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--findmyway--internal--querystring",
+      "module": "http/FindMyWay/internal/queryString",
+      "family": "http/FindMyWay/internal/queryString",
+      "entrypoint": "effect/http/FindMyWay/internal/queryString",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-http--findmyway--internal--querystring",
+      "binarySha256": "3c41d0c5e7e6409e3f12a346fdaea8308e9c09acd9b564871369a82c9fb1c797",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--findmyway--internal--querystring.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 530.055,
+        "maxRssKb": 55096,
+        "stdout": "[{\"a\":\"1\",\"b\":\"two words\"},\"a=1&b=two%20words\"]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siYSI6IjEiLCJiIjoidHdvIHdvcmRzIn0sImE9MSZiPXR3byUyMHdvcmRzIl0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--findmyway--internal--querystring"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.085,
+        "maxRssKb": null,
+        "stdout": "[{\"a\":\"1\",\"b\":\"two words\"},\"a=1&b=two%20words\"]\n",
+        "stderr": "",
+        "stdoutBase64": "W3siYSI6IjEiLCJiIjoidHdvIHdvcmRzIn0sImE9MSZiPXR3byUyMHdvcmRzIl0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--internal--mimetypes",
+      "module": "http/internal/mimeTypes",
+      "family": "http/internal/mimeTypes",
+      "entrypoint": "effect/http/internal/mimeTypes",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-http--internal--mimetypes",
+      "binarySha256": "623a7850d6d4b874a2537317b2604dba39d65c1d168972bceb19a589f3d11e0a",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--internal--mimetypes.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 264.235,
+        "maxRssKb": null,
+        "stdout": "[[\"json\",\"map\"],[\"txt\",\"text\",\"conf\",\"def\",\"list\",\"log\",\"in\",\"ini\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1sianNvbiIsIm1hcCJdLFsidHh0IiwidGV4dCIsImNvbmYiLCJkZWYiLCJsaXN0IiwibG9nIiwiaW4iLCJpbmkiXV0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--internal--mimetypes"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 9.653,
+        "maxRssKb": null,
+        "stdout": "[[\"json\",\"map\"],[\"txt\",\"text\",\"conf\",\"def\",\"list\",\"log\",\"in\",\"ini\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1sianNvbiIsIm1hcCJdLFsidHh0IiwidGV4dCIsImNvbmYiLCJkZWYiLCJsaXN0IiwibG9nIiwiaW4iLCJpbmkiXV0K",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser",
+      "module": "http/MultipartParser",
+      "family": "http/MultipartParser",
+      "entrypoint": "effect/http/MultipartParser",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser",
+      "binarySha256": "9415cdd592232ebc5cdd15be0430bfbc2d5fde54dc821104b55d7a5265ffe2dd",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 255.338,
+        "maxRssKb": null,
+        "stdout": "[\"answer:42\",\"done\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhbnN3ZXI6NDIiLCJkb25lIl0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.851,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught Error: reading 'length' from a value of type 'any' is not supported yet (instantiating 'make' with (string, (unknown, unknown) => unknown, Uint8Array, number)) [SC1090 at /workspace/shared/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/MultipartParser/internal/search.js:112]\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6IHJlYWRpbmcgJ2xlbmd0aCcgZnJvbSBhIHZhbHVlIG9mIHR5cGUgJ2FueScgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ21ha2UnIHdpdGggKHN0cmluZywgKHVua25vd24sIHVua25vd24pID0+IHVua25vd24sIFVpbnQ4QXJyYXksIG51bWJlcikpIFtTQzEwOTAgYXQgL3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L2h0dHAvTXVsdGlwYXJ0UGFyc2VyL2ludGVybmFsL3NlYXJjaC5qczoxMTJdCg=="
+      },
+      "equal": false,
+      "differences": [
+        "stdout",
+        "stderr",
+        "exitCode"
+      ],
+      "finding": "deferred runtime trap",
+      "signature": "36c4933891f59bd1",
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--headersparser",
+      "module": "http/MultipartParser/HeadersParser",
+      "family": "http/MultipartParser/HeadersParser",
+      "entrypoint": "effect/http/MultipartParser/HeadersParser",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--headersparser",
+      "binarySha256": "f372e7e4d288bcdac3e71ad812c9a2877c380dceaead88dbf6ce364204968e2e",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--headersparser.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 796.29,
+        "maxRssKb": 52532,
+        "stdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJfdGFnIjoiSGVhZGVycyIsImhlYWRlcnMiOnsiY29udGVudC10eXBlIjoidGV4dC9wbGFpbiIsIngtZml4ZWQiOiJ5ZXMifSwiZW5kUG9zaXRpb24iOjQyfQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--headersparser"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 14.951,
+        "maxRssKb": null,
+        "stdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJfdGFnIjoiSGVhZGVycyIsImhlYWRlcnMiOnsiY29udGVudC10eXBlIjoidGV4dC9wbGFpbiIsIngtZml4ZWQiOiJ5ZXMifSwiZW5kUG9zaXRpb24iOjQyfQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--internal--contenttype",
+      "module": "http/MultipartParser/internal/contentType",
+      "family": "http/MultipartParser/internal/contentType",
+      "entrypoint": "effect/http/MultipartParser/internal/contentType",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--internal--contenttype",
+      "binarySha256": "66fe5b174c1affdd542778b155774b20dc6de22d8c6d7769c22532c984fcdb9d",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--internal--contenttype.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 553.776,
+        "maxRssKb": 51256,
+        "stdout": "{\"value\":\"text/plain\",\"parameters\":{\"charset\":\"utf-8\"}}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJ2YWx1ZSI6InRleHQvcGxhaW4iLCJwYXJhbWV0ZXJzIjp7ImNoYXJzZXQiOiJ1dGYtOCJ9fQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--contenttype"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 31.976,
+        "maxRssKb": null,
+        "stdout": "{\"value\":\"text/plain\",\"parameters\":{\"charset\":\"utf-8\"}}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJ2YWx1ZSI6InRleHQvcGxhaW4iLCJwYXJhbWV0ZXJzIjp7ImNoYXJzZXQiOiJ1dGYtOCJ9fQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--internal--headers",
+      "module": "http/MultipartParser/internal/headers",
+      "family": "http/MultipartParser/internal/headers",
+      "entrypoint": "effect/http/MultipartParser/internal/headers",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--internal--headers",
+      "binarySha256": "6242e8222cf3519f2a32d11bfcfec73da5c09831f064bb00c3cdbcc06691f20d",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--internal--headers.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 418.275,
+        "maxRssKb": 39688,
+        "stdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJfdGFnIjoiSGVhZGVycyIsImhlYWRlcnMiOnsiY29udGVudC10eXBlIjoidGV4dC9wbGFpbiIsIngtZml4ZWQiOiJ5ZXMifSwiZW5kUG9zaXRpb24iOjQyfQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--headers"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.371,
+        "maxRssKb": null,
+        "stdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+        "stderr": "",
+        "stdoutBase64": "eyJfdGFnIjoiSGVhZGVycyIsImhlYWRlcnMiOnsiY29udGVudC10eXBlIjoidGV4dC9wbGFpbiIsIngtZml4ZWQiOiJ5ZXMifSwiZW5kUG9zaXRpb24iOjQyfQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--internal--multipart",
+      "module": "http/MultipartParser/internal/multipart",
+      "family": "http/MultipartParser/internal/multipart",
+      "entrypoint": "effect/http/MultipartParser/internal/multipart",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--internal--multipart",
+      "binarySha256": "ed6b5cb3f144a929563e17dd9ee2c2d80e46a4427705c74771c95fd5404dc382",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--internal--multipart.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 290.676,
+        "maxRssKb": 58376,
+        "stdout": "[\"answer:42\",\"done\"]\n",
+        "stderr": "",
+        "stdoutBase64": "WyJhbnN3ZXI6NDIiLCJkb25lIl0K",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--multipart"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 13.822,
+        "maxRssKb": null,
+        "stdout": "",
+        "stderr": "Uncaught Error: reading 'length' from a value of type 'any' is not supported yet (instantiating 'make' with (string, (unknown, unknown) => unknown, Uint8Array, number)) [SC1090 at /workspace/shared/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/MultipartParser/internal/search.js:112]\n",
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6IHJlYWRpbmcgJ2xlbmd0aCcgZnJvbSBhIHZhbHVlIG9mIHR5cGUgJ2FueScgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ21ha2UnIHdpdGggKHN0cmluZywgKHVua25vd24sIHVua25vd24pID0+IHVua25vd24sIFVpbnQ4QXJyYXksIG51bWJlcikpIFtTQzEwOTAgYXQgL3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L2h0dHAvTXVsdGlwYXJ0UGFyc2VyL2ludGVybmFsL3NlYXJjaC5qczoxMTJdCg=="
+      },
+      "equal": false,
+      "differences": [
+        "stdout",
+        "stderr",
+        "exitCode"
+      ],
+      "finding": "deferred runtime trap",
+      "signature": "36c4933891f59bd1",
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--internal--search",
+      "module": "http/MultipartParser/internal/search",
+      "family": "http/MultipartParser/internal/search",
+      "entrypoint": "effect/http/MultipartParser/internal/search",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--internal--search",
+      "binarySha256": "e3b666e9f259a891a09ad9d7ee098fddecb6bc491e67981097ec7210520fc56f",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--internal--search.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 309.349,
+        "maxRssKb": 52996,
+        "stdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLCJhIl0sWzEsImIiXSxbMiwiYyJdXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--search"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 13.407,
+        "maxRssKb": null,
+        "stdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLCJhIl0sWzEsImIiXSxbMiwiYyJdXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-http--multipartparser--search",
+      "module": "http/MultipartParser/Search",
+      "family": "http/MultipartParser/Search",
+      "entrypoint": "effect/http/MultipartParser/Search",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-http--multipartparser--search",
+      "binarySha256": "0a1bd73ca04648a88d78d0484788383fa8f2c86b471c91d38425ecbcc865f6da",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-http--multipartparser--search.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 306.79,
+        "maxRssKb": 54556,
+        "stdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLCJhIl0sWzEsImIiXSxbMiwiYyJdXQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--search"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.507,
+        "maxRssKb": null,
+        "stdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n",
+        "stderr": "",
+        "stdoutBase64": "W1swLCJhIl0sWzEsImIiXSxbMiwiYyJdXQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-number",
+      "module": "Number",
+      "family": "Number",
+      "entrypoint": "effect/Number",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-number",
+      "binarySha256": "fe254958b46bc59b46d293a43878a2cafb3699789969d5a40d041b963d610fe9",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-number.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 410.718,
+        "maxRssKb": 52732,
+        "stdout": "number:42\n",
+        "stderr": "",
+        "stdoutBase64": "bnVtYmVyOjQyCg==",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-number"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 16.96,
+        "maxRssKb": null,
+        "stdout": "number:42\n",
+        "stderr": "",
+        "stdoutBase64": "bnVtYmVyOjQyCg==",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-primarykey",
+      "module": "PrimaryKey",
+      "family": "PrimaryKey",
+      "entrypoint": "effect/PrimaryKey",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-primarykey",
+      "binarySha256": "49f318bd279f43f1480d130f91e0e55e3c574e062b444d0ee9586bd74a3509a3",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-primarykey.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 324.173,
+        "maxRssKb": 54508,
+        "stdout": "product-42\n",
+        "stderr": "",
+        "stdoutBase64": "cHJvZHVjdC00Mgo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-primarykey"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 10.965,
+        "maxRssKb": null,
+        "stdout": "product-42\n",
+        "stderr": "",
+        "stdoutBase64": "cHJvZHVjdC00Mgo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-redactable",
+      "module": "Redactable",
+      "family": "Redactable",
+      "entrypoint": "effect/Redactable",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-redactable",
+      "binarySha256": "a96cab9c963525ff7b654b9cad13cc7174a36983377698acd9013586264c779e",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-redactable.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 510.291,
+        "maxRssKb": 47216,
+        "stdout": "redacted-value\n",
+        "stderr": "",
+        "stdoutBase64": "cmVkYWN0ZWQtdmFsdWUK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-redactable"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 7.235,
+        "maxRssKb": null,
+        "stdout": "redacted-value\n",
+        "stderr": "",
+        "stdoutBase64": "cmVkYWN0ZWQtdmFsdWUK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-string",
+      "module": "String",
+      "family": "String",
+      "entrypoint": "effect/String",
+      "tier": "deferred",
+      "mode": "static",
+      "binary": "bin/module-string",
+      "binarySha256": "998d6b4ddde9549b243ed118ff3fbe8026176490c202ec82ed1e236dacbe9ac2",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-string.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 399.3,
+        "maxRssKb": 56588,
+        "stdout": "string:STABLE\n",
+        "stderr": "",
+        "stdoutBase64": "c3RyaW5nOlNUQUJMRQo=",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-string"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.912,
+        "maxRssKb": null,
+        "stdout": "string:STABLE\n",
+        "stderr": "",
+        "stdoutBase64": "c3RyaW5nOlNUQUJMRQo=",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    },
+    {
+      "caseId": "module-undefinedor",
+      "module": "UndefinedOr",
+      "family": "UndefinedOr",
+      "entrypoint": "effect/UndefinedOr",
+      "tier": "static",
+      "mode": "static",
+      "binary": "bin/module-undefinedor",
+      "binarySha256": "4ae4e300f22f6e7039dbfda388e1334e782f556c953cc141f9583dbbccc5a508",
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "--experimental-strip-types",
+          "cases/module-undefinedor.ts"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 311.774,
+        "maxRssKb": 54264,
+        "stdout": "undefinedOr:42\n",
+        "stderr": "",
+        "stdoutBase64": "dW5kZWZpbmVkT3I6NDIK",
+        "stderrBase64": ""
+      },
+      "native": {
+        "command": [
+          "/workspace/shared/effect-scriptc-compat/bin/module-undefinedor"
+        ],
+        "cwd": "/workspace/shared/effect-scriptc-compat",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 9.211,
+        "maxRssKb": null,
+        "stdout": "undefinedOr:42\n",
+        "stderr": "",
+        "stdoutBase64": "dW5kZWZpbmVkT3I6NDIK",
+        "stderrBase64": ""
+      },
+      "equal": true,
+      "differences": [],
+      "finding": null,
+      "signature": null,
+      "baselineValid": true
+    }
+  ],
+  "summary": {
+    "binaries": 39,
+    "equal": 35,
+    "mismatched": 4,
+    "invalidNodeBaselines": 0,
+    "hangs": 0
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "id": "documented-datetime",
+  "module": "DateTime",
+  "entrypoint": "effect/DateTime",
+  "family": "DateTime",
+  "file": "cases/documented-datetime.ts",
+  "status": "ready",
+  "api": [
+    "DateTime.zoneMakeNamedUnsafe",
+    "DateTime.makeZoned",
+    "Option.getOrThrow",
+    "DateTime.formatIso"
+  ],
+  "expectedStdout": "[\"2025-11-02T05:30:00.000Z\",\"2025-11-02T06:30:00.000Z\",\"2025-03-09T06:30:00.000Z\",\"2025-03-09T07:30:00.000Z\"]\n",
+  "declaration": "node_modules/effect/dist/DateTime.d.ts",
+  "declarationSha256": "d9dbf8e8b556f78b8c51915d91d38095fcac929c7b943b5cc1b183273da26a45",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "0a5bf24e389d19c5b8658c12290cee4b4267ece28bc85fe2dbf9d6f6a614bc20",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-datetime.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 3210.601,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-datetime.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 55088.134,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-datetime.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-datetime"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 57917.843,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-datetime.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtZGF0ZXRpbWUudHM6MToxIC0gZXJyb3IgU0MzMDA0OiBudWxsIGlzIG5vdCByZXByZXNlbnRhYmxlIGluIHRoZSB0YXJnZXQgdW5pb24gKGEgdmFsdWUgbmFycm93ZWQgb3IgYXNzZXJ0ZWQgcGFzdCBpdCBzdGlsbCBoZWxkIGl0KQoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-datetime.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-datetime.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 63852.72,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-datetime.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-datetime.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 60670.704,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-datetime.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtZGF0ZXRpbWUudHM6MToxIC0gZXJyb3IgU0MzMDA0OiBudWxsIGlzIG5vdCByZXByZXNlbnRhYmxlIGluIHRoZSB0YXJnZXQgdW5pb24gKGEgdmFsdWUgbmFycm93ZWQgb3IgYXNzZXJ0ZWQgcGFzdCBpdCBzdGlsbCBoZWxkIGl0KQoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-datetime.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/documented-datetime.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; parsed partial counts cannot establish static compatibility"
+  ]
+}

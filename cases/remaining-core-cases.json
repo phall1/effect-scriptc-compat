@@ -1,0 +1,571 @@
+[
+  {
+    "id": "remaining-core-stdio",
+    "module": "Stdio",
+    "entrypoint": "effect/Stdio",
+    "family": "Stdio",
+    "file": "cases/remaining-core-stdio.ts",
+    "status": "ready",
+    "api": [
+      "Stdio.layerTest",
+      "Stdio.Stdio"
+    ],
+    "reason": "Uses the documented process-local layerTest with draining sinks and empty input; no OS handles are opened.",
+    "expectedStdout": "[[\"--mode\",\"test\"],[false,false],0]\n"
+  },
+  {
+    "id": "remaining-core-terminal",
+    "module": "Terminal",
+    "entrypoint": "effect/Terminal",
+    "family": "Terminal",
+    "file": "cases/remaining-core-terminal.ts",
+    "status": "ready",
+    "api": [
+      "Terminal.QuitError",
+      "Terminal.isQuitError"
+    ],
+    "reason": "Pure typed cancellation/error API only; interactive terminal service operations are not exercised.",
+    "expectedStdout": "[\"QuitError\",true,false]\n"
+  },
+  {
+    "id": "remaining-core-random",
+    "module": "Random",
+    "entrypoint": "effect/Random",
+    "family": "Random",
+    "file": "cases/remaining-core-random.ts",
+    "status": "ready",
+    "api": [
+      "Random.choice"
+    ],
+    "reason": "Empty input takes the NoSuchElementError branch before consulting Random or sampling: dist/Random.js choice lines212-214. No random numbers are generated.",
+    "expectedStdout": "[\"NoSuchElementError\",\"Cannot select a random element from an empty array\"]\n"
+  },
+  {
+    "id": "remaining-core-schema--variantschema",
+    "module": "schema/VariantSchema",
+    "entrypoint": "effect/schema/VariantSchema",
+    "family": "schema/VariantSchema",
+    "file": "cases/remaining-core-schema--variantschema.ts",
+    "status": "ready",
+    "api": [
+      "VariantSchema.make",
+      "VariantSchema.isStruct",
+      "VariantSchema.isField",
+      "VariantSchema.extract"
+    ],
+    "expectedStdout": "[true,true,{\"id\":1},{\"id\":2,\"secret\":\"visible\"}]\n"
+  },
+  {
+    "id": "remaining-core-reactivity--hydration",
+    "module": "reactivity/Hydration",
+    "entrypoint": "effect/reactivity/Hydration",
+    "family": "reactivity/Hydration",
+    "file": "cases/remaining-core-reactivity--hydration.ts",
+    "status": "ready",
+    "api": [
+      "Hydration.hydrate",
+      "Hydration.toValues"
+    ],
+    "reason": "Hydrates fixed serialized state; intentionally avoids dehydrate, which reads Date.now internally.",
+    "expectedStdout": "[[[\"count\",42]],42]\n"
+  },
+  {
+    "id": "remaining-core-reactivity--reactivity",
+    "module": "reactivity/Reactivity",
+    "entrypoint": "effect/reactivity/Reactivity",
+    "family": "reactivity/Reactivity",
+    "file": "cases/remaining-core-reactivity--reactivity.ts",
+    "status": "ready",
+    "api": [
+      "Reactivity.make",
+      "Reactivity.registerUnsafe",
+      "Reactivity.invalidate",
+      "Reactivity.mutation",
+      "Reactivity.withBatch"
+    ],
+    "expectedStdout": "[2,2]\n"
+  },
+  {
+    "id": "remaining-core-persistence--persistable",
+    "module": "persistence/Persistable",
+    "entrypoint": "effect/persistence/Persistable",
+    "family": "persistence/Persistable",
+    "file": "cases/remaining-core-persistence--persistable.ts",
+    "status": "ready",
+    "api": [
+      "Persistable.Class",
+      "Persistable.serializeExit",
+      "Persistable.deserializeExit"
+    ],
+    "expectedStdout": "[\"one\",{\"_tag\":\"Success\",\"value\":42},42,\"Failure\"]\n"
+  },
+  {
+    "id": "remaining-core-persistence--persistence",
+    "module": "persistence/Persistence",
+    "entrypoint": "effect/persistence/Persistence",
+    "family": "persistence/Persistence",
+    "file": "cases/remaining-core-persistence--persistence.ts",
+    "status": "ready",
+    "api": [
+      "Persistence.Persistence",
+      "Persistence.layerMemory",
+      "PersistenceStore.get",
+      "PersistenceStore.set",
+      "PersistenceStore.remove"
+    ],
+    "expectedStdout": "[true,42,true]\n"
+  },
+  {
+    "id": "remaining-core-persistence--persistedcache",
+    "module": "persistence/PersistedCache",
+    "entrypoint": "effect/persistence/PersistedCache",
+    "family": "persistence/PersistedCache",
+    "file": "cases/remaining-core-persistence--persistedcache.ts",
+    "status": "ready",
+    "api": [
+      "PersistedCache.make",
+      "PersistedCache.get",
+      "PersistedCache.invalidate"
+    ],
+    "expectedStdout": "[1,1,2,2]\n"
+  },
+  {
+    "id": "remaining-core-persistence--persistedqueue",
+    "module": "persistence/PersistedQueue",
+    "entrypoint": "effect/persistence/PersistedQueue",
+    "family": "persistence/PersistedQueue",
+    "file": "cases/remaining-core-persistence--persistedqueue.ts",
+    "status": "ready",
+    "api": [
+      "PersistedQueue.make",
+      "PersistedQueue.layerStoreMemory",
+      "PersistedQueue.offer",
+      "PersistedQueue.take"
+    ],
+    "reason": "In-memory store, TestClock, and explicit queue IDs; no persistence IO, wall clock, UUID sampling, or waits on empty queue.",
+    "expectedStdout": "[[\"first\",\"one\",1],[\"second\",\"two\",1]]\n"
+  },
+  {
+    "id": "remaining-core-persistence--redis",
+    "module": "persistence/Redis",
+    "entrypoint": "effect/persistence/Redis",
+    "family": "persistence/Redis",
+    "file": "cases/remaining-core-persistence--redis.ts",
+    "status": "ready",
+    "api": [
+      "Redis.script",
+      "Script.withReturnType",
+      "Script.params",
+      "Script.numberOfKeys"
+    ],
+    "reason": "Pure typed Lua-script descriptor only; no Redis connection or commands.",
+    "expectedStdout": "[\"return ARGV[1]\",[\"key\",42],1]\n"
+  },
+  {
+    "id": "remaining-core-schema--schemajitcompiler--enable",
+    "module": "schema/SchemaJITCompiler/enable",
+    "entrypoint": "effect/schema/SchemaJITCompiler/enable",
+    "family": "schema/SchemaJITCompiler/enable",
+    "file": "cases/remaining-core-schema--schemajitcompiler--enable.ts",
+    "status": "ready",
+    "api": [
+      "SchemaJITCompiler/enable side-effect installation",
+      "Schema.decodeUnknownSync",
+      "Schema.is"
+    ],
+    "reason": "Documented side-effect compiler installation is followed by real success/failure parsing, not import-only smoke; fallback is allowed by the public API.",
+    "expectedStdout": "[{\"id\":1,\"label\":\"compiled\"},false]\n"
+  },
+  {
+    "id": "remaining-core-schema--schemacompiler",
+    "module": "schema/SchemaCompiler",
+    "entrypoint": "effect/schema/SchemaCompiler",
+    "family": "schema/SchemaCompiler",
+    "file": "cases/remaining-core-schema--schemacompiler.ts",
+    "status": "ready",
+    "api": [
+      "SchemaCompiler.set",
+      "SchemaParser.decodeUnknownEffect",
+      "SchemaParser.decodeUnknownSync",
+      "SchemaParser.is"
+    ],
+    "reason": "Public registry installation using a genuine SchemaParser interpreter, resolved by a prior parse before replacement. SchemaCompiler.d.ts:188-195 explicitly specifies that already resolved parsers retain their entry; SchemaParser.js:827-830 resolves lazily on first invocation. No source patch, custom parser semantics, or compiler-error workaround.",
+    "expectedStdout": "[{\"value\":7},false]\n"
+  },
+  {
+    "id": "remaining-core-schema--schemaaotcompiler--build",
+    "module": "schema/SchemaAOTCompiler/Build",
+    "entrypoint": "effect/schema/SchemaAOTCompiler/Build",
+    "family": "schema/SchemaAOTCompiler/Build",
+    "file": "cases/remaining-core-schema--schemaaotcompiler--build.ts",
+    "status": "ready",
+    "api": [
+      "Build.build",
+      "Build.BuildError"
+    ],
+    "reason": "Invalid loader result exercises deterministic BuildError validation before filesystem operations; provided no-op filesystem performs no IO.",
+    "expectedStdout": "[\"BuildError\",\"InvalidModule\",\"./invalid.ts\"]\n"
+  },
+  {
+    "id": "remaining-core-differ",
+    "module": "Differ",
+    "entrypoint": "effect/Differ",
+    "family": "Differ",
+    "file": "cases/remaining-core-differ.ts",
+    "status": "uncovered",
+    "reason": "Type-only contract: dist/Differ.d.ts exports only interface Differ<T, Patch>; dist/Differ.js contains export {}. No runtime primary API exists.",
+    "api": []
+  },
+  {
+    "id": "remaining-core-hkt",
+    "module": "HKT",
+    "entrypoint": "effect/HKT",
+    "family": "HKT",
+    "file": "cases/remaining-core-hkt.ts",
+    "status": "uncovered",
+    "reason": "Type-level HKT machinery: dist/HKT.d.ts declares URI as a unique symbol plus TypeClass, TypeLambda and Kind, but dist/HKT.js contains only export {}. URI is not a real runtime export; importing it would not be a valid compatibility probe.",
+    "api": []
+  },
+  {
+    "id": "remaining-core-types",
+    "module": "Types",
+    "entrypoint": "effect/Types",
+    "family": "Types",
+    "file": "cases/remaining-core-types.ts",
+    "status": "uncovered",
+    "reason": "Type-only utilities: dist/Types.d.ts exports type aliases, interfaces and type namespaces; dist/Types.js contains export {}. No runtime primary API exists.",
+    "api": []
+  },
+  {
+    "id": "remaining-core-standardschema",
+    "module": "StandardSchema",
+    "entrypoint": "effect/StandardSchema",
+    "family": "StandardSchema",
+    "file": "cases/remaining-core-standardschema.ts",
+    "status": "uncovered",
+    "reason": "Type-only Standard Schema v1 contracts: dist/StandardSchema.d.ts exposes interfaces and type namespaces; dist/StandardSchema.js contains export {}. No runtime primary API exists.",
+    "api": []
+  },
+  {
+    "id": "remaining-core-schema--schemacompiler--runtime",
+    "module": "schema/SchemaCompiler/runtime",
+    "entrypoint": "effect/schema/SchemaCompiler/runtime",
+    "family": "schema/SchemaCompiler/runtime",
+    "file": "cases/remaining-core-schema--schemacompiler--runtime.ts",
+    "status": "uncovered",
+    "reason": "Declaration-stripped internal support module: dist/schema/SchemaCompiler/runtime.d.ts is export {}. The JavaScript runtime object is annotated @internal and absent from the public type declaration, so no public typed primary API is available; not an import-only compatibility pass.",
+    "api": []
+  },
+  {
+    "id": "remaining-core-reactivity--atomrpc",
+    "module": "reactivity/AtomRpc",
+    "entrypoint": "effect/reactivity/AtomRpc",
+    "family": "reactivity/AtomRpc",
+    "file": "cases/remaining-core-reactivity--atomrpc.ts",
+    "status": "ready",
+    "api": [
+      "AtomRpc.Service",
+      "AtomRpc.query",
+      "AtomRegistry.getResult",
+      "RpcTest.makeClient"
+    ],
+    "reason": "A real AtomRpc query completes over the documented in-memory RpcTest client/server transport with schema-backed RPC handlers; tracing disabled, no sockets or network.",
+    "expectedStdout": "42\n"
+  },
+  {
+    "id": "remaining-core-reactivity--atomhttpapi",
+    "module": "reactivity/AtomHttpApi",
+    "entrypoint": "effect/reactivity/AtomHttpApi",
+    "family": "reactivity/AtomHttpApi",
+    "file": "cases/remaining-core-reactivity--atomhttpapi.ts",
+    "status": "ready",
+    "api": [
+      "AtomHttpApi.Service",
+      "AtomHttpApi.query",
+      "AtomRegistry.getResult",
+      "HttpClient.make",
+      "HttpClientResponse.fromWeb"
+    ],
+    "reason": "A real typed API atom query completes over HttpClient.make with an in-memory request runner and fixed Web Response; records the encoded route, performs no fetch, and disables tracing.",
+    "expectedStdout": "[{\"value\":42},[\"https://fixture.invalid/items/one\"]]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpcclient",
+    "module": "rpc/RpcClient",
+    "entrypoint": "effect/rpc/RpcClient",
+    "family": "rpc/RpcClient",
+    "file": "cases/remaining-core-rpc--rpcclient.ts",
+    "status": "ready",
+    "api": [
+      "RpcClient.makeNoSerialization",
+      "RpcClient.client",
+      "RpcServer.write",
+      "RpcServer.disconnect"
+    ],
+    "reason": "Direct decoded client/server APIs exchange real requests and typed success/failure responses in memory; no transport IO and tracing disabled.",
+    "expectedStdout": "[42,\"negative\"]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpcserver",
+    "module": "rpc/RpcServer",
+    "entrypoint": "effect/rpc/RpcServer",
+    "family": "rpc/RpcServer",
+    "file": "cases/remaining-core-rpc--rpcserver.ts",
+    "status": "ready",
+    "api": [
+      "RpcServer.makeNoSerialization",
+      "RpcClient.client",
+      "RpcServer.write",
+      "RpcServer.disconnect"
+    ],
+    "reason": "Direct decoded client/server APIs exchange real requests and typed success/failure responses in memory; no transport IO and tracing disabled.",
+    "expectedStdout": "[42,\"negative\"]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpcclienterror",
+    "module": "rpc/RpcClientError",
+    "entrypoint": "effect/rpc/RpcClientError",
+    "family": "rpc/RpcClientError",
+    "file": "cases/remaining-core-rpc--rpcclienterror.ts",
+    "status": "ready",
+    "api": [
+      "RpcClientDefect",
+      "RpcClientError",
+      "RpcClientError.message"
+    ],
+    "reason": "Pure protocol-error creation, schema validation and recovered typed failure; no client transport.",
+    "expectedStdout": "[\"RpcClientError\",\"RpcClientDefect\",\"RpcClientDefect: bad response\",true]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpctest",
+    "module": "rpc/RpcTest",
+    "entrypoint": "effect/rpc/RpcTest",
+    "family": "rpc/RpcTest",
+    "file": "cases/remaining-core-rpc--rpctest.ts",
+    "status": "ready",
+    "api": [
+      "RpcTest.makeClient"
+    ],
+    "reason": "The documented in-memory transport executes a real streaming RPC and collects its three terminal values; no network or worker.",
+    "expectedStdout": "[1,2,3]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpcmiddleware",
+    "module": "rpc/RpcMiddleware",
+    "entrypoint": "effect/rpc/RpcMiddleware",
+    "family": "rpc/RpcMiddleware",
+    "file": "cases/remaining-core-rpc--rpcmiddleware.ts",
+    "status": "ready",
+    "api": [
+      "RpcMiddleware.Service",
+      "Rpc.middleware",
+      "RpcTest.makeClient"
+    ],
+    "reason": "User-defined server middleware wraps an actual in-memory RPC and observes the completed handler; no remote IO.",
+    "expectedStdout": "[42,[\"double\"]]\n"
+  },
+  {
+    "id": "remaining-core-rpc--rpcworker",
+    "module": "rpc/RpcWorker",
+    "entrypoint": "effect/rpc/RpcWorker",
+    "family": "rpc/RpcWorker",
+    "file": "cases/remaining-core-rpc--rpcworker.ts",
+    "status": "ready",
+    "api": [
+      "RpcWorker.makeInitialMessage"
+    ],
+    "reason": "Only schema encoding and transferable collection for a fixed initial worker message; no worker is spawned.",
+    "expectedStdout": "[{\"worker\":\"fixture\",\"count\":2},[]]\n"
+  },
+  {
+    "id": "remaining-core-rpc--utils",
+    "module": "rpc/Utils",
+    "entrypoint": "effect/rpc/Utils",
+    "family": "rpc/Utils",
+    "file": "cases/remaining-core-rpc--utils.ts",
+    "status": "ready",
+    "api": [
+      "Utils.withRun"
+    ],
+    "reason": "Exercises pre-run buffering, replay, live delivery and restoration after interruption using Deferred and documented forkScoped({startImmediately: true}) synchronization; no timer sleeps or transport.",
+    "expectedStdout": "[1,2,3]\n"
+  },
+  {
+    "id": "remaining-core-sql--sqlclient",
+    "module": "sql/SqlClient",
+    "entrypoint": "effect/sql/SqlClient",
+    "family": "sql/SqlClient",
+    "file": "cases/remaining-core-sql--sqlclient.ts",
+    "status": "ready",
+    "api": [
+      "SqlClient.make",
+      "SqlClient.safe",
+      "SqlClient.withoutTransforms",
+      "Statement.compile"
+    ],
+    "reason": "Real SqlClient builds and compiles parameterized SQL without executing it. The acquirer fails if called, so this fixture cannot access a database.",
+    "expectedStdout": "[[\"SELECT \\\"name\\\" FROM \\\"items\\\" WHERE id = ?\",[7]],true,[\"SELECT ?\",[3]]]\n"
+  },
+  {
+    "id": "remaining-core-sql--sqlresolver",
+    "module": "sql/SqlResolver",
+    "entrypoint": "effect/sql/SqlResolver",
+    "family": "sql/SqlResolver",
+    "file": "cases/remaining-core-sql--sqlresolver.ts",
+    "status": "ready",
+    "api": [
+      "SqlResolver.ordered",
+      "SqlResolver.request"
+    ],
+    "reason": "Schema-aware ordered request batching with a deterministic in-memory execute callback; actual batching and row decoding are performed by Effect, no SQL driver.",
+    "expectedStdout": "[[4,6],[[2,3]]]\n"
+  },
+  {
+    "id": "remaining-core-sql--sqlstream",
+    "module": "sql/SqlStream",
+    "entrypoint": "effect/sql/SqlStream",
+    "family": "sql/SqlStream",
+    "file": "cases/remaining-core-sql--sqlstream.ts",
+    "status": "ready",
+    "api": [
+      "SqlStream.asyncPauseResume"
+    ],
+    "reason": "Finite in-memory callback producer exercises stream emission and normal completion; no database, timer, or nondeterministic scheduling output.",
+    "expectedStdout": "[1,2,3]\n"
+  },
+  {
+    "id": "remaining-core-process--childprocessspawner",
+    "module": "process/ChildProcessSpawner",
+    "entrypoint": "effect/process/ChildProcessSpawner",
+    "family": "process/ChildProcessSpawner",
+    "file": "cases/remaining-core-process--childprocessspawner.ts",
+    "status": "ready",
+    "api": [
+      "ChildProcessSpawner.makeHandle",
+      "ChildProcessSpawner.make",
+      "ChildProcessSpawner.ProcessId",
+      "ChildProcessSpawner.ExitCode",
+      "ChildProcessSpawner.lines"
+    ],
+    "reason": "Documented handle/spawner constructors derive exit and line collection from fixed in-memory streams; the supplied spawn callback never creates an OS process.",
+    "expectedStdout": "[42,0,[\"a\",\"b\"]]\n"
+  },
+  {
+    "id": "remaining-core-sql--sqlmodel",
+    "module": "sql/SqlModel",
+    "entrypoint": "effect/sql/SqlModel",
+    "family": "sql/SqlModel",
+    "file": "cases/remaining-core-sql--sqlmodel.ts",
+    "status": "ready",
+    "api": [
+      "SqlModel.makeRepository",
+      "Repository.findById"
+    ],
+    "reason": "Expected-failure path validates repository input against the genuine Model id schema before any connection acquisition. The acquirer dies if called; no database is used. Successful database CRUD remains explicitly skipped in the backend case.",
+    "expectedStdout": "[\"SchemaError\",true]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventjournal",
+    "module": "eventlog/EventJournal",
+    "entrypoint": "effect/eventlog/EventJournal",
+    "family": "eventlog/EventJournal",
+    "file": "cases/remaining-core-eventlog--eventjournal.ts",
+    "status": "ready",
+    "api": [
+      "EventJournal.makeMemory",
+      "EventJournal.Entry",
+      "EventJournal.RemoteEntry",
+      "EventJournal.writeFromRemote",
+      "EventJournal.nextRemoteSequence"
+    ],
+    "reason": "Imports fixed remote entries into the real memory journal, verifies de-duplication and sequence tracking. Never calls random makeEntryIdUnsafe/makeRemoteIdUnsafe or local write.",
+    "expectedStdout": "[[[\"Added\",\"one\",[1,2],1]],0,1,1,1]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlog",
+    "module": "eventlog/EventLog",
+    "entrypoint": "effect/eventlog/EventLog",
+    "family": "eventlog/EventLog",
+    "file": "cases/remaining-core-eventlog--eventlog.ts",
+    "status": "ready",
+    "api": [
+      "EventLog.schema",
+      "EventLog.isEventLogSchema",
+      "EventLog.encodeIdentityString",
+      "EventLog.decodeIdentityString"
+    ],
+    "reason": "Pure event schema construction and fixed synthetic identity codec roundtrip; no identity generation, event ID sampling, or remote replication.",
+    "expectedStdout": "[true,1,\"fixture-public\",[1,2,3,4],true]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlogencryption",
+    "module": "eventlog/EventLogEncryption",
+    "entrypoint": "effect/eventlog/EventLogEncryption",
+    "family": "eventlog/EventLogEncryption",
+    "file": "cases/remaining-core-eventlog--eventlogencryption.ts",
+    "status": "ready",
+    "api": [
+      "EventLogEncryption.makeEncryptionSubtle",
+      "EventLogEncryption.sha256String"
+    ],
+    "reason": "Deterministic SHA-256 hashing only. The declared public Web Crypto constructor is used; encrypt/generateIdentity paths that sample randomness are never called.",
+    "expectedStdout": "\"ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\"\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlogserverencrypted",
+    "module": "eventlog/EventLogServerEncrypted",
+    "entrypoint": "effect/eventlog/EventLogServerEncrypted",
+    "family": "eventlog/EventLogServerEncrypted",
+    "file": "cases/remaining-core-eventlog--eventlogserverencrypted.ts",
+    "status": "ready",
+    "api": [
+      "EventLogServerEncrypted.PersistedEntry",
+      "PersistedEntry.entryIdString"
+    ],
+    "reason": "Public encrypted-entry constructor/schema codec and stable UUID rendering only. makeStorageMemory samples a remote UUID at construction (dist/EventLogServerEncrypted.js:168), so storage/replication paths are intentionally not run.",
+    "expectedStdout": "[\"00000000-0001-7000-8000-000000000001\",[1,2,3],[4,5,6]]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlogserverunencrypted",
+    "module": "eventlog/EventLogServerUnencrypted",
+    "entrypoint": "effect/eventlog/EventLogServerUnencrypted",
+    "family": "eventlog/EventLogServerUnencrypted",
+    "file": "cases/remaining-core-eventlog--eventlogserverunencrypted.ts",
+    "status": "ready",
+    "api": [
+      "EventLogServerUnencrypted.layerStoreMappingStatic",
+      "StoreMapping.hasStore",
+      "StoreMapping.resolve"
+    ],
+    "reason": "Actual store mapping layer resolves the configured store and returns a typed NotFound for another; no UUID creation, database or remote service.",
+    "expectedStdout": "[true,\"main\",[\"EventLogServerStoreError\",\"NotFound\"]]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlogserver",
+    "module": "eventlog/EventLogServer",
+    "entrypoint": "effect/eventlog/EventLogServer",
+    "family": "eventlog/EventLogServer",
+    "file": "cases/remaining-core-eventlog--eventlogserver.ts",
+    "status": "ready",
+    "api": [
+      "EventLogServer.layerAuthMiddleware"
+    ],
+    "reason": "Executes the real auth middleware through an in-memory RPC; missing identity is recovered as Forbidden. No challenge creation, randomness, or network.",
+    "expectedStdout": "[\"EventLogProtocolError\",\"Forbidden\",\"Unauthenticated request\"]\n"
+  },
+  {
+    "id": "remaining-core-eventlog--eventlogremote",
+    "module": "eventlog/EventLogRemote",
+    "entrypoint": "effect/eventlog/EventLogRemote",
+    "family": "eventlog/EventLogRemote",
+    "file": "cases/remaining-core-eventlog--eventlogremote.ts",
+    "status": "ready",
+    "api": [
+      "EventLogRemote.makeUnencrypted",
+      "EventLogRemote.EventLogRemoteClient",
+      "Registry.registerRemote"
+    ],
+    "reason": "Constructs and scopes a real unencrypted remote, completes Hello over RpcTest, and registers it. Synthetic fixed Hello payload; authenticated write/change and cryptographic challenge generation are not exercised.",
+    "expectedStdout": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n"
+  }
+]

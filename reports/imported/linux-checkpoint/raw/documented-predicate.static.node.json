@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-predicate.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 356.119,
+  "maxRssKb": 54264,
+  "stdout": "[true]\n",
+  "stderr": "",
+  "stdoutBase64": "W3RydWVdCg==",
+  "stderrBase64": ""
+}

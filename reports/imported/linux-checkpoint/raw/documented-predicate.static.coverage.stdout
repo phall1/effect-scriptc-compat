@@ -1,0 +1,9 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-predicate.ts
+
+  statements analyzed   82
+  compile statically    82  (100%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  fully static — this program has no dynamic remainder.

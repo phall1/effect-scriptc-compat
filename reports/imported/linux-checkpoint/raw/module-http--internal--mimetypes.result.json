@@ -1,0 +1,120 @@
+{
+  "id": "module-http--internal--mimetypes",
+  "module": "http/internal/mimeTypes",
+  "entrypoint": "effect/http/internal/mimeTypes",
+  "family": "http/internal/mimeTypes",
+  "file": "cases/module-http--internal--mimetypes.ts",
+  "status": "ready",
+  "api": [
+    "default"
+  ],
+  "expectedStdout": "[[\"json\",\"map\"],[\"txt\",\"text\",\"conf\",\"def\",\"list\",\"log\",\"in\",\"ini\"]]\n",
+  "declaration": "node_modules/effect/dist/http/internal/mimeTypes.d.ts",
+  "declarationSha256": "3c1d34f9e4c82c0dcf4b813511f19de9df2d0aff8d104793df655fe868944c67",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "420dbf7914bfb7c0b6faf434a5099b1083c101ffe64c73f6f781adc3c089f70e",
+  "sourceSha256": "fbbbee5cbbb433f27600f88a3139c9c5af4b50b06e587b96470d89dcadebd807",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-http--internal--mimetypes.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 2595.834,
+    "maxRssKb": 163552,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-http--internal--mimetypes.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2495.209,
+      "maxRssKb": 35664,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/module-http--internal--mimetypes.ts\n\n  statements analyzed   4\n  compile statically    4  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbW9kdWxlLWh0dHAtLWludGVybmFsLS1taW1ldHlwZXMudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDQKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNCAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 4,
+        "static": 4,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-http--internal--mimetypes.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-http--internal--mimetypes"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 22202.293,
+      "maxRssKb": 82768,
+      "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-http--internal--mimetypes\n",
+      "stderr": "",
+      "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtaHR0cC0taW50ZXJuYWwtLW1pbWV0eXBlcwo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/module-http--internal--mimetypes",
+    "binarySize": 2459456,
+    "binarySha256": "623a7850d6d4b874a2537317b2604dba39d65c1d168972bceb19a589f3d11e0a"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

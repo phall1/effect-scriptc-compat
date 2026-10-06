@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "partial": true,
+  "generatedAt": "2026-10-05T17:45:55.213Z",
+  "distinctSignatures": 156,
+  "totalDiscoveredSignatures": 156,
+  "selectedSignatures": 3,
+  "verifiedSignatures": 5,
+  "pendingSignatures": 151,
+  "complete": false,
+  "results": [
+    {
+      "id": "sc3004-effect-concurrency-ac7ecbfd",
+      "signature": "compiler:Effect.concurrency:SC3004:null is not representable in the target union (a value narrowed or asserted past it still held it)",
+      "classification": "crash/hang",
+      "case": "concurrency-all",
+      "relatedCases": [
+        "concurrency-all:static",
+        "concurrency-all:dynamic",
+        "concurrency-for-each:static",
+        "concurrency-for-each:dynamic",
+        "concurrency-race:static",
+        "concurrency-race:dynamic",
+        "concurrency-timeout:static",
+        "concurrency-timeout:dynamic"
+      ],
+      "repro": "reports/upstream/repro/sc3004-effect-concurrency-ac7ecbfd.ts",
+      "packet": "reports/upstream/sc3004-effect-concurrency-ac7ecbfd.md",
+      "verified": true,
+      "attempts": 12,
+      "budgetExhausted": true,
+      "originalBytes": 272,
+      "reducedBytes": 205,
+      "sourceSha256": "beaf3aecc242e0c8198ffc5048115343f81ffabe1781f3f9c0c081871685f9c2"
+    },
+    {
+      "id": "deferred-sc1043-number-a7a6e7cc",
+      "signature": "deferred:Number:SC1043",
+      "classification": "missing lowering",
+      "case": "module-number",
+      "relatedCases": [
+        "module-number:static"
+      ],
+      "repro": "reports/upstream/repro/deferred-sc1043-number-a7a6e7cc.ts",
+      "packet": "reports/upstream/deferred-sc1043-number-a7a6e7cc.md",
+      "verified": true,
+      "attempts": 8,
+      "budgetExhausted": false,
+      "originalBytes": 155,
+      "reducedBytes": 84,
+      "sourceSha256": "2f84e2a3799d7bcdac62d2695b0467fe6f433815f394a9c7b65b575692834b32"
+    },
+    {
+      "id": "diff-36c4933891f59bd1",
+      "signature": "differential:36c4933891f59bd1",
+      "classification": "deferred runtime trap",
+      "case": "module-http--multipartparser",
+      "relatedCases": [
+        "module-http--multipartparser:static",
+        "module-http--multipartparser--internal--multipart:static"
+      ],
+      "repro": "reports/upstream/repro/diff-36c4933891f59bd1.ts",
+      "packet": "reports/upstream/diff-36c4933891f59bd1.md",
+      "verified": true,
+      "attempts": 20,
+      "budgetExhausted": false,
+      "originalBytes": 623,
+      "reducedBytes": 548,
+      "sourceSha256": "aab2712b0bea5676b66dd5898affc57672c6a0f7fac461e9b9debfcae31ba671"
+    },
+    {
+      "id": "diff-d1ab8340711de15d",
+      "signature": "differential:d1ab8340711de15d",
+      "classification": "deferred runtime trap",
+      "case": "documented-hash",
+      "relatedCases": [
+        "documented-hash:static"
+      ],
+      "repro": "reports/upstream/repro/diff-d1ab8340711de15d.ts",
+      "packet": "reports/upstream/diff-d1ab8340711de15d.md",
+      "verified": true,
+      "attempts": 23,
+      "budgetExhausted": false,
+      "originalBytes": 453,
+      "reducedBytes": 310,
+      "sourceSha256": "38888e17d0f52aaf56e433525897b9e1cbb5b12bd0c5b681364d07f1d1c5f553"
+    },
+    {
+      "id": "diff-d97444478386e499",
+      "signature": "differential:d97444478386e499",
+      "classification": "semantic divergence",
+      "case": "documented-mutablelist",
+      "relatedCases": [
+        "documented-mutablelist:static"
+      ],
+      "repro": "reports/upstream/repro/diff-d97444478386e499.ts",
+      "packet": "reports/upstream/diff-d97444478386e499.md",
+      "verified": true,
+      "attempts": 24,
+      "budgetExhausted": true,
+      "originalBytes": 520,
+      "reducedBytes": 369,
+      "sourceSha256": "fb5f4a4f2c544dfbb8a84fe9b68624455fd7f1de1383811309b4f118c985561c"
+    }
+  ]
+}

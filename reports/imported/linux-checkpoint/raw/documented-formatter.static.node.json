@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-formatter.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 395.771,
+  "maxRssKb": 54812,
+  "stdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+  "stderr": "",
+  "stdoutBase64": "WyJ7XCJhXCI6MSxcImJcIjpbMiwzXX0iXQo=",
+  "stderrBase64": ""
+}

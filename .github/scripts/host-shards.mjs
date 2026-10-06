@@ -172,32 +172,19 @@ export function finish(root, env) {
   if (!existsSync(runnerPath)) return;
   const runner = read(runnerPath);
   const mapPath = runner.shardTotal === 1 ? 'reports/coverage-map.json' : `reports/shards/host-${runner.shardIndex}.json`;
-  let recovered = 0;
-  if (!existsSync(resolve(root, mapPath)) && existsSync(resolve(root, 'reports/provenance.json'))) {
-    const inputs = new Map(manifest(root).map(c => [c.id, c]));
-    const checkpoints = runner.assignedCases.flatMap(id => {
-      const path = resolve(root, `reports/raw/${id}.result.json`);
-      if (!existsSync(path)) return [];
-      try {
-        const c = read(path);
-        if (c.id !== id || c.file !== inputs.get(id)?.file || c.sourceSha256 !== digest(readFileSync(resolve(root, c.file))) || !c.tier) return [];
-        for (const attempt of [c.staticAttempt, c.dynamicAttempt].filter(Boolean)) if (attempt.binary) {
-          const expected = `bin/${id}${attempt.mode === 'dynamic' ? '.dynamic' : ''}`;
-          if (attempt.binary !== expected || !existsSync(resolve(root, expected)) || digest(readFileSync(resolve(root, expected))) !== attempt.binarySha256) return [];
-        }
-        return [c];
-      } catch { return []; }
-    });
-    recovered = checkpoints.length;
-    if (recovered) save(resolve(root, mapPath), {
-      schemaVersion: 1, partial: true, recoveredAfterInterruption: true, generatedAt: new Date().toISOString(),
-      shardIndex: runner.shardIndex, shardTotal: runner.shardTotal, manifestSha256: read(resolve(root, 'reports/ci/snapshot.json')).manifestSha256,
-      provenance: read(resolve(root, 'reports/provenance.json')),
-      options: { jobs: runner.config.jobs, compileTimeoutMs: runner.config.timeoutMs, coverageTimeoutMs: runner.config.timeoutMs },
-      inventory: null, cases: checkpoints, summary: { recoveredCheckpointCases: recovered, assignedCases: runner.assignedCases.length },
-    });
-  }
-  save(resolve(root, 'reports/ci/status.json'), { finishedAt: new Date().toISOString(), map: env.MAP_OUTCOME ?? 'not-run', differential: env.DIFF_OUTCOME ?? 'not-run', reducer: env.REDUCE_OUTCOME ?? 'not-run', recoveredCheckpointCases: recovered, mapReportExists: existsSync(resolve(root, mapPath)) });
+  const recovery = recoverCheckpoints(root, env, mapPath);
+  save(resolve(root, 'reports/ci/status.json'), { finishedAt: new Date().toISOString(),
+    map: env.MAP_OUTCOME ?? 'not-run', differential: env.DIFF_OUTCOME ?? 'not-run', reducer: env.REDUCE_OUTCOME ?? 'not-run',
+    ...recovery, mapReportExists: existsSync(resolve(root, mapPath)) });
+}
+
+function recoverCheckpoints(root, env, mapPath) {
+  if (env.MAP_OUTCOME === 'success' || !existsSync(resolve(root, 'reports/map-session.json'))) return { recoveredCheckpointCases: 0 };
+  try {
+    assert.equal(read(resolve(root, 'reports/map-session.json')).reportPath, mapPath, 'Checkpoint destination differs');
+    command(process.execPath, ['scripts/checkpoint.ts'], root);
+    return { recoveredCheckpointCases: read(resolve(root, mapPath)).summary.completed };
+  } catch (error) { return { recoveredCheckpointCases: 0, recoveryError: error.message }; }
 }
 
 export function collect(root, input, expectedSnapshot, config) {

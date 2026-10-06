@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-undefinedor.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-undefinedor"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3037.415,
+  "maxRssKb": 51964,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-undefinedor\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtdW5kZWZpbmVkb3IK",
+  "stderrBase64": ""
+}

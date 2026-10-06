@@ -1,0 +1,285 @@
+{
+  "id": "documented-inspectable",
+  "module": "Inspectable",
+  "entrypoint": "effect/Inspectable",
+  "family": "Inspectable",
+  "file": "cases/documented-inspectable.ts",
+  "status": "ready",
+  "api": [
+    "Object.create",
+    "Inspectable.BaseProto",
+    "MyClass.prototype"
+  ],
+  "expectedStdout": "[\"\\\"[toJSON threw]\\\"\"]\n",
+  "declaration": "node_modules/effect/dist/Inspectable.d.ts",
+  "declarationSha256": "91232559e0c9c3dcf8e7dafd3ad500118fed81900bc8a6e11dfbfa7e4b37b67b",
+  "exampleIndex": 3,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "791329878293875b75da36a509ef7f002d518170b7c435c46c57e06a41c95e6b",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-inspectable.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 1058.307,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-inspectable.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2470.425,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts\n\n  statements analyzed   240\n  compile statically    237  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×2  assignment to non-variables                                                                                  SC1090\n      ×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)  SC1090\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMjQwCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDIzNyAgKDk4JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBibG9ja2VyczoKICAgICAgw5cyICBhc3NpZ25tZW50IHRvIG5vbi12YXJpYWJsZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgYXNzaWduaW5nIHRoZSByZWFkLW9ubHkgZnVuY3Rpb24gbWVtYmVyICdwcm90b3R5cGUnIChzdHJpY3QtbW9kZSBKUyDigJQgZXZlcnkgbW9kdWxlIOKAlCB0aHJvd3MgVHlwZUVycm9yIGhlcmUpICBTQzEwOTAK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 240,
+        "static": 237,
+        "dynamic": 0,
+        "unsupported": 3
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×2  assignment to non-variables                                                                                  SC1090\n×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [],
+      "notes": []
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-inspectable.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-inspectable"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2701.568,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3 - error SC1090: assignment to non-variables are not supported yet\n\n  14 | function MyClass(this: any, name: string) {\n  15 |   this.name = name\n     |   ^~~~~~~~~\n  16 | }\n\n/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1 - error SC1090: assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet\n\n  16 | }\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n     | ^~~~~~~~~~~~~~~~~\n  18 | MyClass.prototype.constructor = MyClass\n\n/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1 - error SC1090: assignment to non-variables are not supported yet\n\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n  18 | MyClass.prototype.constructor = MyClass\n     | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  19 | console.log(JSON.stringify(__compatObserved))\n\n3 errors.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtaW5zcGVjdGFibGUudHM6MTU6MyAtIGVycm9yIFNDMTA5MDogYXNzaWdubWVudCB0byBub24tdmFyaWFibGVzIGFyZSBub3Qgc3VwcG9ydGVkIHlldAoKICAxNCB8IGZ1bmN0aW9uIE15Q2xhc3ModGhpczogYW55LCBuYW1lOiBzdHJpbmcpIHsKICAxNSB8ICAgdGhpcy5uYW1lID0gbmFtZQogICAgIHwgICBefn5+fn5+fn4KICAxNiB8IH0KCi93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWluc3BlY3RhYmxlLnRzOjE3OjEgLSBlcnJvciBTQzEwOTA6IGFzc2lnbmluZyB0aGUgcmVhZC1vbmx5IGZ1bmN0aW9uIG1lbWJlciAncHJvdG90eXBlJyAoc3RyaWN0LW1vZGUgSlMg4oCUIGV2ZXJ5IG1vZHVsZSDigJQgdGhyb3dzIFR5cGVFcnJvciBoZXJlKSBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxNiB8IH0KICAxNyB8IE15Q2xhc3MucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShJbnNwZWN0YWJsZS5CYXNlUHJvdG8pCiAgICAgfCBefn5+fn5+fn5+fn5+fn5+fgogIDE4IHwgTXlDbGFzcy5wcm90b3R5cGUuY29uc3RydWN0b3IgPSBNeUNsYXNzCgovd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czoxODoxIC0gZXJyb3IgU0MxMDkwOiBhc3NpZ25tZW50IHRvIG5vbi12YXJpYWJsZXMgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0CgogIDE3IHwgTXlDbGFzcy5wcm90b3R5cGUgPSBPYmplY3QuY3JlYXRlKEluc3BlY3RhYmxlLkJhc2VQcm90bykKICAxOCB8IE15Q2xhc3MucHJvdG90eXBlLmNvbnN0cnVjdG9yID0gTXlDbGFzcwogICAgIHwgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAxOSB8IGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KF9fY29tcGF0T2JzZXJ2ZWQpKQoKMyBlcnJvcnMuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC1090",
+        "message": "assignment to non-variables are not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "assignment to non-variables are not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-inspectable.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3136.956,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts\n\n  statements analyzed   240\n  compile statically    211  (87%)\n  compile dynamically   23  (9%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   2 sites (JS statements that throw their fence if executed)\n      ×2  spread arguments  SC1090\n\n  blockers:\n      ×1  'this' outside a class method                                                                                    SC1080\n      ×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)      SC1090\n      ×1  reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }'                  SC1090\n      ×1  'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet  SC2020\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMjQwCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDIxMSAgKDg3JSkKICBjb21waWxlIGR5bmFtaWNhbGx5ICAgMjMgICg5JSkgKGlzbGFuZCBzaXRlcyDigJQgdGhlIGVtYmVkZGVkIGVuZ2luZSBydW5zIHRoZW0pCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDIgc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cyICBzcHJlYWQgYXJndW1lbnRzICBTQzEwOTAKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgJ3RoaXMnIG91dHNpZGUgYSBjbGFzcyBtZXRob2QgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwODAKICAgICAgw5cxICBhc3NpZ25pbmcgdGhlIHJlYWQtb25seSBmdW5jdGlvbiBtZW1iZXIgJ3Byb3RvdHlwZScgKHN0cmljdC1tb2RlIEpTIOKAlCBldmVyeSBtb2R1bGUg4oCUIHRocm93cyBUeXBlRXJyb3IgaGVyZSkgICAgICBTQzEwOTAKICAgICAgw5cxICByZWFkaW5nICdwcm90b3R5cGUnIGZyb20gYSB2YWx1ZSBvZiB0eXBlICd7ICh0aGlzOiBhbnksIG5hbWU6IHN0cmluZyk6IHZvaWQ7IHByb3RvdHlwZTogYW55OyB9JyAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzEgICdPYmplY3QuY3JlYXRlIG92ZXIgJ3Vua25vd24nIHByb3RvdHlwZXMnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAgU0MyMDIwCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 240,
+        "static": 211,
+        "dynamic": 23,
+        "unsupported": 6
+      },
+      "deferredSiteCount": 2,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×2  spread arguments  SC1090\n×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)      SC1090\n×1  reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }'                  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1080",
+          "message": "×1  'this' outside a class method                                                                                    SC1080",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2020",
+          "message": "×1  'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet  SC2020",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×2  spread arguments  SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   2 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-inspectable.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-inspectable.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1923.211,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:7:18 - error SC2020: 'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet\n\n  6 | // Use as prototype\n  7 | const myObject = Object.create(Inspectable.BaseProto)\n    |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  8 | myObject.name = \"example\"\n\n  hint: prototype reads delegate LIVE in Node (mutating the prototype shows through the created object), which the boundary's deep copy cannot honor — only null and engine-held ('any') prototypes lower\n\n/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3 - error SC1080: 'this' outside a class method is not supported yet\n\n  14 | function MyClass(this: any, name: string) {\n  15 |   this.name = name\n     |   ^~~~\n  16 | }\n\n/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1 - error SC1090: assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet\n\n  16 | }\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n     | ^~~~~~~~~~~~~~~~~\n  18 | MyClass.prototype.constructor = MyClass\n\n/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1 - error SC1090: reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }' is not supported yet\n\n  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)\n  18 | MyClass.prototype.constructor = MyClass\n     | ^~~~~~~~~~~~~~~~~\n  19 | console.log(JSON.stringify(__compatObserved))\n\n4 errors.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtaW5zcGVjdGFibGUudHM6NzoxOCAtIGVycm9yIFNDMjAyMDogJ09iamVjdC5jcmVhdGUgb3ZlciAndW5rbm93bicgcHJvdG90eXBlcycgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0CgogIDYgfCAvLyBVc2UgYXMgcHJvdG90eXBlCiAgNyB8IGNvbnN0IG15T2JqZWN0ID0gT2JqZWN0LmNyZWF0ZShJbnNwZWN0YWJsZS5CYXNlUHJvdG8pCiAgICB8ICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgOCB8IG15T2JqZWN0Lm5hbWUgPSAiZXhhbXBsZSIKCiAgaGludDogcHJvdG90eXBlIHJlYWRzIGRlbGVnYXRlIExJVkUgaW4gTm9kZSAobXV0YXRpbmcgdGhlIHByb3RvdHlwZSBzaG93cyB0aHJvdWdoIHRoZSBjcmVhdGVkIG9iamVjdCksIHdoaWNoIHRoZSBib3VuZGFyeSdzIGRlZXAgY29weSBjYW5ub3QgaG9ub3Ig4oCUIG9ubHkgbnVsbCBhbmQgZW5naW5lLWhlbGQgKCdhbnknKSBwcm90b3R5cGVzIGxvd2VyCgovd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czoxNTozIC0gZXJyb3IgU0MxMDgwOiAndGhpcycgb3V0c2lkZSBhIGNsYXNzIG1ldGhvZCBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxNCB8IGZ1bmN0aW9uIE15Q2xhc3ModGhpczogYW55LCBuYW1lOiBzdHJpbmcpIHsKICAxNSB8ICAgdGhpcy5uYW1lID0gbmFtZQogICAgIHwgICBefn5+CiAgMTYgfCB9Cgovd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1pbnNwZWN0YWJsZS50czoxNzoxIC0gZXJyb3IgU0MxMDkwOiBhc3NpZ25pbmcgdGhlIHJlYWQtb25seSBmdW5jdGlvbiBtZW1iZXIgJ3Byb3RvdHlwZScgKHN0cmljdC1tb2RlIEpTIOKAlCBldmVyeSBtb2R1bGUg4oCUIHRocm93cyBUeXBlRXJyb3IgaGVyZSkgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgMTYgfCB9CiAgMTcgfCBNeUNsYXNzLnByb3RvdHlwZSA9IE9iamVjdC5jcmVhdGUoSW5zcGVjdGFibGUuQmFzZVByb3RvKQogICAgIHwgXn5+fn5+fn5+fn5+fn5+fn4KICAxOCB8IE15Q2xhc3MucHJvdG90eXBlLmNvbnN0cnVjdG9yID0gTXlDbGFzcwoKL3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtaW5zcGVjdGFibGUudHM6MTg6MSAtIGVycm9yIFNDMTA5MDogcmVhZGluZyAncHJvdG90eXBlJyBmcm9tIGEgdmFsdWUgb2YgdHlwZSAneyAodGhpczogYW55LCBuYW1lOiBzdHJpbmcpOiB2b2lkOyBwcm90b3R5cGU6IGFueTsgfScgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgMTcgfCBNeUNsYXNzLnByb3RvdHlwZSA9IE9iamVjdC5jcmVhdGUoSW5zcGVjdGFibGUuQmFzZVByb3RvKQogIDE4IHwgTXlDbGFzcy5wcm90b3R5cGUuY29uc3RydWN0b3IgPSBNeUNsYXNzCiAgICAgfCBefn5+fn5+fn5+fn5+fn5+fgogIDE5IHwgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoX19jb21wYXRPYnNlcnZlZCkpCgo0IGVycm9ycy4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC2020",
+        "message": "'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:7:18"
+        ],
+        "rewriteHints": [
+          "hint: prototype reads delegate LIVE in Node (mutating the prototype shows through the created object), which the boundary's deep copy cannot honor — only null and engine-held ('any') prototypes lower"
+        ]
+      },
+      {
+        "code": "SC1080",
+        "message": "'this' outside a class method is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }' is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC1090",
+    "SC1080",
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3",
+    "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1",
+    "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1",
+    "/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:7:18"
+  ],
+  "rewriteHints": [
+    "hint: prototype reads delegate LIVE in Node (mutating the prototype shows through the created object), which the boundary's deep copy cannot honor — only null and engine-held ('any') prototypes lower"
+  ],
+  "deferredSites": [
+    "×2  spread arguments  SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   2 sites (JS statements that throw their fence if executed)"
+  ]
+}

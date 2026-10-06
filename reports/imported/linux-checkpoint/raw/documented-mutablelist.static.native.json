@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/documented-mutablelist"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 14.228,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "Uncaught TypeError: expected number at $[0], got undefined\n",
+  "stdoutBase64": "",
+  "stderrBase64": "VW5jYXVnaHQgVHlwZUVycm9yOiBleHBlY3RlZCBudW1iZXIgYXQgJFswXSwgZ290IHVuZGVmaW5lZAo="
+}

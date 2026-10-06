@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-http--multipartparser--internal--headers.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-http--multipartparser--internal--headers"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3043.194,
+  "maxRssKb": 52132,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--headers\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1pbnRlcm5hbC0taGVhZGVycwo=",
+  "stderrBase64": ""
+}

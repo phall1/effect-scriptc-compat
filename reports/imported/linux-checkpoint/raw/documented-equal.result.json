@@ -1,0 +1,259 @@
+{
+  "id": "documented-equal",
+  "module": "Equal",
+  "entrypoint": "effect/Equal",
+  "family": "Equal",
+  "file": "cases/documented-equal.ts",
+  "status": "ready",
+  "api": [
+    "Equal.equals"
+  ],
+  "expectedStdout": "[true,true,false,true,true,true,true,true,false]\n",
+  "declaration": "node_modules/effect/dist/Equal.d.ts",
+  "declarationSha256": "ed89a6ffa0487c3cf15575d0ea990610b9ca3720053b9bb575299e5b5f84378f",
+  "exampleIndex": 2,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "b2b964a8f0361830809dd037b92a4064fb3d0f3ddf501e5b39f7549495e2857a",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-equal.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 1408.774,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-equal.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3692.335,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-equal.ts\n\n  statements analyzed   322\n  compile statically    321  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×1  converting typed values to 'unknown'  SC1101\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1lcXVhbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMzIyCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDMyMSAgKDk5JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBibG9ja2VyczoKICAgICAgw5cxICBjb252ZXJ0aW5nIHR5cGVkIHZhbHVlcyB0byAndW5rbm93bicgIFNDMTEwMQo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 322,
+        "static": 321,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1101",
+          "message": "×1  converting typed values to 'unknown'  SC1101",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [],
+      "notes": []
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-equal.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-equal"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3091.925,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36 - error SC1101: converting typed values to 'unknown' is not supported yet\n\n  12 | \n  13 | __compatObserved.push(Equal.equals(new Date(\"2024-01-01\"), new Date(\"2024-01-01\")))\n     |                                    ^~~~~~~~~~~~~~~~~~~~~~\n  14 | \n\n  hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtZXF1YWwudHM6MTM6MzYgLSBlcnJvciBTQzExMDE6IGNvbnZlcnRpbmcgdHlwZWQgdmFsdWVzIHRvICd1bmtub3duJyBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxMiB8IAogIDEzIHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEVxdWFsLmVxdWFscyhuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpLCBuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpKSkKICAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDE0IHwgCgogIGhpbnQ6IG51bWJlcnMsIHN0cmluZ3MsIGJvb2xlYW5zLCBKU09OLXNhZmUgcmVjb3Jkcy9hcnJheXMvdW5pb25zIChhIGRlZXAgY29weSksIGZ1bmN0aW9ucywgcHJvZ3JhbSBjbGFzcyBpbnN0YW5jZXMsIGFuZCBzdXBwb3J0ZWQgbmF0aXZlIGhhbmRsZXMgY29udmVydCBpbnRvICd1bmtub3duJyBzbG90czsgZnVuY3Rpb25zLCBleGFjdC1jbGFzcyByb3VuZCB0cmlwcywgYW5kIGhhbmRsZXMgcHJlc2VydmUgaWRlbnRpdHksIHdoaWxlIHRoaXMgdmFsdWUncyB0eXBlIGhhcyBubyBkeW5hbWljIHJlcHJlc2VudGF0aW9uIHlldAoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC1101",
+        "message": "converting typed values to 'unknown' is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36"
+        ],
+        "rewriteHints": [
+          "hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet"
+        ]
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-equal.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3050.922,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-equal.ts\n\n  statements analyzed   282\n  compile statically    244  (86%)\n  compile dynamically   29  (10%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   8 sites (JS statements that throw their fence if executed)\n      ×2  spread arguments                                                                                                                                          SC1090\n      ×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020\n      ×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090\n      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090\n      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090\n      ×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100\n\n  blockers:\n      ×1  converting typed values to 'unknown'  SC1101\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1lcXVhbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMjgyCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDI0NCAgKDg2JSkKICBjb21waWxlIGR5bmFtaWNhbGx5ICAgMjkgICgxMCUpIChpc2xhbmQgc2l0ZXMg4oCUIHRoZSBlbWJlZGRlZCBlbmdpbmUgcnVucyB0aGVtKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICA4IHNpdGVzIChKUyBzdGF0ZW1lbnRzIHRoYXQgdGhyb3cgdGhlaXIgZmVuY2UgaWYgZXhlY3V0ZWQpCiAgICAgIMOXMiAgc3ByZWFkIGFyZ3VtZW50cyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzIgICdPYmplY3QuZ2V0UHJvdG90eXBlT2YnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnZ2V0QWxsT2JqZWN0S2V5cycgd2l0aCAodW5rbm93bikpICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICBzdHJpbmcgbWV0aG9kcyBhcyB2YWx1ZXMgKGNhbGwgJ2NoYXJDb2RlQXQnIGRpcmVjdGx5KSBhcmUgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ3N0cmluZycgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luc3RhbmNlb2YnIHJpZ2h0LWhhbmQgc2lkZXMgb3RoZXIgdGhhbiBjbGFzc2VzIGRlY2xhcmVkIGluIHRoZSBwcm9ncmFtIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoICh1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzEgICdpbnN0YW5jZW9mJyByaWdodC1oYW5kIHNpZGVzIG90aGVyIHRoYW4gY2xhc3NlcyBkZWNsYXJlZCBpbiB0aGUgcHJvZ3JhbSBpcyBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnY29tcGFyZVN0cnVjdHVyZScgd2l0aCAodW5rbm93biwgdW5rbm93bikpICBTQzEwOTAKICAgICAgw5cxICBvcGVyYXRvcnMgb24gJ3Vua25vd24nIHZhbHVlcyBhcmUgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ2NvbXBhcmVPYmplY3RzJyB3aXRoICh1bmtub3duLCB1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMTAwCgogIGJsb2NrZXJzOgogICAgICDDlzEgIGNvbnZlcnRpbmcgdHlwZWQgdmFsdWVzIHRvICd1bmtub3duJyAgU0MxMTAxCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 282,
+        "static": 244,
+        "dynamic": 29,
+        "unsupported": 9
+      },
+      "deferredSiteCount": 8,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×2  spread arguments                                                                                                                                          SC1090\n×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090\n×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090\n×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2020",
+          "message": "×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1100",
+          "message": "×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1101",
+          "message": "×1  converting typed values to 'unknown'  SC1101",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×2  spread arguments                                                                                                                                          SC1090",
+        "×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020",
+        "×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090",
+        "×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090",
+        "×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090",
+        "×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100"
+      ],
+      "notes": [
+        "deferred to runtime   8 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-equal.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-equal.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3120.982,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36 - error SC1101: converting typed values to 'unknown' is not supported yet\n\n  12 | \n  13 | __compatObserved.push(Equal.equals(new Date(\"2024-01-01\"), new Date(\"2024-01-01\")))\n     |                                    ^~~~~~~~~~~~~~~~~~~~~~\n  14 | \n\n  hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtZXF1YWwudHM6MTM6MzYgLSBlcnJvciBTQzExMDE6IGNvbnZlcnRpbmcgdHlwZWQgdmFsdWVzIHRvICd1bmtub3duJyBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxMiB8IAogIDEzIHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEVxdWFsLmVxdWFscyhuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpLCBuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpKSkKICAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDE0IHwgCgogIGhpbnQ6IG51bWJlcnMsIHN0cmluZ3MsIGJvb2xlYW5zLCBKU09OLXNhZmUgcmVjb3Jkcy9hcnJheXMvdW5pb25zIChhIGRlZXAgY29weSksIGZ1bmN0aW9ucywgcHJvZ3JhbSBjbGFzcyBpbnN0YW5jZXMsIGFuZCBzdXBwb3J0ZWQgbmF0aXZlIGhhbmRsZXMgY29udmVydCBpbnRvICd1bmtub3duJyBzbG90czsgZnVuY3Rpb25zLCBleGFjdC1jbGFzcyByb3VuZCB0cmlwcywgYW5kIGhhbmRsZXMgcHJlc2VydmUgaWRlbnRpdHksIHdoaWxlIHRoaXMgdmFsdWUncyB0eXBlIGhhcyBubyBkeW5hbWljIHJlcHJlc2VudGF0aW9uIHlldAoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC1101",
+        "message": "converting typed values to 'unknown' is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36"
+        ],
+        "rewriteHints": [
+          "hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet"
+        ]
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC1101",
+    "SC1090",
+    "SC2020",
+    "SC1100"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36"
+  ],
+  "rewriteHints": [
+    "hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet"
+  ],
+  "deferredSites": [
+    "×2  spread arguments                                                                                                                                          SC1090",
+    "×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020",
+    "×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090",
+    "×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090",
+    "×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090",
+    "×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100"
+  ],
+  "notes": [
+    "deferred to runtime   8 sites (JS statements that throw their fence if executed)"
+  ]
+}

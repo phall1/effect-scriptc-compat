@@ -1,0 +1,448 @@
+[
+  {
+    "id": "effect-succeed",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-succeed.ts",
+    "status": "ready",
+    "api": [
+      "succeed",
+      "runSync"
+    ],
+    "expectedStdout": "succeed:42\n"
+  },
+  {
+    "id": "effect-gen",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-gen.ts",
+    "status": "ready",
+    "api": [
+      "gen",
+      "succeed",
+      "runSync"
+    ],
+    "expectedStdout": "gen:42\n"
+  },
+  {
+    "id": "effect-fail",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-fail.ts",
+    "status": "ready",
+    "api": [
+      "fail",
+      "catch",
+      "runSync"
+    ],
+    "expectedStdout": "ExpectedFailure\n"
+  },
+  {
+    "id": "effect-log",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-log.ts",
+    "status": "ready",
+    "api": [
+      "log",
+      "provide",
+      "runSync"
+    ],
+    "expectedStdout": "log:ok\n"
+  },
+  {
+    "id": "effect-run-promise",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-run-promise.ts",
+    "status": "ready",
+    "api": [
+      "runPromise",
+      "succeed"
+    ],
+    "expectedStdout": "runPromise:42\n"
+  },
+  {
+    "id": "effect-run-sync",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-run-sync.ts",
+    "status": "ready",
+    "api": [
+      "runSync",
+      "map",
+      "succeed"
+    ],
+    "expectedStdout": "runSync:42\n"
+  },
+  {
+    "id": "effect-fn",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-fn.ts",
+    "status": "ready",
+    "api": [
+      "fn",
+      "succeed",
+      "runSync"
+    ],
+    "expectedStdout": "fn:42\n"
+  },
+  {
+    "id": "effect-fn-untraced",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect",
+    "file": "cases/effect-fn-untraced.ts",
+    "status": "ready",
+    "api": [
+      "fnUntraced",
+      "succeed",
+      "runSync"
+    ],
+    "expectedStdout": "fnUntraced:42\n"
+  },
+  {
+    "id": "concurrency-all",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.concurrency",
+    "file": "cases/concurrency-all.ts",
+    "status": "ready",
+    "api": [
+      "all",
+      "runPromise"
+    ],
+    "expectedStdout": "all:1,2,3\n"
+  },
+  {
+    "id": "concurrency-for-each",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.concurrency",
+    "file": "cases/concurrency-for-each.ts",
+    "status": "ready",
+    "api": [
+      "forEach",
+      "runPromise"
+    ],
+    "expectedStdout": "forEach:2,4,6\n"
+  },
+  {
+    "id": "concurrency-race",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.concurrency",
+    "file": "cases/concurrency-race.ts",
+    "status": "ready",
+    "api": [
+      "race",
+      "never",
+      "succeed",
+      "runPromise"
+    ],
+    "expectedStdout": "race:winner\n"
+  },
+  {
+    "id": "concurrency-timeout",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.concurrency",
+    "file": "cases/concurrency-timeout.ts",
+    "status": "ready",
+    "api": [
+      "timeout",
+      "never",
+      "catch",
+      "runPromise"
+    ],
+    "expectedStdout": "TimeoutError\n"
+  },
+  {
+    "id": "fiber-interrupt",
+    "module": "Fiber",
+    "entrypoint": "effect",
+    "family": "Effect.concurrency",
+    "file": "cases/fiber-interrupt.ts",
+    "status": "ready",
+    "api": [
+      "interrupt"
+    ],
+    "expectedStdout": "interrupt:ok\n"
+  },
+  {
+    "id": "layer-succeed",
+    "module": "Layer",
+    "entrypoint": "effect",
+    "family": "Layer",
+    "file": "cases/layer-succeed.ts",
+    "status": "ready",
+    "api": [
+      "succeed"
+    ],
+    "expectedStdout": "layer.succeed:42\n"
+  },
+  {
+    "id": "layer-effect",
+    "module": "Layer",
+    "entrypoint": "effect",
+    "family": "Layer",
+    "file": "cases/layer-effect.ts",
+    "status": "ready",
+    "api": [
+      "effect"
+    ],
+    "expectedStdout": "layer.effect:42\n"
+  },
+  {
+    "id": "effect-provide",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.services",
+    "file": "cases/effect-provide.ts",
+    "status": "ready",
+    "api": [
+      "provide"
+    ],
+    "expectedStdout": "provide:42\n"
+  },
+  {
+    "id": "resource-acquire-release",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.resources",
+    "file": "cases/resource-acquire-release.ts",
+    "status": "ready",
+    "api": [
+      "acquireRelease",
+      "scoped"
+    ],
+    "expectedStdout": "acquire|use:42|release:42\n"
+  },
+  {
+    "id": "resource-scoped-use",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.resources",
+    "file": "cases/resource-scoped-use.ts",
+    "status": "ready",
+    "api": [
+      "scoped",
+      "addFinalizer"
+    ],
+    "expectedStdout": "use|finalize\n"
+  },
+  {
+    "id": "stream-from-iterable",
+    "module": "Stream",
+    "entrypoint": "effect",
+    "family": "Stream",
+    "file": "cases/stream-from-iterable.ts",
+    "status": "ready",
+    "api": [
+      "fromIterable",
+      "runCollect"
+    ],
+    "expectedStdout": "stream:1,2,3\n"
+  },
+  {
+    "id": "stream-map",
+    "module": "Stream",
+    "entrypoint": "effect",
+    "family": "Stream",
+    "file": "cases/stream-map.ts",
+    "status": "ready",
+    "api": [
+      "fromIterable",
+      "map",
+      "runCollect"
+    ],
+    "expectedStdout": "stream.map:2,4,6\n"
+  },
+  {
+    "id": "stream-failing-element",
+    "module": "Stream",
+    "entrypoint": "effect",
+    "family": "Stream",
+    "file": "cases/stream-failing-element.ts",
+    "status": "ready",
+    "api": [
+      "mapEffect",
+      "runCollect"
+    ],
+    "expectedStdout": "ElementFailure\n"
+  },
+  {
+    "id": "schema-decode",
+    "module": "Schema",
+    "entrypoint": "effect",
+    "family": "Schema",
+    "file": "cases/schema-decode.ts",
+    "status": "ready",
+    "api": [
+      "decodeUnknownEffect",
+      "Struct"
+    ],
+    "expectedStdout": "decode:42\n"
+  },
+  {
+    "id": "schema-encode",
+    "module": "Schema",
+    "entrypoint": "effect",
+    "family": "Schema",
+    "file": "cases/schema-encode.ts",
+    "status": "ready",
+    "api": [
+      "encodeEffect",
+      "NumberFromString"
+    ],
+    "expectedStdout": "encode:42\n"
+  },
+  {
+    "id": "schema-class",
+    "module": "Schema",
+    "entrypoint": "effect",
+    "family": "Schema",
+    "file": "cases/schema-class.ts",
+    "status": "ready",
+    "api": [
+      "Class",
+      "decodeUnknownEffect"
+    ],
+    "expectedStdout": "Person:Ada:42\n"
+  },
+  {
+    "id": "schema-failure",
+    "module": "Schema",
+    "entrypoint": "effect",
+    "family": "Schema",
+    "file": "cases/schema-failure.ts",
+    "status": "ready",
+    "api": [
+      "decodeUnknownEffect"
+    ],
+    "expectedStdout": "SchemaError\n"
+  },
+  {
+    "id": "chunk-round-trip",
+    "module": "Chunk",
+    "entrypoint": "effect",
+    "family": "Chunk",
+    "file": "cases/chunk-round-trip.ts",
+    "status": "ready",
+    "api": [
+      "fromIterable",
+      "map",
+      "toArray"
+    ],
+    "expectedStdout": "chunk:2,4,6\n"
+  },
+  {
+    "id": "hashmap-round-trip",
+    "module": "HashMap",
+    "entrypoint": "effect",
+    "family": "HashMap",
+    "file": "cases/hashmap-round-trip.ts",
+    "status": "ready",
+    "api": [
+      "fromIterable",
+      "set",
+      "toEntries"
+    ],
+    "expectedStdout": "hashmap:a:1,b:2,c:3\n"
+  },
+  {
+    "id": "hashset-round-trip",
+    "module": "HashSet",
+    "entrypoint": "effect",
+    "family": "HashSet",
+    "file": "cases/hashset-round-trip.ts",
+    "status": "ready",
+    "api": [
+      "fromIterable",
+      "add",
+      "remove"
+    ],
+    "expectedStdout": "hashset:2,3\n"
+  },
+  {
+    "id": "retry-success",
+    "module": "Schedule",
+    "entrypoint": "effect",
+    "family": "Schedule.retry",
+    "file": "cases/retry-success.ts",
+    "status": "ready",
+    "api": [
+      "recurs"
+    ],
+    "expectedStdout": "retry:3\n"
+  },
+  {
+    "id": "retry-exhausted",
+    "module": "Schedule",
+    "entrypoint": "effect",
+    "family": "Schedule.retry",
+    "file": "cases/retry-exhausted.ts",
+    "status": "ready",
+    "api": [
+      "recurs"
+    ],
+    "expectedStdout": "RetryExhausted:3\n"
+  },
+  {
+    "id": "error-catch",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.errors",
+    "file": "cases/error-catch.ts",
+    "status": "ready",
+    "api": [
+      "catch"
+    ],
+    "expectedStdout": "Caught\n"
+  },
+  {
+    "id": "error-or-else",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.errors",
+    "file": "cases/error-or-else.ts",
+    "status": "ready",
+    "api": [
+      "orElseSucceed"
+    ],
+    "expectedStdout": "Fallback\n"
+  },
+  {
+    "id": "error-cause",
+    "module": "Cause",
+    "entrypoint": "effect",
+    "family": "Effect.errors",
+    "file": "cases/error-cause.ts",
+    "status": "ready",
+    "api": [
+      "findErrorOption"
+    ],
+    "expectedStdout": "CauseFailure\n"
+  },
+  {
+    "id": "callback-microtask",
+    "module": "Effect",
+    "entrypoint": "effect",
+    "family": "Effect.callback",
+    "file": "cases/callback-microtask.ts",
+    "status": "ready",
+    "api": [
+      "callback",
+      "runPromise"
+    ],
+    "expectedStdout": "callback:ok\n"
+  }
+]

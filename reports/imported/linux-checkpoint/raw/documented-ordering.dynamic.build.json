@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-ordering.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-ordering.dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3014.879,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts:19:14 - error SC2001: values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')\n\n  18 | const numbers = [3, 1, 4, 1, 5]\n  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)\n     |              ^~~~~~~~~~~~~~\n  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)\n\n/workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts:20:14 - error SC2001: values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')\n\n  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)\n  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)\n     |              ^~~~~~~~~~~~~~~~~\n  21 | \n\n2 errors.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtb3JkZXJpbmcudHM6MTk6MTQgLSBlcnJvciBTQzIwMDE6IHZhbHVlcyBvZiB0eXBlICcoYTogbnVtYmVyLCBiOiBudW1iZXIpID0+IE9yZGVyaW5nLk9yZGVyaW5nJyBjYW5ub3QgYmUgY29tcGlsZWQgeWV0IChzdXBwb3J0ZWQ6IG51bWJlciwgc3RyaW5nLCBib29sZWFuLCBhcnJheXMsIE1hcHMsIFNldHMsIFJlZ0V4cCwgcmVhZC1vbmx5IERhdGUgdmFsdWVzLCBmdW5jdGlvbnMsIGNsYXNzZXMsIHJlY29yZHMsIHVuaW9ucyBvZiB0aG9zZSwgYW5kICd1bmtub3duJykKCiAgMTggfCBjb25zdCBudW1iZXJzID0gWzMsIDEsIDQsIDEsIDVdCiAgMTkgfCBudW1iZXJzLnNvcnQoY29tcGFyZU51bWJlcnMpIC8vIFsxLCAxLCAzLCA0LCA1XSAoYXNjZW5kaW5nKQogICAgIHwgICAgICAgICAgICAgIF5+fn5+fn5+fn5+fn5+CiAgMjAgfCBudW1iZXJzLnNvcnQoY29tcGFyZURlc2NlbmRpbmcpIC8vIFs1LCA0LCAzLCAxLCAxXSAoZGVzY2VuZGluZykKCi93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLW9yZGVyaW5nLnRzOjIwOjE0IC0gZXJyb3IgU0MyMDAxOiB2YWx1ZXMgb2YgdHlwZSAnKGE6IG51bWJlciwgYjogbnVtYmVyKSA9PiBPcmRlcmluZy5PcmRlcmluZycgY2Fubm90IGJlIGNvbXBpbGVkIHlldCAoc3VwcG9ydGVkOiBudW1iZXIsIHN0cmluZywgYm9vbGVhbiwgYXJyYXlzLCBNYXBzLCBTZXRzLCBSZWdFeHAsIHJlYWQtb25seSBEYXRlIHZhbHVlcywgZnVuY3Rpb25zLCBjbGFzc2VzLCByZWNvcmRzLCB1bmlvbnMgb2YgdGhvc2UsIGFuZCAndW5rbm93bicpCgogIDE5IHwgbnVtYmVycy5zb3J0KGNvbXBhcmVOdW1iZXJzKSAvLyBbMSwgMSwgMywgNCwgNV0gKGFzY2VuZGluZykKICAyMCB8IG51bWJlcnMuc29ydChjb21wYXJlRGVzY2VuZGluZykgLy8gWzUsIDQsIDMsIDEsIDFdIChkZXNjZW5kaW5nKQogICAgIHwgICAgICAgICAgICAgIF5+fn5+fn5+fn5+fn5+fn5+CiAgMjEgfCAKCjIgZXJyb3JzLgo="
+}

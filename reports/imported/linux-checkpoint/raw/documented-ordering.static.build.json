@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-ordering.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-ordering"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 4500.739,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts:19:14 - error SC2011: values of type '(a: number, b: number) => Ordering.Ordering' have no static representation but run in the embedded dynamic engine, which this build does not include\n\n  18 | const numbers = [3, 1, 4, 1, 5]\n  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)\n     |              ^~~~~~~~~~~~~~\n  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)\n\n  hint: build with --dynamic to run these values in the embedded engine (adds ~620KB to the binary), or restate the type inside the static surface (https://scriptc.dev/limitations describes the boundary)\n\n/workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts:20:14 - error SC2011: values of type '(a: number, b: number) => Ordering.Ordering' have no static representation but run in the embedded dynamic engine, which this build does not include\n\n  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)\n  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)\n     |              ^~~~~~~~~~~~~~~~~\n  21 | \n\n  hint: build with --dynamic to run these values in the embedded engine (adds ~620KB to the binary), or restate the type inside the static surface (https://scriptc.dev/limitations describes the boundary)\n\n2 errors.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtb3JkZXJpbmcudHM6MTk6MTQgLSBlcnJvciBTQzIwMTE6IHZhbHVlcyBvZiB0eXBlICcoYTogbnVtYmVyLCBiOiBudW1iZXIpID0+IE9yZGVyaW5nLk9yZGVyaW5nJyBoYXZlIG5vIHN0YXRpYyByZXByZXNlbnRhdGlvbiBidXQgcnVuIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlCgogIDE4IHwgY29uc3QgbnVtYmVycyA9IFszLCAxLCA0LCAxLCA1XQogIDE5IHwgbnVtYmVycy5zb3J0KGNvbXBhcmVOdW1iZXJzKSAvLyBbMSwgMSwgMywgNCwgNV0gKGFzY2VuZGluZykKICAgICB8ICAgICAgICAgICAgICBefn5+fn5+fn5+fn5+fgogIDIwIHwgbnVtYmVycy5zb3J0KGNvbXBhcmVEZXNjZW5kaW5nKSAvLyBbNSwgNCwgMywgMSwgMV0gKGRlc2NlbmRpbmcpCgogIGhpbnQ6IGJ1aWxkIHdpdGggLS1keW5hbWljIHRvIHJ1biB0aGVzZSB2YWx1ZXMgaW4gdGhlIGVtYmVkZGVkIGVuZ2luZSAoYWRkcyB+NjIwS0IgdG8gdGhlIGJpbmFyeSksIG9yIHJlc3RhdGUgdGhlIHR5cGUgaW5zaWRlIHRoZSBzdGF0aWMgc3VyZmFjZSAoaHR0cHM6Ly9zY3JpcHRjLmRldi9saW1pdGF0aW9ucyBkZXNjcmliZXMgdGhlIGJvdW5kYXJ5KQoKL3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtb3JkZXJpbmcudHM6MjA6MTQgLSBlcnJvciBTQzIwMTE6IHZhbHVlcyBvZiB0eXBlICcoYTogbnVtYmVyLCBiOiBudW1iZXIpID0+IE9yZGVyaW5nLk9yZGVyaW5nJyBoYXZlIG5vIHN0YXRpYyByZXByZXNlbnRhdGlvbiBidXQgcnVuIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlCgogIDE5IHwgbnVtYmVycy5zb3J0KGNvbXBhcmVOdW1iZXJzKSAvLyBbMSwgMSwgMywgNCwgNV0gKGFzY2VuZGluZykKICAyMCB8IG51bWJlcnMuc29ydChjb21wYXJlRGVzY2VuZGluZykgLy8gWzUsIDQsIDMsIDEsIDFdIChkZXNjZW5kaW5nKQogICAgIHwgICAgICAgICAgICAgIF5+fn5+fn5+fn5+fn5+fn5+CiAgMjEgfCAKCiAgaGludDogYnVpbGQgd2l0aCAtLWR5bmFtaWMgdG8gcnVuIHRoZXNlIHZhbHVlcyBpbiB0aGUgZW1iZWRkZWQgZW5naW5lIChhZGRzIH42MjBLQiB0byB0aGUgYmluYXJ5KSwgb3IgcmVzdGF0ZSB0aGUgdHlwZSBpbnNpZGUgdGhlIHN0YXRpYyBzdXJmYWNlIChodHRwczovL3NjcmlwdGMuZGV2L2xpbWl0YXRpb25zIGRlc2NyaWJlcyB0aGUgYm91bmRhcnkpCgoyIGVycm9ycy4K"
+}

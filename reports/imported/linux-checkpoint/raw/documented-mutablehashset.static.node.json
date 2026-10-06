@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-mutablehashset.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 350.318,
+  "maxRssKb": 54252,
+  "stdout": "[true,false,[\"apple\",\"banana\",\"cherry\"],3]\n",
+  "stderr": "",
+  "stdoutBase64": "W3RydWUsZmFsc2UsWyJhcHBsZSIsImJhbmFuYSIsImNoZXJyeSJdLDNdCg==",
+  "stderrBase64": ""
+}

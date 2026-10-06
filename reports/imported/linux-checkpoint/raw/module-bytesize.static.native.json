@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/module-bytesize"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10.978,
+  "maxRssKb": null,
+  "stdout": "bytes:2048\n",
+  "stderr": "",
+  "stdoutBase64": "Ynl0ZXM6MjA0OAo=",
+  "stderrBase64": ""
+}

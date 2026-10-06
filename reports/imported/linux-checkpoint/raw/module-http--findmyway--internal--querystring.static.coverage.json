@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "coverage",
+    "cases/module-http--findmyway--internal--querystring.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 1418.7,
+  "maxRssKb": 41020,
+  "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/module-http--findmyway--internal--querystring.ts\n\n  statements analyzed   136\n  compile statically    135  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbW9kdWxlLWh0dHAtLWZpbmRteXdheS0taW50ZXJuYWwtLXF1ZXJ5c3RyaW5nLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxMzYKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTM1ICAoOTklKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICAxIHNpdGUgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cxICBlbGVtZW50IGFjY2VzcyBvbiBub24tYXJyYXkgdmFsdWVzIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnc3RyaW5naWZ5JyB3aXRoICh7IGE6IHN0cmluZzsgYjogc3RyaW5nIH0pKSAgU0MxMDkwCgo=",
+  "stderrBase64": ""
+}

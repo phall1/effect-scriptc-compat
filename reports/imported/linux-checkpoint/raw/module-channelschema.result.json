@@ -1,0 +1,205 @@
+{
+  "id": "module-channelschema",
+  "module": "ChannelSchema",
+  "entrypoint": "effect/ChannelSchema",
+  "family": "ChannelSchema",
+  "file": "cases/module-channelschema.ts",
+  "status": "ready",
+  "api": [
+    "decode"
+  ],
+  "expectedStdout": "channelSchema:1,2\n",
+  "declaration": "node_modules/effect/dist/ChannelSchema.d.ts",
+  "declarationSha256": "d58e1ea6a528cc0004f945dafaa7d4b73902972818645ae0f87c4d2b112afcd0",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "cd7ea747c1aaa682e1c988e6806541ea17452185485a8e6a3d994922a3aab62e",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-channelschema.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 2305.955,
+    "maxRssKb": 327524,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-channelschema.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 106244.737,
+      "maxRssKb": 388860,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-channelschema.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-channelschema"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 105512.384,
+      "maxRssKb": 392268,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/module-channelschema.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL21vZHVsZS1jaGFubmVsc2NoZW1hLnRzOjE6MSAtIGVycm9yIFNDMzAwNDogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkKCjEgZXJyb3IuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/module-channelschema.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-channelschema.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 94333.413,
+      "maxRssKb": 373608,
+      "stdout": "",
+      "stderr": "scriptc: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogZXhwZWN0ZWQgbnVsbCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCBhdCAkLnZhbHVlLCBnb3QgdW5kZWZpbmVkCg=="
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; parsed partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-channelschema.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/module-channelschema.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 123300.379,
+      "maxRssKb": 379928,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/module-channelschema.ts:1:1 - error SC3004: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL21vZHVsZS1jaGFubmVsc2NoZW1hLnRzOjE6MSAtIGVycm9yIFNDMzAwNDogZXhwZWN0ZWQgbnVsbCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCBhdCAkLnZhbHVlLCBnb3QgdW5kZWZpbmVkCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/module-channelschema.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/module-channelschema.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; parsed partial counts cannot establish static compatibility"
+  ]
+}

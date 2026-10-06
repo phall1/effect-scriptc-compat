@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-mutableref.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 405.41,
+  "maxRssKb": 43768,
+  "stdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
+  "stderr": "",
+  "stdoutBase64": "WzQyLDQyLDEwMCx7InRpbWVvdXQiOjEwMDAwLCJyZXRyaWVzIjo1fV0K",
+  "stderrBase64": ""
+}

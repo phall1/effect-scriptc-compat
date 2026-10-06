@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-cli--primitive.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-cli--primitive.dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 65266.279,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-cli--primitive.ts:1:1 - error SC3004: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtY2xpLS1wcmltaXRpdmUudHM6MToxIC0gZXJyb3IgU0MzMDA0OiBleHBlY3RlZCBudWxsIHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IHwgb2JqZWN0IGF0ICQudmFsdWUsIGdvdCB1bmRlZmluZWQKCjEgZXJyb3IuCg=="
+}

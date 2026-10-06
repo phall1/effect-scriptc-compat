@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-http--multipartparser--internal--search.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-http--multipartparser--internal--search"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 9152.237,
+  "maxRssKb": 57104,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--internal--search\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1pbnRlcm5hbC0tc2VhcmNoCg==",
+  "stderrBase64": ""
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-boolean.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-boolean"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 2779.54,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  5 | \n  6 | __compatObserved.push(Boolean.Boolean(1))\n    |                                       ^\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n\n/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n  8 | __compatObserved.push(Boolean.Boolean(0))\n    |                                       ^\n  9 | console.log(JSON.stringify(__compatObserved))\n\n2 errors.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtYm9vbGVhbi50czo2OjM5IC0gZXJyb3IgU0MxMDkwOiAnbnVtYmVyJyB2YWx1ZXMgd2hlcmUgJ3N0cmluZycgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDEpKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA3IHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEJvb2xlYW4uQm9vbGVhbigiZmFsc2UiKSkKCi93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWJvb2xlYW4udHM6ODozOSAtIGVycm9yIFNDMTA5MDogJ251bWJlcicgdmFsdWVzIHdoZXJlICdzdHJpbmcnIGlzIGV4cGVjdGVkIGlzIG5vdCBzdXBwb3J0ZWQgeWV0CgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKCJmYWxzZSIpKQogIDggfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDApKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA5IHwgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoX19jb21wYXRPYnNlcnZlZCkpCgoyIGVycm9ycy4K"
+}

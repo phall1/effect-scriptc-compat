@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/documented-predicate"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 6.209,
+  "maxRssKb": null,
+  "stdout": "[true]\n",
+  "stderr": "",
+  "stdoutBase64": "W3RydWVdCg==",
+  "stderrBase64": ""
+}

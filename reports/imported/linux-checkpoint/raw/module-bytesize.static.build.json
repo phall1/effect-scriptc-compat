@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-bytesize.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-bytesize"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 24752.998,
+  "maxRssKb": 92932,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-bytesize\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtYnl0ZXNpemUK",
+  "stderrBase64": ""
+}

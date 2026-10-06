@@ -1,0 +1,19 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-equal.ts
+
+  statements analyzed   282
+  compile statically    244  (86%)
+  compile dynamically   29  (10%) (island sites — the embedded engine runs them)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   8 sites (JS statements that throw their fence if executed)
+      ×2  spread arguments                                                                                                                                          SC1090
+      ×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020
+      ×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090
+      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090
+      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090
+      ×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100
+
+  blockers:
+      ×1  converting typed values to 'unknown'  SC1101

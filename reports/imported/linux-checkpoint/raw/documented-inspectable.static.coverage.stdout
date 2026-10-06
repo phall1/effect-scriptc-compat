@@ -1,0 +1,11 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts
+
+  statements analyzed   240
+  compile statically    237  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  blockers:
+      ×2  assignment to non-variables                                                                                  SC1090
+      ×1  assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here)  SC1090

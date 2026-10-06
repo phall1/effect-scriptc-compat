@@ -1,0 +1,10 @@
+/workspace/shared/effect-scriptc-compat/cases/documented-nonemptyiterable.ts:10:23 - error SC2020: 'Array.from with this argument shape' is part of the standard library types but has no scriptc lowering yet
+
+   9 | __compatObserved.push(first)
+  10 | __compatObserved.push(globalThis.Array.from({ [Symbol.iterator]: () => rest }))
+     |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  11 | console.log(JSON.stringify(__compatObserved))
+
+  hint: Array.from(array), Array.from(array, mapper), Array.from(aString), Array.from(aString, mapper), and Array.from({ length: n }, mapper) are the lowered forms
+
+1 error.

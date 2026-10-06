@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/documented-option"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10.519,
+  "maxRssKb": null,
+  "stdout": "[true,true,false]\n",
+  "stderr": "",
+  "stdoutBase64": "W3RydWUsdHJ1ZSxmYWxzZV0K",
+  "stderrBase64": ""
+}

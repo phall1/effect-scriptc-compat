@@ -1,0 +1,32 @@
+{
+  "packages": {
+    "effect": {
+      "version": "4.0.1",
+      "registryUrl": "https://registry.npmjs.org/effect/4.0.1",
+      "tarball": "https://registry.npmjs.org/effect/-/effect-4.0.1.tgz",
+      "integrity": "sha512-b1VlQG9g8fwxE5QnIZuPoOP/0MsqHJSRKxUijjoM80E5q95FXrX5yWtY5XI8G+GJsBQAVSDbLS458z9a++uVvw==",
+      "shasum": "823e6870716e77902666874a24834ec7cdda50d8",
+      "repository": {
+        "url": "https://github.com/Effect-TS/effect.git",
+        "type": "git",
+        "directory": "packages/effect"
+      },
+      "engines": null
+    },
+    "scriptc": {
+      "version": "0.2.3",
+      "registryUrl": "https://registry.npmjs.org/scriptc/0.2.3",
+      "tarball": "https://registry.npmjs.org/scriptc/-/scriptc-0.2.3.tgz",
+      "integrity": "sha512-qbfrQiXhWQfFrnpdrXaZNqesIM0E9O3ocp855+EFGAaHKBy/7ad0aWDUECQk0CYmRpcxnXU751zryKMj74sQjA==",
+      "shasum": "ba6941a212e94aefa4038e88cc3d2405646d1e5e",
+      "repository": {
+        "url": "git+https://github.com/vercel-labs/scriptc.git",
+        "type": "git",
+        "directory": "packages/cli"
+      },
+      "engines": {
+        "node": ">=24"
+      }
+    }
+  }
+}

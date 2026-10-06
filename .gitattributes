@@ -1,0 +1,3 @@
+# Captured process bytes must survive checkout unchanged (including invalid UTF-8).
+reports/**/*.stdout binary
+reports/**/*.stderr binary

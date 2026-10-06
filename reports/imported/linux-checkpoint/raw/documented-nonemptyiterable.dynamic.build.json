@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-nonemptyiterable.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-nonemptyiterable.dynamic"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 40828.153,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-nonemptyiterable.ts:1:1 - error SC3004: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtbm9uZW1wdHlpdGVyYWJsZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IGV4cGVjdGVkIG51bGwgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgYXQgJC52YWx1ZSwgZ290IHVuZGVmaW5lZAoKMSBlcnJvci4K"
+}

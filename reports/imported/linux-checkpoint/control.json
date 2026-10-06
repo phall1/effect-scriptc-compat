@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "build": {
+    "command": [
+      "/tmp/effect-scriptc-tools/bin/scriptc",
+      "build",
+      ".work/compiler-control.ts",
+      "--npm-static=effect",
+      "-o",
+      "bin/compiler-control"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 398.218,
+    "maxRssKb": 14800,
+    "stdout": "/workspace/shared/effect-scriptc-compat/bin/compiler-control\n",
+    "stderr": "",
+    "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9jb21waWxlci1jb250cm9sCg==",
+    "stderrBase64": ""
+  },
+  "node": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--experimental-strip-types",
+      ".work/compiler-control.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 271.944,
+    "maxRssKb": 54464,
+    "stdout": "scriptc-control:42\n",
+    "stderr": "",
+    "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+    "stderrBase64": ""
+  },
+  "native": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/bin/compiler-control"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 11.652,
+    "maxRssKb": null,
+    "stdout": "scriptc-control:42\n",
+    "stderr": "",
+    "stdoutBase64": "c2NyaXB0Yy1jb250cm9sOjQyCg==",
+    "stderrBase64": ""
+  }
+}

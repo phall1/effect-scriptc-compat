@@ -1,0 +1,120 @@
+{
+  "id": "module-http--multipartparser--headersparser",
+  "module": "http/MultipartParser/HeadersParser",
+  "entrypoint": "effect/http/MultipartParser/HeadersParser",
+  "family": "http/MultipartParser/HeadersParser",
+  "file": "cases/module-http--multipartparser--headersparser.ts",
+  "status": "ready",
+  "api": [
+    "make"
+  ],
+  "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+  "declaration": "node_modules/effect/dist/http/MultipartParser/HeadersParser.d.ts",
+  "declarationSha256": "196b5705bed93142b67c88d79d41d143e7474b34fee24a2cbca78b46d2f74982",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "420dbf7914bfb7c0b6faf434a5099b1083c101ffe64c73f6f781adc3c089f70e",
+  "sourceSha256": "f3d0efa1918c5f8a6180e8681098ca02bf69c64e2d976f28fd31ea49dc4f382d",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-http--multipartparser--headersparser.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 1301.306,
+    "maxRssKb": 170360,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/module-http--multipartparser--headersparser.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1757.363,
+      "maxRssKb": 44544,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/module-http--multipartparser--headersparser.ts\n\n  statements analyzed   144\n  compile statically    144  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbW9kdWxlLWh0dHAtLW11bHRpcGFydHBhcnNlci0taGVhZGVyc3BhcnNlci50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMTQ0CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDE0NCAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 144,
+        "static": 144,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/module-http--multipartparser--headersparser.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-http--multipartparser--headersparser"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3981.321,
+      "maxRssKb": 52292,
+      "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-http--multipartparser--headersparser\n",
+      "stderr": "",
+      "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1oZWFkZXJzcGFyc2VyCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/module-http--multipartparser--headersparser",
+    "binarySize": 619312,
+    "binarySha256": "f372e7e4d288bcdac3e71ad812c9a2877c380dceaead88dbf6ce364204968e2e"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

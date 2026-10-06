@@ -1,0 +1,2308 @@
+[
+  {
+    "id": "namespace-testing",
+    "module": "testing",
+    "entrypoint": "effect/testing",
+    "family": "testing",
+    "file": "cases/namespace-testing.ts",
+    "status": "ready",
+    "api": [
+      "TestClock.make",
+      "TestClock.setTime",
+      "TestClock.currentTimeMillisUnsafe"
+    ],
+    "expectedStdout": "[1234,\"1234000000\"]\n"
+  },
+  {
+    "id": "namespace-ai",
+    "module": "ai",
+    "entrypoint": "effect/ai",
+    "family": "ai",
+    "file": "cases/namespace-ai.ts",
+    "status": "ready",
+    "api": [
+      "Prompt.make",
+      "Prompt.isPrompt"
+    ],
+    "expectedStdout": "[true,[\"system\",\"user\"],2]\n"
+  },
+  {
+    "id": "namespace-cli",
+    "module": "cli",
+    "entrypoint": "effect/cli",
+    "family": "cli",
+    "file": "cases/namespace-cli.ts",
+    "status": "ready",
+    "api": [
+      "Argument.String",
+      "Command.make",
+      "Command.isCommand",
+      "Flag.Int",
+      "Flag.withDefault"
+    ],
+    "expectedStdout": "[true,\"greet\"]\n"
+  },
+  {
+    "id": "namespace-cluster",
+    "module": "cluster",
+    "entrypoint": "effect/cluster",
+    "family": "cluster",
+    "file": "cases/namespace-cluster.ts",
+    "status": "ready",
+    "api": [
+      "EntityAddress.make",
+      "EntityId.EntityId.make",
+      "EntityType.EntityType.make",
+      "ShardId.make",
+      "ShardId.toString"
+    ],
+    "expectedStdout": "[\"users:2\",\"User\",\"u1\"]\n"
+  },
+  {
+    "id": "namespace-devtools",
+    "module": "devtools",
+    "entrypoint": "effect/devtools",
+    "family": "devtools",
+    "file": "cases/namespace-devtools.ts",
+    "status": "ready",
+    "api": [
+      "DevToolsSchema.Request",
+      "DevToolsSchema.Response"
+    ],
+    "expectedStdout": "[\"Ping\",\"Pong\"]\n"
+  },
+  {
+    "id": "namespace-encoding",
+    "module": "encoding",
+    "entrypoint": "effect/encoding",
+    "family": "encoding",
+    "file": "cases/namespace-encoding.ts",
+    "status": "ready",
+    "api": [
+      "Base64.encode",
+      "Base64.decodeString",
+      "Base64Url.encode",
+      "Hex.encode"
+    ],
+    "expectedStdout": "[\"RWZmZWN0\",\"Effect\",\"YT8\",\"4f4b\"]\n"
+  },
+  {
+    "id": "namespace-eventlog",
+    "module": "eventlog",
+    "entrypoint": "effect/eventlog",
+    "family": "eventlog",
+    "file": "cases/namespace-eventlog.ts",
+    "status": "ready",
+    "api": [
+      "Event.make",
+      "Event.isEvent",
+      "EventGroup.empty",
+      "EventGroup.add"
+    ],
+    "expectedStdout": "[true,true,[\"Changed\"],\"a\"]\n"
+  },
+  {
+    "id": "namespace-http",
+    "module": "http",
+    "entrypoint": "effect/http",
+    "family": "http",
+    "file": "cases/namespace-http.ts",
+    "status": "ready",
+    "api": [
+      "HttpClientRequest.get",
+      "HttpClientRequest.setHeader",
+      "HttpClientRequest.appendUrlParam",
+      "HttpServerResponse.text"
+    ],
+    "expectedStdout": "[\"GET\",\"https://example.invalid/items\",\"fixture\",{\"_id\":\"UrlParams\",\"params\":{\"page\":\"2\"}},201,\"Uint8Array\"]\n"
+  },
+  {
+    "id": "namespace-http-api",
+    "module": "http-api",
+    "entrypoint": "effect/http-api",
+    "family": "http-api",
+    "file": "cases/namespace-http-api.ts",
+    "status": "ready",
+    "api": [
+      "HttpApi.make",
+      "HttpApiGroup.make",
+      "HttpApiEndpoint.get",
+      "OpenApi.fromApi"
+    ],
+    "expectedStdout": "[true,\"GET\",[\"/v1/items/{id}\"]]\n"
+  },
+  {
+    "id": "namespace-net",
+    "module": "net",
+    "entrypoint": "effect/net",
+    "family": "net",
+    "file": "cases/namespace-net.ts",
+    "status": "ready",
+    "api": [
+      "NetAddress.ipFromStringUnsafe",
+      "IpNetwork.fromStringUnsafe",
+      "IpNetwork.contains",
+      "IpNetwork.addressCount",
+      "IpInterface.fromStringUnsafe"
+    ],
+    "expectedStdout": "[\"192.168.1.7\",true,\"256\",\"192.168.1.7/24\"]\n"
+  },
+  {
+    "id": "namespace-observability",
+    "module": "observability",
+    "entrypoint": "effect/observability",
+    "family": "observability",
+    "file": "cases/namespace-observability.ts",
+    "status": "ready",
+    "api": [
+      "OtlpResource.make",
+      "OtlpResource.serviceNameUnsafe"
+    ],
+    "expectedStdout": "[\"fixture\",[{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n"
+  },
+  {
+    "id": "namespace-persistence",
+    "module": "persistence",
+    "entrypoint": "effect/persistence",
+    "family": "persistence",
+    "file": "cases/namespace-persistence.ts",
+    "status": "ready",
+    "api": [
+      "KeyValueStore.KeyValueStore",
+      "KeyValueStore.layerMemory",
+      "KeyValueStore.set",
+      "KeyValueStore.modify",
+      "KeyValueStore.get"
+    ],
+    "expectedStdout": "[\"2\",1,false]\n"
+  },
+  {
+    "id": "namespace-process",
+    "module": "process",
+    "entrypoint": "effect/process",
+    "family": "process",
+    "file": "cases/namespace-process.ts",
+    "status": "ready",
+    "api": [
+      "ChildProcess.make",
+      "ChildProcess.pipeTo",
+      "ChildProcess.isPipedCommand",
+      "ChildProcess.fdName",
+      "ChildProcess.parseFdName"
+    ],
+    "expectedStdout": "[\"echo\",[\"fixture\"],true,\"fd3\",3]\n"
+  },
+  {
+    "id": "namespace-reactivity",
+    "module": "reactivity",
+    "entrypoint": "effect/reactivity",
+    "family": "reactivity",
+    "file": "cases/namespace-reactivity.ts",
+    "status": "ready",
+    "api": [
+      "AtomRef.make",
+      "AtomRef.prop",
+      "AtomRef.update",
+      "AsyncResult.success",
+      "AsyncResult.map",
+      "AsyncResult.getOrThrow"
+    ],
+    "expectedStdout": "[{\"count\":5},10,false]\n"
+  },
+  {
+    "id": "namespace-rpc",
+    "module": "rpc",
+    "entrypoint": "effect/rpc",
+    "family": "rpc",
+    "file": "cases/namespace-rpc.ts",
+    "status": "ready",
+    "api": [
+      "Rpc.make",
+      "Rpc.prefix",
+      "Rpc.isRpc",
+      "RpcGroup.make"
+    ],
+    "expectedStdout": "[true,\"fixture.GetItem\",{\"id\":\"a\"},1]\n"
+  },
+  {
+    "id": "namespace-schema",
+    "module": "schema",
+    "entrypoint": "effect/schema",
+    "family": "schema",
+    "file": "cases/namespace-schema.ts",
+    "status": "ready",
+    "api": [
+      "Model.Class",
+      "Model.GeneratedByDb",
+      "Model.Sensitive"
+    ],
+    "expectedStdout": "[{\"name\":\"new\",\"secret\":\"value\"},{\"id\":1,\"name\":\"fixture\"}]\n"
+  },
+  {
+    "id": "namespace-socket",
+    "module": "socket",
+    "entrypoint": "effect/socket",
+    "family": "socket",
+    "file": "cases/namespace-socket.ts",
+    "status": "ready",
+    "api": [
+      "Socket.CloseEvent",
+      "Socket.isCloseEvent"
+    ],
+    "expectedStdout": "[true,1000,\"fixture\",\"1000: fixture\"]\n"
+  },
+  {
+    "id": "namespace-sql",
+    "module": "sql",
+    "entrypoint": "effect/sql",
+    "family": "sql",
+    "file": "cases/namespace-sql.ts",
+    "status": "ready",
+    "api": [
+      "Statement.fragment",
+      "Statement.literal",
+      "Statement.identifier",
+      "Statement.parameter",
+      "Statement.makeCompilerSqlite"
+    ],
+    "expectedStdout": "[true,[\"SELECT \\\"name\\\" FROM \\\"items\\\" WHERE id = ?\",[7]]]\n"
+  },
+  {
+    "id": "namespace-workflow",
+    "module": "workflow",
+    "entrypoint": "effect/workflow",
+    "family": "workflow",
+    "file": "cases/namespace-workflow.ts",
+    "status": "ready",
+    "api": [
+      "Workflow.make",
+      "Workflow.idempotencyKey",
+      "DurableDeferred.make"
+    ],
+    "expectedStdout": "[\"Fixture\",\"a\",{\"id\":\"a\"},\"approval\"]\n"
+  },
+  {
+    "id": "namespace-workers",
+    "module": "workers",
+    "entrypoint": "effect/workers",
+    "family": "workers",
+    "file": "cases/namespace-workers.ts",
+    "status": "ready",
+    "api": [
+      "Transferable.makeCollectorUnsafe",
+      "Transferable.Collector.addAllUnsafe",
+      "Transferable.Collector.clearUnsafe"
+    ],
+    "expectedStdout": "[1,1,0]\n"
+  },
+  {
+    "id": "namespace-testing-testconsole",
+    "module": "testing/TestConsole",
+    "entrypoint": "effect/testing/TestConsole",
+    "family": "testing/TestConsole",
+    "file": "cases/namespace-testing-testconsole.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "TestConsole.log",
+      "TestConsole.logLines",
+      "TestConsole.errorLines"
+    ],
+    "expectedStdout": "[[\"fixture\",1],[\"handled\"]]\n"
+  },
+  {
+    "id": "namespace-encoding-base64",
+    "module": "encoding/Base64",
+    "entrypoint": "effect/encoding/Base64",
+    "family": "encoding/Base64",
+    "file": "cases/namespace-encoding-base64.ts",
+    "status": "ready",
+    "api": [
+      "encode",
+      "decodeString",
+      "decode"
+    ],
+    "expectedStdout": "[\"aGVsbG8=\",\"hello\",true]\n"
+  },
+  {
+    "id": "namespace-encoding-base64url",
+    "module": "encoding/Base64Url",
+    "entrypoint": "effect/encoding/Base64Url",
+    "family": "encoding/Base64Url",
+    "file": "cases/namespace-encoding-base64url.ts",
+    "status": "ready",
+    "api": [
+      "encode",
+      "decodeString",
+      "decode"
+    ],
+    "expectedStdout": "[\"aGVsbG8\",\"hello\",true]\n"
+  },
+  {
+    "id": "namespace-encoding-hex",
+    "module": "encoding/Hex",
+    "entrypoint": "effect/encoding/Hex",
+    "family": "encoding/Hex",
+    "file": "cases/namespace-encoding-hex.ts",
+    "status": "ready",
+    "api": [
+      "encode",
+      "decodeString",
+      "decode"
+    ],
+    "expectedStdout": "[\"68656c6c6f\",\"hello\",true]\n"
+  },
+  {
+    "id": "namespace-encoding-ini",
+    "module": "encoding/Ini",
+    "entrypoint": "effect/encoding/Ini",
+    "family": "encoding/Ini",
+    "file": "cases/namespace-encoding-ini.ts",
+    "status": "ready",
+    "api": [
+      "parse"
+    ],
+    "expectedStdout": "{\"name\":\"fixture\",\"server\":{\"port\":\"3000\"}}\n"
+  },
+  {
+    "id": "namespace-encoding-toml",
+    "module": "encoding/Toml",
+    "entrypoint": "effect/encoding/Toml",
+    "family": "encoding/Toml",
+    "file": "cases/namespace-encoding-toml.ts",
+    "status": "ready",
+    "api": [
+      "parse"
+    ],
+    "expectedStdout": "{\"name\":\"fixture\",\"server\":{\"port\":3000}}\n"
+  },
+  {
+    "id": "namespace-encoding-yaml",
+    "module": "encoding/Yaml",
+    "entrypoint": "effect/encoding/Yaml",
+    "family": "encoding/Yaml",
+    "file": "cases/namespace-encoding-yaml.ts",
+    "status": "ready",
+    "api": [
+      "parse"
+    ],
+    "expectedStdout": "{\"name\":\"fixture\",\"items\":[\"first\",\"second\"]}\n"
+  },
+  {
+    "id": "namespace-encoding-ndjson",
+    "module": "encoding/Ndjson",
+    "entrypoint": "effect/encoding/Ndjson",
+    "family": "encoding/Ndjson",
+    "file": "cases/namespace-encoding-ndjson.ts",
+    "status": "ready",
+    "api": [
+      "encodeString",
+      "decodeString"
+    ],
+    "expectedStdout": "[{\"n\":1},{\"n\":2}]\n"
+  },
+  {
+    "id": "namespace-encoding-schemabinary",
+    "module": "encoding/SchemaBinary",
+    "entrypoint": "effect/encoding/SchemaBinary",
+    "family": "encoding/SchemaBinary",
+    "file": "cases/namespace-encoding-schemabinary.ts",
+    "status": "ready",
+    "api": [
+      "toCodec"
+    ],
+    "expectedStdout": "[[20,32,209,188,218,151,33,14,176,222,183,206,70,7,102,105,120,116,117,114,101],{\"value\":7,\"name\":\"fixture\"}]\n"
+  },
+  {
+    "id": "namespace-encoding-sse",
+    "module": "encoding/Sse",
+    "entrypoint": "effect/encoding/Sse",
+    "family": "encoding/Sse",
+    "file": "cases/namespace-encoding-sse.ts",
+    "status": "ready",
+    "api": [
+      "makeParser",
+      "Parser.feed"
+    ],
+    "expectedStdout": "[{\"_tag\":\"Event\",\"id\":\"a\",\"event\":\"fixture\",\"data\":\"hello\"}]\n"
+  },
+  {
+    "id": "namespace-http-headers",
+    "module": "http/Headers",
+    "entrypoint": "effect/http/Headers",
+    "family": "http/Headers",
+    "file": "cases/namespace-http-headers.ts",
+    "status": "ready",
+    "api": [
+      "fromInput",
+      "set",
+      "get",
+      "remove",
+      "has"
+    ],
+    "expectedStdout": "[true,\"second\",false]\n"
+  },
+  {
+    "id": "namespace-http-cookies",
+    "module": "http/Cookies",
+    "entrypoint": "effect/http/Cookies",
+    "family": "http/Cookies",
+    "file": "cases/namespace-http-cookies.ts",
+    "status": "ready",
+    "api": [
+      "makeCookieUnsafe",
+      "fromIterable",
+      "serializeCookie",
+      "toCookieHeader",
+      "parseHeader"
+    ],
+    "expectedStdout": "[\"fixture=hello; Path=/; HttpOnly; SameSite=Lax\",\"fixture=hello\",{\"a\":\"1\",\"b\":\"two\"}]\n"
+  },
+  {
+    "id": "namespace-http-etag",
+    "module": "http/Etag",
+    "entrypoint": "effect/http/Etag",
+    "family": "http/Etag",
+    "file": "cases/namespace-http-etag.ts",
+    "status": "ready",
+    "api": [
+      "toString"
+    ],
+    "expectedStdout": "[\"\\\"fixture\\\"\",\"W/\\\"fixture\\\"\"]\n"
+  },
+  {
+    "id": "namespace-http-findmyway",
+    "module": "http/FindMyWay",
+    "entrypoint": "effect/http/FindMyWay",
+    "family": "http/FindMyWay",
+    "file": "cases/namespace-http-findmyway.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "Router.on",
+      "Router.find",
+      "Router.has"
+    ],
+    "expectedStdout": "[{\"handler\":\"read-item\",\"params\":{\"id\":\"42\"},\"searchParams\":{\"view\":\"full\"}},false]\n"
+  },
+  {
+    "id": "namespace-http-httpbody",
+    "module": "http/HttpBody",
+    "entrypoint": "effect/http/HttpBody",
+    "family": "http/HttpBody",
+    "file": "cases/namespace-http-httpbody.ts",
+    "status": "ready",
+    "api": [
+      "jsonUnsafe",
+      "isHttpBody"
+    ],
+    "expectedStdout": "[true,\"application/json\",18,\"{\\\"name\\\":\\\"fixture\\\"}\"]\n"
+  },
+  {
+    "id": "namespace-http-httpmethod",
+    "module": "http/HttpMethod",
+    "entrypoint": "effect/http/HttpMethod",
+    "family": "http/HttpMethod",
+    "file": "cases/namespace-http-httpmethod.ts",
+    "status": "ready",
+    "api": [
+      "hasBody",
+      "isHttpMethod"
+    ],
+    "expectedStdout": "[true,false,true,false]\n"
+  },
+  {
+    "id": "namespace-http-httpstatus",
+    "module": "http/HttpStatus",
+    "entrypoint": "effect/http/HttpStatus",
+    "family": "http/HttpStatus",
+    "file": "cases/namespace-http-httpstatus.ts",
+    "status": "ready",
+    "api": [
+      "fromLiteral"
+    ],
+    "expectedStdout": "[200,404]\n"
+  },
+  {
+    "id": "namespace-http-mime",
+    "module": "http/Mime",
+    "entrypoint": "effect/http/Mime",
+    "family": "http/Mime",
+    "file": "cases/namespace-http-mime.ts",
+    "status": "ready",
+    "api": [
+      "getType",
+      "getExtension"
+    ],
+    "expectedStdout": "[\"text/html\",\"json\",true]\n"
+  },
+  {
+    "id": "namespace-http-url",
+    "module": "http/Url",
+    "entrypoint": "effect/http/Url",
+    "family": "http/Url",
+    "file": "cases/namespace-http-url.ts",
+    "status": "ready",
+    "api": [
+      "fromString",
+      "setPathname"
+    ],
+    "expectedStdout": "[\"https://example.invalid/a?x=1\",\"https://example.invalid/b?x=1\",true]\n"
+  },
+  {
+    "id": "namespace-http-urlparams",
+    "module": "http/UrlParams",
+    "entrypoint": "effect/http/UrlParams",
+    "family": "http/UrlParams",
+    "file": "cases/namespace-http-urlparams.ts",
+    "status": "ready",
+    "api": [
+      "fromInput",
+      "append",
+      "toString",
+      "getAll",
+      "remove",
+      "toRecord"
+    ],
+    "expectedStdout": "[\"q=a+b&page=1&q=second\",[\"a b\",\"second\"],{\"q\":[\"a b\",\"second\"]}]\n"
+  },
+  {
+    "id": "namespace-http-template",
+    "module": "http/Template",
+    "entrypoint": "effect/http/Template",
+    "family": "http/Template",
+    "file": "cases/namespace-http-template.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "\"<p><fixture></p>\"\n"
+  },
+  {
+    "id": "namespace-http-api-httpapisecurity",
+    "module": "http-api/HttpApiSecurity",
+    "entrypoint": "effect/http-api/HttpApiSecurity",
+    "family": "http-api/HttpApiSecurity",
+    "file": "cases/namespace-http-api-httpapisecurity.ts",
+    "status": "ready",
+    "api": [
+      "apiKey",
+      "bearer",
+      "basic"
+    ],
+    "expectedStdout": "[\"Http\",\"Basic\",\"ApiKey\",\"x-api-key\",\"header\"]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapierror",
+    "module": "http-api/HttpApiError",
+    "entrypoint": "effect/http-api/HttpApiError",
+    "family": "http-api/HttpApiError",
+    "file": "cases/namespace-http-api-httpapierror.ts",
+    "status": "ready",
+    "api": [
+      "NotFound"
+    ],
+    "expectedStdout": "[\"NotFound\",{\"_tag\":\"NotFound\"}]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapischema",
+    "module": "http-api/HttpApiSchema",
+    "entrypoint": "effect/http-api/HttpApiSchema",
+    "family": "http-api/HttpApiSchema",
+    "file": "cases/namespace-http-api-httpapischema.ts",
+    "status": "ready",
+    "api": [
+      "WithHeaders",
+      "withHeaders",
+      "isWithHeaders",
+      "isNoContent"
+    ],
+    "expectedStdout": "[true,true,\"ok\",{\"x-fixture\":\"yes\"}]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcmessage",
+    "module": "rpc/RpcMessage",
+    "entrypoint": "effect/rpc/RpcMessage",
+    "family": "rpc/RpcMessage",
+    "file": "cases/namespace-rpc-rpcmessage.ts",
+    "status": "ready",
+    "api": [
+      "EncodedSchema",
+      "RequestId",
+      "constPing",
+      "constPong",
+      "ResponseDefectEncoded",
+      "isTerminalResponse"
+    ],
+    "expectedStdout": "[{\"_tag\":\"Request\",\"id\":\"a\",\"tag\":\"Get\",\"payload\":{\"0\":7},\"headers\":[]},2,{\"_tag\":\"Ping\"},{\"_tag\":\"Pong\"},true]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcserialization",
+    "module": "rpc/RpcSerialization",
+    "entrypoint": "effect/rpc/RpcSerialization",
+    "family": "rpc/RpcSerialization",
+    "file": "cases/namespace-rpc-rpcserialization.ts",
+    "status": "ready",
+    "api": [
+      "json",
+      "makeNdjson",
+      "Parser.encode",
+      "Parser.decode"
+    ],
+    "expectedStdout": "[[{\"_tag\":\"Ping\"}],[],[{\"n\":1},{\"n\":2}],\"application/json\"]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcschema",
+    "module": "rpc/RpcSchema",
+    "entrypoint": "effect/rpc/RpcSchema",
+    "family": "rpc/RpcSchema",
+    "file": "cases/namespace-rpc-rpcschema.ts",
+    "status": "ready",
+    "api": [
+      "Stream",
+      "isStreamSchema",
+      "ClientAbort"
+    ],
+    "expectedStdout": "[true,false,true]\n"
+  },
+  {
+    "id": "namespace-schema-schemajitcompiler",
+    "module": "schema/SchemaJITCompiler",
+    "entrypoint": "effect/schema/SchemaJITCompiler",
+    "family": "schema/SchemaJITCompiler",
+    "file": "cases/namespace-schema-schemajitcompiler.ts",
+    "status": "ready",
+    "api": [
+      "enable"
+    ],
+    "expectedStdout": "[{\"name\":\"fixture\",\"value\":7},false]\n"
+  },
+  {
+    "id": "namespace-schema-schemaaotcompiler",
+    "module": "schema/SchemaAOTCompiler",
+    "entrypoint": "effect/schema/SchemaAOTCompiler",
+    "family": "schema/SchemaAOTCompiler",
+    "file": "cases/namespace-schema-schemaaotcompiler.ts",
+    "status": "ready",
+    "api": [
+      "compile"
+    ],
+    "expectedStdout": "[true,true,true]\n"
+  },
+  {
+    "id": "namespace-sql-sqlschema",
+    "module": "sql/SqlSchema",
+    "entrypoint": "effect/sql/SqlSchema",
+    "family": "sql/SqlSchema",
+    "file": "cases/namespace-sql-sqlschema.ts",
+    "status": "ready",
+    "api": [
+      "findAll",
+      "findOneOption"
+    ],
+    "expectedStdout": "[[{\"id\":7}],true]\n"
+  },
+  {
+    "id": "namespace-sql-sqlerror",
+    "module": "sql/SqlError",
+    "entrypoint": "effect/sql/SqlError",
+    "family": "sql/SqlError",
+    "file": "cases/namespace-sql-sqlerror.ts",
+    "status": "ready",
+    "api": [
+      "classifySqliteError",
+      "SqlError",
+      "isSqlError",
+      "isSqlErrorReason"
+    ],
+    "expectedStdout": "[\"UniqueViolation\",true,true]\n"
+  },
+  {
+    "id": "namespace-reactivity-atomregistry",
+    "module": "reactivity/AtomRegistry",
+    "entrypoint": "effect/reactivity/AtomRegistry",
+    "family": "reactivity/AtomRegistry",
+    "file": "cases/namespace-reactivity-atomregistry.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "AtomRegistry.set",
+      "AtomRegistry.get",
+      "isAtomRegistry"
+    ],
+    "expectedStdout": "[5,true]\n"
+  },
+  {
+    "id": "namespace-cluster-runneraddress",
+    "module": "cluster/RunnerAddress",
+    "entrypoint": "effect/cluster/RunnerAddress",
+    "family": "cluster/RunnerAddress",
+    "file": "cases/namespace-cluster-runneraddress.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "RunnerAddress.toString"
+    ],
+    "expectedStdout": "[\"localhost\",9000,\"RunnerAddress(localhost:9000)\"]\n"
+  },
+  {
+    "id": "namespace-cluster-shardid",
+    "module": "cluster/ShardId",
+    "entrypoint": "effect/cluster/ShardId",
+    "family": "cluster/ShardId",
+    "file": "cases/namespace-cluster-shardid.ts",
+    "status": "ready",
+    "api": [
+      "fromString",
+      "isShardId",
+      "toString",
+      "fromStringEncoded"
+    ],
+    "expectedStdout": "[true,\"fixture:7\",{\"group\":\"fixture\",\"id\":7}]\n"
+  },
+  {
+    "id": "namespace-cluster-snowflake",
+    "module": "cluster/Snowflake",
+    "entrypoint": "effect/cluster/Snowflake",
+    "family": "cluster/Snowflake",
+    "file": "cases/namespace-cluster-snowflake.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "timestamp",
+      "machineId",
+      "sequence"
+    ],
+    "expectedStdout": "[\"4194316295\",1000,3,7]\n"
+  },
+  {
+    "id": "namespace-workflow-activity",
+    "module": "workflow/Activity",
+    "entrypoint": "effect/workflow/Activity",
+    "family": "workflow/Activity",
+    "file": "cases/namespace-workflow-activity.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"read\",7]\n"
+  },
+  {
+    "id": "namespace-workers-workererror",
+    "module": "workers/WorkerError",
+    "entrypoint": "effect/workers/WorkerError",
+    "family": "workers/WorkerError",
+    "file": "cases/namespace-workers-workererror.ts",
+    "status": "ready",
+    "api": [
+      "WorkerError",
+      "WorkerSendError",
+      "isWorkerError"
+    ],
+    "expectedStdout": "[true,\"WorkerError\",\"WorkerSendError\"]\n"
+  },
+  {
+    "id": "namespace-testing-testclock",
+    "module": "testing/TestClock",
+    "entrypoint": "effect/testing/TestClock",
+    "family": "testing/TestClock",
+    "file": "cases/namespace-testing-testclock.ts",
+    "status": "ready",
+    "api": [
+      "TestClock.make",
+      "TestClock.setTime",
+      "TestClock.currentTimeMillisUnsafe"
+    ],
+    "expectedStdout": "[1234,\"1234000000\"]\n"
+  },
+  {
+    "id": "namespace-ai-prompt",
+    "module": "ai/Prompt",
+    "entrypoint": "effect/ai/Prompt",
+    "family": "ai/Prompt",
+    "file": "cases/namespace-ai-prompt.ts",
+    "status": "ready",
+    "api": [
+      "Prompt.make",
+      "Prompt.isPrompt"
+    ],
+    "expectedStdout": "[true,[\"system\",\"user\"],2]\n"
+  },
+  {
+    "id": "namespace-cli-argument",
+    "module": "cli/Argument",
+    "entrypoint": "effect/cli/Argument",
+    "family": "cli/Argument",
+    "file": "cases/namespace-cli-argument.ts",
+    "status": "ready",
+    "api": [
+      "Argument.String"
+    ],
+    "expectedStdout": "[true,\"greet\"]\n"
+  },
+  {
+    "id": "namespace-cli-command",
+    "module": "cli/Command",
+    "entrypoint": "effect/cli/Command",
+    "family": "cli/Command",
+    "file": "cases/namespace-cli-command.ts",
+    "status": "ready",
+    "api": [
+      "Command.make",
+      "Command.isCommand"
+    ],
+    "expectedStdout": "[true,\"greet\"]\n"
+  },
+  {
+    "id": "namespace-cli-flag",
+    "module": "cli/Flag",
+    "entrypoint": "effect/cli/Flag",
+    "family": "cli/Flag",
+    "file": "cases/namespace-cli-flag.ts",
+    "status": "ready",
+    "api": [
+      "Flag.Int",
+      "Flag.withDefault"
+    ],
+    "expectedStdout": "[true,\"greet\"]\n"
+  },
+  {
+    "id": "namespace-cluster-entityaddress",
+    "module": "cluster/EntityAddress",
+    "entrypoint": "effect/cluster/EntityAddress",
+    "family": "cluster/EntityAddress",
+    "file": "cases/namespace-cluster-entityaddress.ts",
+    "status": "ready",
+    "api": [
+      "EntityAddress.make"
+    ],
+    "expectedStdout": "[\"users:2\",\"User\",\"u1\"]\n"
+  },
+  {
+    "id": "namespace-cluster-entityid",
+    "module": "cluster/EntityId",
+    "entrypoint": "effect/cluster/EntityId",
+    "family": "cluster/EntityId",
+    "file": "cases/namespace-cluster-entityid.ts",
+    "status": "ready",
+    "api": [
+      "EntityId.EntityId.make"
+    ],
+    "expectedStdout": "[\"users:2\",\"User\",\"u1\"]\n"
+  },
+  {
+    "id": "namespace-cluster-entitytype",
+    "module": "cluster/EntityType",
+    "entrypoint": "effect/cluster/EntityType",
+    "family": "cluster/EntityType",
+    "file": "cases/namespace-cluster-entitytype.ts",
+    "status": "ready",
+    "api": [
+      "EntityType.EntityType.make"
+    ],
+    "expectedStdout": "[\"users:2\",\"User\",\"u1\"]\n"
+  },
+  {
+    "id": "namespace-devtools-devtoolsschema",
+    "module": "devtools/DevToolsSchema",
+    "entrypoint": "effect/devtools/DevToolsSchema",
+    "family": "devtools/DevToolsSchema",
+    "file": "cases/namespace-devtools-devtoolsschema.ts",
+    "status": "ready",
+    "api": [
+      "DevToolsSchema.Request",
+      "DevToolsSchema.Response"
+    ],
+    "expectedStdout": "[\"Ping\",\"Pong\"]\n"
+  },
+  {
+    "id": "namespace-eventlog-event",
+    "module": "eventlog/Event",
+    "entrypoint": "effect/eventlog/Event",
+    "family": "eventlog/Event",
+    "file": "cases/namespace-eventlog-event.ts",
+    "status": "ready",
+    "api": [
+      "Event.make",
+      "Event.isEvent"
+    ],
+    "expectedStdout": "[true,true,[\"Changed\"],\"a\"]\n"
+  },
+  {
+    "id": "namespace-eventlog-eventgroup",
+    "module": "eventlog/EventGroup",
+    "entrypoint": "effect/eventlog/EventGroup",
+    "family": "eventlog/EventGroup",
+    "file": "cases/namespace-eventlog-eventgroup.ts",
+    "status": "ready",
+    "api": [
+      "EventGroup.empty",
+      "EventGroup.add"
+    ],
+    "expectedStdout": "[true,true,[\"Changed\"],\"a\"]\n"
+  },
+  {
+    "id": "namespace-http-httpclientrequest",
+    "module": "http/HttpClientRequest",
+    "entrypoint": "effect/http/HttpClientRequest",
+    "family": "http/HttpClientRequest",
+    "file": "cases/namespace-http-httpclientrequest.ts",
+    "status": "ready",
+    "api": [
+      "HttpClientRequest.get",
+      "HttpClientRequest.setHeader",
+      "HttpClientRequest.appendUrlParam"
+    ],
+    "expectedStdout": "[\"GET\",\"https://example.invalid/items\",\"fixture\",{\"_id\":\"UrlParams\",\"params\":{\"page\":\"2\"}},201,\"Uint8Array\"]\n"
+  },
+  {
+    "id": "namespace-http-httpserverresponse",
+    "module": "http/HttpServerResponse",
+    "entrypoint": "effect/http/HttpServerResponse",
+    "family": "http/HttpServerResponse",
+    "file": "cases/namespace-http-httpserverresponse.ts",
+    "status": "ready",
+    "api": [
+      "HttpServerResponse.text"
+    ],
+    "expectedStdout": "[\"GET\",\"https://example.invalid/items\",\"fixture\",{\"_id\":\"UrlParams\",\"params\":{\"page\":\"2\"}},201,\"Uint8Array\"]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapi",
+    "module": "http-api/HttpApi",
+    "entrypoint": "effect/http-api/HttpApi",
+    "family": "http-api/HttpApi",
+    "file": "cases/namespace-http-api-httpapi.ts",
+    "status": "ready",
+    "api": [
+      "HttpApi.make"
+    ],
+    "expectedStdout": "[true,\"GET\",[\"/v1/items/{id}\"]]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapigroup",
+    "module": "http-api/HttpApiGroup",
+    "entrypoint": "effect/http-api/HttpApiGroup",
+    "family": "http-api/HttpApiGroup",
+    "file": "cases/namespace-http-api-httpapigroup.ts",
+    "status": "ready",
+    "api": [
+      "HttpApiGroup.make"
+    ],
+    "expectedStdout": "[true,\"GET\",[\"/v1/items/{id}\"]]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapiendpoint",
+    "module": "http-api/HttpApiEndpoint",
+    "entrypoint": "effect/http-api/HttpApiEndpoint",
+    "family": "http-api/HttpApiEndpoint",
+    "file": "cases/namespace-http-api-httpapiendpoint.ts",
+    "status": "ready",
+    "api": [
+      "HttpApiEndpoint.get"
+    ],
+    "expectedStdout": "[true,\"GET\",[\"/v1/items/{id}\"]]\n"
+  },
+  {
+    "id": "namespace-http-api-openapi",
+    "module": "http-api/OpenApi",
+    "entrypoint": "effect/http-api/OpenApi",
+    "family": "http-api/OpenApi",
+    "file": "cases/namespace-http-api-openapi.ts",
+    "status": "ready",
+    "api": [
+      "OpenApi.fromApi"
+    ],
+    "expectedStdout": "[true,\"GET\",[\"/v1/items/{id}\"]]\n"
+  },
+  {
+    "id": "namespace-net-ipinterface",
+    "module": "net/IpInterface",
+    "entrypoint": "effect/net/IpInterface",
+    "family": "net/IpInterface",
+    "file": "cases/namespace-net-ipinterface.ts",
+    "status": "ready",
+    "api": [
+      "IpInterface.fromStringUnsafe"
+    ],
+    "expectedStdout": "[\"192.168.1.7\",true,\"256\",\"192.168.1.7/24\"]\n"
+  },
+  {
+    "id": "namespace-net-ipnetwork",
+    "module": "net/IpNetwork",
+    "entrypoint": "effect/net/IpNetwork",
+    "family": "net/IpNetwork",
+    "file": "cases/namespace-net-ipnetwork.ts",
+    "status": "ready",
+    "api": [
+      "IpNetwork.fromStringUnsafe",
+      "IpNetwork.contains",
+      "IpNetwork.addressCount"
+    ],
+    "expectedStdout": "[\"192.168.1.7\",true,\"256\",\"192.168.1.7/24\"]\n"
+  },
+  {
+    "id": "namespace-net-netaddress",
+    "module": "net/NetAddress",
+    "entrypoint": "effect/net/NetAddress",
+    "family": "net/NetAddress",
+    "file": "cases/namespace-net-netaddress.ts",
+    "status": "ready",
+    "api": [
+      "NetAddress.ipFromStringUnsafe"
+    ],
+    "expectedStdout": "[\"192.168.1.7\",true,\"256\",\"192.168.1.7/24\"]\n"
+  },
+  {
+    "id": "namespace-observability-otlpresource",
+    "module": "observability/OtlpResource",
+    "entrypoint": "effect/observability/OtlpResource",
+    "family": "observability/OtlpResource",
+    "file": "cases/namespace-observability-otlpresource.ts",
+    "status": "ready",
+    "api": [
+      "OtlpResource.make",
+      "OtlpResource.serviceNameUnsafe"
+    ],
+    "expectedStdout": "[\"fixture\",[{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n"
+  },
+  {
+    "id": "namespace-persistence-keyvaluestore",
+    "module": "persistence/KeyValueStore",
+    "entrypoint": "effect/persistence/KeyValueStore",
+    "family": "persistence/KeyValueStore",
+    "file": "cases/namespace-persistence-keyvaluestore.ts",
+    "status": "ready",
+    "api": [
+      "KeyValueStore.KeyValueStore",
+      "KeyValueStore.layerMemory",
+      "KeyValueStore.set",
+      "KeyValueStore.modify",
+      "KeyValueStore.get"
+    ],
+    "expectedStdout": "[\"2\",1,false]\n"
+  },
+  {
+    "id": "namespace-process-childprocess",
+    "module": "process/ChildProcess",
+    "entrypoint": "effect/process/ChildProcess",
+    "family": "process/ChildProcess",
+    "file": "cases/namespace-process-childprocess.ts",
+    "status": "ready",
+    "api": [
+      "ChildProcess.make",
+      "ChildProcess.pipeTo",
+      "ChildProcess.isPipedCommand",
+      "ChildProcess.fdName",
+      "ChildProcess.parseFdName"
+    ],
+    "expectedStdout": "[\"echo\",[\"fixture\"],true,\"fd3\",3]\n"
+  },
+  {
+    "id": "namespace-reactivity-asyncresult",
+    "module": "reactivity/AsyncResult",
+    "entrypoint": "effect/reactivity/AsyncResult",
+    "family": "reactivity/AsyncResult",
+    "file": "cases/namespace-reactivity-asyncresult.ts",
+    "status": "ready",
+    "api": [
+      "AsyncResult.success",
+      "AsyncResult.map",
+      "AsyncResult.getOrThrow"
+    ],
+    "expectedStdout": "[{\"count\":5},10,false]\n"
+  },
+  {
+    "id": "namespace-reactivity-atomref",
+    "module": "reactivity/AtomRef",
+    "entrypoint": "effect/reactivity/AtomRef",
+    "family": "reactivity/AtomRef",
+    "file": "cases/namespace-reactivity-atomref.ts",
+    "status": "ready",
+    "api": [
+      "AtomRef.make",
+      "AtomRef.prop",
+      "AtomRef.update"
+    ],
+    "expectedStdout": "[{\"count\":5},10,false]\n"
+  },
+  {
+    "id": "namespace-rpc-rpc",
+    "module": "rpc/Rpc",
+    "entrypoint": "effect/rpc/Rpc",
+    "family": "rpc/Rpc",
+    "file": "cases/namespace-rpc-rpc.ts",
+    "status": "ready",
+    "api": [
+      "Rpc.make",
+      "Rpc.prefix",
+      "Rpc.isRpc"
+    ],
+    "expectedStdout": "[true,\"fixture.GetItem\",{\"id\":\"a\"},1]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcgroup",
+    "module": "rpc/RpcGroup",
+    "entrypoint": "effect/rpc/RpcGroup",
+    "family": "rpc/RpcGroup",
+    "file": "cases/namespace-rpc-rpcgroup.ts",
+    "status": "ready",
+    "api": [
+      "RpcGroup.make"
+    ],
+    "expectedStdout": "[true,\"fixture.GetItem\",{\"id\":\"a\"},1]\n"
+  },
+  {
+    "id": "namespace-schema-model",
+    "module": "schema/Model",
+    "entrypoint": "effect/schema/Model",
+    "family": "schema/Model",
+    "file": "cases/namespace-schema-model.ts",
+    "status": "ready",
+    "api": [
+      "Model.Class",
+      "Model.GeneratedByDb",
+      "Model.Sensitive"
+    ],
+    "expectedStdout": "[{\"name\":\"new\",\"secret\":\"value\"},{\"id\":1,\"name\":\"fixture\"}]\n"
+  },
+  {
+    "id": "namespace-socket-socket",
+    "module": "socket/Socket",
+    "entrypoint": "effect/socket/Socket",
+    "family": "socket/Socket",
+    "file": "cases/namespace-socket-socket.ts",
+    "status": "ready",
+    "api": [
+      "Socket.CloseEvent",
+      "Socket.isCloseEvent"
+    ],
+    "expectedStdout": "[true,1000,\"fixture\",\"1000: fixture\"]\n"
+  },
+  {
+    "id": "namespace-sql-statement",
+    "module": "sql/Statement",
+    "entrypoint": "effect/sql/Statement",
+    "family": "sql/Statement",
+    "file": "cases/namespace-sql-statement.ts",
+    "status": "ready",
+    "api": [
+      "Statement.fragment",
+      "Statement.literal",
+      "Statement.identifier",
+      "Statement.parameter",
+      "Statement.makeCompilerSqlite"
+    ],
+    "expectedStdout": "[true,[\"SELECT \\\"name\\\" FROM \\\"items\\\" WHERE id = ?\",[7]]]\n"
+  },
+  {
+    "id": "namespace-workflow-workflow",
+    "module": "workflow/Workflow",
+    "entrypoint": "effect/workflow/Workflow",
+    "family": "workflow/Workflow",
+    "file": "cases/namespace-workflow-workflow.ts",
+    "status": "ready",
+    "api": [
+      "Workflow.make",
+      "Workflow.idempotencyKey"
+    ],
+    "expectedStdout": "[\"Fixture\",\"a\",{\"id\":\"a\"},\"approval\"]\n"
+  },
+  {
+    "id": "namespace-workflow-durabledeferred",
+    "module": "workflow/DurableDeferred",
+    "entrypoint": "effect/workflow/DurableDeferred",
+    "family": "workflow/DurableDeferred",
+    "file": "cases/namespace-workflow-durabledeferred.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "TokenParsed",
+      "TokenParsed.asToken",
+      "TokenParsed.fromString"
+    ],
+    "expectedStdout": "[\"approval\",\"Fixture\",\"exec-1\",\"approval\"]\n"
+  },
+  {
+    "id": "namespace-workers-transferable",
+    "module": "workers/Transferable",
+    "entrypoint": "effect/workers/Transferable",
+    "family": "workers/Transferable",
+    "file": "cases/namespace-workers-transferable.ts",
+    "status": "ready",
+    "api": [
+      "Transferable.makeCollectorUnsafe",
+      "Transferable.Collector.addAllUnsafe",
+      "Transferable.Collector.clearUnsafe"
+    ],
+    "expectedStdout": "[1,1,0]\n"
+  },
+  {
+    "id": "namespace-ai-anthropicstructuredoutput",
+    "module": "ai/AnthropicStructuredOutput",
+    "entrypoint": "effect/ai/AnthropicStructuredOutput",
+    "family": "ai/AnthropicStructuredOutput",
+    "file": "cases/namespace-ai-anthropicstructuredoutput.ts",
+    "status": "ready",
+    "api": [
+      "toCodecAnthropic"
+    ],
+    "expectedStdout": "[{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"count\":{\"anyOf\":[{\"type\":\"number\"},{\"type\":\"string\",\"enum\":[\"Infinity\",\"-Infinity\",\"NaN\"]}]}},\"required\":[\"name\",\"count\"],\"additionalProperties\":false},{\"name\":\"fixture\",\"count\":2}]\n"
+  },
+  {
+    "id": "namespace-ai-openaistructuredoutput",
+    "module": "ai/OpenAiStructuredOutput",
+    "entrypoint": "effect/ai/OpenAiStructuredOutput",
+    "family": "ai/OpenAiStructuredOutput",
+    "file": "cases/namespace-ai-openaistructuredoutput.ts",
+    "status": "ready",
+    "api": [
+      "toCodecOpenAI"
+    ],
+    "expectedStdout": "[{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"count\":{\"anyOf\":[{\"type\":\"number\"},{\"type\":\"string\",\"enum\":[\"Infinity\",\"-Infinity\",\"NaN\"]}]}},\"required\":[\"name\",\"count\"],\"additionalProperties\":false},{\"name\":\"fixture\",\"count\":2}]\n"
+  },
+  {
+    "id": "namespace-ai-decision",
+    "module": "ai/Decision",
+    "entrypoint": "effect/ai/Decision",
+    "family": "ai/Decision",
+    "file": "cases/namespace-ai-decision.ts",
+    "status": "ready",
+    "api": [
+      "classify",
+      "rate",
+      "probability"
+    ],
+    "expectedStdout": "[{\"_tag\":\"Classify\",\"instructions\":\"Route input\",\"criteria\":{\"yes\":\"accept\",\"no\":\"reject\"}},{\"_tag\":\"Rate\",\"instructions\":\"Rate input\",\"criteria\":[\"low\",\"high\"]},{\"_tag\":\"Probability\",\"instructions\":\"Is this valid?\"}]\n"
+  },
+  {
+    "id": "namespace-ai-mcpprotocol",
+    "module": "ai/McpProtocol",
+    "entrypoint": "effect/ai/McpProtocol",
+    "family": "ai/McpProtocol",
+    "file": "cases/namespace-ai-mcpprotocol.ts",
+    "status": "ready",
+    "api": [
+      "v2025_11_25",
+      "ProtocolAdapter.payloadCodecs",
+      "v2026_07_28"
+    ],
+    "expectedStdout": "[\"2025-11-25\",\"Stateful\",true,null,\"Stateless\"]\n"
+  },
+  {
+    "id": "namespace-ai-mcpschema",
+    "module": "ai/McpSchema",
+    "entrypoint": "effect/ai/McpSchema",
+    "family": "ai/McpSchema",
+    "file": "cases/namespace-ai-mcpschema.ts",
+    "status": "ready",
+    "api": [
+      "Implementation",
+      "Ping.successSchema",
+      "Ping"
+    ],
+    "expectedStdout": "[\"fixture\",\"1.0\",\"ping\",{}]\n"
+  },
+  {
+    "id": "namespace-ai-responseidtracker",
+    "module": "ai/ResponseIdTracker",
+    "entrypoint": "effect/ai/ResponseIdTracker",
+    "family": "ai/ResponseIdTracker",
+    "file": "cases/namespace-ai-responseidtracker.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "Service.prepareUnsafe",
+      "Service.markParts",
+      "Service.clearUnsafe"
+    ],
+    "expectedStdout": "[true,false,true]\n"
+  },
+  {
+    "id": "namespace-cli-cliconfig",
+    "module": "cli/CliConfig",
+    "entrypoint": "effect/cli/CliConfig",
+    "family": "cli/CliConfig",
+    "file": "cases/namespace-cli-cliconfig.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "defaults"
+    ],
+    "expectedStdout": "[0,true]\n"
+  },
+  {
+    "id": "namespace-cli-completions",
+    "module": "cli/Completions",
+    "entrypoint": "effect/cli/Completions",
+    "family": "cli/Completions",
+    "file": "cases/namespace-cli-completions.ts",
+    "status": "ready",
+    "api": [
+      "generate"
+    ],
+    "expectedStdout": "[true,true,true,true]\n"
+  },
+  {
+    "id": "namespace-cluster-entity",
+    "module": "cluster/Entity",
+    "entrypoint": "effect/cluster/Entity",
+    "family": "cluster/Entity",
+    "file": "cases/namespace-cluster-entity.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "isEntity"
+    ],
+    "expectedStdout": "[true,\"Counter\",[\"Get\"]]\n"
+  },
+  {
+    "id": "namespace-cluster-clustererror",
+    "module": "cluster/ClusterError",
+    "entrypoint": "effect/cluster/ClusterError",
+    "family": "cluster/ClusterError",
+    "file": "cases/namespace-cluster-clustererror.ts",
+    "status": "ready",
+    "api": [
+      "MalformedMessage.refail",
+      "MalformedMessage.is"
+    ],
+    "expectedStdout": "[true,\"MalformedMessage\",\"fixture\"]\n"
+  },
+  {
+    "id": "namespace-cluster-runner",
+    "module": "cluster/Runner",
+    "entrypoint": "effect/cluster/Runner",
+    "family": "cluster/Runner",
+    "file": "cases/namespace-cluster-runner.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"localhost\",9000,[\"default\"],2]\n"
+  },
+  {
+    "id": "namespace-cluster-singletonaddress",
+    "module": "cluster/SingletonAddress",
+    "entrypoint": "effect/cluster/SingletonAddress",
+    "family": "cluster/SingletonAddress",
+    "file": "cases/namespace-cluster-singletonaddress.ts",
+    "status": "ready",
+    "api": [
+      "SingletonAddress"
+    ],
+    "expectedStdout": "[true,\"fixture\"]\n"
+  },
+  {
+    "id": "namespace-cluster-envelope",
+    "module": "cluster/Envelope",
+    "entrypoint": "effect/cluster/Envelope",
+    "family": "cluster/Envelope",
+    "file": "cases/namespace-cluster-envelope.ts",
+    "status": "ready",
+    "api": [
+      "Interrupt",
+      "isEnvelope",
+      "PartialJson"
+    ],
+    "expectedStdout": "[true,{\"_tag\":\"Interrupt\",\"id\":\"2\",\"address\":{\"shardId\":{\"group\":\"default\",\"id\":1},\"entityType\":\"Counter\",\"entityId\":\"a\"},\"requestId\":\"1\"}]\n"
+  },
+  {
+    "id": "namespace-cluster-reply",
+    "module": "cluster/Reply",
+    "entrypoint": "effect/cluster/Reply",
+    "family": "cluster/Reply",
+    "file": "cases/namespace-cluster-reply.ts",
+    "status": "ready",
+    "api": [
+      "WithExit",
+      "WithExit.is",
+      "isReply"
+    ],
+    "expectedStdout": "[true,true,\"WithExit\",true]\n"
+  },
+  {
+    "id": "namespace-eventlog-eventlogmessage",
+    "module": "eventlog/EventLogMessage",
+    "entrypoint": "effect/eventlog/EventLogMessage",
+    "family": "eventlog/EventLogMessage",
+    "file": "cases/namespace-eventlog-eventlogmessage.ts",
+    "status": "ready",
+    "api": [
+      "EventLogProtocolError",
+      "EventLogProtocolError.is",
+      "HelloRpc",
+      "EventLogRemoteRpcs"
+    ],
+    "expectedStdout": "[[true,\"NotFound\",\"Read\"],\"EventLog.Hello\",5]\n"
+  },
+  {
+    "id": "namespace-encoding-encodingerror",
+    "module": "encoding/EncodingError",
+    "entrypoint": "effect/encoding/EncodingError",
+    "family": "encoding/EncodingError",
+    "file": "cases/namespace-encoding-encodingerror.ts",
+    "status": "ready",
+    "api": [
+      "EncodingError",
+      "isEncodingError"
+    ],
+    "expectedStdout": "[true,\"Decode\",\"fixture\",\"invalid\"]\n"
+  },
+  {
+    "id": "namespace-http-api-httpapiclient",
+    "module": "http-api/HttpApiClient",
+    "entrypoint": "effect/http-api/HttpApiClient",
+    "family": "http-api/HttpApiClient",
+    "file": "cases/namespace-http-api-httpapiclient.ts",
+    "status": "ready",
+    "api": [
+      "urlBuilder"
+    ],
+    "expectedStdout": "\"https://example.invalid/items/a%20b?q=x+y\"\n"
+  },
+  {
+    "id": "namespace-schema-variantschema",
+    "module": "schema/VariantSchema",
+    "entrypoint": "effect/schema/VariantSchema",
+    "family": "schema/VariantSchema",
+    "file": "cases/namespace-schema-variantschema.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "Struct",
+      "FieldOnly",
+      "extract",
+      "isStruct"
+    ],
+    "expectedStdout": "[true,{\"name\":\"fixture\"}]\n"
+  },
+  {
+    "id": "namespace-observability-otlpserialization",
+    "module": "observability/OtlpSerialization",
+    "entrypoint": "effect/observability/OtlpSerialization",
+    "family": "observability/OtlpSerialization",
+    "file": "cases/namespace-observability-otlpserialization.ts",
+    "status": "ready",
+    "api": [
+      "OtlpSerialization",
+      "layerJson",
+      "OtlpSerialization.traces"
+    ],
+    "expectedStdout": "[\"application/json\",\"{\\\"resourceSpans\\\":[]}\"]\n"
+  },
+  {
+    "id": "namespace-http-httpclient",
+    "module": "http/HttpClient",
+    "entrypoint": "effect/http/HttpClient",
+    "family": "http/HttpClient",
+    "file": "cases/namespace-http-httpclient.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "HttpClient.get"
+    ],
+    "expectedStdout": "{\"ok\":true}\n"
+  },
+  {
+    "id": "namespace-http-httpclienterror",
+    "module": "http/HttpClientError",
+    "entrypoint": "effect/http/HttpClientError",
+    "family": "http/HttpClientError",
+    "file": "cases/namespace-http-httpclienterror.ts",
+    "status": "ready",
+    "api": [
+      "HttpClientError",
+      "TransportError",
+      "isHttpClientError"
+    ],
+    "expectedStdout": "[true,\"TransportError\",\"GET\",\"Transport: offline fixture (GET https://example.invalid/fixture)\"]\n"
+  },
+  {
+    "id": "namespace-http-httpclientresponse",
+    "module": "http/HttpClientResponse",
+    "entrypoint": "effect/http/HttpClientResponse",
+    "family": "http/HttpClientResponse",
+    "file": "cases/namespace-http-httpclientresponse.ts",
+    "status": "ready",
+    "api": [
+      "fromWeb",
+      "HttpClientResponse.json"
+    ],
+    "expectedStdout": "[201,{\"value\":7}]\n"
+  },
+  {
+    "id": "namespace-http-httpserverrequest",
+    "module": "http/HttpServerRequest",
+    "entrypoint": "effect/http/HttpServerRequest",
+    "family": "http/HttpServerRequest",
+    "file": "cases/namespace-http-httpserverrequest.ts",
+    "status": "ready",
+    "api": [
+      "fromClientRequest",
+      "toClientRequest",
+      "searchParamsFromURL"
+    ],
+    "expectedStdout": "[\"GET\",\"GET\",{\"a\":[\"1\",\"2\"]}]\n"
+  },
+  {
+    "id": "namespace-http-httpservererror",
+    "module": "http/HttpServerError",
+    "entrypoint": "effect/http/HttpServerError",
+    "family": "http/HttpServerError",
+    "file": "cases/namespace-http-httpservererror.ts",
+    "status": "ready",
+    "api": [
+      "exitResponse"
+    ],
+    "expectedStdout": "[202,500]\n"
+  },
+  {
+    "id": "namespace-http-httptracecontext",
+    "module": "http/HttpTraceContext",
+    "entrypoint": "effect/http/HttpTraceContext",
+    "family": "http/HttpTraceContext",
+    "file": "cases/namespace-http-httptracecontext.ts",
+    "status": "ready",
+    "api": [
+      "fromHeaders"
+    ],
+    "expectedStdout": "[\"0123456789abcdef0123456789abcdef\",\"0123456789abcdef\",true]\n"
+  },
+  {
+    "id": "namespace-persistence-persistable",
+    "module": "persistence/Persistable",
+    "entrypoint": "effect/persistence/Persistable",
+    "family": "persistence/Persistable",
+    "file": "cases/namespace-persistence-persistable.ts",
+    "status": "ready",
+    "api": [
+      "Class",
+      "serializeExit",
+      "deserializeExit"
+    ],
+    "expectedStdout": "[\"Read\",{\"_tag\":\"Success\",\"value\":7},true]\n"
+  },
+  {
+    "id": "namespace-persistence-persistence",
+    "module": "persistence/Persistence",
+    "entrypoint": "effect/persistence/Persistence",
+    "family": "persistence/Persistence",
+    "file": "cases/namespace-persistence-persistence.ts",
+    "status": "ready",
+    "api": [
+      "Persistence",
+      "layerMemory",
+      "PersistenceStore.set",
+      "PersistenceStore.get",
+      "PersistenceStore.remove"
+    ],
+    "expectedStdout": "[7,true]\n"
+  },
+  {
+    "id": "namespace-persistence-persistedqueue",
+    "module": "persistence/PersistedQueue",
+    "entrypoint": "effect/persistence/PersistedQueue",
+    "family": "persistence/PersistedQueue",
+    "file": "cases/namespace-persistence-persistedqueue.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "layer",
+      "layerStoreMemory",
+      "PersistedQueue.offer",
+      "PersistedQueue.take"
+    ],
+    "expectedStdout": "[\"fixed-1\",[7,\"fixed-1\",1]]\n"
+  },
+  {
+    "id": "namespace-cluster-deliverat",
+    "module": "cluster/DeliverAt",
+    "entrypoint": "effect/cluster/DeliverAt",
+    "family": "cluster/DeliverAt",
+    "file": "cases/namespace-cluster-deliverat.ts",
+    "status": "ready",
+    "api": [
+      "symbol",
+      "isDeliverAt",
+      "toMillis"
+    ],
+    "expectedStdout": "[true,1234,null]\n"
+  },
+  {
+    "id": "namespace-cluster-clusterschema",
+    "module": "cluster/ClusterSchema",
+    "entrypoint": "effect/cluster/ClusterSchema",
+    "family": "cluster/ClusterSchema",
+    "file": "cases/namespace-cluster-clusterschema.ts",
+    "status": "ready",
+    "api": [
+      "Uninterruptible",
+      "isUninterruptibleForServer",
+      "isUninterruptibleForClient"
+    ],
+    "expectedStdout": "[true,false]\n"
+  },
+  {
+    "id": "namespace-cluster-machineid",
+    "module": "cluster/MachineId",
+    "entrypoint": "effect/cluster/MachineId",
+    "family": "cluster/MachineId",
+    "file": "cases/namespace-cluster-machineid.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "MachineId"
+    ],
+    "expectedStdout": "[7,7]\n"
+  },
+  {
+    "id": "namespace-cluster-entityproxy",
+    "module": "cluster/EntityProxy",
+    "entrypoint": "effect/cluster/EntityProxy",
+    "family": "cluster/EntityProxy",
+    "file": "cases/namespace-cluster-entityproxy.ts",
+    "status": "ready",
+    "api": [
+      "toRpcGroup",
+      "toHttpApiGroup"
+    ],
+    "expectedStdout": "[[\"Counter.Get\",\"Counter.GetDiscard\"],\"counters\",[\"Get\",\"GetDiscard\"]]\n"
+  },
+  {
+    "id": "namespace-cluster-shardingconfig",
+    "module": "cluster/ShardingConfig",
+    "entrypoint": "effect/cluster/ShardingConfig",
+    "family": "cluster/ShardingConfig",
+    "file": "cases/namespace-cluster-shardingconfig.ts",
+    "status": "ready",
+    "api": [
+      "shardGroupConfig",
+      "defaults"
+    ],
+    "expectedStdout": "[[\"default\"],[\"default\"],true]\n"
+  },
+  {
+    "id": "namespace-cluster-shardingregistrationevent",
+    "module": "cluster/ShardingRegistrationEvent",
+    "entrypoint": "effect/cluster/ShardingRegistrationEvent",
+    "family": "cluster/ShardingRegistrationEvent",
+    "file": "cases/namespace-cluster-shardingregistrationevent.ts",
+    "status": "ready",
+    "api": [
+      "SingletonRegistered",
+      "match"
+    ],
+    "expectedStdout": "\"fixture\"\n"
+  },
+  {
+    "id": "namespace-cluster-runnerhealth",
+    "module": "cluster/RunnerHealth",
+    "entrypoint": "effect/cluster/RunnerHealth",
+    "family": "cluster/RunnerHealth",
+    "file": "cases/namespace-cluster-runnerhealth.ts",
+    "status": "ready",
+    "api": [
+      "RunnerHealth",
+      "layerNoop",
+      "RunnerHealth.isAlive"
+    ],
+    "expectedStdout": "true\n"
+  },
+  {
+    "id": "namespace-cluster-runnerstorage",
+    "module": "cluster/RunnerStorage",
+    "entrypoint": "effect/cluster/RunnerStorage",
+    "family": "cluster/RunnerStorage",
+    "file": "cases/namespace-cluster-runnerstorage.ts",
+    "status": "ready",
+    "api": [
+      "makeMemory",
+      "RunnerStorage.register",
+      "RunnerStorage.acquire",
+      "RunnerStorage.unregister"
+    ],
+    "expectedStdout": "[1,true,[\"default:1\"],0]\n"
+  },
+  {
+    "id": "namespace-cluster-runners",
+    "module": "cluster/Runners",
+    "entrypoint": "effect/cluster/Runners",
+    "family": "cluster/Runners",
+    "file": "cases/namespace-cluster-runners.ts",
+    "status": "ready",
+    "api": [
+      "Rpcs",
+      "Rpcs.requests"
+    ],
+    "expectedStdout": "[[\"Ping\",\"Notify\",\"Effect\",\"Stream\",\"Envelope\"],null]\n"
+  },
+  {
+    "id": "namespace-workflow-durableclock",
+    "module": "workflow/DurableClock",
+    "entrypoint": "effect/workflow/DurableClock",
+    "family": "workflow/DurableClock",
+    "file": "cases/namespace-workflow-durableclock.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"fixture\",2000,\"DurableClock/fixture\"]\n"
+  },
+  {
+    "id": "namespace-workflow-workflowproxy",
+    "module": "workflow/WorkflowProxy",
+    "entrypoint": "effect/workflow/WorkflowProxy",
+    "family": "workflow/WorkflowProxy",
+    "file": "cases/namespace-workflow-workflowproxy.ts",
+    "status": "ready",
+    "api": [
+      "toRpcGroup",
+      "toHttpApiGroup"
+    ],
+    "expectedStdout": "[[\"Fixture\",\"FixtureDiscard\",\"FixtureResume\"],\"fixtures\",[\"Fixture\",\"FixtureDiscard\",\"FixtureResume\"]]\n"
+  },
+  {
+    "id": "namespace-eventlog-eventlogsessionauth",
+    "module": "eventlog/EventLogSessionAuth",
+    "entrypoint": "effect/eventlog/EventLogSessionAuth",
+    "family": "eventlog/EventLogSessionAuth",
+    "file": "cases/namespace-eventlog-eventlogsessionauth.ts",
+    "status": "ready",
+    "api": [
+      "encodeSessionAuthPayload",
+      "decodeSessionAuthPayload"
+    ],
+    "expectedStdout": "[121,\"fixture\",\"public-fixture\",32,32]\n"
+  },
+  {
+    "id": "namespace-sql-migrator",
+    "module": "sql/Migrator",
+    "entrypoint": "effect/sql/Migrator",
+    "family": "sql/Migrator",
+    "file": "cases/namespace-sql-migrator.ts",
+    "status": "ready",
+    "api": [
+      "fromRecord"
+    ],
+    "expectedStdout": "[[1,\"first\"],[2,\"second\"]]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcclienterror",
+    "module": "rpc/RpcClientError",
+    "entrypoint": "effect/rpc/RpcClientError",
+    "family": "rpc/RpcClientError",
+    "file": "cases/namespace-rpc-rpcclienterror.ts",
+    "status": "ready",
+    "api": [
+      "RpcClientError",
+      "RpcClientDefect"
+    ],
+    "expectedStdout": "[\"RpcClientError\",\"RpcClientDefect\",\"RpcClientDefect: bad protocol\"]\n"
+  },
+  {
+    "id": "namespace-rpc-rpcworker",
+    "module": "rpc/RpcWorker",
+    "entrypoint": "effect/rpc/RpcWorker",
+    "family": "rpc/RpcWorker",
+    "file": "cases/namespace-rpc-rpcworker.ts",
+    "status": "ready",
+    "api": [
+      "makeInitialMessage"
+    ],
+    "expectedStdout": "[{\"value\":7},0]\n"
+  },
+  {
+    "id": "namespace-workers-worker",
+    "module": "workers/Worker",
+    "entrypoint": "effect/workers/Worker",
+    "family": "workers/Worker",
+    "file": "cases/namespace-workers-worker.ts",
+    "status": "ready",
+    "api": [
+      "makeUnsafe",
+      "Worker.send"
+    ],
+    "expectedStdout": "[{\"value\":7}]\n"
+  },
+  {
+    "id": "namespace-http-httpserver",
+    "module": "http/HttpServer",
+    "entrypoint": "effect/http/HttpServer",
+    "family": "http/HttpServer",
+    "file": "cases/namespace-http-httpserver.ts",
+    "status": "ready",
+    "api": [
+      "formatAddress"
+    ],
+    "expectedStdout": "\"http://127.0.0.1:3000\"\n"
+  },
+  {
+    "id": "namespace-socket-socketserver",
+    "module": "socket/SocketServer",
+    "entrypoint": "effect/socket/SocketServer",
+    "family": "socket/SocketServer",
+    "file": "cases/namespace-socket-socketserver.ts",
+    "status": "ready",
+    "api": [
+      "SocketServerError",
+      "SocketServerOpenError"
+    ],
+    "expectedStdout": "[\"SocketServerError\",\"SocketServerOpenError\"]\n"
+  },
+  {
+    "id": "namespace-http-fetchhttpclient",
+    "module": "http/FetchHttpClient",
+    "entrypoint": "effect/http/FetchHttpClient",
+    "family": "http/FetchHttpClient",
+    "file": "cases/namespace-http-fetchhttpclient.ts",
+    "status": "ready",
+    "api": [
+      "layer",
+      "Fetch"
+    ],
+    "expectedStdout": "{\"value\":7}\n"
+  },
+  {
+    "id": "namespace-skipped-cluster-httprunner",
+    "module": "cluster/HttpRunner",
+    "entrypoint": "effect/cluster/HttpRunner",
+    "family": "cluster/HttpRunner",
+    "file": "cases/namespace-skipped-cluster-httprunner.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "layerHttp",
+      "layerWebsocket"
+    ],
+    "reason": "Published layerHttp/layerWebsocket require an HttpServer and HttpClient or WebSocketConstructor plus runner storage. The live runner transport needs an HTTP/WebSocket backend and peer; no listeners or outbound network are allowed in this deterministic corpus."
+  },
+  {
+    "id": "namespace-skipped-cluster-socketrunner",
+    "module": "cluster/SocketRunner",
+    "entrypoint": "effect/cluster/SocketRunner",
+    "family": "cluster/SocketRunner",
+    "file": "cases/namespace-skipped-cluster-socketrunner.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "layer"
+    ],
+    "reason": "Published layer requires SocketServer and Runners.RpcClientProtocol and runs the socket RPC listener. No socket-server platform adapter or peer is installed; opening sockets is outside this corpus."
+  },
+  {
+    "id": "namespace-skipped-cluster-singlerunner",
+    "module": "cluster/SingleRunner",
+    "entrypoint": "effect/cluster/SingleRunner",
+    "family": "cluster/SingleRunner",
+    "file": "cases/namespace-skipped-cluster-singlerunner.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "layer"
+    ],
+    "reason": "The declaration explicitly says message storage remains SQL-backed even with runnerStorage=\"memory\". layer requires SqlClient and Crypto; no SQL driver/database is installed, and the fixture must not create database IO."
+  },
+  {
+    "id": "namespace-skipped-cluster-sqlmessagestorage",
+    "module": "cluster/SqlMessageStorage",
+    "entrypoint": "effect/cluster/SqlMessageStorage",
+    "family": "cluster/SqlMessageStorage",
+    "file": "cases/namespace-skipped-cluster-sqlmessagestorage.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "makeEncoded",
+      "make",
+      "layer"
+    ],
+    "reason": "makeEncoded/make run SQL migrations and require SqlClient plus Crypto; exercising this backend requires a concrete database driver and database IO, neither provided in the pinned Effect-only package."
+  },
+  {
+    "id": "namespace-skipped-cluster-sqlrunnerstorage",
+    "module": "cluster/SqlRunnerStorage",
+    "entrypoint": "effect/cluster/SqlRunnerStorage",
+    "family": "cluster/SqlRunnerStorage",
+    "file": "cases/namespace-skipped-cluster-sqlrunnerstorage.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "make",
+      "layer"
+    ],
+    "reason": "make/layer implement runner registration and shard/advisory locks using SqlClient and ShardingConfig. There is no concrete SQL driver or database; in-memory runner storage is covered separately."
+  },
+  {
+    "id": "namespace-skipped-devtools-devtools",
+    "module": "devtools/DevTools",
+    "entrypoint": "effect/devtools/DevTools",
+    "family": "devtools/DevTools",
+    "file": "cases/namespace-skipped-devtools-devtools.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "layerSocket",
+      "layerWebSocket",
+      "layer"
+    ],
+    "reason": "The high-level tracer streams spans and metric snapshots to an external devtools process. layerSocket requires Socket and WebSocket layers require a WebSocket backend; no devtools peer or network connection is permitted."
+  },
+  {
+    "id": "namespace-skipped-devtools-devtoolsserver",
+    "module": "devtools/DevToolsServer",
+    "entrypoint": "effect/devtools/DevToolsServer",
+    "family": "devtools/DevToolsServer",
+    "file": "cases/namespace-skipped-devtools-devtoolsserver.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "run"
+    ],
+    "reason": "run is declared Effect<never,...,SocketServer> and accepts external devtools socket clients. There is no SocketServer platform adapter; this unbounded listener requires network IO and cannot be a terminating standalone fixture."
+  },
+  {
+    "id": "namespace-skipped-eventlog-sqleventjournal",
+    "module": "eventlog/SqlEventJournal",
+    "entrypoint": "effect/eventlog/SqlEventJournal",
+    "family": "eventlog/SqlEventJournal",
+    "file": "cases/namespace-skipped-eventlog-sqleventjournal.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "make",
+      "layer"
+    ],
+    "reason": "make/layer construct a SQL-backed EventJournal and require SqlClient. No concrete SQL driver or database is installed; journal database migrations and persistence IO are excluded."
+  },
+  {
+    "id": "namespace-skipped-eventlog-sqleventlogserverencrypted",
+    "module": "eventlog/SqlEventLogServerEncrypted",
+    "entrypoint": "effect/eventlog/SqlEventLogServerEncrypted",
+    "family": "eventlog/SqlEventLogServerEncrypted",
+    "file": "cases/namespace-skipped-eventlog-sqleventlogserverencrypted.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "makeStorage",
+      "layerStorage"
+    ],
+    "reason": "makeStorage/layerStorage persist encrypted entries, remote identity and sequence state in SQL and require SqlClient. No SQL database/driver is installed; live persistence IO is excluded."
+  },
+  {
+    "id": "namespace-skipped-eventlog-sqleventlogserverunencrypted",
+    "module": "eventlog/SqlEventLogServerUnencrypted",
+    "entrypoint": "effect/eventlog/SqlEventLogServerUnencrypted",
+    "family": "eventlog/SqlEventLogServerUnencrypted",
+    "file": "cases/namespace-skipped-eventlog-sqleventlogserverunencrypted.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "makeStorage",
+      "layerStorage"
+    ],
+    "reason": "makeStorage/layerStorage construct SQL-backed unencrypted server storage and require SqlClient. No concrete database/driver is installed; this persistence backend cannot run without SQL IO."
+  },
+  {
+    "id": "namespace-skipped-process-childprocessspawner",
+    "module": "process/ChildProcessSpawner",
+    "entrypoint": "effect/process/ChildProcessSpawner",
+    "family": "process/ChildProcessSpawner",
+    "file": "cases/namespace-skipped-process-childprocessspawner.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "ChildProcessSpawner.spawn"
+    ],
+    "reason": "The primary service method starts and controls operating-system child processes through a platform backend. No process adapter is installed and spawning is forbidden by the corpus constraints; command construction is covered separately."
+  },
+  {
+    "id": "namespace-skipped-workers-workerrunner",
+    "module": "workers/WorkerRunner",
+    "entrypoint": "effect/workers/WorkerRunner",
+    "family": "workers/WorkerRunner",
+    "file": "cases/namespace-skipped-workers-workerrunner.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "WorkerRunnerPlatform.start"
+    ],
+    "reason": "The only runtime service starts a platform-specific WorkerRunner. No browser/Node/Bun worker-runner platform is installed; exercising the actual message-port runtime requires a worker execution environment."
+  },
+  {
+    "id": "namespace-skipped-sql-sqlconnection",
+    "module": "sql/SqlConnection",
+    "entrypoint": "effect/sql/SqlConnection",
+    "family": "sql/SqlConnection",
+    "file": "cases/namespace-skipped-sql-sqlconnection.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "Connection.execute",
+      "Connection.executeRaw",
+      "Connection.executeStream"
+    ],
+    "reason": "This module exposes the driver-facing Connection service and contracts, without a concrete connection implementation. Executing compiled SQL requires a database driver/backend not installed in the Effect-only package."
+  },
+  {
+    "id": "namespace-skipped-sql-sqlmodel",
+    "module": "sql/SqlModel",
+    "entrypoint": "effect/sql/SqlModel",
+    "family": "sql/SqlModel",
+    "file": "cases/namespace-skipped-sql-sqlmodel.ts",
+    "status": "skipped-needs-io",
+    "api": [
+      "makeRepository",
+      "makeResolvers"
+    ],
+    "reason": "Repository/resolver helpers derive insert/update/find/delete SQL and require SqlClient. End-to-end model persistence needs a concrete SQL driver/database absent from this package; model schema variants and standalone SQL compilation are covered separately."
+  },
+  {
+    "id": "namespace-ai-decisionmodel",
+    "module": "ai/DecisionModel",
+    "entrypoint": "effect/ai/DecisionModel",
+    "family": "ai/DecisionModel",
+    "file": "cases/namespace-ai-decisionmodel.ts",
+    "status": "ready",
+    "api": [
+      "DecisionModel.make",
+      "DecisionModel.decide",
+      "DecisionModel.DecisionModel",
+      "Decision.make",
+      "Decision.classify",
+      "Decision.probability"
+    ],
+    "expectedStdout": "[[{\"text\":\"help\"}],\"support\",0.8,4,\"InvalidOutputError\"]\n"
+  },
+  {
+    "id": "namespace-ai-embeddingmodel",
+    "module": "ai/EmbeddingModel",
+    "entrypoint": "effect/ai/EmbeddingModel",
+    "family": "ai/EmbeddingModel",
+    "file": "cases/namespace-ai-embeddingmodel.ts",
+    "status": "ready",
+    "api": [
+      "EmbeddingModel.make",
+      "EmbeddingModel.embedMany",
+      "EmbeddingModel.embed"
+    ],
+    "expectedStdout": "[[[1,2],[4,8]],2,[2,4],0,2,\"InvalidOutputError\"]\n"
+  },
+  {
+    "id": "namespace-ai-mcpserver",
+    "module": "ai/McpServer",
+    "entrypoint": "effect/ai/McpServer",
+    "family": "ai/McpServer",
+    "file": "cases/namespace-ai-mcpserver.ts",
+    "status": "ready",
+    "api": [
+      "McpServer.McpServer.make",
+      "McpServer.registerResource",
+      "McpServer.registerPrompt"
+    ],
+    "expectedStdout": "[[[\"fixture://message\",\"updated\",\"text/plain\"]],[[\"greet\",[\"name\"]]],0]\n"
+  },
+  {
+    "id": "namespace-cli-globalflag",
+    "module": "cli/GlobalFlag",
+    "entrypoint": "effect/cli/GlobalFlag",
+    "family": "cli/GlobalFlag",
+    "file": "cases/namespace-cli-globalflag.ts",
+    "status": "ready",
+    "api": [
+      "GlobalFlag.Setting",
+      "GlobalFlag.Action",
+      "GlobalFlag.BuiltIns",
+      "GlobalFlag.Action.run"
+    ],
+    "expectedStdout": "[\"Setting\",\"mode\",\"safe\",\"Action\",[\"fixture:1.2.3\"],[\"Action\",\"Action\",\"Action\",\"Action\",\"Setting\"]]\n"
+  },
+  {
+    "id": "namespace-devtools-devtoolsclient",
+    "module": "devtools/DevToolsClient",
+    "entrypoint": "effect/devtools/DevToolsClient",
+    "family": "devtools/DevToolsClient",
+    "file": "cases/namespace-devtools-devtoolsclient.ts",
+    "status": "ready",
+    "api": [
+      "DevToolsClient.makeTracer",
+      "DevToolsClient.DevToolsClient",
+      "Tracer.make",
+      "Tracer.span",
+      "Tracer.Span.event",
+      "Tracer.Span.end"
+    ],
+    "expectedStdout": "[[[\"Span\",\"fixture\",\"Started\",[]],[\"SpanEvent\",\"ready\",\"110\"],[\"Span\",\"fixture\",\"Ended\",[[\"step\",1]]]],[\"ready\"],\"span-1\",\"trace-1\"]\n"
+  },
+  {
+    "id": "namespace-cluster-testrunner",
+    "module": "cluster/TestRunner",
+    "entrypoint": "effect/cluster/TestRunner",
+    "family": "cluster/TestRunner",
+    "file": "cases/namespace-cluster-testrunner.ts",
+    "status": "ready",
+    "api": [
+      "layer"
+    ],
+    "expectedStdout": "[\"default:97\",0,false]\n"
+  },
+  {
+    "id": "namespace-cluster-sharding",
+    "module": "cluster/Sharding",
+    "entrypoint": "effect/cluster/Sharding",
+    "family": "cluster/Sharding",
+    "file": "cases/namespace-cluster-sharding.ts",
+    "status": "ready",
+    "api": [
+      "Sharding",
+      "Sharding.getShardId",
+      "Sharding.activeEntityCount",
+      "Sharding.isShutdown"
+    ],
+    "expectedStdout": "[\"default:97\",0,false]\n"
+  },
+  {
+    "id": "namespace-cluster-clustermetrics",
+    "module": "cluster/ClusterMetrics",
+    "entrypoint": "effect/cluster/ClusterMetrics",
+    "family": "cluster/ClusterMetrics",
+    "file": "cases/namespace-cluster-clustermetrics.ts",
+    "status": "ready",
+    "api": [
+      "entities",
+      "shards"
+    ],
+    "expectedStdout": "[\"3\",\"7\"]\n"
+  },
+  {
+    "id": "namespace-cluster-k8shttpclient",
+    "module": "cluster/K8sHttpClient",
+    "entrypoint": "effect/cluster/K8sHttpClient",
+    "family": "cluster/K8sHttpClient",
+    "file": "cases/namespace-cluster-k8shttpclient.ts",
+    "status": "ready",
+    "api": [
+      "Pod",
+      "Pod.isReady",
+      "Pod.isReadyOrInitializing"
+    ],
+    "expectedStdout": "[\"10.0.0.1\",true,true]\n"
+  },
+  {
+    "id": "namespace-cluster-message",
+    "module": "cluster/Message",
+    "entrypoint": "effect/cluster/Message",
+    "family": "cluster/Message",
+    "file": "cases/namespace-cluster-message.ts",
+    "status": "ready",
+    "api": [
+      "OutgoingEnvelope.interrupt",
+      "serializeEnvelope"
+    ],
+    "expectedStdout": "[\"OutgoingEnvelope\",{\"_tag\":\"Interrupt\",\"id\":\"2\",\"address\":{\"shardId\":{\"group\":\"default\",\"id\":1},\"entityType\":\"Fixture\",\"entityId\":\"a\"},\"requestId\":\"1\"}]\n"
+  },
+  {
+    "id": "namespace-cluster-messagestorage",
+    "module": "cluster/MessageStorage",
+    "entrypoint": "effect/cluster/MessageStorage",
+    "family": "cluster/MessageStorage",
+    "file": "cases/namespace-cluster-messagestorage.ts",
+    "status": "ready",
+    "api": [
+      "layerMemory",
+      "MessageStorage.saveRequest",
+      "MessageStorage.unprocessedMessages"
+    ],
+    "expectedStdout": "[\"Success\",\"Duplicate\",[\"Request\"]]\n"
+  },
+  {
+    "id": "namespace-cluster-clustercron",
+    "module": "cluster/ClusterCron",
+    "entrypoint": "effect/cluster/ClusterCron",
+    "family": "cluster/ClusterCron",
+    "file": "cases/namespace-cluster-clustercron.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"entity:ClusterCron/fixture\",\"singleton:ClusterCron/fixture\"]\n"
+  },
+  {
+    "id": "namespace-cluster-singleton",
+    "module": "cluster/Singleton",
+    "entrypoint": "effect/cluster/Singleton",
+    "family": "cluster/Singleton",
+    "file": "cases/namespace-cluster-singleton.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"fixture:default\"]\n"
+  },
+  {
+    "id": "namespace-cluster-entityproxyserver",
+    "module": "cluster/EntityProxyServer",
+    "entrypoint": "effect/cluster/EntityProxyServer",
+    "family": "cluster/EntityProxyServer",
+    "file": "cases/namespace-cluster-entityproxyserver.ts",
+    "status": "ready",
+    "api": [
+      "layerRpcHandlers"
+    ],
+    "expectedStdout": "[\"effect/rpc/Rpc/Fixture.Get\",\"effect/rpc/Rpc/Fixture.GetDiscard\"]\n"
+  },
+  {
+    "id": "namespace-cluster-entityresource",
+    "module": "cluster/EntityResource",
+    "entrypoint": "effect/cluster/EntityResource",
+    "family": "cluster/EntityResource",
+    "file": "cases/namespace-cluster-entityresource.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "EntityResource.get",
+      "EntityResource.close"
+    ],
+    "expectedStdout": "[1,1,1]\n"
+  },
+  {
+    "id": "namespace-cluster-clusterworkflowengine",
+    "module": "cluster/ClusterWorkflowEngine",
+    "entrypoint": "effect/cluster/ClusterWorkflowEngine",
+    "family": "cluster/ClusterWorkflowEngine",
+    "file": "cases/namespace-cluster-clusterworkflowengine.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "WorkflowEngine.register",
+      "WorkflowEngine.poll"
+    ],
+    "expectedStdout": "true\n"
+  },
+  {
+    "id": "namespace-cluster-runnerserver",
+    "module": "cluster/RunnerServer",
+    "entrypoint": "effect/cluster/RunnerServer",
+    "family": "cluster/RunnerServer",
+    "file": "cases/namespace-cluster-runnerserver.ts",
+    "status": "ready",
+    "api": [
+      "layerHandlers"
+    ],
+    "expectedStdout": "[\"effect/rpc/Rpc/Effect\",\"effect/rpc/Rpc/Envelope\",\"effect/rpc/Rpc/Notify\",\"effect/rpc/Rpc/Ping\",\"effect/rpc/Rpc/Stream\"]\n"
+  },
+  {
+    "id": "namespace-workflow-workflowengine",
+    "module": "workflow/WorkflowEngine",
+    "entrypoint": "effect/workflow/WorkflowEngine",
+    "family": "workflow/WorkflowEngine",
+    "file": "cases/namespace-workflow-workflowengine.ts",
+    "status": "ready",
+    "api": [
+      "WorkflowEngine",
+      "layerMemory",
+      "WorkflowEngine.register",
+      "WorkflowEngine.execute",
+      "WorkflowEngine.poll"
+    ],
+    "expectedStdout": "[7,true]\n"
+  },
+  {
+    "id": "namespace-workflow-workflowproxyserver",
+    "module": "workflow/WorkflowProxyServer",
+    "entrypoint": "effect/workflow/WorkflowProxyServer",
+    "family": "workflow/WorkflowProxyServer",
+    "file": "cases/namespace-workflow-workflowproxyserver.ts",
+    "status": "ready",
+    "api": [
+      "layerRpcHandlers"
+    ],
+    "expectedStdout": "7\n"
+  }
+]

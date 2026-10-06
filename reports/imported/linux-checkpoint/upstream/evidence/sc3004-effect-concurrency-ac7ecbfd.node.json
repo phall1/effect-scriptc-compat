@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "reports/upstream/repro/sc3004-effect-concurrency-ac7ecbfd.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 581.105,
+  "maxRssKb": 81832,
+  "stdout": "all:1,2,3\n",
+  "stderr": "",
+  "stdoutBase64": "YWxsOjEsMiwzCg==",
+  "stderrBase64": ""
+}

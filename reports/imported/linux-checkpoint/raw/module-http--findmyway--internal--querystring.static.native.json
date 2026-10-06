@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/module-http--findmyway--internal--querystring"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 8.085,
+  "maxRssKb": null,
+  "stdout": "[{\"a\":\"1\",\"b\":\"two words\"},\"a=1&b=two%20words\"]\n",
+  "stderr": "",
+  "stdoutBase64": "W3siYSI6IjEiLCJiIjoidHdvIHdvcmRzIn0sImE9MSZiPXR3byUyMHdvcmRzIl0K",
+  "stderrBase64": ""
+}

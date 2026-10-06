@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-10-05T23:56:07.675Z",
+  "status": "partial",
+  "reportPath": "reports/shards/macos-smoke.json",
+  "cacheIdentity": "797f998f59757e98a6aeca80d1ae4293691eb7267015654ed8c53482e697bc39",
+  "summary": {
+    "cases": 2,
+    "modules": 2,
+    "ready": 2,
+    "completed": 2,
+    "pending": 0,
+    "caseTiers": {
+      "static": 0,
+      "deferred": 1,
+      "dynamic-fallback": 0,
+      "rejected": 1
+    },
+    "skippedNeedsIo": 0,
+    "uncovered": 0,
+    "moduleTiers": {
+      "static": 0,
+      "deferred": 1,
+      "dynamic-fallback": 0,
+      "rejected": 1,
+      "pending": 0,
+      "uncovered": 0,
+      "skipped-needs-io": 0
+    },
+    "scCodesByCaseFrequency": {
+      "SC3004": 1,
+      "SC1043": 1,
+      "SC1090": 1,
+      "SC2020": 1
+    }
+  },
+  "executionContext": "Completed exact-source/toolchain records only; pending cases are unmeasured."
+}

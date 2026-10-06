@@ -1,0 +1,11 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/module-http--findmyway--internal--querystring.ts
+
+  statements analyzed   136
+  compile statically    135  (99%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090
+

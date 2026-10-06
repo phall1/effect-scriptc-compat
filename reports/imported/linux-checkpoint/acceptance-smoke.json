@@ -1,0 +1,158 @@
+{
+  "scope": "Fresh one-case checkout smoke test; full corpus host map remains separate",
+  "commands": [
+    "pnpm install --frozen-lockfile",
+    "pnpm map",
+    "pnpm diff"
+  ],
+  "passed": true,
+  "case": "module-number",
+  "tier": "deferred",
+  "differential": {
+    "binaries": 1,
+    "equal": 1,
+    "mismatched": 0,
+    "invalidNodeBaselines": 0,
+    "hangs": 0
+  },
+  "provenance": {
+    "nodeVersion": "v24.19.0",
+    "pnpmVersion": "11.19.0",
+    "effectVersion": "4.0.1",
+    "typescriptVersion": "7.0.2",
+    "scriptcVersion": "0.2.3",
+    "scriptcVersionOutput": "0.2.3",
+    "scriptcPrintedCommit": null,
+    "scriptcReleaseTag": "v0.2.3",
+    "scriptcReleaseCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+    "hostTriple": "x86_64-unknown-linux-gnu",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel": "6.18.44",
+    "toolchainPins": {
+      "schemaVersion": 1,
+      "node": "24.19.0",
+      "pnpm": "11.19.0",
+      "typescript": "7.0.2",
+      "nodeTypes": "24.10.1",
+      "effect": "4.0.1",
+      "scriptc": {
+        "npmVersion": "0.2.3",
+        "githubReleaseTag": "v0.2.3",
+        "githubCommit": "52169979ee3fac98ad6651eb2a717fbbf4ac1f89",
+        "releaseUrl": "https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3",
+        "contributingUrl": "https://github.com/vercel-labs/scriptc/blob/v0.2.3/CONTRIBUTING.md",
+        "issuesUrl": "https://github.com/vercel-labs/scriptc/issues"
+      },
+      "runner": "node --experimental-strip-types",
+      "hostFirst": true
+    },
+    "lockfileSha256": "4aeef7dcdebdf11c8b9441fac76683ffac02527b6762ee19266e387a4081e6ea",
+    "effectPackageJsonSha256": "569fd709b635b26e9d5851b3cf1958082da47a9778ee6d21cf4f47f3dbc41e6f",
+    "cliSha256": "76e3c4d1c326438ee46f29480bf2310407e01f7bcf39fe182e2cd43d2d2a2234",
+    "commands": {
+      "node": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "-v"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 33.001,
+        "maxRssKb": null,
+        "stdout": "v24.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "djI0LjE5LjAK",
+        "stderrBase64": ""
+      },
+      "scriptc": {
+        "command": [
+          "/tmp/effect-scriptc-tools/bin/scriptc",
+          "--version"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 29.574,
+        "maxRssKb": null,
+        "stdout": "0.2.3\n",
+        "stderr": "",
+        "stdoutBase64": "MC4yLjMK",
+        "stderrBase64": ""
+      },
+      "pnpm": {
+        "command": [
+          "pnpm",
+          "--version"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 1220.895,
+        "maxRssKb": 101872,
+        "stdout": "11.19.0\n",
+        "stderr": "",
+        "stdoutBase64": "MTEuMTkuMAo=",
+        "stderrBase64": ""
+      },
+      "typescript": {
+        "command": [
+          "/tmp/effect-harness-clean-install/node_modules/.bin/tsc",
+          "--version"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 207.183,
+        "maxRssKb": null,
+        "stdout": "Version 7.0.2\n",
+        "stderr": "",
+        "stdoutBase64": "VmVyc2lvbiA3LjAuMgo=",
+        "stderrBase64": ""
+      },
+      "linker": {
+        "command": [
+          "/tmp/effect-scriptc-clang/root/usr/bin/clang-19",
+          "--version"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 92.304,
+        "maxRssKb": null,
+        "stdout": "Debian clang version 19.1.7 (3+b1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /tmp/effect-scriptc-clang/root/usr/lib/llvm-19/bin\n",
+        "stderr": "",
+        "stdoutBase64": "RGViaWFuIGNsYW5nIHZlcnNpb24gMTkuMS43ICgzK2IxKQpUYXJnZXQ6IHg4Nl82NC1wYy1saW51eC1nbnUKVGhyZWFkIG1vZGVsOiBwb3NpeApJbnN0YWxsZWREaXI6IC90bXAvZWZmZWN0LXNjcmlwdGMtY2xhbmcvcm9vdC91c3IvbGliL2xsdm0tMTkvYmluCg==",
+        "stderrBase64": ""
+      },
+      "systemLinker": {
+        "command": [
+          "ld",
+          "--version"
+        ],
+        "cwd": "/tmp/effect-harness-clean-install",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null,
+        "durationMs": 8.17,
+        "maxRssKb": null,
+        "stdout": "GNU ld (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+        "stderr": "",
+        "stdoutBase64": "R05VIGxkIChHTlUgQmludXRpbHMgZm9yIERlYmlhbikgMi40NApDb3B5cmlnaHQgKEMpIDIwMjUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uLCBJbmMuClRoaXMgcHJvZ3JhbSBpcyBmcmVlIHNvZnR3YXJlOyB5b3UgbWF5IHJlZGlzdHJpYnV0ZSBpdCB1bmRlciB0aGUgdGVybXMgb2YKdGhlIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHZlcnNpb24gMyBvciAoYXQgeW91ciBvcHRpb24pIGEgbGF0ZXIgdmVyc2lvbi4KVGhpcyBwcm9ncmFtIGhhcyBhYnNvbHV0ZWx5IG5vIHdhcnJhbnR5Lgo=",
+        "stderrBase64": ""
+      }
+    }
+  }
+}

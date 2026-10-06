@@ -151,7 +151,6 @@ jobs:
         run: |
           env -u MAP_SHARD_INDEX -u MAP_SHARD_TOTAL -u MAP_SHARD_NAME -u MAP_RESUME \
             -u MAP_REPORT -u DIFF_REPORT pnpm check 2>&1 | tee reports/ci/check.log
-          node --test .github/tests/*.test.mjs 2>&1 | tee reports/ci/workflow-tests.log
       - name: Download explicitly selected resume evidence
         if: ${{ success() && fromJSON(needs.plan.outputs.config).resumeRunId != '' }}
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1

@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { assertProvenance, commandText, fileSha, json, ok, pins, provenance, raw, readJson, ROOT, run, sameBytes, sha, SCRIPTC, typecheckCommand } from './common.ts';
+import { assertProvenance, cacheIdentityFor, commandText, fileSha, json, ok, pins, provenance, raw, readJson, ROOT, run, sameBytes, sha, SCRIPTC, typecheckCommand } from './common.ts';
 import { diagnostics, parseCoverage } from './coverage.ts';
 import { deltaSignature } from './diff.ts';
 import type { Attempt, CaseResult, Differential, DiffReport, MapReport, Run } from './types.ts';
@@ -161,33 +161,76 @@ async function reduceFailure(f: Failure, map: MapReport, budget: number): Promis
     repro: file, packet: `reports/upstream/${f.id}.md`, verified: finalVerified, attempts: reduced.attempts, budgetExhausted: reduced.exhausted,
     originalBytes: Buffer.byteLength(original), reducedBytes: Buffer.byteLength(actualSource), sourceSha256: fileSha(file) };
 }
+type PacketResult = { id?: string; verified?: boolean; [key: string]: unknown };
+
+function verifyMapSources(map: MapReport): void {
+  for (const c of map.cases) {
+    if (c.status === 'ready' && c.staticAttempt && fileSha(c.file) !== c.sourceSha256) throw new Error(`Case ${c.id} changed; run pnpm map`);
+  }
+}
+
+function currentDifferential(map: MapReport): DiffReport | null {
+  const path = process.env.DIFF_REPORT ?? 'reports/differentials.json';
+  if (!existsSync(resolve(ROOT, path))) return null;
+  const diff = readJson<DiffReport>(path);
+  assertProvenance(map.provenance, diff.provenance);
+  for (const d of diff.results) {
+    const c = map.cases.find(c => c.id === d.caseId);
+    const a = d.mode === 'static' ? c?.staticAttempt : c?.dynamicAttempt;
+    if (!a || a.binarySha256 !== d.binarySha256) throw new Error(`Differential ${d.caseId} is stale; run pnpm diff`);
+  }
+  return diff;
+}
+
+export function requestedFailures(all: Failure[], requested = process.env.REDUCE_SIGNATURES): Failure[] {
+  if (requested === undefined) return all;
+  const ids = requested.split(',').map(id => id.trim());
+  const unknown = ids.filter(id => !all.some(f => f.id === id));
+  if (unknown.length) throw new Error(`Unknown reduction signatures: ${unknown.join(', ')}`);
+  return all.filter(f => ids.includes(f.id));
+}
+
+export function retainedPacket(r: PacketResult, origin: { key: string; caseResult: { sourceSha256: string } }, identity: string): boolean {
+  if (r.verified !== true || r.signature !== origin.key || r.verificationIdentity !== identity || r.originSourceSha256 !== origin.caseResult.sourceSha256) return false;
+  if (typeof r.repro !== 'string' || typeof r.sourceSha256 !== 'string') return false;
+  return existsSync(resolve(ROOT, r.repro)) && fileSha(r.repro) === r.sourceSha256;
+}
+
+function priorVerifications(all: Failure[], selected: Failure[], identity: string): PacketResult[] {
+  const path = 'reports/upstream/index.json';
+  if (!process.env.REDUCE_SIGNATURES || !existsSync(resolve(ROOT, path))) return [];
+  const prior = readJson<{ results: PacketResult[] }>(path);
+  const selectedIds = new Set(selected.map(f => f.id));
+  return prior.results.filter(r => {
+    const f = all.find(f => f.id === r.id);
+    return Boolean(f && !selectedIds.has(f.id) && retainedPacket(r, f, identity));
+  });
+}
+
+function saveIndex(map: MapReport, all: Failure[], selected: Failure[], results: PacketResult[]): void {
+  const verified = results.filter(r => r.verified === true).length;
+  json('reports/upstream/index.json', { schemaVersion: 1, partial: Boolean(map.partial) || selected.length !== all.length,
+    generatedAt: new Date().toISOString(), distinctSignatures: all.length, totalDiscoveredSignatures: all.length,
+    selectedSignatures: selected.length, verifiedSignatures: verified, pendingSignatures: all.length - verified,
+    complete: !map.partial && verified === all.length, results });
+}
+
 export async function main(): Promise<void> {
   const map = readJson<MapReport>(process.env.MAP_REPORT ?? 'reports/coverage-map.json');
   assertProvenance(map.provenance, await provenance());
-  for (const c of map.cases) if (c.status === 'ready' && c.staticAttempt && fileSha(c.file) !== c.sourceSha256) throw new Error(`Case ${c.id} changed; run pnpm map`);
-  const diffPath = process.env.DIFF_REPORT ?? 'reports/differentials.json';
-  const diff = existsSync(resolve(ROOT, diffPath)) ? readJson<DiffReport>(diffPath) : null;
-  if (diff) { assertProvenance(map.provenance, diff.provenance);
-    for (const d of diff.results) { const c = map.cases.find(c => c.id === d.caseId); const a = d.mode === 'static' ? c?.staticAttempt : c?.dynamicAttempt; if (!a || a.binarySha256 !== d.binarySha256) throw new Error(`Differential ${d.caseId} is stale; run pnpm diff`); }
-  }
-  const allFailures = signatures(map, diff);
-  const requestedIds = process.env.REDUCE_SIGNATURES?.split(',') ?? [];
-  const unknownIds = requestedIds.filter(id => !allFailures.some(f => f.id === id));
-  if (unknownIds.length) throw new Error(`Unknown reduction signatures: ${unknownIds.join(', ')}`);
-  const failures = process.env.REDUCE_SIGNATURES ? allFailures.filter(f => process.env.REDUCE_SIGNATURES!.split(',').includes(f.id)) : allFailures;
-  const partial = map.partial || failures.length !== allFailures.length;
+  verifyMapSources(map);
+  const all = signatures(map, currentDifferential(map)), selected = requestedFailures(all);
+  const identity = cacheIdentityFor(map.provenance, map.options);
   const budget = Number(process.env.REDUCE_BUDGET ?? 24);
   if (!Number.isSafeInteger(budget) || budget < 0) throw new Error('REDUCE_BUDGET must be a nonnegative integer');
   mkdirSync(resolve(ROOT, 'reports/upstream/repro'), { recursive: true });
   mkdirSync(resolve(ROOT, 'reports/upstream/evidence'), { recursive: true });
-  const priorIndex = process.env.REDUCE_SIGNATURES && existsSync(resolve(ROOT, 'reports/upstream/index.json')) ? readJson<{ results: Array<{ id?: string; verified?: boolean; [key: string]: unknown }> }>('reports/upstream/index.json') : { results: [] };
-  const results: Array<{ id?: string; verified?: boolean; [key: string]: unknown }> = priorIndex.results.filter(r => allFailures.some(f => f.id === r.id) && !failures.some(f => f.id === r.id) && typeof r.repro === 'string' && typeof r.sourceSha256 === 'string' && existsSync(resolve(ROOT, r.repro)) && fileSha(r.repro) === r.sourceSha256);
-  const saveIndex = () => {
-    const verified = results.filter(r => r.verified === true).length;
-    json('reports/upstream/index.json', { schemaVersion: 1, partial, generatedAt: new Date().toISOString(), distinctSignatures: allFailures.length, totalDiscoveredSignatures: allFailures.length, selectedSignatures: failures.length, verifiedSignatures: verified, pendingSignatures: allFailures.length - verified, complete: !map.partial && verified === allFailures.length, results });
-  };
-  for (const f of failures) { results.push(await reduceFailure(f, map, budget)); saveIndex(); }
+  const results = priorVerifications(all, selected, identity);
+  for (const f of selected) {
+    results.push({ ...await reduceFailure(f, map, budget), verificationIdentity: identity, originSourceSha256: f.caseResult.sourceSha256 });
+    saveIndex(map, all, selected, results);
+  }
   if (results.some(r => r.verified !== true)) process.exitCode = 1;
-  if (!failures.length) saveIndex();
+  if (!selected.length) saveIndex(map, all, selected, results);
 }
 if (process.argv[1] && resolve(process.argv[1]) === resolve(import.meta.filename)) await main();

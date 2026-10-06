@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/module-undefinedor"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 9.211,
+  "maxRssKb": null,
+  "stdout": "undefinedOr:42\n",
+  "stderr": "",
+  "stdoutBase64": "dW5kZWZpbmVkT3I6NDIK",
+  "stderrBase64": ""
+}

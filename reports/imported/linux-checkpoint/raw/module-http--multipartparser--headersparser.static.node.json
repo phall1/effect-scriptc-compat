@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/module-http--multipartparser--headersparser.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 796.29,
+  "maxRssKb": 52532,
+  "stdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n",
+  "stderr": "",
+  "stdoutBase64": "eyJfdGFnIjoiSGVhZGVycyIsImhlYWRlcnMiOnsiY29udGVudC10eXBlIjoidGV4dC9wbGFpbiIsIngtZml4ZWQiOiJ5ZXMifSwiZW5kUG9zaXRpb24iOjQyfQo=",
+  "stderrBase64": ""
+}

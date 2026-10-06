@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "coverage",
+    "cases/documented-equal.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3692.335,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-equal.ts\n\n  statements analyzed   322\n  compile statically    321  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×1  converting typed values to 'unknown'  SC1101\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1lcXVhbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMzIyCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDMyMSAgKDk5JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBibG9ja2VyczoKICAgICAgw5cxICBjb252ZXJ0aW5nIHR5cGVkIHZhbHVlcyB0byAndW5rbm93bicgIFNDMTEwMQo=",
+  "stderrBase64": ""
+}

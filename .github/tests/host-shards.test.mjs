@@ -101,7 +101,7 @@ test('resume restores raw data only, rejects changed context, and never imports 
   save(source, 'ci/runner.json', old); assert.throws(() => restore(root, source), /timeout differs/);
 });
 
-test('interrupted mapping recovers complete measured checkpoints, never missing successful binaries', t => {
+test('interrupted mapping never recovers records without an exact map session', t => {
   const { root, env } = fixture(t); prepare(root, env, config);
   save(root, 'reports/provenance.json', { hostTriple: 'test-host' });
   for (const [id, tier] of [['alpha', 'rejected'], ['zeta', 'static']]) save(root, `reports/raw/${id}.result.json`, {
@@ -110,10 +110,30 @@ test('interrupted mapping recovers complete measured checkpoints, never missing 
     dynamicAttempt: null,
   });
   finish(root, { MAP_OUTCOME: 'failure' });
-  const map = read(resolve(root, 'reports/shards/host-0.json'));
-  assert.equal(map.partial, true); assert.equal(map.recoveredAfterInterruption, true);
-  assert.deepEqual(map.cases.map(c => c.id), ['alpha']);
+  assert.equal(existsSync(resolve(root, 'reports/shards/host-0.json')), false);
+  assert.equal(read(resolve(root, 'reports/ci/status.json')).recoveredCheckpointCases, 0);
   assert.equal(read(resolve(root, 'reports/ci/status.json')).map, 'failure');
+});
+
+test('interrupted CI refreshes an existing pending map through the shared verifier', t => {
+  const { root, env } = fixture(t); prepare(root, env, config);
+  cpSync(resolve(ROOT, 'scripts'), resolve(root, 'scripts'), { recursive: true });
+  const provenance = { effectVersion: '4.0.1', scriptcVersion: '0.2.3' };
+  const session = { schemaVersion: 1, provenance, options: { jobs: 2, compileTimeoutMs: 100, coverageTimeoutMs: 100 },
+    cacheIdentity: 'exact', manifestSha256: hash(readFileSync(resolve(root, 'cases/manifest.json'))), caseIds: ['alpha', 'zeta'],
+    reportPath: 'reports/shards/host-0.json', partial: true, shardIndex: 0, shardTotal: 2 };
+  save(root, 'reports/map-session.json', session);
+  save(root, session.reportPath, { partial: true, cases: [] });
+  const success = { exitCode: 0, signal: null, timedOut: false, spawnError: null, stdout: '', stderr: '', stdoutBase64: '', stderrBase64: '' };
+  const failure = { ...success, exitCode: 1, stderr: 'refused' };
+  const attempt = mode => ({ mode, coverage: failure, build: failure, diagnostics: [], binary: null });
+  save(root, 'reports/raw/alpha.result.json', { id: 'alpha', file: 'cases/alpha.ts', status: 'ready',
+    ...provenance, sourceSha256: hash(readFileSync(resolve(root, 'cases/alpha.ts'))), cacheIdentity: 'exact', typecheck: success,
+    tier: 'rejected', staticAttempt: attempt('static'), dynamicAttempt: attempt('dynamic') });
+  finish(root, { MAP_OUTCOME: 'failure' });
+  const map = read(resolve(root, session.reportPath));
+  assert.equal(map.summary.completed, 1); assert.equal(map.summary.pending, 1); assert.equal(map.partial, true);
+  assert.equal(read(resolve(root, 'reports/ci/status.json')).recoveredCheckpointCases, 1);
 });
 
 test('aggregate records missing hosts and preserves host provenance; rejects mismatched evidence', t => {

@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { relative, resolve } from 'node:path';
-import { cases, fileSha, json, pins, ROOT, sha } from './common.ts';
+import { cases, fileSha, json, linkerIdentity, pins, ROOT, sha } from './common.ts';
 import type { CaseResult, DiffReport, MapReport } from './types.ts';
 
 /** Aggregate evidence without pretending different runners share one provenance.
@@ -21,7 +21,7 @@ const manifest = cases();
 for (const { path, data } of [...maps, ...diffs]) {
   if (data.provenance.effectVersion !== pins.effect || data.provenance.scriptcVersion !== pins.scriptc.npmVersion || data.provenance.scriptcReleaseCommit !== pins.scriptc.githubCommit || data.provenance.typescriptVersion !== pins.typescript) throw new Error(`Tool pin mismatch in ${path}`);
 }
-const sameContext = (a: MapReport['provenance'], b: MapReport['provenance']) => ['nodeVersion', 'effectVersion', 'typescriptVersion', 'scriptcVersion', 'scriptcReleaseCommit', 'hostTriple', 'kernel', 'lockfileSha256', 'effectPackageJsonSha256', 'cliSha256'].every(k => (a as unknown as Record<string, unknown>)[k] === (b as unknown as Record<string, unknown>)[k]) && a.commands.linker?.stdout === b.commands.linker?.stdout;
+const sameContext = (a: MapReport['provenance'], b: MapReport['provenance']) => ['nodeVersion', 'effectVersion', 'typescriptVersion', 'scriptcVersion', 'scriptcReleaseCommit', 'hostTriple', 'kernel', 'lockfileSha256', 'effectPackageJsonSha256', 'cliSha256'].every(k => (a as unknown as Record<string, unknown>)[k] === (b as unknown as Record<string, unknown>)[k]) && linkerIdentity(a) === linkerIdentity(b);
 const observations = manifest.map(c => {
   const sourceSha256 = fileSha(c.file);
   const candidates = maps.flatMap(m => m.data.cases.filter(r => r.id === c.id && r.sourceSha256 === sourceSha256 && (r.tier !== null || c.status !== 'ready')).map(r => ({ report: m.path, provenance: m.data.provenance, observation: r })));

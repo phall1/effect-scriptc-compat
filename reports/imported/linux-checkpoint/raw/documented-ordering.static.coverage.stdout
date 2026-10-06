@@ -1,0 +1,11 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-ordering.ts
+
+  statements analyzed   75
+  compile statically    73  (97%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  runs with --dynamic   2 sites (embeds a JS engine, ~620KB — static stays the default)
+      ×2  values of type '(a: number, b: number) => Ordering.Ordering' have no static representation but run in the embedded dynamic engine, which this build does not include  SC2011
+

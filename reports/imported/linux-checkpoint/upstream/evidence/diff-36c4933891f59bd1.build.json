@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "reports/upstream/repro/diff-36c4933891f59bd1.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/repro-diff-36c4933891f59bd1"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 19748.228,
+  "maxRssKb": 137220,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/repro-diff-36c4933891f59bd1\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9yZXByby1kaWZmLTM2YzQ5MzM4OTFmNTliZDEK",
+  "stderrBase64": ""
+}

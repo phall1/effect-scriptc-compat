@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/module-hashring"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 14.331,
+  "maxRssKb": null,
+  "stdout": "ring:node-a\n",
+  "stderr": "",
+  "stdoutBase64": "cmluZzpub2RlLWEK",
+  "stderrBase64": ""
+}

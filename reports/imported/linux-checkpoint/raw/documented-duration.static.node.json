@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-duration.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 502.997,
+  "maxRssKb": 41368,
+  "stdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+  "stderr": "",
+  "stdoutBase64": "W3siX2lkIjoiRHVyYXRpb24iLCJfdGFnIjoiTWlsbGlzIiwibWlsbGlzIjozMDAwMH0seyJfaWQiOiJEdXJhdGlvbiIsIl90YWciOiJNaWxsaXMiLCJtaWxsaXMiOjg2NDAwMDAwfSx7Il9pZCI6IkR1cmF0aW9uIiwiX3RhZyI6Ik5hbm9zIiwibmFub3MiOiIxMDAwMDAwNTAwIn1dCg==",
+  "stderrBase64": ""
+}

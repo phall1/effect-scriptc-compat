@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/module-array.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 459.446,
+  "maxRssKb": 53088,
+  "stdout": "array:2,4,6\n",
+  "stderr": "",
+  "stdoutBase64": "YXJyYXk6Miw0LDYK",
+  "stderrBase64": ""
+}

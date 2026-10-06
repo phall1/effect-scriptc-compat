@@ -1,0 +1,2239 @@
+[
+  {
+    "id": "documented-ai--aierror",
+    "module": "ai/AiError",
+    "entrypoint": "effect/ai/AiError",
+    "family": "ai/AiError",
+    "file": "cases/documented-ai--aierror.ts",
+    "status": "ready",
+    "api": [
+      "HttpClientError.TransportError",
+      "HttpClientRequest.get",
+      "AiError.NetworkError"
+    ],
+    "expectedStdout": "[\"TransportError\"]\n",
+    "declaration": "node_modules/effect/dist/ai/AiError.d.ts",
+    "declarationSha256": "e259d62f4c9acef8b750eec2a31eb250f12263eb6eb68e8326aac11259fb794e",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-ai--chat",
+    "module": "ai/Chat",
+    "entrypoint": "effect/ai/Chat",
+    "family": "ai/Chat",
+    "file": "cases/documented-ai--chat.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Chat.fromPrompt",
+      "Ref.get",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[1]\n",
+    "declaration": "node_modules/effect/dist/ai/Chat.d.ts",
+    "declarationSha256": "35f4b7a203b6c2bac65376b4db2fc4152c6b7d21ac57329a9ef466c978e7e2bf",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-ai--idgenerator",
+    "module": "ai/IdGenerator",
+    "entrypoint": "effect/ai/IdGenerator",
+    "family": "ai/IdGenerator",
+    "file": "cases/documented-ai--idgenerator.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "IdGenerator.IdGenerator",
+      "Effect.provideService",
+      "Effect.succeed",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"id-1\"]\n",
+    "declaration": "node_modules/effect/dist/ai/IdGenerator.d.ts",
+    "declarationSha256": "8072363ebe47f0fb4095897195aa4842d8eecf1f941a05bbe068a4c88af22f4e",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ai--languagemodel",
+    "module": "ai/LanguageModel",
+    "entrypoint": "effect/ai/LanguageModel",
+    "family": "ai/LanguageModel",
+    "file": "cases/documented-ai--languagemodel.ts",
+    "status": "ready",
+    "api": [
+      "Layer.effect",
+      "LanguageModel.LanguageModel",
+      "LanguageModel.make",
+      "Effect.succeed",
+      "Stream.empty",
+      "Effect.gen",
+      "Effect.runPromise",
+      "Effect.provide"
+    ],
+    "expectedStdout": "[\"Machine learning finds patterns in data.\"]\n",
+    "declaration": "node_modules/effect/dist/ai/LanguageModel.d.ts",
+    "declarationSha256": "451911f5ef8a23a05156d5dbc26e260b79ab8bb6df1602d909a3b26852fd5b0b",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ai--model",
+    "module": "ai/Model",
+    "entrypoint": "effect/ai/Model",
+    "family": "ai/Model",
+    "file": "cases/documented-ai--model.ts",
+    "status": "ready",
+    "api": [
+      "Model.make",
+      "Layer.empty",
+      "Effect.gen",
+      "Model.ProviderName",
+      "Model.ModelName",
+      "Effect.provide",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[{\"provider\":\"amazon-bedrock\",\"modelName\":\"claude-3-5-haiku\"}]\n",
+    "declaration": "node_modules/effect/dist/ai/Model.d.ts",
+    "declarationSha256": "cc62a8c90d5afa78a42fecc179fdc38d72c63db3883db307618d612474c3b49a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ai--response",
+    "module": "ai/Response",
+    "entrypoint": "effect/ai/Response",
+    "family": "ai/Response",
+    "file": "cases/documented-ai--response.ts",
+    "status": "ready",
+    "api": [
+      "Toolkit.make",
+      "Tool.make",
+      "Schema.Struct",
+      "Schema.String",
+      "Schema.Number",
+      "Response.AllParts",
+      "Schema.isSchema"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/ai/Response.d.ts",
+    "declarationSha256": "395cccd768786863612bf6ede2bf1e172a7d4cbe906a8a7a7f06a4c7d41577a0",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ai--telemetry",
+    "module": "ai/Telemetry",
+    "entrypoint": "effect/ai/Telemetry",
+    "family": "ai/Telemetry",
+    "file": "cases/documented-ai--telemetry.ts",
+    "status": "ready",
+    "api": [
+      "Telemetry.addSpanAttributes",
+      "String.camelToSnake",
+      "Tracer.NativeSpan",
+      "Option.none",
+      "Context.empty",
+      "Array.from"
+    ],
+    "expectedStdout": "[[\"custom.ai.model_name\",\"custom.ai.max_tokens\"]]\n",
+    "declaration": "node_modules/effect/dist/ai/Telemetry.d.ts",
+    "declarationSha256": "70bbf6da7d96f4ebe3da6c0260f7fa977c42a6c866ecb27d569e1fa95e4e466a",
+    "exampleIndex": 2
+  },
+  {
+    "id": "documented-ai--tokenizer",
+    "module": "ai/Tokenizer",
+    "entrypoint": "effect/ai/Tokenizer",
+    "family": "ai/Tokenizer",
+    "file": "cases/documented-ai--tokenizer.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Tokenizer.Tokenizer",
+      "Tokenizer.make",
+      "Effect.succeed",
+      "Effect.provideService",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[1]\n",
+    "declaration": "node_modules/effect/dist/ai/Tokenizer.d.ts",
+    "declarationSha256": "9486e97ba3cfb856ec57d8536b7e9e4a7a3187490010759aaf7b3e7d3a2e87f3",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ai--tool",
+    "module": "ai/Tool",
+    "entrypoint": "effect/ai/Tool",
+    "family": "ai/Tool",
+    "file": "cases/documented-ai--tool.ts",
+    "status": "ready",
+    "api": [
+      "Tool.make",
+      "Schema.Number",
+      "GetCurrentTime.name"
+    ],
+    "expectedStdout": "[\"GetCurrentTime\"]\n",
+    "declaration": "node_modules/effect/dist/ai/Tool.d.ts",
+    "declarationSha256": "2fc757e24670556872a53c2b51cda1df66243b0a1cac91a5087f68068a17d0a0",
+    "exampleIndex": 6
+  },
+  {
+    "id": "documented-ai--toolkit",
+    "module": "ai/Toolkit",
+    "entrypoint": "effect/ai/Toolkit",
+    "family": "ai/Toolkit",
+    "file": "cases/documented-ai--toolkit.ts",
+    "status": "ready",
+    "api": [
+      "Tool.make",
+      "Schema.Struct",
+      "Schema.String",
+      "Schema.Array",
+      "Toolkit.make",
+      "AiToolkit.pipe",
+      "Effect.provide",
+      "AiToolkit.toLayer",
+      "Effect.succeed",
+      "Object.keys",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"SearchDocs\",\"SummarizeText\"]]\n",
+    "declaration": "node_modules/effect/dist/ai/Toolkit.d.ts",
+    "declarationSha256": "725ca7f4ec20a7f099a44cfd0b4bfba7b0778e5dd8074d6666ed39be2997c9fb",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-bigdecimal",
+    "module": "BigDecimal",
+    "entrypoint": "effect/BigDecimal",
+    "family": "BigDecimal",
+    "file": "cases/documented-bigdecimal.ts",
+    "status": "ready",
+    "api": [
+      "BigDecimal.fromNumber",
+      "BigDecimal.isBigDecimal",
+      "BigDecimal.fromStringUnsafe"
+    ],
+    "expectedStdout": "[false,true,false,false]\n",
+    "declaration": "node_modules/effect/dist/BigDecimal.d.ts",
+    "declarationSha256": "427d366852176e5ea24c0139daeb73ade47c1cd17093ebb8791e0a1df3bff707",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-boolean",
+    "module": "Boolean",
+    "entrypoint": "effect/Boolean",
+    "family": "Boolean",
+    "file": "cases/documented-boolean.ts",
+    "status": "ready",
+    "api": [
+      "Boolean.Boolean"
+    ],
+    "expectedStdout": "[true,true,false]\n",
+    "declaration": "node_modules/effect/dist/Boolean.d.ts",
+    "declarationSha256": "6fbf588ecc66a4b4b02ef791193902cbf9cf88e1685a87f3a3d7459f9bd7bb05",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cache",
+    "module": "Cache",
+    "entrypoint": "effect/Cache",
+    "family": "Cache",
+    "file": "cases/documented-cache.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Cache.make",
+      "Effect.succeed",
+      "Cache.get",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[5,5,5]]\n",
+    "declaration": "node_modules/effect/dist/Cache.d.ts",
+    "declarationSha256": "38428f4d2cc00aa38b4827c1fe78a9ad4b3924f04612baa3a324f9c419a1e8e6",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-channel",
+    "module": "Channel",
+    "entrypoint": "effect/Channel",
+    "family": "Channel",
+    "file": "cases/documented-channel.ts",
+    "status": "ready",
+    "api": [
+      "Channel.succeed",
+      "Channel.isChannel"
+    ],
+    "expectedStdout": "[true,false]\n",
+    "declaration": "node_modules/effect/dist/Channel.d.ts",
+    "declarationSha256": "f87f908aa53088d994dc70d4a6a2f1bda08fdcbfbbe389c63a6c9653ff95ed65",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cli--clierror",
+    "module": "cli/CliError",
+    "entrypoint": "effect/cli/CliError",
+    "family": "cli/CliError",
+    "file": "cases/documented-cli--clierror.ts",
+    "status": "ready",
+    "api": [
+      "CliError.MissingOption",
+      "CliError.isCliError",
+      "Effect.succeed",
+      "Effect.fail",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"Missing required flag: --api-key\"]\n",
+    "declaration": "node_modules/effect/dist/cli/CliError.d.ts",
+    "declarationSha256": "b7c53b192035aeba6701377bc919c4318cc54d17d4fe41b3e68e4c5f55866e19",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cli--clioutput",
+    "module": "cli/CliOutput",
+    "entrypoint": "effect/cli/CliOutput",
+    "family": "cli/CliOutput",
+    "file": "cases/documented-cli--clioutput.ts",
+    "status": "ready",
+    "api": [
+      "CliOutput.Formatter",
+      "Effect.gen",
+      "Effect.provide",
+      "CliOutput.layer",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"myapp (1.0.0)\"]\n",
+    "declaration": "node_modules/effect/dist/cli/CliOutput.d.ts",
+    "declarationSha256": "148356f724485c7f41bf8e758d4b8165f52d8cfc93a217125e0c105bdfb17eff",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cli--param",
+    "module": "cli/Param",
+    "entrypoint": "effect/cli/Param",
+    "family": "cli/Param",
+    "file": "cases/documented-cli--param.ts",
+    "status": "ready",
+    "api": [
+      "Param.String",
+      "Param.flagKind",
+      "Param.isParam"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/cli/Param.d.ts",
+    "declarationSha256": "70432f379a97867c36bc3854310f01d3a4d7e7e6cd33cec83789ed450e90516f",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cli--primitive",
+    "module": "cli/Primitive",
+    "entrypoint": "effect/cli/Primitive",
+    "family": "cli/Primitive",
+    "file": "cases/documented-cli--primitive.ts",
+    "status": "ready",
+    "api": [
+      "Primitive.getTypeName",
+      "Primitive.String",
+      "Primitive.Int",
+      "Primitive.Boolean",
+      "Primitive.Date",
+      "Primitive.KeyValuePair",
+      "Primitive.Choice"
+    ],
+    "expectedStdout": "[\"string\",\"integer\",\"boolean\",\"date\",\"key=value\",\"choice\"]\n",
+    "declaration": "node_modules/effect/dist/cli/Primitive.d.ts",
+    "declarationSha256": "1e43a85d45d07cd360374c6ea2c51e0cd51668ae1689395289f7338a2517b872",
+    "exampleIndex": 15
+  },
+  {
+    "id": "documented-cli--prompt",
+    "module": "cli/Prompt",
+    "entrypoint": "effect/cli/Prompt",
+    "family": "cli/Prompt",
+    "file": "cases/documented-cli--prompt.ts",
+    "status": "ready",
+    "api": [
+      "Prompt.AutoComplete",
+      "Prompt.isPrompt"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/cli/Prompt.d.ts",
+    "declarationSha256": "52a4a744030144c4a5c23e9c028adb2499c10200664625a5871ec82757e5bc66",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-clock",
+    "module": "Clock",
+    "entrypoint": "effect/Clock",
+    "family": "Clock",
+    "file": "cases/documented-clock.ts",
+    "status": "ready",
+    "api": [
+      "Clock.Clock",
+      "Effect.succeed",
+      "Effect.void",
+      "Effect.gen",
+      "Effect.runPromise",
+      "Effect.provideService"
+    ],
+    "expectedStdout": "[1000]\n",
+    "declaration": "node_modules/effect/dist/Clock.d.ts",
+    "declarationSha256": "5f4b52959650f11b3ab82a82c5931b67366131f27b0558b418e813eb88bbee3f",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-combiner",
+    "module": "Combiner",
+    "entrypoint": "effect/Combiner",
+    "family": "Combiner",
+    "file": "cases/documented-combiner.ts",
+    "status": "ready",
+    "api": [
+      "Combiner.make",
+      "Sum.combine"
+    ],
+    "expectedStdout": "[7]\n",
+    "declaration": "node_modules/effect/dist/Combiner.d.ts",
+    "declarationSha256": "98034f3c137df14454b79f662596ef7c97783edc876df396c97a6bcf4786948f",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-config",
+    "module": "Config",
+    "entrypoint": "effect/Config",
+    "family": "Config",
+    "file": "cases/documented-config.ts",
+    "status": "ready",
+    "api": [
+      "Config.isConfig",
+      "Config.String"
+    ],
+    "expectedStdout": "[true,false]\n",
+    "declaration": "node_modules/effect/dist/Config.d.ts",
+    "declarationSha256": "a2c0d99071453dcae6ac7593b3b59a7aec8c7048a06abd779786d7c539edff59",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-configprovider",
+    "module": "ConfigProvider",
+    "entrypoint": "effect/ConfigProvider",
+    "family": "ConfigProvider",
+    "file": "cases/documented-configprovider.ts",
+    "status": "ready",
+    "api": [
+      "ConfigProvider.makeValue"
+    ],
+    "expectedStdout": "[{\"_tag\":\"Value\",\"value\":\"3000\"}]\n",
+    "declaration": "node_modules/effect/dist/ConfigProvider.d.ts",
+    "declarationSha256": "c85d6f01b92b273ea6f277fac831276df7fa81d9263e0c9788bab255dee0589a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-console",
+    "module": "Console",
+    "entrypoint": "effect/Console",
+    "family": "Console",
+    "file": "cases/documented-console.ts",
+    "status": "ready",
+    "api": [
+      "Console.Console",
+      "Object.assign",
+      "Object.create",
+      "Effect.gen",
+      "Console.assert",
+      "Effect.runSync",
+      "Effect.provideService"
+    ],
+    "expectedStdout": "[[\"This will be logged as an error\"]]\n",
+    "declaration": "node_modules/effect/dist/Console.d.ts",
+    "declarationSha256": "ef05abaa093da47fe79fcebec7c1f6a008719f850547ed734aff184eb183e05a",
+    "exampleIndex": 2
+  },
+  {
+    "id": "documented-context",
+    "module": "Context",
+    "entrypoint": "effect/Context",
+    "family": "Context",
+    "file": "cases/documented-context.ts",
+    "status": "ready",
+    "api": [
+      "Context.Service",
+      "Context.make",
+      "Context.get"
+    ],
+    "expectedStdout": "[\"Result: SELECT 1\"]\n",
+    "declaration": "node_modules/effect/dist/Context.d.ts",
+    "declarationSha256": "91de255cf418741849f2813a6c76dc9948c5dfa8f0986a3eee6e910dfec3961a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-cron",
+    "module": "Cron",
+    "entrypoint": "effect/Cron",
+    "family": "Cron",
+    "file": "cases/documented-cron.ts",
+    "status": "ready",
+    "api": [
+      "Cron.make",
+      "DateTime.zoneMakeNamedUnsafe",
+      "Cron.match"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/Cron.d.ts",
+    "declarationSha256": "d59a8fdf62d2514b261f0e8ac8853513a16d695c464aa2e4bfbc64fa582655ba",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-crypto",
+    "module": "Crypto",
+    "entrypoint": "effect/Crypto",
+    "family": "Crypto",
+    "file": "cases/documented-crypto.ts",
+    "status": "ready",
+    "api": [
+      "Layer.succeed",
+      "Crypto.Crypto",
+      "Crypto.make",
+      "Effect.succeed",
+      "Effect.gen",
+      "Effect.runPromise",
+      "Effect.provide"
+    ],
+    "expectedStdout": "[[16,36,16]]\n",
+    "declaration": "node_modules/effect/dist/Crypto.d.ts",
+    "declarationSha256": "17a63f37bcac12f159dc6540ca0721ff8ae79553ce7cffee6eebcf0216bf41a6",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-data",
+    "module": "Data",
+    "entrypoint": "effect/Data",
+    "family": "Data",
+    "file": "cases/documented-data.ts",
+    "status": "ready",
+    "api": [
+      "Data.Class",
+      "Equal.equals"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/Data.d.ts",
+    "declarationSha256": "dfe2804d3cea8c8bd2661819cb2ce0afbb092335eb27e6b28a8edb0ee2da1a4f",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-datetime",
+    "module": "DateTime",
+    "entrypoint": "effect/DateTime",
+    "family": "DateTime",
+    "file": "cases/documented-datetime.ts",
+    "status": "ready",
+    "api": [
+      "DateTime.zoneMakeNamedUnsafe",
+      "DateTime.makeZoned",
+      "Option.getOrThrow",
+      "DateTime.formatIso"
+    ],
+    "expectedStdout": "[\"2025-11-02T05:30:00.000Z\",\"2025-11-02T06:30:00.000Z\",\"2025-03-09T06:30:00.000Z\",\"2025-03-09T07:30:00.000Z\"]\n",
+    "declaration": "node_modules/effect/dist/DateTime.d.ts",
+    "declarationSha256": "d9dbf8e8b556f78b8c51915d91d38095fcac929c7b943b5cc1b183273da26a45",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-deferred",
+    "module": "Deferred",
+    "entrypoint": "effect/Deferred",
+    "family": "Deferred",
+    "file": "cases/documented-deferred.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Deferred.Deferred",
+      "Deferred.make",
+      "Effect.forkChild",
+      "Deferred.succeed",
+      "Deferred.await",
+      "Fiber.join",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"Hello, World!\"]\n",
+    "declaration": "node_modules/effect/dist/Deferred.d.ts",
+    "declarationSha256": "d12e03fe6a9d0b096b162ac7a0d67ea7674d5983754bc1273b191050f995f734",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-duration",
+    "module": "Duration",
+    "entrypoint": "effect/Duration",
+    "family": "Duration",
+    "file": "cases/documented-duration.ts",
+    "status": "ready",
+    "api": [
+      "Duration.fromInputUnsafe"
+    ],
+    "expectedStdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+    "declaration": "node_modules/effect/dist/Duration.d.ts",
+    "declarationSha256": "fda414d1e97aaad5aee9633f178d732bc439efaa1a5c25fe52d47e5a83a4e13e",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-equal",
+    "module": "Equal",
+    "entrypoint": "effect/Equal",
+    "family": "Equal",
+    "file": "cases/documented-equal.ts",
+    "status": "ready",
+    "api": [
+      "Equal.equals"
+    ],
+    "expectedStdout": "[true,true,false,true,true,true,true,true,false]\n",
+    "declaration": "node_modules/effect/dist/Equal.d.ts",
+    "declarationSha256": "ed89a6ffa0487c3cf15575d0ea990610b9ca3720053b9bb575299e5b5f84378f",
+    "exampleIndex": 2
+  },
+  {
+    "id": "documented-equivalence",
+    "module": "Equivalence",
+    "entrypoint": "effect/Equivalence",
+    "family": "Equivalence",
+    "file": "cases/documented-equivalence.ts",
+    "status": "ready",
+    "api": [
+      "Equivalence.make"
+    ],
+    "expectedStdout": "[true,false,true]\n",
+    "declaration": "node_modules/effect/dist/Equivalence.d.ts",
+    "declarationSha256": "186fdadd3c630ca1e5406fedad4ea7ea815d62999a0d7d4ca1f8d3c01e7e3973",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-errorreporter",
+    "module": "ErrorReporter",
+    "entrypoint": "effect/ErrorReporter",
+    "family": "ErrorReporter",
+    "file": "cases/documented-errorreporter.ts",
+    "status": "ready",
+    "api": [
+      "ErrorReporter.make",
+      "Effect.fail",
+      "Effect.withErrorReporting",
+      "Effect.provide",
+      "ErrorReporter.layer",
+      "Effect.exit",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[{\"message\":\"boom\",\"severity\":\"Info\",\"attributes\":{}}]]\n",
+    "declaration": "node_modules/effect/dist/ErrorReporter.d.ts",
+    "declarationSha256": "92e89914be5f78fbedf4d40a0b2f6a5bedda004a7706603d4aa144e029532d61",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-executionplan",
+    "module": "ExecutionPlan",
+    "entrypoint": "effect/ExecutionPlan",
+    "family": "ExecutionPlan",
+    "file": "cases/documented-executionplan.ts",
+    "status": "ready",
+    "api": [
+      "ExecutionPlan.make",
+      "Context.empty",
+      "ThePlan.steps"
+    ],
+    "expectedStdout": "[[2,1]]\n",
+    "declaration": "node_modules/effect/dist/ExecutionPlan.d.ts",
+    "declarationSha256": "def832320d210b120c47e8a68d6264b270270e0650edafc0fc3a52e48a1d53e7",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-exit",
+    "module": "Exit",
+    "entrypoint": "effect/Exit",
+    "family": "Exit",
+    "file": "cases/documented-exit.ts",
+    "status": "ready",
+    "api": [
+      "Exit.isExit",
+      "Exit.succeed",
+      "Exit.fail"
+    ],
+    "expectedStdout": "[true,true,false]\n",
+    "declaration": "node_modules/effect/dist/Exit.d.ts",
+    "declarationSha256": "0a122ebc42d759904c0868b873882288a02b1fef9b481d2a9d8f39199000b71a",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-fiberhandle",
+    "module": "FiberHandle",
+    "entrypoint": "effect/FiberHandle",
+    "family": "FiberHandle",
+    "file": "cases/documented-fiberhandle.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "FiberHandle.make",
+      "FiberHandle.run",
+      "Effect.succeed",
+      "Fiber.join",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[\"hello\"]\n",
+    "declaration": "node_modules/effect/dist/FiberHandle.d.ts",
+    "declarationSha256": "f2670b517fef69d5ee230119c9837008199be4922069dd6ba05ae36b07a866a3",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-fibermap",
+    "module": "FiberMap",
+    "entrypoint": "effect/FiberMap",
+    "family": "FiberMap",
+    "file": "cases/documented-fibermap.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "FiberMap.make",
+      "FiberMap.run",
+      "Effect.never",
+      "FiberMap.size",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[2]\n",
+    "declaration": "node_modules/effect/dist/FiberMap.d.ts",
+    "declarationSha256": "d1617527e786d8dcff88ada042f7a3b9fd243bdf33caee66ab1ce0f80e51d490",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-fiberset",
+    "module": "FiberSet",
+    "entrypoint": "effect/FiberSet",
+    "family": "FiberSet",
+    "file": "cases/documented-fiberset.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "FiberSet.make",
+      "FiberSet.run",
+      "Effect.succeed",
+      "FiberSet.awaitEmpty",
+      "FiberSet.size",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[0]\n",
+    "declaration": "node_modules/effect/dist/FiberSet.d.ts",
+    "declarationSha256": "a794b64b88500cdd86c126deb74875694bc3cfc269654a49c7f6b38f32b7604e",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-filter",
+    "module": "Filter",
+    "entrypoint": "effect/Filter",
+    "family": "Filter",
+    "file": "cases/documented-filter.ts",
+    "status": "ready",
+    "api": [
+      "Filter.make",
+      "Result.succeed",
+      "Result.fail"
+    ],
+    "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
+    "declaration": "node_modules/effect/dist/Filter.d.ts",
+    "declarationSha256": "ced2ba25448068160b19040c860e566ce1c30c1314e435cc3fbd424530553661",
+    "exampleIndex": 2
+  },
+  {
+    "id": "documented-formatter",
+    "module": "Formatter",
+    "entrypoint": "effect/Formatter",
+    "family": "Formatter",
+    "file": "cases/documented-formatter.ts",
+    "status": "ready",
+    "api": [
+      "Formatter.format"
+    ],
+    "expectedStdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
+    "declaration": "node_modules/effect/dist/Formatter.d.ts",
+    "declarationSha256": "071c35820142e58fe9321e155fe12b1d88d0c97db55efa51f052a962ea6133a0",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-function",
+    "module": "Function",
+    "entrypoint": "effect/Function",
+    "family": "Function",
+    "file": "cases/documented-function.ts",
+    "status": "ready",
+    "api": [
+      "Function.dual"
+    ],
+    "expectedStdout": "[5,5]\n",
+    "declaration": "node_modules/effect/dist/Function.d.ts",
+    "declarationSha256": "b4bc459b681edb3382564e649e73c29696b1983b651b6104a76a9cc3050a89e1",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-graph",
+    "module": "Graph",
+    "entrypoint": "effect/Graph",
+    "family": "Graph",
+    "file": "cases/documented-graph.ts",
+    "status": "ready",
+    "api": [
+      "Graph.fromSnapshot",
+      "Graph.toSnapshot"
+    ],
+    "expectedStdout": "[3]\n",
+    "declaration": "node_modules/effect/dist/Graph.d.ts",
+    "declarationSha256": "303cb8d22a0ab7b56e5673f8126d73fa71b6c46ec593a46e81ea1a16efbce0cd",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-hash",
+    "module": "Hash",
+    "entrypoint": "effect/Hash",
+    "family": "Hash",
+    "file": "cases/documented-hash.ts",
+    "status": "ready",
+    "api": [
+      "Hash.hash"
+    ],
+    "expectedStdout": "[true,true,true]\n",
+    "declaration": "node_modules/effect/dist/Hash.d.ts",
+    "declarationSha256": "187c6da3cf1e02c4585108043e31f7b300f6858c860448aa7399c4d6d4d23b94",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-http--httprouter",
+    "module": "http/HttpRouter",
+    "entrypoint": "effect/http/HttpRouter",
+    "family": "http/HttpRouter",
+    "file": "cases/documented-http--httprouter.ts",
+    "status": "ready",
+    "api": [
+      "HttpRouter.use",
+      "HttpServerResponse.text",
+      "Effect.acquireUseRelease",
+      "Effect.sync",
+      "HttpRouter.toWebHandler",
+      "Effect.gen",
+      "Effect.promise",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"ready\"]\n",
+    "declaration": "node_modules/effect/dist/http/HttpRouter.d.ts",
+    "declarationSha256": "c0ee5d8bf74c68f8a77d9721ba0a37f87b2f9abf342de873c41bd23f9b717584",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-http--httpstaticserver",
+    "module": "http/HttpStaticServer",
+    "entrypoint": "effect/http/HttpStaticServer",
+    "family": "http/HttpStaticServer",
+    "file": "cases/documented-http--httpstaticserver.ts",
+    "status": "ready",
+    "api": [
+      "HttpRouter.add",
+      "HttpServerResponse.text",
+      "HttpStaticServer.layer",
+      "Layer.mergeAll",
+      "Layer.isLayer"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/http/HttpStaticServer.d.ts",
+    "declarationSha256": "5959531eb69a8007767d809f85d871d3319a30a19582678470898a1347373fee",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-inspectable",
+    "module": "Inspectable",
+    "entrypoint": "effect/Inspectable",
+    "family": "Inspectable",
+    "file": "cases/documented-inspectable.ts",
+    "status": "ready",
+    "api": [
+      "Object.create",
+      "Inspectable.BaseProto",
+      "MyClass.prototype"
+    ],
+    "expectedStdout": "[\"\\\"[toJSON threw]\\\"\"]\n",
+    "declaration": "node_modules/effect/dist/Inspectable.d.ts",
+    "declarationSha256": "91232559e0c9c3dcf8e7dafd3ad500118fed81900bc8a6e11dfbfa7e4b37b67b",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-iterable",
+    "module": "Iterable",
+    "entrypoint": "effect/Iterable",
+    "family": "Iterable",
+    "file": "cases/documented-iterable.ts",
+    "status": "ready",
+    "api": [
+      "Iterable.makeBy",
+      "Array.from",
+      "Iterable.take"
+    ],
+    "expectedStdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
+    "declaration": "node_modules/effect/dist/Iterable.d.ts",
+    "declarationSha256": "02e39d71b94bd236e68990d6bf6a719443b0046c5f56e7163a337b1808ada737",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-jsonpatch",
+    "module": "JsonPatch",
+    "entrypoint": "effect/JsonPatch",
+    "family": "JsonPatch",
+    "file": "cases/documented-jsonpatch.ts",
+    "status": "ready",
+    "api": [
+      "JsonPatch.JsonPatch",
+      "JsonPatch.apply"
+    ],
+    "expectedStdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
+    "declaration": "node_modules/effect/dist/JsonPatch.d.ts",
+    "declarationSha256": "f6a08e5d6e0c8ffa255783e571bc7830ba95ca9fc4db2cf5f3d041b480c3d8b3",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-jsonpointer",
+    "module": "JsonPointer",
+    "entrypoint": "effect/JsonPointer",
+    "family": "JsonPointer",
+    "file": "cases/documented-jsonpointer.ts",
+    "status": "ready",
+    "api": [
+      "JsonPointer.escapeToken"
+    ],
+    "expectedStdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+    "declaration": "node_modules/effect/dist/JsonPointer.d.ts",
+    "declarationSha256": "3eb3b0501cfebc202b082c1fe614e42c2a4514ed374f67002968fa2deb18f5e2",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-jsonschema",
+    "module": "JsonSchema",
+    "entrypoint": "effect/JsonSchema",
+    "family": "JsonSchema",
+    "file": "cases/documented-jsonschema.ts",
+    "status": "ready",
+    "api": [
+      "JsonSchema.JsonSchema",
+      "JsonSchema.fromSchemaDraft2020_12"
+    ],
+    "expectedStdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
+    "declaration": "node_modules/effect/dist/JsonSchema.d.ts",
+    "declarationSha256": "b628d2c2d97f5a2ef889a3382b93dca59c51d34ad17e1d489833ceab0eccee5c",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-latch",
+    "module": "Latch",
+    "entrypoint": "effect/Latch",
+    "family": "Latch",
+    "file": "cases/documented-latch.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Latch.make",
+      "Effect.forkChild",
+      "Effect.as",
+      "Fiber.join",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"opened\"]\n",
+    "declaration": "node_modules/effect/dist/Latch.d.ts",
+    "declarationSha256": "41f97a043cfd5e183878adbbd2af2758b55491ed124d89436396d07b431fec41",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-layermap",
+    "module": "LayerMap",
+    "entrypoint": "effect/LayerMap",
+    "family": "LayerMap",
+    "file": "cases/documented-layermap.ts",
+    "status": "ready",
+    "api": [
+      "Context.Service",
+      "Effect.Effect",
+      "LayerMap.make",
+      "Layer.succeed",
+      "Effect.fn",
+      "DatabaseService.query",
+      "Effect.succeed",
+      "Effect.gen",
+      "Effect.provide",
+      "DatabaseService.use",
+      "Context.get",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[{\"development\":\"development: SELECT 1\",\"production\":\"production: SELECT 1\"}]\n",
+    "declaration": "node_modules/effect/dist/LayerMap.d.ts",
+    "declarationSha256": "b28d754be202cd92ac9b0f62145148688ebde921a223607d46fce99ddff458a3",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-layerref",
+    "module": "LayerRef",
+    "entrypoint": "effect/LayerRef",
+    "family": "LayerRef",
+    "file": "cases/documented-layerref.ts",
+    "status": "ready",
+    "api": [
+      "Context.Service",
+      "Effect.Effect",
+      "Layer.succeed",
+      "Effect.succeed",
+      "Effect.gen",
+      "Effect.scoped",
+      "LayerRef.make",
+      "Effect.provide",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"result\"]\n",
+    "declaration": "node_modules/effect/dist/LayerRef.d.ts",
+    "declarationSha256": "76e5e88e01f725165b4a82ff025f78186c9225ccef67467626fa48202936a7a6",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-logger",
+    "module": "Logger",
+    "entrypoint": "effect/Logger",
+    "family": "Logger",
+    "file": "cases/documented-logger.ts",
+    "status": "ready",
+    "api": [
+      "Logger.make",
+      "Logger.isLogger"
+    ],
+    "expectedStdout": "[true,false,false]\n",
+    "declaration": "node_modules/effect/dist/Logger.d.ts",
+    "declarationSha256": "5dfe53a49833cd40e3e82db69f6be685e0d0b8b307c0d54b792080aabae7a45b",
+    "exampleIndex": 2
+  },
+  {
+    "id": "documented-loglevel",
+    "module": "LogLevel",
+    "entrypoint": "effect/LogLevel",
+    "family": "LogLevel",
+    "file": "cases/documented-loglevel.ts",
+    "status": "ready",
+    "api": [
+      "LogLevel.Order"
+    ],
+    "expectedStdout": "[1,-1,0]\n",
+    "declaration": "node_modules/effect/dist/LogLevel.d.ts",
+    "declarationSha256": "ae81882cb1a4ece7995a4a510f1ae11496c638fef5585417963110bd520ec70e",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-managedruntime",
+    "module": "ManagedRuntime",
+    "entrypoint": "effect/ManagedRuntime",
+    "family": "ManagedRuntime",
+    "file": "cases/documented-managedruntime.ts",
+    "status": "ready",
+    "api": [
+      "Context.Service",
+      "Effect.Effect",
+      "Layer.succeed",
+      "Effect.fn",
+      "Notifications.notify",
+      "Effect.sync",
+      "ManagedRuntime.make",
+      "Notifications.layer",
+      "Effect.flatMap",
+      "Effect.ensuring"
+    ],
+    "expectedStdout": "[[\"Hello, world!\"]]\n",
+    "declaration": "node_modules/effect/dist/ManagedRuntime.d.ts",
+    "declarationSha256": "2311a85b78eea5e2ef936d36e4252ef85a65bbee91c386f085c60f280860d932",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-match",
+    "module": "Match",
+    "entrypoint": "effect/Match",
+    "family": "Match",
+    "file": "cases/documented-match.ts",
+    "status": "ready",
+    "api": [
+      "Match.value",
+      "Match.when",
+      "Match.number",
+      "Match.string",
+      "Match.exhaustive"
+    ],
+    "expectedStdout": "[\"string: some input\"]\n",
+    "declaration": "node_modules/effect/dist/Match.d.ts",
+    "declarationSha256": "ba8bde7d56f06d794deba0ed46799ba7afab392f3ab7657960fbb477e47c37cb",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-metric",
+    "module": "Metric",
+    "entrypoint": "effect/Metric",
+    "family": "Metric",
+    "file": "cases/documented-metric.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Metric.frequency",
+      "Metric.update",
+      "Metric.FrequencyState",
+      "Metric.value",
+      "Array.from",
+      "Effect.runPromise",
+      "Effect.provideService",
+      "Metric.MetricRegistry"
+    ],
+    "expectedStdout": "[[[\"200\",3],[\"click\",3]]]\n",
+    "declaration": "node_modules/effect/dist/Metric.d.ts",
+    "declarationSha256": "79ff05f62c3659b6d540b17df00120ebd524c0dcbdfca588ef6766c70c9b97fe",
+    "exampleIndex": 4
+  },
+  {
+    "id": "documented-mutablehashmap",
+    "module": "MutableHashMap",
+    "entrypoint": "effect/MutableHashMap",
+    "family": "MutableHashMap",
+    "file": "cases/documented-mutablehashmap.ts",
+    "status": "ready",
+    "api": [
+      "MutableHashMap.MutableHashMap",
+      "MutableHashMap.set",
+      "Array.from"
+    ],
+    "expectedStdout": "[[[\"count\",42],[\"total\",100]]]\n",
+    "declaration": "node_modules/effect/dist/MutableHashMap.d.ts",
+    "declarationSha256": "5eefe1ba2f9582a6be988d0f9a7b101de7d14a53e4fae1567ef945464fb57d1d",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-mutablehashset",
+    "module": "MutableHashSet",
+    "entrypoint": "effect/MutableHashSet",
+    "family": "MutableHashSet",
+    "file": "cases/documented-mutablehashset.ts",
+    "status": "ready",
+    "api": [
+      "MutableHashSet.MutableHashSet",
+      "MutableHashSet.make",
+      "MutableHashSet.add",
+      "MutableHashSet.has",
+      "Array.from",
+      "MutableHashSet.size"
+    ],
+    "expectedStdout": "[true,false,[\"apple\",\"banana\",\"cherry\"],3]\n",
+    "declaration": "node_modules/effect/dist/MutableHashSet.d.ts",
+    "declarationSha256": "14e3bdf77741788a3bbbc2562a9843343056f7565bce3b262cdf375ee94e57cd",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-mutablelist",
+    "module": "MutableList",
+    "entrypoint": "effect/MutableList",
+    "family": "MutableList",
+    "file": "cases/documented-mutablelist.ts",
+    "status": "ready",
+    "api": [
+      "MutableList.MutableList",
+      "MutableList.make",
+      "MutableList.append",
+      "MutableList.prepend",
+      "MutableList.takeAll"
+    ],
+    "expectedStdout": "[[0,1,2],0]\n",
+    "declaration": "node_modules/effect/dist/MutableList.d.ts",
+    "declarationSha256": "17158507f29ec11120bc1cada5c79b9471d2debd18e1ee755898bd2317fdd040",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-mutableref",
+    "module": "MutableRef",
+    "entrypoint": "effect/MutableRef",
+    "family": "MutableRef",
+    "file": "cases/documented-mutableref.ts",
+    "status": "ready",
+    "api": [
+      "MutableRef.MutableRef",
+      "MutableRef.make",
+      "MutableRef.get"
+    ],
+    "expectedStdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
+    "declaration": "node_modules/effect/dist/MutableRef.d.ts",
+    "declarationSha256": "357f8eac8759da206331043fbd0f743aa4539c55a2c285e4d61a1ffce2385822",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-newtype",
+    "module": "Newtype",
+    "entrypoint": "effect/Newtype",
+    "family": "Newtype",
+    "file": "cases/documented-newtype.ts",
+    "status": "ready",
+    "api": [
+      "Newtype.Newtype",
+      "Newtype.makeIso",
+      "Newtype.value"
+    ],
+    "expectedStdout": "[\"hello\"]\n",
+    "declaration": "node_modules/effect/dist/Newtype.d.ts",
+    "declarationSha256": "7a689e0c65f3467c279a22517826427252dd4e11042e436b9f84636c6de51a1d",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-nonemptyiterable",
+    "module": "NonEmptyIterable",
+    "entrypoint": "effect/NonEmptyIterable",
+    "family": "NonEmptyIterable",
+    "file": "cases/documented-nonemptyiterable.ts",
+    "status": "ready",
+    "api": [
+      "NonEmptyIterable.unprepend",
+      "Chunk.make",
+      "Array.from",
+      "Symbol.iterator"
+    ],
+    "expectedStdout": "[1,[2,3]]\n",
+    "declaration": "node_modules/effect/dist/NonEmptyIterable.d.ts",
+    "declarationSha256": "d30faebd3c50f7865091782066772e7f7465dbc5f67832afefc988f7b75d1b82",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-observability--otlpexporter",
+    "module": "observability/OtlpExporter",
+    "entrypoint": "effect/observability/OtlpExporter",
+    "family": "observability/OtlpExporter",
+    "file": "cases/documented-observability--otlpexporter.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "OtlpExporter.Flusher",
+      "Effect.provide",
+      "OtlpExporter.layerFlusher",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"flushed\"]\n",
+    "declaration": "node_modules/effect/dist/observability/OtlpExporter.d.ts",
+    "declarationSha256": "9166b8915aa5e2da3ab98a9e553eb8b9e76efc38bef47ff1b07f8cd52a05d824",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-observability--prometheusmetrics",
+    "module": "observability/PrometheusMetrics",
+    "entrypoint": "effect/observability/PrometheusMetrics",
+    "family": "observability/PrometheusMetrics",
+    "file": "cases/documented-observability--prometheusmetrics.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Metric.counter",
+      "Metric.gauge",
+      "Metric.update",
+      "PrometheusMetrics.format",
+      "Effect.runSync"
+    ],
+    "expectedStdout": "[[true,true]]\n",
+    "declaration": "node_modules/effect/dist/observability/PrometheusMetrics.d.ts",
+    "declarationSha256": "db760071805b0818d0a5b31c6bc198a375d07175d1d8ee2718652584beb40daa",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-optic",
+    "module": "Optic",
+    "entrypoint": "effect/Optic",
+    "family": "Optic",
+    "file": "cases/documented-optic.ts",
+    "status": "ready",
+    "api": [
+      "Optic.makeIso"
+    ],
+    "expectedStdout": "[212,0]\n",
+    "declaration": "node_modules/effect/dist/Optic.d.ts",
+    "declarationSha256": "3ac516f343a10214e32af71a0a74497cf73304cdb786efc6569597fc42367fc9",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-option",
+    "module": "Option",
+    "entrypoint": "effect/Option",
+    "family": "Option",
+    "file": "cases/documented-option.ts",
+    "status": "ready",
+    "api": [
+      "Option.isOption",
+      "Option.some",
+      "Option.none"
+    ],
+    "expectedStdout": "[true,true,false]\n",
+    "declaration": "node_modules/effect/dist/Option.d.ts",
+    "declarationSha256": "84761f98c987b6f45080533ca816a36d9ebb3df419becf7d19f6b1fd6f3ab4e1",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-order",
+    "module": "Order",
+    "entrypoint": "effect/Order",
+    "family": "Order",
+    "file": "cases/documented-order.ts",
+    "status": "ready",
+    "api": [
+      "Order.make"
+    ],
+    "expectedStdout": "[1,-1]\n",
+    "declaration": "node_modules/effect/dist/Order.d.ts",
+    "declarationSha256": "29ddd287af75b90ef536471496ec7089016f447d91bfd8844481c599098ba61c",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-ordering",
+    "module": "Ordering",
+    "entrypoint": "effect/Ordering",
+    "family": "Ordering",
+    "file": "cases/documented-ordering.ts",
+    "status": "ready",
+    "api": [
+      "Ordering.reverse",
+      "Ordering.Ordering"
+    ],
+    "expectedStdout": "[-1,1,0]\n",
+    "declaration": "node_modules/effect/dist/Ordering.d.ts",
+    "declarationSha256": "ccddb60cdf068c6b8300b1767f8843fee668b41a85d482cd99ffe6993177b25f",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-path",
+    "module": "Path",
+    "entrypoint": "effect/Path",
+    "family": "Path",
+    "file": "cases/documented-path.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Path.Path",
+      "Effect.runSync",
+      "Effect.provide",
+      "Path.layer"
+    ],
+    "expectedStdout": "[\"home/user/documents\",\"to/file.txt\",\"file.txt\",\"/path/to\",\".txt\",true,\"file\",\"../../to/path\",\"/base/relative/path\"]\n",
+    "declaration": "node_modules/effect/dist/Path.d.ts",
+    "declarationSha256": "ac2031a92596597248ff91d626bc3d4f96fc8afc4302bd3ca7b6c4f78f2a3e15",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-persistence--ratelimiter",
+    "module": "persistence/RateLimiter",
+    "entrypoint": "effect/persistence/RateLimiter",
+    "family": "persistence/RateLimiter",
+    "file": "cases/documented-persistence--ratelimiter.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "RateLimiter.makeWithRateLimiter",
+      "Effect.sync",
+      "Effect.provide",
+      "RateLimiter.layer",
+      "Layer.provide",
+      "RateLimiter.layerStoreMemory",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"Making a request with rate limiting\"]]\n",
+    "declaration": "node_modules/effect/dist/persistence/RateLimiter.d.ts",
+    "declarationSha256": "b3bb4c8a22b3d20aa4a3d2d10fd673cd070b7b3d22a0dd5747053abbc909a376",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-pool",
+    "module": "Pool",
+    "entrypoint": "effect/Pool",
+    "family": "Pool",
+    "file": "cases/documented-pool.ts",
+    "status": "ready",
+    "api": [
+      "Effect.Effect",
+      "Effect.acquireRelease",
+      "Effect.succeed",
+      "Effect.void",
+      "Effect.scoped",
+      "Effect.flatMap",
+      "Pool.makeWithTTL",
+      "Duration.seconds",
+      "Pool.get",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"executed: select 1\"]]\n",
+    "declaration": "node_modules/effect/dist/Pool.d.ts",
+    "declarationSha256": "37e9c2efc9ec01ecc12e6676a0425e0a226b374d9666cfbd54ab919a62f431d8",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-predicate",
+    "module": "Predicate",
+    "entrypoint": "effect/Predicate",
+    "family": "Predicate",
+    "file": "cases/documented-predicate.ts",
+    "status": "ready",
+    "api": [
+      "Predicate.mapInput"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/Predicate.d.ts",
+    "declarationSha256": "4db6129fc99fa29e43c347d53b03f03c91a5c5e840db03c9cd7bb42ee34bbafd",
+    "exampleIndex": 10
+  },
+  {
+    "id": "documented-pubsub",
+    "module": "PubSub",
+    "entrypoint": "effect/PubSub",
+    "family": "PubSub",
+    "file": "cases/documented-pubsub.ts",
+    "status": "ready",
+    "api": [
+      "Effect.scoped",
+      "Effect.gen",
+      "PubSub.bounded",
+      "PubSub.subscribe",
+      "PubSub.publish",
+      "PubSub.take",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"Hello\",\"World\"]]\n",
+    "declaration": "node_modules/effect/dist/PubSub.d.ts",
+    "declarationSha256": "54e132614bd61acffef2e4c02ad7aa760cf6ddc8af95e5bc007ae40096bd793f",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-pull",
+    "module": "Pull",
+    "entrypoint": "effect/Pull",
+    "family": "Pull",
+    "file": "cases/documented-pull.ts",
+    "status": "ready",
+    "api": [
+      "Cause.done",
+      "Pull.matchEffect",
+      "Effect.succeed",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"Stream halted with: stream ended\"]\n",
+    "declaration": "node_modules/effect/dist/Pull.d.ts",
+    "declarationSha256": "0e96e768cb021f2ddc6eba96350cae9842c4b40d13cdb0071d4716c99ae07679",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-queue",
+    "module": "Queue",
+    "entrypoint": "effect/Queue",
+    "family": "Queue",
+    "file": "cases/documented-queue.ts",
+    "status": "ready",
+    "api": [
+      "Queue.Enqueue",
+      "Effect.gen",
+      "Queue.offer",
+      "Queue.offerAll",
+      "Queue.bounded",
+      "Queue.takeAll",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"hello\",\"world\",\"!\"]]\n",
+    "declaration": "node_modules/effect/dist/Queue.d.ts",
+    "declarationSha256": "af123df9ff8c226c6e61e7dd03156cc22bbc68a9475455b9385c20d83a731a1d",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-rcmap",
+    "module": "RcMap",
+    "entrypoint": "effect/RcMap",
+    "family": "RcMap",
+    "file": "cases/documented-rcmap.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "RcMap.make",
+      "Effect.acquireRelease",
+      "Effect.succeed",
+      "Effect.void",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[10]\n",
+    "declaration": "node_modules/effect/dist/RcMap.d.ts",
+    "declarationSha256": "afcbe81535128f1616c07b4afaddce9cb703c19148b6ed5774c14402c65cac9a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-rcref",
+    "module": "RcRef",
+    "entrypoint": "effect/RcRef",
+    "family": "RcRef",
+    "file": "cases/documented-rcref.ts",
+    "status": "ready",
+    "api": [
+      "RcRef.make",
+      "Effect.acquireRelease",
+      "Effect.succeed",
+      "Effect.sync",
+      "Effect.gen",
+      "RcRef.get",
+      "Effect.runPromise",
+      "Effect.scoped"
+    ],
+    "expectedStdout": "[[true,[\"closed Connected to postgres://localhost\"]]]\n",
+    "declaration": "node_modules/effect/dist/RcRef.d.ts",
+    "declarationSha256": "e44f9e94210dea2d9966236743cb9b9b045d61796d9b7800f46375346cf0036f",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-reactivity--atom",
+    "module": "reactivity/Atom",
+    "entrypoint": "effect/reactivity/Atom",
+    "family": "reactivity/Atom",
+    "file": "cases/documented-reactivity--atom.ts",
+    "status": "ready",
+    "api": [
+      "Atom.make",
+      "Atom.withEquality"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/reactivity/Atom.d.ts",
+    "declarationSha256": "71829942f6b286e95e631f0456ac2598d9dcc812134a3398211b2997110d6628",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-record",
+    "module": "Record",
+    "entrypoint": "effect/Record",
+    "family": "Record",
+    "file": "cases/documented-record.ts",
+    "status": "ready",
+    "api": [
+      "Record.empty",
+      "Record.set"
+    ],
+    "expectedStdout": "[{},{\"count\":42}]\n",
+    "declaration": "node_modules/effect/dist/Record.d.ts",
+    "declarationSha256": "54d7906581efd26405ce63da1222e2b5a42e15dc3dde2dccbdf654a1a1c07fb3",
+    "exampleIndex": 5
+  },
+  {
+    "id": "documented-redacted",
+    "module": "Redacted",
+    "entrypoint": "effect/Redacted",
+    "family": "Redacted",
+    "file": "cases/documented-redacted.ts",
+    "status": "ready",
+    "api": [
+      "Redacted.make",
+      "Array.of"
+    ],
+    "expectedStdout": "[[\"<redacted>\",\"<redacted>\"]]\n",
+    "declaration": "node_modules/effect/dist/Redacted.d.ts",
+    "declarationSha256": "62241100d9b71070bb626e7880f32343580534fb692a8647cac5b2b6eb188b23",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-reducer",
+    "module": "Reducer",
+    "entrypoint": "effect/Reducer",
+    "family": "Reducer",
+    "file": "cases/documented-reducer.ts",
+    "status": "ready",
+    "api": [
+      "Reducer.make",
+      "Concat.combineAll"
+    ],
+    "expectedStdout": "[\"hello world\"]\n",
+    "declaration": "node_modules/effect/dist/Reducer.d.ts",
+    "declarationSha256": "f66a888acfb5fad5489717a94e65620d247d6788a7f1941771e80d05ed742cff",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-ref",
+    "module": "Ref",
+    "entrypoint": "effect/Ref",
+    "family": "Ref",
+    "file": "cases/documented-ref.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Ref.make",
+      "Ref.get",
+      "Ref.update",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[0,1]]\n",
+    "declaration": "node_modules/effect/dist/Ref.d.ts",
+    "declarationSha256": "cb8ab988cc5f9c9649e191511e0f672ea154523cca86cb99c09c0c72fcab6261",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-references",
+    "module": "References",
+    "entrypoint": "effect/References",
+    "family": "References",
+    "file": "cases/documented-references.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "References.CurrentLogAnnotations",
+      "Object.keys",
+      "Effect.provideService",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[0,[\"req-123\",\"user-456\",\"1.0.0\"],[\"data-sync\",1234567890]]]\n",
+    "declaration": "node_modules/effect/dist/References.d.ts",
+    "declarationSha256": "450c698bc48782d560741478a2f57a20c0f93327df2b72339857c9a398d98563",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-regexp",
+    "module": "RegExp",
+    "entrypoint": "effect/RegExp",
+    "family": "RegExp",
+    "file": "cases/documented-regexp.ts",
+    "status": "ready",
+    "api": [
+      "RegExp.RegExp"
+    ],
+    "expectedStdout": "[{},true,false]\n",
+    "declaration": "node_modules/effect/dist/RegExp.d.ts",
+    "declarationSha256": "764d803bd2755e629af51f94c2cbdba197135bdfce34ed3a3864bb398c5143b7",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-request",
+    "module": "Request",
+    "entrypoint": "effect/Request",
+    "family": "Request",
+    "file": "cases/documented-request.ts",
+    "status": "ready",
+    "api": [
+      "Request.Request",
+      "Request.of",
+      "Request.tagged"
+    ],
+    "expectedStdout": "[\"GetUser\",123]\n",
+    "declaration": "node_modules/effect/dist/Request.d.ts",
+    "declarationSha256": "5160656dfe09d5b2169170b0b2f6030ef7c55f62d623301b466caa025fcb1bee",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-requestresolver",
+    "module": "RequestResolver",
+    "entrypoint": "effect/RequestResolver",
+    "family": "RequestResolver",
+    "file": "cases/documented-requestresolver.ts",
+    "status": "ready",
+    "api": [
+      "Request.Request",
+      "Request.tagged",
+      "RequestResolver.make",
+      "Effect.sync",
+      "Exit.succeed",
+      "Effect.request",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"User 1\"]\n",
+    "declaration": "node_modules/effect/dist/RequestResolver.d.ts",
+    "declarationSha256": "bf08b8a7c5588a75c913e893b5f6e8c50e13ae72857dbab92c8476dc0894cc72",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-result",
+    "module": "Result",
+    "entrypoint": "effect/Result",
+    "family": "Result",
+    "file": "cases/documented-result.ts",
+    "status": "ready",
+    "api": [
+      "Result.succeed"
+    ],
+    "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":42}]\n",
+    "declaration": "node_modules/effect/dist/Result.d.ts",
+    "declarationSha256": "a4fc0e2fc3eae5b5dda7584bcfb5f870ef2cee9be357c51ef98cda13ce243e37",
+    "exampleIndex": 4
+  },
+  {
+    "id": "documented-runtime",
+    "module": "Runtime",
+    "entrypoint": "effect/Runtime",
+    "family": "Runtime",
+    "file": "cases/documented-runtime.ts",
+    "status": "ready",
+    "api": [
+      "Runtime.Teardown",
+      "Exit.isSuccess",
+      "Exit.Exit",
+      "Runtime.makeRunMain",
+      "Effect.succeed"
+    ],
+    "expectedStdout": "[[{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":\"Hello, World!\"},0]]\n",
+    "declaration": "node_modules/effect/dist/Runtime.d.ts",
+    "declarationSha256": "6da881cc87ca3fd93ee9be83df2f133b3f5c5b2de4ba6efea836c5b781ebfc80",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-schemaast",
+    "module": "SchemaAST",
+    "entrypoint": "effect/SchemaAST",
+    "family": "SchemaAST",
+    "file": "cases/documented-schemaast.ts",
+    "status": "ready",
+    "api": [
+      "SchemaAST.Literal"
+    ],
+    "expectedStdout": "[\"active\"]\n",
+    "declaration": "node_modules/effect/dist/SchemaAST.d.ts",
+    "declarationSha256": "423449946d829ce7b7181b69dfec4a70ae030511156dd5c384ed06ec5ab88c30",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-schemagetter",
+    "module": "SchemaGetter",
+    "entrypoint": "effect/SchemaGetter",
+    "family": "SchemaGetter",
+    "file": "cases/documented-schemagetter.ts",
+    "status": "ready",
+    "api": [
+      "SchemaGetter.transform",
+      "SchemaGetter.compose",
+      "Effect.runSync",
+      "SchemaGetter.run",
+      "Option.some"
+    ],
+    "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42}]\n",
+    "declaration": "node_modules/effect/dist/SchemaGetter.d.ts",
+    "declarationSha256": "0c26fe5f784810a82b41543f1b8d18c8a80b4327dead17f4dd5402b570bf5e1c",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-schemaissue",
+    "module": "SchemaIssue",
+    "entrypoint": "effect/SchemaIssue",
+    "family": "SchemaIssue",
+    "file": "cases/documented-schemaissue.ts",
+    "status": "ready",
+    "api": [
+      "SchemaIssue.MissingKey",
+      "SchemaIssue.isIssue"
+    ],
+    "expectedStdout": "[true,false]\n",
+    "declaration": "node_modules/effect/dist/SchemaIssue.d.ts",
+    "declarationSha256": "9098144358e2dff4b90c0ca0c603f53577cbf8cef336a32b4df775991639cd34",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-schemarepresentation",
+    "module": "SchemaRepresentation",
+    "entrypoint": "effect/SchemaRepresentation",
+    "family": "SchemaRepresentation",
+    "file": "cases/documented-schemarepresentation.ts",
+    "status": "ready",
+    "api": [
+      "SchemaRepresentation.toRepresentation",
+      "Schema.Struct",
+      "Schema.String",
+      "SchemaRepresentation.toJson",
+      "SchemaRepresentation.fromJson",
+      "SchemaRepresentation.fromRepresentation",
+      "Schema.make",
+      "Schema.Codec",
+      "Schema.decodeUnknownSync"
+    ],
+    "expectedStdout": "[{\"name\":\"Ada\"}]\n",
+    "declaration": "node_modules/effect/dist/SchemaRepresentation.d.ts",
+    "declarationSha256": "2d4173f7c91435f6cdc96ca71585ae58742c64bfa981f71c94c013850700bbc1",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-schematransformation",
+    "module": "SchemaTransformation",
+    "entrypoint": "effect/SchemaTransformation",
+    "family": "SchemaTransformation",
+    "file": "cases/documented-schematransformation.ts",
+    "status": "ready",
+    "api": [
+      "SchemaTransformation.Middleware",
+      "Effect.catch",
+      "Effect.succeed",
+      "Option.some",
+      "SchemaIssue.InvalidValue",
+      "Effect.runPromise",
+      "Effect.fail"
+    ],
+    "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"fallback\"}]\n",
+    "declaration": "node_modules/effect/dist/SchemaTransformation.d.ts",
+    "declarationSha256": "0e2e587187e77f8179510ea91d4f1b4b4ff36065acf04064432e341d5cea5b4a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-scope",
+    "module": "Scope",
+    "entrypoint": "effect/Scope",
+    "family": "Scope",
+    "file": "cases/documented-scope.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Scope.make",
+      "Scope.close",
+      "Exit.void",
+      "Effect.runSync"
+    ],
+    "expectedStdout": "[[[\"sequential\",\"Empty\"],\"Closed\"]]\n",
+    "declaration": "node_modules/effect/dist/Scope.d.ts",
+    "declarationSha256": "388a5c527ab6bf676056498ee2669507c70bd3a1f9a72ab95543ba9d7dd82835",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-semaphore",
+    "module": "Semaphore",
+    "entrypoint": "effect/Semaphore",
+    "family": "Semaphore",
+    "file": "cases/documented-semaphore.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "Semaphore.make",
+      "Effect.succeed",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"Resource accessed\"]\n",
+    "declaration": "node_modules/effect/dist/Semaphore.d.ts",
+    "declarationSha256": "b808373f04d5f3dd72043f063c23c91e33104ef47811980c592a8f762cf5e442",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-sink",
+    "module": "Sink",
+    "entrypoint": "effect/Sink",
+    "family": "Sink",
+    "file": "cases/documented-sink.ts",
+    "status": "ready",
+    "api": [
+      "Sink.Sink",
+      "Sink.succeed",
+      "Stream.make",
+      "Effect.runPromise",
+      "Stream.run"
+    ],
+    "expectedStdout": "[42]\n",
+    "declaration": "node_modules/effect/dist/Sink.d.ts",
+    "declarationSha256": "438b523b406fbc260ca295c3faf67e7058a2416cf73e84df135c97ab96f1b39b",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-struct",
+    "module": "Struct",
+    "entrypoint": "effect/Struct",
+    "family": "Struct",
+    "file": "cases/documented-struct.ts",
+    "status": "ready",
+    "api": [
+      "Struct.get"
+    ],
+    "expectedStdout": "[\"Alice\"]\n",
+    "declaration": "node_modules/effect/dist/Struct.d.ts",
+    "declarationSha256": "d48a8e6b6c8cb7b6b99f533ca7393896e66d8a53c2f27bbec276eb6b7468984c",
+    "exampleIndex": 3
+  },
+  {
+    "id": "documented-subscriptionref",
+    "module": "SubscriptionRef",
+    "entrypoint": "effect/SubscriptionRef",
+    "family": "SubscriptionRef",
+    "file": "cases/documented-subscriptionref.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "SubscriptionRef.make",
+      "Deferred.make",
+      "SubscriptionRef.changes",
+      "Stream.tap",
+      "Deferred.succeed",
+      "Stream.take",
+      "Stream.runCollect",
+      "Effect.forkChild",
+      "Deferred.await",
+      "SubscriptionRef.set",
+      "Fiber.join",
+      "Array.from",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[0,1,2]]\n",
+    "declaration": "node_modules/effect/dist/SubscriptionRef.d.ts",
+    "declarationSha256": "4823df1a54e889d87063665273b2013794ad8733002491d8e5284d7a968da147",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-symbol",
+    "module": "Symbol",
+    "entrypoint": "effect/Symbol",
+    "family": "Symbol",
+    "file": "cases/documented-symbol.ts",
+    "status": "ready",
+    "api": [
+      "Symbol.isSymbol",
+      "Symbol.for"
+    ],
+    "expectedStdout": "[true,false]\n",
+    "declaration": "node_modules/effect/dist/Symbol.d.ts",
+    "declarationSha256": "5a93bd5426a0955182607cccaf10bb48a994dc1602cc9e7345cc1a0dfc4c26d5",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-testing--testschema",
+    "module": "testing/TestSchema",
+    "entrypoint": "effect/testing/TestSchema",
+    "family": "testing/TestSchema",
+    "file": "cases/documented-testing--testschema.ts",
+    "status": "ready",
+    "api": [
+      "Schema.Struct",
+      "Schema.String",
+      "TestSchema.Asserts"
+    ],
+    "expectedStdout": "[null,null]\n",
+    "declaration": "node_modules/effect/dist/testing/TestSchema.d.ts",
+    "declarationSha256": "1d61064a4fde7a7519cd450dd37d5b463c0622a5cba69d39f90fba89a3507613",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-tracer",
+    "module": "Tracer",
+    "entrypoint": "effect/Tracer",
+    "family": "Tracer",
+    "file": "cases/documented-tracer.ts",
+    "status": "ready",
+    "api": [
+      "Tracer.AnySpan",
+      "Effect.succeed",
+      "Tracer.externalSpan",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"span-123\",\"trace-456\"]]\n",
+    "declaration": "node_modules/effect/dist/Tracer.d.ts",
+    "declarationSha256": "60893fbc52d56d426093b897c99d5c8e293193d668a8dfa704ec74042acc1034",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-trie",
+    "module": "Trie",
+    "entrypoint": "effect/Trie",
+    "family": "Trie",
+    "file": "cases/documented-trie.ts",
+    "status": "ready",
+    "api": [
+      "Trie.Trie",
+      "Trie.make",
+      "Trie.get",
+      "Array.from",
+      "Trie.keysWithPrefix",
+      "Trie.has",
+      "Trie.size"
+    ],
+    "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},[\"app\",\"apple\",\"application\"],[[\"app\",2],[\"apple\",1],[\"application\",3],[\"banana\",4]],true,4]\n",
+    "declaration": "node_modules/effect/dist/Trie.d.ts",
+    "declarationSha256": "fb6c1bb045e9ce779db2f8a357ce1ac96677ca13c139d1822b2047892c9285d6",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-tuple",
+    "module": "Tuple",
+    "entrypoint": "effect/Tuple",
+    "family": "Tuple",
+    "file": "cases/documented-tuple.ts",
+    "status": "ready",
+    "api": [
+      "Tuple.make"
+    ],
+    "expectedStdout": "[[10,20,\"red\"]]\n",
+    "declaration": "node_modules/effect/dist/Tuple.d.ts",
+    "declarationSha256": "5f0e474d95af7d63a6d635a23f05ac8e4cbe06c562cc75c868cef60097e045a2",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txchunk",
+    "module": "TxChunk",
+    "entrypoint": "effect/TxChunk",
+    "family": "TxChunk",
+    "file": "cases/documented-txchunk.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxChunk.TxChunk",
+      "TxChunk.fromIterable",
+      "TxChunk.append",
+      "TxChunk.get",
+      "Effect.tx",
+      "TxChunk.prepend",
+      "Chunk.toArray",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[[1,2,3,4],[0,1,2,3,4,5]]]\n",
+    "declaration": "node_modules/effect/dist/TxChunk.d.ts",
+    "declarationSha256": "d9ecb2e566f432b9dd26d48901e612ae2ebe1d8b34b2bb1e805b2edee1afdefa",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txdeferred",
+    "module": "TxDeferred",
+    "entrypoint": "effect/TxDeferred",
+    "family": "TxDeferred",
+    "file": "cases/documented-txdeferred.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxDeferred.make",
+      "TxDeferred.succeed",
+      "TxDeferred.await",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[true,false,42]]\n",
+    "declaration": "node_modules/effect/dist/TxDeferred.d.ts",
+    "declarationSha256": "8625b52b991d154ca0e97f45a56106014770b7d7b7a4f4db587e20edee18ad52",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txhashmap",
+    "module": "TxHashMap",
+    "entrypoint": "effect/TxHashMap",
+    "family": "TxHashMap",
+    "file": "cases/documented-txhashmap.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxHashMap.make",
+      "TxHashMap.set",
+      "TxHashMap.get",
+      "Option.some",
+      "Effect.tx",
+      "TxHashMap.remove",
+      "TxHashMap.size",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[2]\n",
+    "declaration": "node_modules/effect/dist/TxHashMap.d.ts",
+    "declarationSha256": "36e1cf24ed72bb883e639911cb85fb72ecd1f8a632f53e08de4f263ef97b6727",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txhashset",
+    "module": "TxHashSet",
+    "entrypoint": "effect/TxHashSet",
+    "family": "TxHashSet",
+    "file": "cases/documented-txhashset.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxHashSet.empty",
+      "TxHashSet.isNonEmpty",
+      "TxHashSet.make",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[false,true]]\n",
+    "declaration": "node_modules/effect/dist/TxHashSet.d.ts",
+    "declarationSha256": "d3cd3bb5c7c3931aa3545ed940a358e30a26ec93bf2707d54fb2cd3f14d5a25e",
+    "exampleIndex": 19
+  },
+  {
+    "id": "documented-txpriorityqueue",
+    "module": "TxPriorityQueue",
+    "entrypoint": "effect/TxPriorityQueue",
+    "family": "TxPriorityQueue",
+    "file": "cases/documented-txpriorityqueue.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxPriorityQueue.empty",
+      "Order.Number",
+      "TxPriorityQueue.offer",
+      "TxPriorityQueue.take",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[1]\n",
+    "declaration": "node_modules/effect/dist/TxPriorityQueue.d.ts",
+    "declarationSha256": "440002da7feecd676c12aca48dfc4bcd0038dc64182d018e463ce6ff53f71eb0",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txpubsub",
+    "module": "TxPubSub",
+    "entrypoint": "effect/TxPubSub",
+    "family": "TxPubSub",
+    "file": "cases/documented-txpubsub.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxPubSub.unbounded",
+      "Effect.scoped",
+      "TxPubSub.subscribe",
+      "TxPubSub.publish",
+      "TxQueue.take",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[\"hello\"]\n",
+    "declaration": "node_modules/effect/dist/TxPubSub.d.ts",
+    "declarationSha256": "5970817e7103d95f38581423f915d968aa67da3d1227e31bcdc797991910a3ef",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txqueue",
+    "module": "TxQueue",
+    "entrypoint": "effect/TxQueue",
+    "family": "TxQueue",
+    "file": "cases/documented-txqueue.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxQueue.bounded",
+      "TxQueue.offer",
+      "TxQueue.offerAll",
+      "TxQueue.fail",
+      "Cause.Done",
+      "TxQueue.end",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[true]\n",
+    "declaration": "node_modules/effect/dist/TxQueue.d.ts",
+    "declarationSha256": "95720cf32febdc56e09cc257e686886badd33ce6731eb2c491e550ca0ba38fc2",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-txreentrantlock",
+    "module": "TxReentrantLock",
+    "entrypoint": "effect/TxReentrantLock",
+    "family": "TxReentrantLock",
+    "file": "cases/documented-txreentrantlock.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxReentrantLock.make",
+      "TxReentrantLock.withReadLock",
+      "Effect.succeed",
+      "TxReentrantLock.withWriteLock",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[\"reading\",\"writing\"]]\n",
+    "declaration": "node_modules/effect/dist/TxReentrantLock.d.ts",
+    "declarationSha256": "7cc350146911d8cb97086473b97ce4c8626e0fc6608371014c23f0c457012aa8",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txref",
+    "module": "TxRef",
+    "entrypoint": "effect/TxRef",
+    "family": "TxRef",
+    "file": "cases/documented-txref.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxRef.TxRef",
+      "TxRef.make",
+      "Effect.tx",
+      "TxRef.get",
+      "TxRef.set",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[1]\n",
+    "declaration": "node_modules/effect/dist/TxRef.d.ts",
+    "declarationSha256": "3a7714d6e7bdf742de0b28149c56b38ca9eea3899cf741710ec583c1902808af",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txsemaphore",
+    "module": "TxSemaphore",
+    "entrypoint": "effect/TxSemaphore",
+    "family": "TxSemaphore",
+    "file": "cases/documented-txsemaphore.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxSemaphore.make",
+      "TxSemaphore.acquire",
+      "TxSemaphore.available",
+      "TxSemaphore.release",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[2,3]]\n",
+    "declaration": "node_modules/effect/dist/TxSemaphore.d.ts",
+    "declarationSha256": "87d3b41f6fd28e7722fe0b250a86ea6bbc68fa08b08ab13051bf89cd4eca170a",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-txsubscriptionref",
+    "module": "TxSubscriptionRef",
+    "entrypoint": "effect/TxSubscriptionRef",
+    "family": "TxSubscriptionRef",
+    "file": "cases/documented-txsubscriptionref.ts",
+    "status": "ready",
+    "api": [
+      "Effect.gen",
+      "TxSubscriptionRef.make",
+      "Effect.scoped",
+      "TxSubscriptionRef.changes",
+      "TxQueue.take",
+      "TxSubscriptionRef.set",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[0,1]]\n",
+    "declaration": "node_modules/effect/dist/TxSubscriptionRef.d.ts",
+    "declarationSha256": "78e482c2578af62b57777ea8270fbcb211d46dc62acbec9eeabb5ad91ac455f2",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-unify",
+    "module": "Unify",
+    "entrypoint": "effect/Unify",
+    "family": "Unify",
+    "file": "cases/documented-unify.ts",
+    "status": "ready",
+    "api": [
+      "Unify.unify"
+    ],
+    "expectedStdout": "[\"test\",\"value-1\"]\n",
+    "declaration": "node_modules/effect/dist/Unify.d.ts",
+    "declarationSha256": "aee87669fc378a6ebd9b91dcce9d2991545df840e43005749b4c5a7b7cfb9e04",
+    "exampleIndex": 1
+  },
+  {
+    "id": "documented-utils",
+    "module": "Utils",
+    "entrypoint": "effect/Utils",
+    "family": "Utils",
+    "file": "cases/documented-utils.ts",
+    "status": "ready",
+    "api": [
+      "Utils.SingleShotGen"
+    ],
+    "expectedStdout": "[\"hello\",42]\n",
+    "declaration": "node_modules/effect/dist/Utils.d.ts",
+    "declarationSha256": "a25598d47e74a63b2bac539ef9258d640856eac0e49be34f4c27e916c350cfed",
+    "exampleIndex": 0
+  },
+  {
+    "id": "documented-workflow--durablequeue",
+    "module": "workflow/DurableQueue",
+    "entrypoint": "effect/workflow/DurableQueue",
+    "family": "workflow/DurableQueue",
+    "file": "cases/documented-workflow--durablequeue.ts",
+    "status": "ready",
+    "api": [
+      "DurableQueue.make",
+      "Schema.String",
+      "Schema.Void",
+      "Schema.Never",
+      "Workflow.make",
+      "MyWorkflow.toLayer",
+      "Effect.fnUntraced",
+      "DurableQueue.process",
+      "Effect.sync",
+      "DurableQueue.worker",
+      "Effect.gen",
+      "Layer.isLayer",
+      "Effect.runPromise"
+    ],
+    "expectedStdout": "[[true,true,[\"api-call-1\"]]]\n",
+    "declaration": "node_modules/effect/dist/workflow/DurableQueue.d.ts",
+    "declarationSha256": "8da6b3a4c754defb63611911edacae6d5ef7a998cd975b5dedbaf0cd68911b7e",
+    "exampleIndex": 0
+  }
+]

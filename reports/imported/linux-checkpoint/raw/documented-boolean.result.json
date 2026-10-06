@@ -1,0 +1,239 @@
+{
+  "id": "documented-boolean",
+  "module": "Boolean",
+  "entrypoint": "effect/Boolean",
+  "family": "Boolean",
+  "file": "cases/documented-boolean.ts",
+  "status": "ready",
+  "api": [
+    "Boolean.Boolean"
+  ],
+  "expectedStdout": "[true,true,false]\n",
+  "declaration": "node_modules/effect/dist/Boolean.d.ts",
+  "declarationSha256": "6fbf588ecc66a4b4b02ef791193902cbf9cf88e1685a87f3a3d7459f9bd7bb05",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "sourceSha256": "e890f78d63d05dcf20789b447791dd1a631073cdf5fa8dc807e84b034f6c252b",
+  "typecheck": {
+    "command": [
+      "/workspace/shared/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-boolean.ts"
+    ],
+    "cwd": "/workspace/shared/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 3231.59,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-boolean.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2653.675,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts\n\n  statements analyzed   158\n  compile statically    156  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×2  'number' values where 'string' is expected  SC1090\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1ib29sZWFuLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxNTgKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTU2ICAoOTglKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGJsb2NrZXJzOgogICAgICDDlzIgICdudW1iZXInIHZhbHVlcyB3aGVyZSAnc3RyaW5nJyBpcyBleHBlY3RlZCAgU0MxMDkwCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 158,
+        "static": 156,
+        "dynamic": 0,
+        "unsupported": 2
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×2  'number' values where 'string' is expected  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [],
+      "notes": []
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-boolean.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-boolean"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2779.54,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  5 | \n  6 | __compatObserved.push(Boolean.Boolean(1))\n    |                                       ^\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n\n/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n  8 | __compatObserved.push(Boolean.Boolean(0))\n    |                                       ^\n  9 | console.log(JSON.stringify(__compatObserved))\n\n2 errors.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtYm9vbGVhbi50czo2OjM5IC0gZXJyb3IgU0MxMDkwOiAnbnVtYmVyJyB2YWx1ZXMgd2hlcmUgJ3N0cmluZycgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDEpKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA3IHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEJvb2xlYW4uQm9vbGVhbigiZmFsc2UiKSkKCi93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWJvb2xlYW4udHM6ODozOSAtIGVycm9yIFNDMTA5MDogJ251bWJlcicgdmFsdWVzIHdoZXJlICdzdHJpbmcnIGlzIGV4cGVjdGVkIGlzIG5vdCBzdXBwb3J0ZWQgeWV0CgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKCJmYWxzZSIpKQogIDggfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDApKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA5IHwgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoX19jb21wYXRPYnNlcnZlZCkpCgoyIGVycm9ycy4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC1090",
+        "message": "'number' values where 'string' is expected is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "'number' values where 'string' is expected is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "coverage",
+        "cases/documented-boolean.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3056.726,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts\n\n  statements analyzed   158\n  compile statically    152  (96%)\n  compile dynamically   2  (1%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   2 sites (JS statements that throw their fence if executed)\n      ×2  spread arguments  SC1090\n\n  blockers:\n      ×2  'number' values where 'string' is expected  SC1090\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvd29ya3NwYWNlL3NoYXJlZC9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1ib29sZWFuLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxNTgKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTUyICAoOTYlKQogIGNvbXBpbGUgZHluYW1pY2FsbHkgICAyICAoMSUpIChpc2xhbmQgc2l0ZXMg4oCUIHRoZSBlbWJlZGRlZCBlbmdpbmUgcnVucyB0aGVtKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICAyIHNpdGVzIChKUyBzdGF0ZW1lbnRzIHRoYXQgdGhyb3cgdGhlaXIgZmVuY2UgaWYgZXhlY3V0ZWQpCiAgICAgIMOXMiAgc3ByZWFkIGFyZ3VtZW50cyAgU0MxMDkwCgogIGJsb2NrZXJzOgogICAgICDDlzIgICdudW1iZXInIHZhbHVlcyB3aGVyZSAnc3RyaW5nJyBpcyBleHBlY3RlZCAgU0MxMDkwCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 158,
+        "static": 152,
+        "dynamic": 2,
+        "unsupported": 4
+      },
+      "deferredSiteCount": 2,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×2  spread arguments  SC1090\n×2  'number' values where 'string' is expected  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×2  spread arguments  SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   2 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "/tmp/effect-scriptc-tools/bin/scriptc",
+        "build",
+        "cases/documented-boolean.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-boolean.dynamic"
+      ],
+      "cwd": "/workspace/shared/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2524.614,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  5 | \n  6 | __compatObserved.push(Boolean.Boolean(1))\n    |                                       ^\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n\n/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n  8 | __compatObserved.push(Boolean.Boolean(0))\n    |                                       ^\n  9 | console.log(JSON.stringify(__compatObserved))\n\n2 errors.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtYm9vbGVhbi50czo2OjM5IC0gZXJyb3IgU0MxMDkwOiAnbnVtYmVyJyB2YWx1ZXMgd2hlcmUgJ3N0cmluZycgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDEpKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA3IHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEJvb2xlYW4uQm9vbGVhbigiZmFsc2UiKSkKCi93b3Jrc3BhY2Uvc2hhcmVkL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWJvb2xlYW4udHM6ODozOSAtIGVycm9yIFNDMTA5MDogJ251bWJlcicgdmFsdWVzIHdoZXJlICdzdHJpbmcnIGlzIGV4cGVjdGVkIGlzIG5vdCBzdXBwb3J0ZWQgeWV0CgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKCJmYWxzZSIpKQogIDggfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKDApKQogICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4KICA5IHwgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoX19jb21wYXRPYnNlcnZlZCkpCgoyIGVycm9ycy4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC1090",
+        "message": "'number' values where 'string' is expected is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39"
+        ],
+        "rewriteHints": []
+      },
+      {
+        "code": "SC1090",
+        "message": "'number' values where 'string' is expected is not supported yet",
+        "sourceLocations": [
+          "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:6:39",
+    "/workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts:8:39"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×2  spread arguments  SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   2 sites (JS statements that throw their fence if executed)"
+  ]
+}

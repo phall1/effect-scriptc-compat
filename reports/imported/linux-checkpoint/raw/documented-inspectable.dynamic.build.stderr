@@ -1,0 +1,31 @@
+/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:7:18 - error SC2020: 'Object.create over 'unknown' prototypes' is part of the standard library types but has no scriptc lowering yet
+
+  6 | // Use as prototype
+  7 | const myObject = Object.create(Inspectable.BaseProto)
+    |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  8 | myObject.name = "example"
+
+  hint: prototype reads delegate LIVE in Node (mutating the prototype shows through the created object), which the boundary's deep copy cannot honor — only null and engine-held ('any') prototypes lower
+
+/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:15:3 - error SC1080: 'this' outside a class method is not supported yet
+
+  14 | function MyClass(this: any, name: string) {
+  15 |   this.name = name
+     |   ^~~~
+  16 | }
+
+/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:17:1 - error SC1090: assigning the read-only function member 'prototype' (strict-mode JS — every module — throws TypeError here) is not supported yet
+
+  16 | }
+  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)
+     | ^~~~~~~~~~~~~~~~~
+  18 | MyClass.prototype.constructor = MyClass
+
+/workspace/shared/effect-scriptc-compat/cases/documented-inspectable.ts:18:1 - error SC1090: reading 'prototype' from a value of type '{ (this: any, name: string): void; prototype: any; }' is not supported yet
+
+  17 | MyClass.prototype = Object.create(Inspectable.BaseProto)
+  18 | MyClass.prototype.constructor = MyClass
+     | ^~~~~~~~~~~~~~~~~
+  19 | console.log(JSON.stringify(__compatObserved))
+
+4 errors.

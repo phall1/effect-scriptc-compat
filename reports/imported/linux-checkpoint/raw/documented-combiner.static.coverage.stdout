@@ -1,0 +1,9 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-combiner.ts
+
+  statements analyzed   8
+  compile statically    8  (100%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  fully static — this program has no dynamic remainder.

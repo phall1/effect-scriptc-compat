@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/module-redactable.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-redactable"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 2526.863,
+  "maxRssKb": 42028,
+  "stdout": "/workspace/shared/effect-scriptc-compat/bin/module-redactable\n",
+  "stderr": "",
+  "stdoutBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Jpbi9tb2R1bGUtcmVkYWN0YWJsZQo=",
+  "stderrBase64": ""
+}

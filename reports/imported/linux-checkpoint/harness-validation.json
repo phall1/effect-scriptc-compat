@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-10-05T17:49:40.148Z",
+  "strictTypecheck": "passed",
+  "harnessTests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "workflowTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "ciEnvironmentIsolation": "passed",
+  "nodeCorpusBaselines": {
+    "passed": 404,
+    "failed": 0
+  },
+  "realDifferentialCheckpoint": {
+    "binaries": 39,
+    "equal": 35,
+    "mismatched": 4,
+    "invalidNodeBaselines": 0,
+    "hangs": 0
+  },
+  "upstreamVerifiedPackets": 5,
+  "fullHostMap": "in progress"
+}

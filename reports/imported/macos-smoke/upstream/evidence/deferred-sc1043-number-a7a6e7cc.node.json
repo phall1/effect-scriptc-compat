@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "reports/upstream/repro/deferred-sc1043-number-a7a6e7cc.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 87.527,
+  "maxRssKb": null,
+  "stdout": "number:42\n",
+  "stderr": "",
+  "stdoutBase64": "bnVtYmVyOjQyCg==",
+  "stderrBase64": ""
+}

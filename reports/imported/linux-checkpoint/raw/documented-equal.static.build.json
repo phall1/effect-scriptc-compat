@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/effect-scriptc-tools/bin/scriptc",
+    "build",
+    "cases/documented-equal.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-equal"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 3091.925,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/workspace/shared/effect-scriptc-compat/cases/documented-equal.ts:13:36 - error SC1101: converting typed values to 'unknown' is not supported yet\n\n  12 | \n  13 | __compatObserved.push(Equal.equals(new Date(\"2024-01-01\"), new Date(\"2024-01-01\")))\n     |                                    ^~~~~~~~~~~~~~~~~~~~~~\n  14 | \n\n  hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L3dvcmtzcGFjZS9zaGFyZWQvZWZmZWN0LXNjcmlwdGMtY29tcGF0L2Nhc2VzL2RvY3VtZW50ZWQtZXF1YWwudHM6MTM6MzYgLSBlcnJvciBTQzExMDE6IGNvbnZlcnRpbmcgdHlwZWQgdmFsdWVzIHRvICd1bmtub3duJyBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICAxMiB8IAogIDEzIHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEVxdWFsLmVxdWFscyhuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpLCBuZXcgRGF0ZSgiMjAyNC0wMS0wMSIpKSkKICAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDE0IHwgCgogIGhpbnQ6IG51bWJlcnMsIHN0cmluZ3MsIGJvb2xlYW5zLCBKU09OLXNhZmUgcmVjb3Jkcy9hcnJheXMvdW5pb25zIChhIGRlZXAgY29weSksIGZ1bmN0aW9ucywgcHJvZ3JhbSBjbGFzcyBpbnN0YW5jZXMsIGFuZCBzdXBwb3J0ZWQgbmF0aXZlIGhhbmRsZXMgY29udmVydCBpbnRvICd1bmtub3duJyBzbG90czsgZnVuY3Rpb25zLCBleGFjdC1jbGFzcyByb3VuZCB0cmlwcywgYW5kIGhhbmRsZXMgcHJlc2VydmUgaWRlbnRpdHksIHdoaWxlIHRoaXMgdmFsdWUncyB0eXBlIGhhcyBubyBkeW5hbWljIHJlcHJlc2VudGF0aW9uIHlldAoKMSBlcnJvci4K"
+}

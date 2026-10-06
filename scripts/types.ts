@@ -35,12 +35,17 @@ export interface Provenance {
   scriptcPrintedCommit: string | null; scriptcReleaseTag: string; scriptcReleaseCommit: string;
   hostTriple: string; platform: string; arch: string; kernel: string;
   toolchainPins: unknown; lockfileSha256: string; effectPackageJsonSha256: string;
-  cliSha256: string | null; commands: Record<string, Run>;
+  cliSha256: string | null; executableHashes?: Record<string, string | null>; commands: Record<string, Run>;
 }
 export interface MapReport {
   schemaVersion: 1; partial?: boolean; generatedAt: string; provenance: Provenance;
   options: { compileTimeoutMs: number; coverageTimeoutMs: number; jobs: number | null };
   inventory: unknown; cases: CaseResult[]; summary: Record<string, unknown>;
+}
+export interface MapSession {
+  schemaVersion: 1; provenance: Provenance; options: MapReport['options'];
+  cacheIdentity: string; manifestSha256: string; caseIds: string[];
+  reportPath: string; partial: boolean; shardIndex: number; shardTotal: number;
 }
 export interface Differential {
   caseId: string; module: string; family: string; entrypoint: string; tier: Tier;

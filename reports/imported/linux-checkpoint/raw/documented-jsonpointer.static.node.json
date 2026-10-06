@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-strip-types",
+    "cases/documented-jsonpointer.ts"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 212.772,
+  "maxRssKb": null,
+  "stdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
+  "stderr": "",
+  "stdoutBase64": "WyJhfjFiIiwiY34wZCIsInBhdGh+MXRvfjBrZXkiXQo=",
+  "stderrBase64": ""
+}

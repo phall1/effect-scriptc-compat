@@ -1,0 +1,10 @@
+scriptc coverage /workspace/shared/effect-scriptc-compat/cases/documented-boolean.ts
+
+  statements analyzed   158
+  compile statically    156  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  blockers:
+      ×2  'number' values where 'string' is expected  SC1090

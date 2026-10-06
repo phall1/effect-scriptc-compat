@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/shared/effect-scriptc-compat/bin/module-primarykey"
+  ],
+  "cwd": "/workspace/shared/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10.965,
+  "maxRssKb": null,
+  "stdout": "product-42\n",
+  "stderr": "",
+  "stdoutBase64": "cHJvZHVjdC00Mgo=",
+  "stderrBase64": ""
+}
