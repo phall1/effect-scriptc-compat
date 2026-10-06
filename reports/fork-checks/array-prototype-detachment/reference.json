@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "-i",
+    "HOME=/Users/phall",
+    "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin",
+    "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+    "SCRIPTC_LINKER=/usr/bin/clang",
+    "SCRIPTC_CACHE_DIR=/var/folders/6k/_cy0x5fn1c53gx23j8s3_mnm0000gn/T/effect-parent-prototype-jGkbqx/cache",
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "/Users/phall/workspace/effect-scriptc-compat/reports/fork-checks/array-prototype-detachment/repro.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 72.363,
+  "maxRssKb": null,
+  "stdout": "null false true\n",
+  "stderr": "",
+  "stdoutBase64": "bnVsbCBmYWxzZSB0cnVlCg==",
+  "stderrBase64": ""
+}

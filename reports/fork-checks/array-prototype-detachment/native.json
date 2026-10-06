@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "-i",
+    "HOME=/Users/phall",
+    "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin",
+    "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+    "SCRIPTC_LINKER=/usr/bin/clang",
+    "SCRIPTC_CACHE_DIR=/var/folders/6k/_cy0x5fn1c53gx23j8s3_mnm0000gn/T/effect-parent-prototype-jGkbqx/cache",
+    "/var/folders/6k/_cy0x5fn1c53gx23j8s3_mnm0000gn/T/effect-parent-prototype-jGkbqx/program"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 47.73,
+  "maxRssKb": null,
+  "stdout": "null true true\n",
+  "stderr": "",
+  "stdoutBase64": "bnVsbCB0cnVlIHRydWUK",
+  "stderrBase64": ""
+}

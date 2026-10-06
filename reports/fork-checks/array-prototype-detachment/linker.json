@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "-i",
+    "HOME=/Users/phall",
+    "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin",
+    "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+    "SCRIPTC_LINKER=/usr/bin/clang",
+    "SCRIPTC_CACHE_DIR=/var/folders/6k/_cy0x5fn1c53gx23j8s3_mnm0000gn/T/effect-parent-prototype-jGkbqx/cache",
+    "/usr/bin/clang",
+    "--version"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 16.305,
+  "maxRssKb": null,
+  "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "stderr": "",
+  "stdoutBase64": "QXBwbGUgY2xhbmcgdmVyc2lvbiAyMS4wLjAgKGNsYW5nLTIxMDAuMy4zNC4yKQpUYXJnZXQ6IGFybTY0LWFwcGxlLWRhcndpbjI3LjAuMApUaHJlYWQgbW9kZWw6IHBvc2l4Ckluc3RhbGxlZERpcjogL0FwcGxpY2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvRGV2ZWxvcGVyL1Rvb2xjaGFpbnMvWGNvZGVEZWZhdWx0LnhjdG9vbGNoYWluL3Vzci9iaW4K",
+  "stderrBase64": ""
+}
