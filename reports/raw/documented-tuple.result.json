@@ -1,0 +1,121 @@
+{
+  "id": "documented-tuple",
+  "module": "Tuple",
+  "entrypoint": "effect/Tuple",
+  "family": "Tuple",
+  "file": "cases/documented-tuple.ts",
+  "status": "ready",
+  "api": [
+    "Tuple.make"
+  ],
+  "expectedStdout": "[[10,20,\"red\"]]\n",
+  "declaration": "node_modules/effect/dist/Tuple.d.ts",
+  "declarationSha256": "5f0e474d95af7d63a6d635a23f05ac8e4cbe06c562cc75c868cef60097e045a2",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "681a607697202cc23b714042ae9d620e2bb6a1dbf1427a0dc514dd98a2dfd685",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-tuple.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 238.928,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-tuple.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 552.859,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-tuple.ts\n\n  statements analyzed   171\n  compile statically    171  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXR1cGxlLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxNzEKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTcxICAoMTAwJSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBmdWxseSBzdGF0aWMg4oCUIHRoaXMgcHJvZ3JhbSBoYXMgbm8gZHluYW1pYyByZW1haW5kZXIuCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 171,
+        "static": 171,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-tuple.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-tuple"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 663.209,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-tuple\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtdHVwbGUK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-tuple",
+    "binarySize": 334208,
+    "binarySha256": "bd2e22d9fd21d9c0db872bfd81640bd0d302501a97254b3b8630f91bbfcc4bb2"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "namespace-cli-completions",
+  "module": "cli/Completions",
+  "entrypoint": "effect/cli/Completions",
+  "family": "cli/Completions",
+  "file": "cases/namespace-cli-completions.ts",
+  "status": "ready",
+  "api": [
+    "generate"
+  ],
+  "expectedStdout": "[true,true,true,true]\n",
+  "declaration": "node_modules/effect/dist/cli/Completions.d.ts",
+  "declarationSha256": "6ac8d5626ab2d573af7f8440e600652ab2821a754b169087e19e233b37e18ee7",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "12c39a3916ddf78398ce6c2d4438762e6b8bd76dc95a18b9de82327bb174b7c0",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-cli-completions.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 216.772,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-cli-completions.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 996.414,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-cli-completions.ts\n\n  statements analyzed   509\n  compile statically    509  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtY2xpLWNvbXBsZXRpb25zLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA1MDkKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNTA5ICAoMTAwJSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBmdWxseSBzdGF0aWMg4oCUIHRoaXMgcHJvZ3JhbSBoYXMgbm8gZHluYW1pYyByZW1haW5kZXIuCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 509,
+        "static": 509,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-cli-completions.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-cli-completions"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1777.018,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-cli-completions\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1jbGktY29tcGxldGlvbnMK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-cli-completions",
+    "binarySize": 501736,
+    "binarySha256": "582e3af346eb3a05d4ed9aea4ba93a670cc13555623540f9e38fb04ba9db8f78"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-ordering.ts",
+    "--npm-static=effect",
+    "--dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 605.286,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-ordering.ts\n\n  statements analyzed   75\n  compile statically    71  (94%)\n  compile dynamically   1  (1%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×2  values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')  SC2001\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLW9yZGVyaW5nLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA3NQogIGNvbXBpbGUgc3RhdGljYWxseSAgICA3MSAgKDk0JSkKICBjb21waWxlIGR5bmFtaWNhbGx5ICAgMSAgKDElKSAoaXNsYW5kIHNpdGVzIOKAlCB0aGUgZW1iZWRkZWQgZW5naW5lIHJ1bnMgdGhlbSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBibG9ja2VyczoKICAgICAgw5cyICB2YWx1ZXMgb2YgdHlwZSAnKGE6IG51bWJlciwgYjogbnVtYmVyKSA9PiBPcmRlcmluZy5PcmRlcmluZycgY2Fubm90IGJlIGNvbXBpbGVkIHlldCAoc3VwcG9ydGVkOiBudW1iZXIsIHN0cmluZywgYm9vbGVhbiwgYXJyYXlzLCBNYXBzLCBTZXRzLCBSZWdFeHAsIHJlYWQtb25seSBEYXRlIHZhbHVlcywgZnVuY3Rpb25zLCBjbGFzc2VzLCByZWNvcmRzLCB1bmlvbnMgb2YgdGhvc2UsIGFuZCAndW5rbm93bicpICBTQzIwMDEK",
+  "stderrBase64": ""
+}

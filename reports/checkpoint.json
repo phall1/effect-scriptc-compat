@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T01:00:41.407Z",
+  "generatedAt": "2026-10-06T01:49:24.890Z",
   "status": "partial",
   "reportPath": "reports/coverage-map.json",
   "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
@@ -7,34 +7,39 @@
     "cases": 456,
     "modules": 414,
     "ready": 404,
-    "completed": 55,
-    "pending": 349,
+    "completed": 323,
+    "pending": 81,
     "caseTiers": {
-      "static": 7,
-      "deferred": 6,
+      "static": 26,
+      "deferred": 36,
       "dynamic-fallback": 0,
-      "rejected": 42
+      "rejected": 261
     },
     "skippedNeedsIo": 14,
     "uncovered": 38,
     "moduleTiers": {
-      "static": 7,
-      "deferred": 6,
+      "static": 26,
+      "deferred": 34,
       "dynamic-fallback": 0,
-      "rejected": 38,
-      "pending": 313,
+      "rejected": 240,
+      "pending": 64,
       "uncovered": 38,
       "skipped-needs-io": 12
     },
     "scCodesByCaseFrequency": {
-      "SC3004": 39,
-      "SC1090": 9,
-      "SC2020": 8,
-      "SC1043": 6,
+      "SC3004": 254,
+      "SC1090": 39,
+      "SC2020": 37,
+      "SC1043": 30,
+      "SC2004": 4,
+      "SC1101": 3,
+      "SC1100": 3,
+      "SC2011": 2,
+      "SC1013": 2,
+      "SC2012": 2,
       "SC2002": 1,
-      "SC1101": 1,
-      "SC1100": 1,
-      "SC1080": 1
+      "SC1080": 1,
+      "SC2001": 1
     }
   },
   "executionContext": "Completed exact-source/toolchain records only; pending cases are unmeasured."

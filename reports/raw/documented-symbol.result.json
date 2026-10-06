@@ -1,0 +1,122 @@
+{
+  "id": "documented-symbol",
+  "module": "Symbol",
+  "entrypoint": "effect/Symbol",
+  "family": "Symbol",
+  "file": "cases/documented-symbol.ts",
+  "status": "ready",
+  "api": [
+    "Symbol.isSymbol",
+    "Symbol.for"
+  ],
+  "expectedStdout": "[true,false]\n",
+  "declaration": "node_modules/effect/dist/Symbol.d.ts",
+  "declarationSha256": "5a93bd5426a0955182607cccaf10bb48a994dc1602cc9e7345cc1a0dfc4c26d5",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "3b280c4a62c60f1bb32e1db73c95c6821d397242405279260bc18a1a4889c292",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-symbol.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 510.562,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-symbol.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1095.475,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-symbol.ts\n\n  statements analyzed   61\n  compile statically    61  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXN5bWJvbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNjEKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNjEgICgxMDAlKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGZ1bGx5IHN0YXRpYyDigJQgdGhpcyBwcm9ncmFtIGhhcyBubyBkeW5hbWljIHJlbWFpbmRlci4K",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 61,
+        "static": 61,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-symbol.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-symbol"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 654.168,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-symbol\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtc3ltYm9sCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-symbol",
+    "binarySize": 315264,
+    "binarySha256": "db4884e38c0f8c33ddc5fe3ab998c8de2790c97caae3e1f05f2df702950ae6b0"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "id": "namespace-net-netaddress",
+  "module": "net/NetAddress",
+  "entrypoint": "effect/net/NetAddress",
+  "family": "net/NetAddress",
+  "file": "cases/namespace-net-netaddress.ts",
+  "status": "ready",
+  "api": [
+    "NetAddress.ipFromStringUnsafe"
+  ],
+  "expectedStdout": "[\"192.168.1.7\",true,\"256\",\"192.168.1.7/24\"]\n",
+  "declaration": "node_modules/effect/dist/net/NetAddress.d.ts",
+  "declarationSha256": "1c3cbb9f4c6e8e984f959383880647a791b1b58d964825f43df7ca0b2f10ceb1",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "c6107d39b664a9465e05762381673883ca28133e6ef35989477fd90b5d2521ad",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-net-netaddress.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 262.04,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-net-netaddress.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1741.134,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-net-netaddress.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-net-netaddress"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1776.558,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-net-netaddress.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbmFtZXNwYWNlLW5ldC1uZXRhZGRyZXNzLnRzOjE6MSAtIGVycm9yIFNDMzAwNDogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkKCjEgZXJyb3IuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-net-netaddress.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-net-netaddress.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1798.093,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-net-netaddress.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/namespace-net-netaddress.dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1902.137,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-net-netaddress.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbmFtZXNwYWNlLW5ldC1uZXRhZGRyZXNzLnRzOjE6MSAtIGVycm9yIFNDMzAwNDogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkKCjEgZXJyb3IuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-net-netaddress.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-net-netaddress.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; partial counts cannot establish static compatibility"
+  ]
+}

@@ -1,0 +1,9 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--multipartparser--internal--contenttype.ts
+
+  statements analyzed   34
+  compile statically    34  (100%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  fully static — this program has no dynamic remainder.

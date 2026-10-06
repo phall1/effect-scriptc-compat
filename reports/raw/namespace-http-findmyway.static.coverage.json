@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/namespace-http-findmyway.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 992.085,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-findmyway.ts\n\n  statements analyzed   636\n  compile statically    635  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtaHR0cC1maW5kbXl3YXkudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDYzNgogIGNvbXBpbGUgc3RhdGljYWxseSAgICA2MzUgICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgICcuc3BsaXQoKScgb24gYSAnbTEuUGFyZW50Tm9kZScgc2VwYXJhdG9yIChwYXNzIGEgc3RyaW5nLCBvciBhIHJlZ2V4IGxpdGVyYWwpIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdjcmVhdGVTdGF0aWNDaGlsZCcgd2l0aCAodW5rbm93bikpICBTQzEwOTAKCg==",
+  "stderrBase64": ""
+}

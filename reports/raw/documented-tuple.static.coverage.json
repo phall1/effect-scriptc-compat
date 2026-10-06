@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-tuple.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 552.859,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-tuple.ts\n\n  statements analyzed   171\n  compile statically    171  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXR1cGxlLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxNzEKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTcxICAoMTAwJSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBmdWxseSBzdGF0aWMg4oCUIHRoaXMgcHJvZ3JhbSBoYXMgbm8gZHluYW1pYyByZW1haW5kZXIuCg==",
+  "stderrBase64": ""
+}

@@ -1,0 +1,8 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/hashmap-round-trip.ts:4:69 - error SC1090: method calls like 'a.localeCompare' is not supported yet
+
+  3 | const values = HashMap.set(HashMap.fromIterable([["a", 1], ["b", 2]]), "c", 3)
+  4 | console.log(`hashmap:${HashMap.toEntries(values).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => `${k}:${v}`).join(",")}`)
+    |                                                                     ^~~~~~~~~~~~~~~~~~
+  5 | 
+
+1 error.

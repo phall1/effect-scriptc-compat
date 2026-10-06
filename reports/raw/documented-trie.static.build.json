@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/documented-trie.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/documented-trie"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10700.127,
+  "maxRssKb": null,
+  "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-trie\n",
+  "stderr": "",
+  "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtdHJpZQo=",
+  "stderrBase64": ""
+}

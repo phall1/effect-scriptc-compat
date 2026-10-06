@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/module-http--internal--mimetypes.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-http--internal--mimetypes"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 7051.962,
+  "maxRssKb": null,
+  "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/module-http--internal--mimetypes\n",
+  "stderr": "",
+  "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL21vZHVsZS1odHRwLS1pbnRlcm5hbC0tbWltZXR5cGVzCg==",
+  "stderrBase64": ""
+}

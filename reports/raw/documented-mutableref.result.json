@@ -1,0 +1,140 @@
+{
+  "id": "documented-mutableref",
+  "module": "MutableRef",
+  "entrypoint": "effect/MutableRef",
+  "family": "MutableRef",
+  "file": "cases/documented-mutableref.ts",
+  "status": "ready",
+  "api": [
+    "MutableRef.MutableRef",
+    "MutableRef.make",
+    "MutableRef.get"
+  ],
+  "expectedStdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
+  "declaration": "node_modules/effect/dist/MutableRef.d.ts",
+  "declarationSha256": "357f8eac8759da206331043fbd0f743aa4539c55a2c285e4d61a1ffce2385822",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "ab88fbd394ffb00019c6b8341a95744f30e6c0c84430fe95dcff3fc4ddad4b4b",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-mutableref.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 236.88,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-mutableref.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2135.304,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-mutableref.ts\n\n  statements analyzed   838\n  compile statically    837  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLW11dGFibGVyZWYudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDgzOAogIGNvbXBpbGUgc3RhdGljYWxseSAgICA4MzcgICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgICdPYmplY3QuZGVmaW5lUHJvcGVydHknIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnYXNzaWduUHJvcGVydHknIHdpdGggKG0xMy4lY3gxMjIwMC5CYXNlLCB1bmtub3duLCB1bmtub3duKSkgIFNDMjAyMAoK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 838,
+        "static": 837,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2020",
+          "message": "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-mutableref.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-mutableref"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 4767.22,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-mutableref\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtbXV0YWJsZXJlZgo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-mutableref",
+    "binarySize": 967480,
+    "binarySha256": "fe3c8fad96dabd67d1900b39ffc698ef7d5db42a249b77cd8e354fc5adcbb802"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

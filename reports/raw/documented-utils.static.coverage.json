@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-utils.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 428.912,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-utils.ts\n\n  statements analyzed   13\n  compile statically    13  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXV0aWxzLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxMwogIGNvbXBpbGUgc3RhdGljYWxseSAgICAxMyAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+  "stderrBase64": ""
+}

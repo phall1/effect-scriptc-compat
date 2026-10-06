@@ -1,0 +1,211 @@
+{
+  "id": "documented-scope",
+  "module": "Scope",
+  "entrypoint": "effect/Scope",
+  "family": "Scope",
+  "file": "cases/documented-scope.ts",
+  "status": "ready",
+  "api": [
+    "Effect.gen",
+    "Scope.make",
+    "Scope.close",
+    "Exit.void",
+    "Effect.runSync"
+  ],
+  "expectedStdout": "[[[\"sequential\",\"Empty\"],\"Closed\"]]\n",
+  "declaration": "node_modules/effect/dist/Scope.d.ts",
+  "declarationSha256": "388a5c527ab6bf676056498ee2669507c70bd3a1f9a72ab95543ba9d7dd82835",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "34870d6faf32eb7114d310097e684c748ce163d8c030609a546ac98376873771",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-scope.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 275.962,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-scope.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 22816.149,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-scope.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-scope"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 21114.925,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-scope.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1zY29wZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-scope.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-scope.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 28652.417,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-scope.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-scope.dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 28120.304,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-scope.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1zY29wZS50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-scope.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/cases/documented-scope.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; partial counts cannot establish static compatibility"
+  ]
+}

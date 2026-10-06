@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+    "--experimental-strip-types",
+    "reports/triage/import-effect.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 89.329,
+  "maxRssKb": null,
+  "stdout": "imported\n",
+  "stderr": "",
+  "stdoutBase64": "aW1wb3J0ZWQK",
+  "stderrBase64": ""
+}

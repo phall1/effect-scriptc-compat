@@ -1,0 +1,207 @@
+{
+  "id": "namespace-encoding-ndjson",
+  "module": "encoding/Ndjson",
+  "entrypoint": "effect/encoding/Ndjson",
+  "family": "encoding/Ndjson",
+  "file": "cases/namespace-encoding-ndjson.ts",
+  "status": "ready",
+  "api": [
+    "encodeString",
+    "decodeString"
+  ],
+  "expectedStdout": "[{\"n\":1},{\"n\":2}]\n",
+  "declaration": "node_modules/effect/dist/encoding/Ndjson.d.ts",
+  "declarationSha256": "eb3711bc12cb931f6076417dab048cef1d8a283261cad1d7f37997615de53c0e",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "488ccaf827be0494d03642129a3d104ae1ea2f74f1765bdc80e653ba541205f4",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-encoding-ndjson.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 286.441,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-encoding-ndjson.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 18185.982,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: null is not representable in the target union (a value narrowed or asserted past it still held it)\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogbnVsbCBpcyBub3QgcmVwcmVzZW50YWJsZSBpbiB0aGUgdGFyZ2V0IHVuaW9uIChhIHZhbHVlIG5hcnJvd2VkIG9yIGFzc2VydGVkIHBhc3QgaXQgc3RpbGwgaGVsZCBpdCkK"
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-encoding-ndjson.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-encoding-ndjson"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 17914.085,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ndjson.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbmFtZXNwYWNlLWVuY29kaW5nLW5kanNvbi50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "null is not representable in the target union (a value narrowed or asserted past it still held it)",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ndjson.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-encoding-ndjson.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 14884.114,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "scriptc: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n",
+      "stdoutBase64": "",
+      "stderrBase64": "c2NyaXB0YzogZXhwZWN0ZWQgbnVsbCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCBhdCAkLnZhbHVlLCBnb3QgdW5kZWZpbmVkCg=="
+    },
+    "parsedCoverage": {
+      "parsed": false,
+      "counts": {
+        "total": null,
+        "static": null,
+        "dynamic": null,
+        "unsupported": null
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "Coverage command failed; partial counts cannot establish static compatibility"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-encoding-ndjson.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/namespace-encoding-ndjson.dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 14992.313,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ndjson.ts:1:1 - error SC3004: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbmFtZXNwYWNlLWVuY29kaW5nLW5kanNvbi50czoxOjEgLSBlcnJvciBTQzMwMDQ6IGV4cGVjdGVkIG51bGwgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgfCBvYmplY3QgYXQgJC52YWx1ZSwgZ290IHVuZGVmaW5lZAoKMSBlcnJvci4K"
+    },
+    "diagnostics": [
+      {
+        "code": "SC3004",
+        "message": "expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ndjson.ts:1:1"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC3004"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ndjson.ts:1:1"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "Coverage command failed; partial counts cannot establish static compatibility"
+  ]
+}

@@ -1,0 +1,11 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-mutableref.ts
+
+  statements analyzed   838
+  compile statically    837  (99%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020
+

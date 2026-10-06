@@ -1,0 +1,230 @@
+{
+  "id": "documented-regexp",
+  "module": "RegExp",
+  "entrypoint": "effect/RegExp",
+  "family": "RegExp",
+  "file": "cases/documented-regexp.ts",
+  "status": "ready",
+  "api": [
+    "RegExp.RegExp"
+  ],
+  "expectedStdout": "[{},true,false]\n",
+  "declaration": "node_modules/effect/dist/RegExp.d.ts",
+  "declarationSha256": "764d803bd2755e629af51f94c2cbdba197135bdfce34ed3a3864bb398c5143b7",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "5c910340d945c50ae90968b8ce94046281be1ec874ec48e5e9734ba42da9d14d",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-regexp.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 217.911,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "rejected",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-regexp.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 322.321,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts\n\n  statements analyzed   65\n  compile statically    64  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×1  constructing values other than classes declared in the program  SC1090\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXJlZ2V4cC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNjUKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNjQgICg5OCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gIFNDMTA5MAo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 65,
+        "static": 64,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×1  constructing values other than classes declared in the program  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [],
+      "notes": []
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-regexp.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-regexp"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 325.005,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17 - error SC1090: constructing values other than classes declared in the program is not supported yet\n\n  5 | \n  6 | const pattern = new RegExp.RegExp(\"hello\", \"i\")\n    |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  7 | __compatObserved.push(pattern)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1yZWdleHAudHM6NjoxNyAtIGVycm9yIFNDMTA5MDogY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBjb25zdCBwYXR0ZXJuID0gbmV3IFJlZ0V4cC5SZWdFeHAoImhlbGxvIiwgImkiKQogICAgfCAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2gocGF0dGVybikKCjEgZXJyb3IuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC1090",
+        "message": "constructing values other than classes declared in the program is not supported yet",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "dynamicAttempt": {
+    "mode": "dynamic",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-regexp.ts",
+        "--npm-static=effect",
+        "--dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 321.815,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts\n\n  statements analyzed   65\n  compile statically    62  (95%)\n  compile dynamically   0  (0%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'RegExpConstructor' is part of the standard library types but has no scriptc lowering yet  SC2020\n\n  blockers:\n      ×1  constructing values other than classes declared in the program  SC1090\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXJlZ2V4cC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNjUKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNjIgICg5NSUpCiAgY29tcGlsZSBkeW5hbWljYWxseSAgIDAgICgwJSkgKGlzbGFuZCBzaXRlcyDigJQgdGhlIGVtYmVkZGVkIGVuZ2luZSBydW5zIHRoZW0pCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgICdSZWdFeHBDb25zdHJ1Y3RvcicgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0ICBTQzIwMjAKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gIFNDMTA5MAo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 65,
+        "static": 62,
+        "dynamic": 0,
+        "unsupported": 3
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2020",
+          "message": "×1  'RegExpConstructor' is part of the standard library types but has no scriptc lowering yet  SC2020",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×1  constructing values other than classes declared in the program  SC1090",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  'RegExpConstructor' is part of the standard library types but has no scriptc lowering yet  SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-regexp.ts",
+        "--npm-static=effect",
+        "--dynamic",
+        "-o",
+        "bin/documented-regexp.dynamic"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 1,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 459.695,
+      "maxRssKb": null,
+      "stdout": "",
+      "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17 - error SC1090: constructing values other than classes declared in the program is not supported yet\n\n  5 | \n  6 | const pattern = new RegExp.RegExp(\"hello\", \"i\")\n    |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  7 | __compatObserved.push(pattern)\n\n1 error.\n",
+      "stdoutBase64": "",
+      "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1yZWdleHAudHM6NjoxNyAtIGVycm9yIFNDMTA5MDogY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBjb25zdCBwYXR0ZXJuID0gbmV3IFJlZ0V4cC5SZWdFeHAoImhlbGxvIiwgImkiKQogICAgfCAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2gocGF0dGVybikKCjEgZXJyb3IuCg=="
+    },
+    "diagnostics": [
+      {
+        "code": "SC1090",
+        "message": "constructing values other than classes declared in the program is not supported yet",
+        "sourceLocations": [
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17"
+        ],
+        "rewriteHints": []
+      }
+    ],
+    "binary": null,
+    "binarySize": null,
+    "binarySha256": null
+  },
+  "scCodes": [
+    "SC1090",
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  'RegExpConstructor' is part of the standard library types but has no scriptc lowering yet  SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

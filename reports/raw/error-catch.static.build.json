@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/error-catch.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/error-catch"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 11102.449,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/error-catch.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZXJyb3ItY2F0Y2gudHM6MToxIC0gZXJyb3IgU0MzMDA0OiBudWxsIGlzIG5vdCByZXByZXNlbnRhYmxlIGluIHRoZSB0YXJnZXQgdW5pb24gKGEgdmFsdWUgbmFycm93ZWQgb3IgYXNzZXJ0ZWQgcGFzdCBpdCBzdGlsbCBoZWxkIGl0KQoKMSBlcnJvci4K"
+}

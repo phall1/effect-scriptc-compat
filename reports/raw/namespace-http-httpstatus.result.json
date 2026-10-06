@@ -1,0 +1,120 @@
+{
+  "id": "namespace-http-httpstatus",
+  "module": "http/HttpStatus",
+  "entrypoint": "effect/http/HttpStatus",
+  "family": "http/HttpStatus",
+  "file": "cases/namespace-http-httpstatus.ts",
+  "status": "ready",
+  "api": [
+    "fromLiteral"
+  ],
+  "expectedStdout": "[200,404]\n",
+  "declaration": "node_modules/effect/dist/http/HttpStatus.d.ts",
+  "declarationSha256": "466dd42e246333f24f3ce065ae70b35459ae3c7ab87b6c87b4c7d89ea1797706",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "f102db2590df476732f5156637badb32207f51203556bcc08a708ae67e33e1ea",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-http-httpstatus.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 213.551,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-http-httpstatus.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 209.81,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-httpstatus.ts\n\n  statements analyzed   3\n  compile statically    3  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtaHR0cC1odHRwc3RhdHVzLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAzCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDMgICgxMDAlKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGZ1bGx5IHN0YXRpYyDigJQgdGhpcyBwcm9ncmFtIGhhcyBubyBkeW5hbWljIHJlbWFpbmRlci4K",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 3,
+        "static": 3,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-http-httpstatus.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-http-httpstatus"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 918.426,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-http-httpstatus\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1odHRwLWh0dHBzdGF0dXMK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-http-httpstatus",
+    "binarySize": 238088,
+    "binarySha256": "89529d8813ec2d3cd6e03b4d720686a29f020d9c2cb9e766ad9ec6d81a9c9d9a"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

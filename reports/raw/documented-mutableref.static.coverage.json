@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-mutableref.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 2135.304,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-mutableref.ts\n\n  statements analyzed   838\n  compile statically    837  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m13.%cx12200.Base, unknown, unknown))  SC2020\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLW11dGFibGVyZWYudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDgzOAogIGNvbXBpbGUgc3RhdGljYWxseSAgICA4MzcgICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgICdPYmplY3QuZGVmaW5lUHJvcGVydHknIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnYXNzaWduUHJvcGVydHknIHdpdGggKG0xMy4lY3gxMjIwMC5CYXNlLCB1bmtub3duLCB1bmtub3duKSkgIFNDMjAyMAoK",
+  "stderrBase64": ""
+}

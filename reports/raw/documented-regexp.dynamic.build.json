@@ -1,0 +1,22 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/documented-regexp.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-regexp.dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 459.695,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17 - error SC1090: constructing values other than classes declared in the program is not supported yet\n\n  5 | \n  6 | const pattern = new RegExp.RegExp(\"hello\", \"i\")\n    |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  7 | __compatObserved.push(pattern)\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1yZWdleHAudHM6NjoxNyAtIGVycm9yIFNDMTA5MDogY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gaXMgbm90IHN1cHBvcnRlZCB5ZXQKCiAgNSB8IAogIDYgfCBjb25zdCBwYXR0ZXJuID0gbmV3IFJlZ0V4cC5SZWdFeHAoImhlbGxvIiwgImkiKQogICAgfCAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2gocGF0dGVybikKCjEgZXJyb3IuCg=="
+}

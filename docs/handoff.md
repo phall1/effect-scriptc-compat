@@ -9,9 +9,13 @@
 - Independent review's three P1 issues are closed. Its remaining two input-validation P2 findings were fixed and re-tested before commit.
 - Historical Linux and macOS smoke evidence are separate under `reports/imported/`; never relabel them as a completed current-host map.
 
-## Work currently running
+## Bulk work paused at the user's cost objection
 
-The full host-local pipeline runs in **phux worker `@52`**, alias `native-map`, cwd this repository. The local launcher is `.work/run-native.sh`.
+The full host-local pipeline is **frozen in phux worker `@52`**, alias `native-map`, cwd this repository. The completed checkpoint is **323/404 cases**: 26 static, 36 deferred, 261 rejected, 81 pending. There is no active broad reduction. `.work/native-status.json` records `map-paused`. Compiler children were inspected after freezing and were defunct; the parent process group remains stopped and can be deliberately resumed, but not automatically into exhaustive reductions.
+
+253 rejected cases share the same null/union SC3004 message. Focused persisted diagnostics in `reports/triage/` show the failure even with an unused `effect/Effect` import, and with `Effect.runSync(Effect.succeed(42))`; Node succeeds in both. Do not interpret this as hundreds of distinct API defects. See `reports/triage/README.md` for the bounded investigation and its limitations.
+
+Before pausing, the full host-local pipeline ran in **phux worker `@52`**, alias `native-map`, cwd this repository. The local launcher is `.work/run-native.sh`.
 
 It was started with a clean environment, not the shared terminal server's inherited developer shell:
 
@@ -44,11 +48,11 @@ The attempt to start Pi's built-in `monitor` failed before a run was created:
 
 > Pi Workflows durable state is incompatible. Back up and move state.sqlite with its -wal and -shm files, then start Pi Workflows to create a new state.sqlite database. The incompatible state was not changed.
 
-This is the **shared** `/Users/phall/.pi/agent/workflows/state.sqlite`, not repository-local state. It was left untouched: resetting it could discard unrelated workflow history/continuations. Operator approval is required before backup/reset of this shared database. The native pipeline remains running independently, but there is no active Monitor run and no automatic completion claim.
+This is the **shared** `/Users/phall/.pi/agent/workflows/state.sqlite`, not repository-local state. It was left untouched: resetting it could discard unrelated workflow history/continuations. Operator approval is required before backup/reset of this shared database. The native pipeline is now deliberately paused, with no active Monitor run or automatic completion claim.
 
 ## Next ready action
 
-1. Inspect `@52`, its process/phase and latest durable outputs; never infer liveness from this handoff.
-2. With approved shared workflow-state recovery, start one Monitor for the existing job (do not relaunch it). Otherwise inspect the existing job directly when this session is continued.
-3. At terminal state, verify full 404-case mapping, every built binary's valid differential baseline, per-signature repro outcomes, aggregate disagreements and final checks. Compiler refusals/mismatches are findings; unreproduced predicates must remain explicitly unverified.
+1. Preserve the paused checkpoint; inspect `@52` before any signal. Do not start a competing writer or automatically resume the broad map/reduction pipeline.
+2. Prefer bounded common-blocker triage and differential checks of the 62 built binaries. Select representative signatures deliberately; the API-family grouping otherwise repeats the same SC3004 reduction many times. Preserve all original evidence and explicitly partial/unverified outcomes.
+3. Only if the exhaustive sweep is deliberately continued, complete the remaining 81 cases and ensure every built binary has a valid differential baseline. Compiler refusals/mismatches are findings; unreproduced predicates remain explicitly unverified. Resetting shared workflow state still requires approval and does not fix compiler compatibility.
 4. Commit/push only intended completed evidence to the owned repo. `origin/main` advanced independently to `9b46de2` with an older handoff and corpus publication; local `main` was safely fast-forwarded to it without checking it out. It is not an ancestor of this branch. After compiler work, merge that history without losing the freshly generated inventory metadata (`cases/documented-cases.json`, `cases/public-exports.json`) or treating its old HANDOFF.md as current state. Do not switch/check out the older main while compilers read this checkout. No force push, upstream publication, hosted Actions dispatch, paid runners, releases or remote deletion. Clean task-created scratch only after results are preserved.

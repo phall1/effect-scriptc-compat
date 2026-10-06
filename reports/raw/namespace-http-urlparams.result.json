@@ -1,0 +1,191 @@
+{
+  "id": "namespace-http-urlparams",
+  "module": "http/UrlParams",
+  "entrypoint": "effect/http/UrlParams",
+  "family": "http/UrlParams",
+  "file": "cases/namespace-http-urlparams.ts",
+  "status": "ready",
+  "api": [
+    "fromInput",
+    "append",
+    "toString",
+    "getAll",
+    "remove",
+    "toRecord"
+  ],
+  "expectedStdout": "[\"q=a+b&page=1&q=second\",[\"a b\",\"second\"],{\"q\":[\"a b\",\"second\"]}]\n",
+  "declaration": "node_modules/effect/dist/http/UrlParams.d.ts",
+  "declarationSha256": "4f3e54ac7900448f953462c183222ae4ac42e2a62a361a003c0007ba916ae16f",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "ada90a77edb48da6a32f96a1f2e1827fbbd5ba2a5c84829859b01150bf0aeec5",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-http-urlparams.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 332.7,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-http-urlparams.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3237.903,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-urlparams.ts\n\n  statements analyzed   1341\n  compile statically    1338  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   9 sites (JS statements that throw their fence if executed)\n      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043\n      ×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090\n      ×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090\n      ×1  symbol-keyed property access outside class fields keyed by a stable module-level literal Symbol()/Symbol.for() (other static shapes have no symbol-keyed storage) is not supported yet (instantiating 'fromInputNested' with ({ page: string; q: string }))                                   SC1090\n      ×1  uses of 'entries' inherit the blocker on its declaration (instantiating 'fromInputNested' with ({ page: string; q: string }))                                                                                                                                                                 SC2004\n      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m19.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020\n      ×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020\n      ×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n      ×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtaHR0cC11cmxwYXJhbXMudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDEzNDEKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMTMzOCAgKDk5JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBkZWZlcnJlZCB0byBydW50aW1lICAgOSBzaXRlcyAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgIGNvbXBhcmluZyBub24tbnVtYmVyLCBub24tc3RyaW5nIHZhbHVlcyBhcmUgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ251bWJlcicgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwNDMKICAgICAgw5cxICAnc3RyaW5nJyB2YWx1ZXMgd2hlcmUgJ251bWJlcicgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ251bWJlcicgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luJyBvbiAnc3RyaW5nJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgIFNDMTA5MAogICAgICDDlzEgIHN5bWJvbC1rZXllZCBwcm9wZXJ0eSBhY2Nlc3Mgb3V0c2lkZSBjbGFzcyBmaWVsZHMga2V5ZWQgYnkgYSBzdGFibGUgbW9kdWxlLWxldmVsIGxpdGVyYWwgU3ltYm9sKCkvU3ltYm9sLmZvcigpIChvdGhlciBzdGF0aWMgc2hhcGVzIGhhdmUgbm8gc3ltYm9sLWtleWVkIHN0b3JhZ2UpIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdmcm9tSW5wdXROZXN0ZWQnIHdpdGggKHsgcGFnZTogc3RyaW5nOyBxOiBzdHJpbmcgfSkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKICAgICAgw5cxICB1c2VzIG9mICdlbnRyaWVzJyBpbmhlcml0IHRoZSBibG9ja2VyIG9uIGl0cyBkZWNsYXJhdGlvbiAoaW5zdGFudGlhdGluZyAnZnJvbUlucHV0TmVzdGVkJyB3aXRoICh7IHBhZ2U6IHN0cmluZzsgcTogc3RyaW5nIH0pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDA0CiAgICAgIMOXMSAgJ09iamVjdC5kZWZpbmVQcm9wZXJ0eScgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdhc3NpZ25Qcm9wZXJ0eScgd2l0aCAobTE5LiVjeDEyMjAwLkJhc2UsIHVua25vd24sIHVua25vd24pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICdzdHJpbmcudG9TdHJpbmcnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAnc3RyaW5nLmdldFRpbWUnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgJ3N0cmluZy50b0lTT1N0cmluZycgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAoK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 1341,
+        "static": 1338,
+        "dynamic": 0,
+        "unsupported": 3
+      },
+      "deferredSiteCount": 9,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1043",
+          "message": "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090\n×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090\n×1  symbol-keyed property access outside class fields keyed by a stable module-level literal Symbol()/Symbol.for() (other static shapes have no symbol-keyed storage) is not supported yet (instantiating 'fromInputNested' with ({ page: string; q: string }))                                   SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/UrlParams.js:95"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2004",
+          "message": "×1  uses of 'entries' inherit the blocker on its declaration (instantiating 'fromInputNested' with ({ page: string; q: string }))                                                                                                                                                                 SC2004",
+          "sourceLocations": [],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2020",
+          "message": "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m19.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020\n×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020\n×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043",
+        "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090",
+        "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090",
+        "×1  symbol-keyed property access outside class fields keyed by a stable module-level literal Symbol()/Symbol.for() (other static shapes have no symbol-keyed storage) is not supported yet (instantiating 'fromInputNested' with ({ page: string; q: string }))                                   SC1090",
+        "×1  uses of 'entries' inherit the blocker on its declaration (instantiating 'fromInputNested' with ({ page: string; q: string }))                                                                                                                                                                 SC2004",
+        "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m19.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020",
+        "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020",
+        "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+        "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   9 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-http-urlparams.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-http-urlparams"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 5730.753,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-http-urlparams\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1odHRwLXVybHBhcmFtcwo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-http-urlparams",
+    "binarySize": 1168456,
+    "binarySha256": "4a959ec71bc71fbd30d63beac7dc442b2c24dc208f521b4c79e21c0da6881434"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1043",
+    "SC1090",
+    "SC2004",
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/UrlParams.js:95",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043",
+    "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090",
+    "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090",
+    "×1  symbol-keyed property access outside class fields keyed by a stable module-level literal Symbol()/Symbol.for() (other static shapes have no symbol-keyed storage) is not supported yet (instantiating 'fromInputNested' with ({ page: string; q: string }))                                   SC1090",
+    "×1  uses of 'entries' inherit the blocker on its declaration (instantiating 'fromInputNested' with ({ page: string; q: string }))                                                                                                                                                                 SC2004",
+    "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m19.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020",
+    "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020",
+    "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+    "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   9 sites (JS statements that throw their fence if executed)"
+  ]
+}

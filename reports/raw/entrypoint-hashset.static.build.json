@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/entrypoint-hashset.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/entrypoint-hashset"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 9024.018,
+  "maxRssKb": null,
+  "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/entrypoint-hashset\n",
+  "stderr": "",
+  "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2VudHJ5cG9pbnQtaGFzaHNldAo=",
+  "stderrBase64": ""
+}

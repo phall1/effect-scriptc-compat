@@ -1,6 +1,6 @@
 # Effect × scriptc coverage map
 
-Generated: 2026-10-06T01:00:41.407Z · Partial: **true**
+Generated: 2026-10-06T01:49:24.890Z · Partial: **true**
 
 Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf4ac1f89) · Node **v24.19.0** · TypeScript **7.0.2** · aarch64-apple-darwin
 
@@ -13,34 +13,39 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
   "cases": 456,
   "modules": 414,
   "ready": 404,
-  "completed": 55,
-  "pending": 349,
+  "completed": 323,
+  "pending": 81,
   "caseTiers": {
-    "static": 7,
-    "deferred": 6,
+    "static": 26,
+    "deferred": 36,
     "dynamic-fallback": 0,
-    "rejected": 42
+    "rejected": 261
   },
   "skippedNeedsIo": 14,
   "uncovered": 38,
   "moduleTiers": {
-    "static": 7,
-    "deferred": 6,
+    "static": 26,
+    "deferred": 34,
     "dynamic-fallback": 0,
-    "rejected": 38,
-    "pending": 313,
+    "rejected": 240,
+    "pending": 64,
     "uncovered": 38,
     "skipped-needs-io": 12
   },
   "scCodesByCaseFrequency": {
-    "SC3004": 39,
-    "SC1090": 9,
-    "SC2020": 8,
-    "SC1043": 6,
+    "SC3004": 254,
+    "SC1090": 39,
+    "SC2020": 37,
+    "SC1043": 30,
+    "SC2004": 4,
+    "SC1101": 3,
+    "SC1100": 3,
+    "SC2011": 2,
+    "SC1013": 2,
+    "SC2012": 2,
     "SC2002": 1,
-    "SC1101": 1,
-    "SC1100": 1,
-    "SC1080": 1
+    "SC1080": 1,
+    "SC2001": 1
   }
 }
 ```
@@ -54,18 +59,18 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 | concurrency-for-each / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | concurrency-race / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | concurrency-timeout / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
-| effect-fail / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-fn / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-fn-untraced / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-gen / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-log / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-provide / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-run-promise / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-run-sync / effect | ready | not run | not run | — | 0/0 | — | — |
-| effect-succeed / effect | ready | not run | not run | — | 0/0 | — | — |
-| entrypoint-effect / effect/Effect | ready | not run | not run | — | 0/0 | — | — |
-| error-catch / effect | ready | not run | not run | — | 0/0 | — | — |
-| error-or-else / effect | ready | not run | not run | — | 0/0 | — | — |
+| effect-fail / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-fn / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-fn-untraced / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-gen / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-log / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-provide / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-run-promise / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-run-sync / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| effect-succeed / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| entrypoint-effect / effect/Effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| error-catch / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| error-or-else / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | resource-acquire-release / effect | ready | not run | not run | — | 0/0 | — | — |
 | resource-scoped-use / effect | ready | not run | not run | — | 0/0 | — | — |
 
@@ -74,7 +79,7 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
 | chunk-round-trip / effect | deferred | built | not run | 1496/0/1 | 7/0 | 1136800 | SC1043, SC1090, SC2020 |
-| entrypoint-chunk / effect/Chunk | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-chunk / effect/Chunk | deferred | built | not run | 1496/0/1 | 7/0 | 1136752 | SC1043, SC1090, SC2020 |
 
 ## ai/AiError
 
@@ -344,13 +349,13 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-http--httprouter / effect/http/HttpRouter | ready | not run | not run | — | 0/0 | — | — |
+| documented-http--httprouter / effect/http/HttpRouter | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpStaticServer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-http--httpstaticserver / effect/http/HttpStaticServer | ready | not run | not run | — | 0/0 | — | — |
+| documented-http--httpstaticserver / effect/http/HttpStaticServer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Inspectable
 
@@ -386,457 +391,457 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-latch / effect/Latch | ready | not run | not run | — | 0/0 | — | — |
+| documented-latch / effect/Latch | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## LayerMap
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-layermap / effect/LayerMap | ready | not run | not run | — | 0/0 | — | — |
+| documented-layermap / effect/LayerMap | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## LayerRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-layerref / effect/LayerRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-layerref / effect/LayerRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Logger
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-logger / effect/Logger | ready | not run | not run | — | 0/0 | — | — |
+| documented-logger / effect/Logger | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## LogLevel
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-loglevel / effect/LogLevel | ready | not run | not run | — | 0/0 | — | — |
+| documented-loglevel / effect/LogLevel | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ManagedRuntime
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-managedruntime / effect/ManagedRuntime | ready | not run | not run | — | 0/0 | — | — |
+| documented-managedruntime / effect/ManagedRuntime | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Match
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-match / effect/Match | ready | not run | not run | — | 0/0 | — | — |
+| documented-match / effect/Match | deferred | built | not run | 1204/0/1 | 7/0 | 1170992 | SC1043, SC1090, SC2020 |
 
 ## Metric
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-metric / effect/Metric | ready | not run | not run | — | 0/0 | — | — |
+| documented-metric / effect/Metric | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## MutableHashMap
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-mutablehashmap / effect/MutableHashMap | ready | not run | not run | — | 0/0 | — | — |
+| documented-mutablehashmap / effect/MutableHashMap | deferred | built | not run | 1013/0/1 | 7/0 | 1024136 | SC1043, SC1090, SC2020 |
 
 ## MutableHashSet
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-mutablehashset / effect/MutableHashSet | ready | not run | not run | — | 0/0 | — | — |
+| documented-mutablehashset / effect/MutableHashSet | deferred | built | not run | 1071/0/1 | 7/0 | 1042472 | SC1043, SC1090, SC2020 |
 
 ## MutableList
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-mutablelist / effect/MutableList | ready | not run | not run | — | 0/0 | — | — |
+| documented-mutablelist / effect/MutableList | deferred | built | not run | 1367/0/1 | 7/0 | 1100104 | SC1043, SC1090, SC2020 |
 
 ## MutableRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-mutableref / effect/MutableRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-mutableref / effect/MutableRef | deferred | built | not run | 837/0/1 | 1/0 | 967480 | SC2020 |
 
 ## Newtype
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-newtype / effect/Newtype | ready | not run | not run | — | 0/0 | — | — |
+| documented-newtype / effect/Newtype | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## NonEmptyIterable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-nonemptyiterable / effect/NonEmptyIterable | ready | not run | not run | — | 0/0 | — | — |
+| documented-nonemptyiterable / effect/NonEmptyIterable | rejected | refused | refused | 1503/0/2 | 7/0 | — | SC1043, SC1090, SC2020, SC3004 |
 
 ## observability/OtlpExporter
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-observability--otlpexporter / effect/observability/OtlpExporter | ready | not run | not run | — | 0/0 | — | — |
+| documented-observability--otlpexporter / effect/observability/OtlpExporter | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/PrometheusMetrics
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-observability--prometheusmetrics / effect/observability/PrometheusMetrics | ready | not run | not run | — | 0/0 | — | — |
+| documented-observability--prometheusmetrics / effect/observability/PrometheusMetrics | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Optic
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-optic / effect/Optic | ready | not run | not run | — | 0/0 | — | — |
+| documented-optic / effect/Optic | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Option
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-option / effect/Option | ready | not run | not run | — | 0/0 | — | — |
+| documented-option / effect/Option | deferred | built | not run | 971/0/1 | 7/0 | 1006912 | SC1043, SC1090, SC2020 |
 
 ## Order
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-order / effect/Order | ready | not run | not run | — | 0/0 | — | — |
+| documented-order / effect/Order | static | built | not run | 131/0/0 | 0/0 | 333904 | — |
 
 ## Ordering
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-ordering / effect/Ordering | ready | not run | not run | — | 0/0 | — | — |
+| documented-ordering / effect/Ordering | rejected | refused | refused | 73/0/2 | 0/0 | — | SC2011, SC2001 |
 
 ## Path
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-path / effect/Path | ready | not run | not run | — | 0/0 | — | — |
+| documented-path / effect/Path | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## persistence/RateLimiter
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-persistence--ratelimiter / effect/persistence/RateLimiter | ready | not run | not run | — | 0/0 | — | — |
+| documented-persistence--ratelimiter / effect/persistence/RateLimiter | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Pool
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-pool / effect/Pool | ready | not run | not run | — | 0/0 | — | — |
+| documented-pool / effect/Pool | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Predicate
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-predicate / effect/Predicate | ready | not run | not run | — | 0/0 | — | — |
+| documented-predicate / effect/Predicate | static | built | not run | 82/0/0 | 0/0 | 333032 | — |
 
 ## PubSub
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-pubsub / effect/PubSub | ready | not run | not run | — | 0/0 | — | — |
+| documented-pubsub / effect/PubSub | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Pull
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-pull / effect/Pull | ready | not run | not run | — | 0/0 | — | — |
+| documented-pull / effect/Pull | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Queue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-queue / effect/Queue | ready | not run | not run | — | 0/0 | — | — |
+| documented-queue / effect/Queue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## RcMap
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-rcmap / effect/RcMap | ready | not run | not run | — | 0/0 | — | — |
+| documented-rcmap / effect/RcMap | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## RcRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-rcref / effect/RcRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-rcref / effect/RcRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## reactivity/Atom
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-reactivity--atom / effect/reactivity/Atom | ready | not run | not run | — | 0/0 | — | — |
+| documented-reactivity--atom / effect/reactivity/Atom | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Record
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-record / effect/Record | ready | not run | not run | — | 0/0 | — | — |
+| documented-record / effect/Record | deferred | built | not run | 1042/0/1 | 7/0 | 1044128 | SC1043, SC1090, SC2020 |
 
 ## Redacted
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-redacted / effect/Redacted | ready | not run | not run | — | 0/0 | — | — |
+| documented-redacted / effect/Redacted | deferred | built | not run | 838/0/1 | 1/0 | 967568 | SC2020 |
 
 ## Reducer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-reducer / effect/Reducer | ready | not run | not run | — | 0/0 | — | — |
+| documented-reducer / effect/Reducer | static | built | not run | 9/0/0 | 0/0 | 296240 | — |
 
 ## Ref
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-ref / effect/Ref | ready | not run | not run | — | 0/0 | — | — |
+| documented-ref / effect/Ref | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## References
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-references / effect/References | ready | not run | not run | — | 0/0 | — | — |
+| documented-references / effect/References | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## RegExp
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-regexp / effect/RegExp | ready | not run | not run | — | 0/0 | — | — |
+| documented-regexp / effect/RegExp | rejected | refused | refused | 64/0/1 | 0/1 | — | SC1090, SC2020 |
 
 ## Request
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-request / effect/Request | ready | not run | not run | — | 0/0 | — | — |
+| documented-request / effect/Request | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## RequestResolver
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-requestresolver / effect/RequestResolver | ready | not run | not run | — | 0/0 | — | — |
+| documented-requestresolver / effect/RequestResolver | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Result
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-result / effect/Result | ready | not run | not run | — | 0/0 | — | — |
+| documented-result / effect/Result | deferred | built | not run | 916/0/1 | 7/0 | 1006048 | SC1043, SC1090, SC2020 |
 
 ## Runtime
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-runtime / effect/Runtime | ready | not run | not run | — | 0/0 | — | — |
+| documented-runtime / effect/Runtime | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaAST
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-schemaast / effect/SchemaAST | ready | not run | not run | — | 0/0 | — | — |
+| documented-schemaast / effect/SchemaAST | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaGetter
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-schemagetter / effect/SchemaGetter | ready | not run | not run | — | 0/0 | — | — |
+| documented-schemagetter / effect/SchemaGetter | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaIssue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-schemaissue / effect/SchemaIssue | ready | not run | not run | — | 0/0 | — | — |
+| documented-schemaissue / effect/SchemaIssue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaRepresentation
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-schemarepresentation / effect/SchemaRepresentation | ready | not run | not run | — | 0/0 | — | — |
+| documented-schemarepresentation / effect/SchemaRepresentation | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaTransformation
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-schematransformation / effect/SchemaTransformation | ready | not run | not run | — | 0/0 | — | — |
+| documented-schematransformation / effect/SchemaTransformation | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Scope
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-scope / effect/Scope | ready | not run | not run | — | 0/0 | — | — |
+| documented-scope / effect/Scope | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Semaphore
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-semaphore / effect/Semaphore | ready | not run | not run | — | 0/0 | — | — |
+| documented-semaphore / effect/Semaphore | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Sink
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-sink / effect/Sink | ready | not run | not run | — | 0/0 | — | — |
+| documented-sink / effect/Sink | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Struct
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-struct / effect/Struct | ready | not run | not run | — | 0/0 | — | — |
+| documented-struct / effect/Struct | static | built | not run | 170/0/0 | 0/0 | 368736 | — |
 
 ## SubscriptionRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-subscriptionref / effect/SubscriptionRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-subscriptionref / effect/SubscriptionRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Symbol
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-symbol / effect/Symbol | ready | not run | not run | — | 0/0 | — | — |
+| documented-symbol / effect/Symbol | static | built | not run | 61/0/0 | 0/0 | 315264 | — |
 
 ## testing/TestSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-testing--testschema / effect/testing/TestSchema | ready | not run | not run | — | 0/0 | — | — |
+| documented-testing--testschema / effect/testing/TestSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Tracer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-tracer / effect/Tracer | ready | not run | not run | — | 0/0 | — | — |
+| documented-tracer / effect/Tracer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Trie
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-trie / effect/Trie | ready | not run | not run | — | 0/0 | — | — |
+| documented-trie / effect/Trie | deferred | built | not run | 1332/0/1 | 7/0 | 1135072 | SC1043, SC1090, SC2020 |
 
 ## Tuple
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-tuple / effect/Tuple | ready | not run | not run | — | 0/0 | — | — |
+| documented-tuple / effect/Tuple | static | built | not run | 171/0/0 | 0/0 | 334208 | — |
 
 ## TxChunk
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txchunk / effect/TxChunk | ready | not run | not run | — | 0/0 | — | — |
+| documented-txchunk / effect/TxChunk | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxDeferred
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txdeferred / effect/TxDeferred | ready | not run | not run | — | 0/0 | — | — |
+| documented-txdeferred / effect/TxDeferred | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxHashMap
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txhashmap / effect/TxHashMap | ready | not run | not run | — | 0/0 | — | — |
+| documented-txhashmap / effect/TxHashMap | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxHashSet
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txhashset / effect/TxHashSet | ready | not run | not run | — | 0/0 | — | — |
+| documented-txhashset / effect/TxHashSet | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxPriorityQueue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txpriorityqueue / effect/TxPriorityQueue | ready | not run | not run | — | 0/0 | — | — |
+| documented-txpriorityqueue / effect/TxPriorityQueue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxPubSub
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txpubsub / effect/TxPubSub | ready | not run | not run | — | 0/0 | — | — |
+| documented-txpubsub / effect/TxPubSub | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxQueue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txqueue / effect/TxQueue | ready | not run | not run | — | 0/0 | — | — |
+| documented-txqueue / effect/TxQueue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxReentrantLock
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txreentrantlock / effect/TxReentrantLock | ready | not run | not run | — | 0/0 | — | — |
+| documented-txreentrantlock / effect/TxReentrantLock | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txref / effect/TxRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-txref / effect/TxRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxSemaphore
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txsemaphore / effect/TxSemaphore | ready | not run | not run | — | 0/0 | — | — |
+| documented-txsemaphore / effect/TxSemaphore | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## TxSubscriptionRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-txsubscriptionref / effect/TxSubscriptionRef | ready | not run | not run | — | 0/0 | — | — |
+| documented-txsubscriptionref / effect/TxSubscriptionRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Unify
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-unify / effect/Unify | ready | not run | not run | — | 0/0 | — | — |
+| documented-unify / effect/Unify | static | built | not run | 65/0/0 | 0/0 | 315776 | — |
 
 ## Utils
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-utils / effect/Utils | ready | not run | not run | — | 0/0 | — | — |
+| documented-utils / effect/Utils | static | built | not run | 13/0/0 | 0/0 | 297056 | — |
 
 ## workflow/DurableQueue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| documented-workflow--durablequeue / effect/workflow/DurableQueue | ready | not run | not run | — | 0/0 | — | — |
+| documented-workflow--durablequeue / effect/workflow/DurableQueue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Cause
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-cause / effect/Cause | ready | not run | not run | — | 0/0 | — | — |
-| error-cause / effect | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-cause / effect/Cause | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| error-cause / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Fiber
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-fiber / effect/Fiber | ready | not run | not run | — | 0/0 | — | — |
-| fiber-interrupt / effect | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-fiber / effect/Fiber | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| fiber-interrupt / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## HashMap
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-hashmap / effect/HashMap | ready | not run | not run | — | 0/0 | — | — |
-| hashmap-round-trip / effect | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-hashmap / effect/HashMap | rejected | refused | refused | 1852/0/3 | 7/59 | — | SC1043, SC1090, SC2020, SC1013, SC1100, SC1101, SC2004 |
+| hashmap-round-trip / effect | rejected | refused | refused | 1852/0/3 | 7/59 | — | SC1043, SC1090, SC2020, SC1013, SC1100, SC1101, SC2004 |
 
 ## HashSet
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-hashset / effect/HashSet | ready | not run | not run | — | 0/0 | — | — |
-| hashset-round-trip / effect | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-hashset / effect/HashSet | deferred | built | not run | 1795/0/2 | 7/0 | 1533920 | SC1043, SC1090, SC2020 |
+| hashset-round-trip / effect | deferred | built | not run | 1795/0/2 | 7/0 | 1533968 | SC1043, SC1090, SC2020 |
 
 ## Layer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-layer / effect/Layer | ready | not run | not run | — | 0/0 | — | — |
-| layer-effect / effect | ready | not run | not run | — | 0/0 | — | — |
-| layer-succeed / effect | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-layer / effect/Layer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| layer-effect / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
+| layer-succeed / effect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Schedule
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-schedule / effect/Schedule | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-schedule / effect/Schedule | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | retry-exhausted / effect | ready | not run | not run | — | 0/0 | — | — |
 | retry-success / effect | ready | not run | not run | — | 0/0 | — | — |
 
@@ -844,7 +849,7 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-schema / effect/Schema | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-schema / effect/Schema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | schema-class / effect | ready | not run | not run | — | 0/0 | — | — |
 | schema-decode / effect | ready | not run | not run | — | 0/0 | — | — |
 | schema-encode / effect | ready | not run | not run | — | 0/0 | — | — |
@@ -854,7 +859,7 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| entrypoint-stream / effect/Stream | ready | not run | not run | — | 0/0 | — | — |
+| entrypoint-stream / effect/Stream | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | stream-failing-element / effect | ready | not run | not run | — | 0/0 | — | — |
 | stream-from-iterable / effect | ready | not run | not run | — | 0/0 | — | — |
 | stream-map / effect | ready | not run | not run | — | 0/0 | — | — |
@@ -863,7 +868,7 @@ Effect **4.0.1** · scriptc **0.2.3** (v0.2.3, 52169979ee3fac98ad6651eb2a717fbbf
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-arbitrary / effect/Arbitrary | ready | not run | not run | — | 0/0 | — | — |
+| module-arbitrary / effect/Arbitrary | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 module-arbitrary: Only constant arbitrary construction and its documented guard are exercised; random generation is intentionally excluded.
 
@@ -872,205 +877,205 @@ module-arbitrary: Only constant arbitrary construction and its documented guard 
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-array / effect/Array | ready | not run | not run | — | 0/0 | — | — |
+| module-array / effect/Array | deferred | built | not run | 1299/0/1 | 7/0 | 1081856 | SC1043, SC1090, SC2020 |
 
 ## BigInt
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-bigint / effect/BigInt | ready | not run | not run | — | 0/0 | — | — |
+| module-bigint / effect/BigInt | deferred | built | not run | 1020/0/1 | 7/0 | 1008960 | SC1043, SC1090, SC2020 |
 
 ## Brand
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-brand / effect/Brand | ready | not run | not run | — | 0/0 | — | — |
+| module-brand / effect/Brand | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ByteSize
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-bytesize / effect/ByteSize | ready | not run | not run | — | 0/0 | — | — |
+| module-bytesize / effect/ByteSize | deferred | built | not run | 1099/0/2 | 8/0 | 1139728 | SC1043, SC1090, SC2020 |
 
 ## ChannelSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-channelschema / effect/ChannelSchema | ready | not run | not run | — | 0/0 | — | — |
+| module-channelschema / effect/ChannelSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Effectable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-effectable / effect/Effectable | ready | not run | not run | — | 0/0 | — | — |
+| module-effectable / effect/Effectable | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## FileSystem
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-filesystem / effect/FileSystem | ready | not run | not run | — | 0/0 | — | — |
+| module-filesystem / effect/FileSystem | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## HashRing
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-hashring / effect/HashRing | ready | not run | not run | — | 0/0 | — | — |
+| module-hashring / effect/HashRing | deferred | built | not run | 1188/0/1 | 7/0 | 1045872 | SC1043, SC1090, SC2020 |
 
 ## http/FindMyWay/internal/queryString
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--findmyway--internal--querystring / effect/http/FindMyWay/internal/queryString | ready | not run | not run | — | 0/0 | — | — |
+| module-http--findmyway--internal--querystring / effect/http/FindMyWay/internal/queryString | deferred | built | not run | 135/0/1 | 1/0 | 426432 | SC1090 |
 
 ## http/HttpEffect
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--httpeffect / effect/http/HttpEffect | ready | not run | not run | — | 0/0 | — | — |
+| module-http--httpeffect / effect/http/HttpEffect | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpIncomingMessage
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--httpincomingmessage / effect/http/HttpIncomingMessage | ready | not run | not run | — | 0/0 | — | — |
+| module-http--httpincomingmessage / effect/http/HttpIncomingMessage | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpMiddleware
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--httpmiddleware / effect/http/HttpMiddleware | ready | not run | not run | — | 0/0 | — | — |
+| module-http--httpmiddleware / effect/http/HttpMiddleware | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpPlatform
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--httpplatform / effect/http/HttpPlatform | ready | not run | not run | — | 0/0 | — | — |
+| module-http--httpplatform / effect/http/HttpPlatform | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpServerRespondable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--httpserverrespondable / effect/http/HttpServerRespondable | ready | not run | not run | — | 0/0 | — | — |
+| module-http--httpserverrespondable / effect/http/HttpServerRespondable | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/internal/mimeTypes
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--internal--mimetypes / effect/http/internal/mimeTypes | ready | not run | not run | — | 0/0 | — | — |
+| module-http--internal--mimetypes / effect/http/internal/mimeTypes | static | built | not run | 4/0/0 | 0/0 | 1627200 | — |
 
 ## http/Multipart
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipart / effect/http/Multipart | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipart / effect/http/Multipart | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/MultipartParser
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser / effect/http/MultipartParser | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser / effect/http/MultipartParser | deferred | built | not run | 1545/0/4 | 10/0 | 1447936 | SC1043, SC1090, SC2020 |
 
 ## http/MultipartParser/HeadersParser
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--headersparser / effect/http/MultipartParser/HeadersParser | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--headersparser / effect/http/MultipartParser/HeadersParser | static | built | not run | 144/0/0 | 0/0 | 533080 | — |
 
 ## http/MultipartParser/internal/contentType
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--internal--contenttype / effect/http/MultipartParser/internal/contentType | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--internal--contenttype / effect/http/MultipartParser/internal/contentType | static | built | not run | 34/0/0 | 0/0 | 314704 | — |
 
 ## http/MultipartParser/internal/headers
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--internal--headers / effect/http/MultipartParser/internal/headers | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--internal--headers / effect/http/MultipartParser/internal/headers | static | built | not run | 143/0/0 | 0/0 | 532208 | — |
 
 ## http/MultipartParser/internal/multipart
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--internal--multipart / effect/http/MultipartParser/internal/multipart | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--internal--multipart / effect/http/MultipartParser/internal/multipart | deferred | built | not run | 1537/0/3 | 9/0 | 1447472 | SC1043, SC1090, SC2020 |
 
 ## http/MultipartParser/internal/search
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--internal--search / effect/http/MultipartParser/internal/search | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--internal--search / effect/http/MultipartParser/internal/search | deferred | built | not run | 84/0/1 | 1/0 | 338064 | SC2020 |
 
 ## http/MultipartParser/Search
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http--multipartparser--search / effect/http/MultipartParser/Search | ready | not run | not run | — | 0/0 | — | — |
+| module-http--multipartparser--search / effect/http/MultipartParser/Search | deferred | built | not run | 85/0/1 | 1/0 | 356088 | SC2020 |
 
 ## http-api/HttpApiBuilder
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http-api--httpapibuilder / effect/http-api/HttpApiBuilder | ready | not run | not run | — | 0/0 | — | — |
+| module-http-api--httpapibuilder / effect/http-api/HttpApiBuilder | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiMiddleware
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http-api--httpapimiddleware / effect/http-api/HttpApiMiddleware | ready | not run | not run | — | 0/0 | — | — |
+| module-http-api--httpapimiddleware / effect/http-api/HttpApiMiddleware | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiScalar
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http-api--httpapiscalar / effect/http-api/HttpApiScalar | ready | not run | not run | — | 0/0 | — | — |
+| module-http-api--httpapiscalar / effect/http-api/HttpApiScalar | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiSwagger
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http-api--httpapiswagger / effect/http-api/HttpApiSwagger | ready | not run | not run | — | 0/0 | — | — |
+| module-http-api--httpapiswagger / effect/http-api/HttpApiSwagger | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiTest
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-http-api--httpapitest / effect/http-api/HttpApiTest | ready | not run | not run | — | 0/0 | — | — |
+| module-http-api--httpapitest / effect/http-api/HttpApiTest | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Number
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-number / effect/Number | ready | not run | not run | — | 0/0 | — | — |
+| module-number / effect/Number | deferred | built | not run | 1009/0/1 | 7/0 | 1008528 | SC1043, SC1090, SC2020 |
 
 ## observability/internal/otlpEnv
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-observability--internal--otlpenv / effect/observability/internal/otlpEnv | ready | not run | not run | — | 0/0 | — | — |
+| module-observability--internal--otlpenv / effect/observability/internal/otlpEnv | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/Otlp
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-observability--otlp / effect/observability/Otlp | ready | not run | not run | — | 0/0 | — | — |
+| module-observability--otlp / effect/observability/Otlp | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/OtlpLogger
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-observability--otlplogger / effect/observability/OtlpLogger | ready | not run | not run | — | 0/0 | — | — |
+| module-observability--otlplogger / effect/observability/OtlpLogger | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/OtlpMetrics
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-observability--otlpmetrics / effect/observability/OtlpMetrics | ready | not run | not run | — | 0/0 | — | — |
+| module-observability--otlpmetrics / effect/observability/OtlpMetrics | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/OtlpTracer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-observability--otlptracer / effect/observability/OtlpTracer | ready | not run | not run | — | 0/0 | — | — |
+| module-observability--otlptracer / effect/observability/OtlpTracer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 module-observability--otlptracer: Exercises unsampled span lifecycle and attributes with explicit fixed nanoseconds; no random trace/span IDs are read or generated, and no transport export is expected.
 
@@ -1079,764 +1084,764 @@ module-observability--otlptracer: Exercises unsampled span lifecycle and attribu
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-partitionedsemaphore / effect/PartitionedSemaphore | ready | not run | not run | — | 0/0 | — | — |
+| module-partitionedsemaphore / effect/PartitionedSemaphore | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Pipeable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-pipeable / effect/Pipeable | ready | not run | not run | — | 0/0 | — | — |
+| module-pipeable / effect/Pipeable | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## PlatformError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-platformerror / effect/PlatformError | ready | not run | not run | — | 0/0 | — | — |
+| module-platformerror / effect/PlatformError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## PrimaryKey
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-primarykey / effect/PrimaryKey | ready | not run | not run | — | 0/0 | — | — |
+| module-primarykey / effect/PrimaryKey | static | built | not run | 59/0/0 | 0/0 | 221904 | — |
 
 ## Redactable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-redactable / effect/Redactable | ready | not run | not run | — | 0/0 | — | — |
+| module-redactable / effect/Redactable | static | built | not run | 92/0/0 | 0/0 | 357152 | — |
 
 ## Resource
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-resource / effect/Resource | ready | not run | not run | — | 0/0 | — | — |
+| module-resource / effect/Resource | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Scheduler
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-scheduler / effect/Scheduler | ready | not run | not run | — | 0/0 | — | — |
+| module-scheduler / effect/Scheduler | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## SchemaParser
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-schemaparser / effect/SchemaParser | ready | not run | not run | — | 0/0 | — | — |
+| module-schemaparser / effect/SchemaParser | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ScopedCache
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-scopedcache / effect/ScopedCache | ready | not run | not run | — | 0/0 | — | — |
+| module-scopedcache / effect/ScopedCache | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ScopedRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-scopedref / effect/ScopedRef | ready | not run | not run | — | 0/0 | — | — |
+| module-scopedref / effect/ScopedRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## String
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-string / effect/String | ready | not run | not run | — | 0/0 | — | — |
+| module-string / effect/String | deferred | built | not run | 1115/0/2 | 8/0 | 1120688 | SC1043, SC2011, SC1090, SC2020 |
 
 ## SynchronizedRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-synchronizedref / effect/SynchronizedRef | ready | not run | not run | — | 0/0 | — | — |
+| module-synchronizedref / effect/SynchronizedRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## Take
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-take / effect/Take | ready | not run | not run | — | 0/0 | — | — |
+| module-take / effect/Take | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## UndefinedOr
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| module-undefinedor / effect/UndefinedOr | ready | not run | not run | — | 0/0 | — | — |
+| module-undefinedor / effect/UndefinedOr | static | built | not run | 88/0/0 | 0/0 | 316416 | — |
 
 ## ai
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai / effect/ai | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai / effect/ai | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/AnthropicStructuredOutput
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-anthropicstructuredoutput / effect/ai/AnthropicStructuredOutput | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-anthropicstructuredoutput / effect/ai/AnthropicStructuredOutput | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/Decision
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-decision / effect/ai/Decision | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-decision / effect/ai/Decision | static | built | not run | 16/0/0 | 0/0 | 221832 | — |
 
 ## ai/DecisionModel
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-decisionmodel / effect/ai/DecisionModel | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-decisionmodel / effect/ai/DecisionModel | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/EmbeddingModel
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-embeddingmodel / effect/ai/EmbeddingModel | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-embeddingmodel / effect/ai/EmbeddingModel | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/McpProtocol
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-mcpprotocol / effect/ai/McpProtocol | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-mcpprotocol / effect/ai/McpProtocol | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/McpSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-mcpschema / effect/ai/McpSchema | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-mcpschema / effect/ai/McpSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/McpServer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-mcpserver / effect/ai/McpServer | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-mcpserver / effect/ai/McpServer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/OpenAiStructuredOutput
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-openaistructuredoutput / effect/ai/OpenAiStructuredOutput | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-openaistructuredoutput / effect/ai/OpenAiStructuredOutput | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/Prompt
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-prompt / effect/ai/Prompt | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-prompt / effect/ai/Prompt | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## ai/ResponseIdTracker
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-ai-responseidtracker / effect/ai/ResponseIdTracker | ready | not run | not run | — | 0/0 | — | — |
+| namespace-ai-responseidtracker / effect/ai/ResponseIdTracker | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli / effect/cli | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli / effect/cli | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli/Argument
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-argument / effect/cli/Argument | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-argument / effect/cli/Argument | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli/CliConfig
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-cliconfig / effect/cli/CliConfig | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-cliconfig / effect/cli/CliConfig | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli/Command
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-command / effect/cli/Command | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-command / effect/cli/Command | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli/Completions
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-completions / effect/cli/Completions | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-completions / effect/cli/Completions | static | built | not run | 509/0/0 | 0/0 | 501736 | — |
 
 ## cli/Flag
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-flag / effect/cli/Flag | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-flag / effect/cli/Flag | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cli/GlobalFlag
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cli-globalflag / effect/cli/GlobalFlag | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cli-globalflag / effect/cli/GlobalFlag | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster / effect/cluster | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster / effect/cluster | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ClusterCron
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-clustercron / effect/cluster/ClusterCron | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-clustercron / effect/cluster/ClusterCron | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ClusterError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-clustererror / effect/cluster/ClusterError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-clustererror / effect/cluster/ClusterError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ClusterMetrics
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-clustermetrics / effect/cluster/ClusterMetrics | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-clustermetrics / effect/cluster/ClusterMetrics | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ClusterSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-clusterschema / effect/cluster/ClusterSchema | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-clusterschema / effect/cluster/ClusterSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ClusterWorkflowEngine
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-clusterworkflowengine / effect/cluster/ClusterWorkflowEngine | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-clusterworkflowengine / effect/cluster/ClusterWorkflowEngine | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/DeliverAt
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-deliverat / effect/cluster/DeliverAt | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-deliverat / effect/cluster/DeliverAt | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Entity
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entity / effect/cluster/Entity | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entity / effect/cluster/Entity | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityAddress
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entityaddress / effect/cluster/EntityAddress | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entityaddress / effect/cluster/EntityAddress | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityId
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entityid / effect/cluster/EntityId | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entityid / effect/cluster/EntityId | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityProxy
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entityproxy / effect/cluster/EntityProxy | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entityproxy / effect/cluster/EntityProxy | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityProxyServer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entityproxyserver / effect/cluster/EntityProxyServer | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entityproxyserver / effect/cluster/EntityProxyServer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityResource
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entityresource / effect/cluster/EntityResource | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entityresource / effect/cluster/EntityResource | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/EntityType
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-entitytype / effect/cluster/EntityType | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-entitytype / effect/cluster/EntityType | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Envelope
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-envelope / effect/cluster/Envelope | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-envelope / effect/cluster/Envelope | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/K8sHttpClient
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-k8shttpclient / effect/cluster/K8sHttpClient | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-k8shttpclient / effect/cluster/K8sHttpClient | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/MachineId
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-machineid / effect/cluster/MachineId | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-machineid / effect/cluster/MachineId | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Message
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-message / effect/cluster/Message | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-message / effect/cluster/Message | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/MessageStorage
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-messagestorage / effect/cluster/MessageStorage | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-messagestorage / effect/cluster/MessageStorage | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Reply
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-reply / effect/cluster/Reply | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-reply / effect/cluster/Reply | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Runner
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runner / effect/cluster/Runner | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runner / effect/cluster/Runner | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/RunnerAddress
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runneraddress / effect/cluster/RunnerAddress | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runneraddress / effect/cluster/RunnerAddress | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/RunnerHealth
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runnerhealth / effect/cluster/RunnerHealth | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runnerhealth / effect/cluster/RunnerHealth | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Runners
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runners / effect/cluster/Runners | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runners / effect/cluster/Runners | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/RunnerServer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runnerserver / effect/cluster/RunnerServer | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runnerserver / effect/cluster/RunnerServer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/RunnerStorage
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-runnerstorage / effect/cluster/RunnerStorage | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-runnerstorage / effect/cluster/RunnerStorage | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ShardId
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-shardid / effect/cluster/ShardId | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-shardid / effect/cluster/ShardId | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Sharding
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-sharding / effect/cluster/Sharding | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-sharding / effect/cluster/Sharding | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ShardingConfig
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-shardingconfig / effect/cluster/ShardingConfig | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-shardingconfig / effect/cluster/ShardingConfig | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/ShardingRegistrationEvent
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-shardingregistrationevent / effect/cluster/ShardingRegistrationEvent | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-shardingregistrationevent / effect/cluster/ShardingRegistrationEvent | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Singleton
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-singleton / effect/cluster/Singleton | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-singleton / effect/cluster/Singleton | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/SingletonAddress
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-singletonaddress / effect/cluster/SingletonAddress | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-singletonaddress / effect/cluster/SingletonAddress | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/Snowflake
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-snowflake / effect/cluster/Snowflake | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-snowflake / effect/cluster/Snowflake | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## cluster/TestRunner
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-cluster-testrunner / effect/cluster/TestRunner | ready | not run | not run | — | 0/0 | — | — |
+| namespace-cluster-testrunner / effect/cluster/TestRunner | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## devtools
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-devtools / effect/devtools | ready | not run | not run | — | 0/0 | — | — |
+| namespace-devtools / effect/devtools | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## devtools/DevToolsClient
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-devtools-devtoolsclient / effect/devtools/DevToolsClient | ready | not run | not run | — | 0/0 | — | — |
+| namespace-devtools-devtoolsclient / effect/devtools/DevToolsClient | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## devtools/DevToolsSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-devtools-devtoolsschema / effect/devtools/DevToolsSchema | ready | not run | not run | — | 0/0 | — | — |
+| namespace-devtools-devtoolsschema / effect/devtools/DevToolsSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding / effect/encoding | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding / effect/encoding | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Base64
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-base64 / effect/encoding/Base64 | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-base64 / effect/encoding/Base64 | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Base64Url
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-base64url / effect/encoding/Base64Url | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-base64url / effect/encoding/Base64Url | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/EncodingError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-encodingerror / effect/encoding/EncodingError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-encodingerror / effect/encoding/EncodingError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Hex
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-hex / effect/encoding/Hex | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-hex / effect/encoding/Hex | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Ini
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-ini / effect/encoding/Ini | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-ini / effect/encoding/Ini | deferred | built | not run | 87/0/1 | 1/0 | 408680 | SC1090 |
 
 ## encoding/Ndjson
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-ndjson / effect/encoding/Ndjson | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-ndjson / effect/encoding/Ndjson | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/SchemaBinary
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-schemabinary / effect/encoding/SchemaBinary | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-schemabinary / effect/encoding/SchemaBinary | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Sse
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-sse / effect/encoding/Sse | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-sse / effect/encoding/Sse | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## encoding/Toml
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-toml / effect/encoding/Toml | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-toml / effect/encoding/Toml | deferred | built | not run | 554/0/10 | 11/0 | 606504 | SC2012, SC1090 |
 
 ## encoding/Yaml
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-encoding-yaml / effect/encoding/Yaml | ready | not run | not run | — | 0/0 | — | — |
+| namespace-encoding-yaml / effect/encoding/Yaml | deferred | built | not run | 677/0/8 | 13/0 | 628072 | SC2012, SC1090, SC2004 |
 
 ## eventlog
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-eventlog / effect/eventlog | ready | not run | not run | — | 0/0 | — | — |
+| namespace-eventlog / effect/eventlog | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## eventlog/Event
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-eventlog-event / effect/eventlog/Event | ready | not run | not run | — | 0/0 | — | — |
+| namespace-eventlog-event / effect/eventlog/Event | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## eventlog/EventGroup
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-eventlog-eventgroup / effect/eventlog/EventGroup | ready | not run | not run | — | 0/0 | — | — |
+| namespace-eventlog-eventgroup / effect/eventlog/EventGroup | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## eventlog/EventLogMessage
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-eventlog-eventlogmessage / effect/eventlog/EventLogMessage | ready | not run | not run | — | 0/0 | — | — |
+| namespace-eventlog-eventlogmessage / effect/eventlog/EventLogMessage | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## eventlog/EventLogSessionAuth
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-eventlog-eventlogsessionauth / effect/eventlog/EventLogSessionAuth | ready | not run | not run | — | 0/0 | — | — |
+| namespace-eventlog-eventlogsessionauth / effect/eventlog/EventLogSessionAuth | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http / effect/http | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http / effect/http | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api / effect/http-api | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api / effect/http-api | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApi
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapi / effect/http-api/HttpApi | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapi / effect/http-api/HttpApi | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiClient
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapiclient / effect/http-api/HttpApiClient | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapiclient / effect/http-api/HttpApiClient | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiEndpoint
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapiendpoint / effect/http-api/HttpApiEndpoint | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapiendpoint / effect/http-api/HttpApiEndpoint | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapierror / effect/http-api/HttpApiError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapierror / effect/http-api/HttpApiError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiGroup
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapigroup / effect/http-api/HttpApiGroup | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapigroup / effect/http-api/HttpApiGroup | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiSchema
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapischema / effect/http-api/HttpApiSchema | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapischema / effect/http-api/HttpApiSchema | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/HttpApiSecurity
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-httpapisecurity / effect/http-api/HttpApiSecurity | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-httpapisecurity / effect/http-api/HttpApiSecurity | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http-api/OpenApi
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-api-openapi / effect/http-api/OpenApi | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-api-openapi / effect/http-api/OpenApi | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/Cookies
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-cookies / effect/http/Cookies | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-cookies / effect/http/Cookies | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/Etag
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-etag / effect/http/Etag | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-etag / effect/http/Etag | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/FetchHttpClient
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-fetchhttpclient / effect/http/FetchHttpClient | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-fetchhttpclient / effect/http/FetchHttpClient | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/FindMyWay
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-findmyway / effect/http/FindMyWay | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-findmyway / effect/http/FindMyWay | deferred | built | not run | 635/0/1 | 1/0 | 697192 | SC1090 |
 
 ## http/Headers
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-headers / effect/http/Headers | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-headers / effect/http/Headers | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpBody
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpbody / effect/http/HttpBody | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpbody / effect/http/HttpBody | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpClient
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpclient / effect/http/HttpClient | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpclient / effect/http/HttpClient | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpClientError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpclienterror / effect/http/HttpClientError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpclienterror / effect/http/HttpClientError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpClientRequest
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpclientrequest / effect/http/HttpClientRequest | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpclientrequest / effect/http/HttpClientRequest | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpClientResponse
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpclientresponse / effect/http/HttpClientResponse | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpclientresponse / effect/http/HttpClientResponse | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpMethod
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpmethod / effect/http/HttpMethod | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpmethod / effect/http/HttpMethod | static | built | not run | 4/0/0 | 0/0 | 92200 | — |
 
 ## http/HttpServer
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpserver / effect/http/HttpServer | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpserver / effect/http/HttpServer | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpServerError
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpservererror / effect/http/HttpServerError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpservererror / effect/http/HttpServerError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpServerRequest
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpserverrequest / effect/http/HttpServerRequest | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpserverrequest / effect/http/HttpServerRequest | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpServerResponse
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpserverresponse / effect/http/HttpServerResponse | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpserverresponse / effect/http/HttpServerResponse | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/HttpStatus
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httpstatus / effect/http/HttpStatus | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httpstatus / effect/http/HttpStatus | static | built | not run | 3/0/0 | 0/0 | 238088 | — |
 
 ## http/HttpTraceContext
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-httptracecontext / effect/http/HttpTraceContext | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-httptracecontext / effect/http/HttpTraceContext | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/Mime
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-mime / effect/http/Mime | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-mime / effect/http/Mime | deferred | built | not run | 1007/0/1 | 7/0 | 2558704 | SC1043, SC1090, SC2020 |
 
 ## http/Template
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-template / effect/http/Template | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-template / effect/http/Template | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/Url
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-url / effect/http/Url | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-url / effect/http/Url | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## http/UrlParams
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-http-urlparams / effect/http/UrlParams | ready | not run | not run | — | 0/0 | — | — |
+| namespace-http-urlparams / effect/http/UrlParams | deferred | built | not run | 1338/0/3 | 9/0 | 1168456 | SC1043, SC1090, SC2004, SC2020 |
 
 ## net
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-net / effect/net | ready | not run | not run | — | 0/0 | — | — |
+| namespace-net / effect/net | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## net/IpInterface
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-net-ipinterface / effect/net/IpInterface | ready | not run | not run | — | 0/0 | — | — |
+| namespace-net-ipinterface / effect/net/IpInterface | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## net/IpNetwork
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-net-ipnetwork / effect/net/IpNetwork | ready | not run | not run | — | 0/0 | — | — |
+| namespace-net-ipnetwork / effect/net/IpNetwork | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## net/NetAddress
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-net-netaddress / effect/net/NetAddress | ready | not run | not run | — | 0/0 | — | — |
+| namespace-net-netaddress / effect/net/NetAddress | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-observability / effect/observability | ready | not run | not run | — | 0/0 | — | — |
+| namespace-observability / effect/observability | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/OtlpResource
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-observability-otlpresource / effect/observability/OtlpResource | ready | not run | not run | — | 0/0 | — | — |
+| namespace-observability-otlpresource / effect/observability/OtlpResource | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## observability/OtlpSerialization
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-observability-otlpserialization / effect/observability/OtlpSerialization | ready | not run | not run | — | 0/0 | — | — |
+| namespace-observability-otlpserialization / effect/observability/OtlpSerialization | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## persistence
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-persistence / effect/persistence | ready | not run | not run | — | 0/0 | — | — |
+| namespace-persistence / effect/persistence | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## persistence/KeyValueStore
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-persistence-keyvaluestore / effect/persistence/KeyValueStore | ready | not run | not run | — | 0/0 | — | — |
+| namespace-persistence-keyvaluestore / effect/persistence/KeyValueStore | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## persistence/Persistable
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-persistence-persistable / effect/persistence/Persistable | ready | not run | not run | — | 0/0 | — | — |
+| namespace-persistence-persistable / effect/persistence/Persistable | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | remaining-core-persistence--persistable / effect/persistence/Persistable | ready | not run | not run | — | 0/0 | — | — |
 
 ## persistence/PersistedQueue
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-persistence-persistedqueue / effect/persistence/PersistedQueue | ready | not run | not run | — | 0/0 | — | — |
+| namespace-persistence-persistedqueue / effect/persistence/PersistedQueue | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | remaining-core-persistence--persistedqueue / effect/persistence/PersistedQueue | ready | not run | not run | — | 0/0 | — | — |
 
 remaining-core-persistence--persistedqueue: In-memory store, TestClock, and explicit queue IDs; no persistence IO, wall clock, UUID sampling, or waits on empty queue.
@@ -1846,44 +1851,44 @@ remaining-core-persistence--persistedqueue: In-memory store, TestClock, and expl
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-persistence-persistence / effect/persistence/Persistence | ready | not run | not run | — | 0/0 | — | — |
+| namespace-persistence-persistence / effect/persistence/Persistence | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | remaining-core-persistence--persistence / effect/persistence/Persistence | ready | not run | not run | — | 0/0 | — | — |
 
 ## process
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-process / effect/process | ready | not run | not run | — | 0/0 | — | — |
+| namespace-process / effect/process | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## process/ChildProcess
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-process-childprocess / effect/process/ChildProcess | ready | not run | not run | — | 0/0 | — | — |
+| namespace-process-childprocess / effect/process/ChildProcess | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## reactivity
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-reactivity / effect/reactivity | ready | not run | not run | — | 0/0 | — | — |
+| namespace-reactivity / effect/reactivity | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## reactivity/AsyncResult
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-reactivity-asyncresult / effect/reactivity/AsyncResult | ready | not run | not run | — | 0/0 | — | — |
+| namespace-reactivity-asyncresult / effect/reactivity/AsyncResult | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## reactivity/AtomRef
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-reactivity-atomref / effect/reactivity/AtomRef | ready | not run | not run | — | 0/0 | — | — |
+| namespace-reactivity-atomref / effect/reactivity/AtomRef | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## reactivity/AtomRegistry
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-reactivity-atomregistry / effect/reactivity/AtomRegistry | ready | not run | not run | — | 0/0 | — | — |
+| namespace-reactivity-atomregistry / effect/reactivity/AtomRegistry | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 
 ## rpc
 
@@ -1901,7 +1906,7 @@ remaining-core-persistence--persistedqueue: In-memory store, TestClock, and expl
 
 | Case / public entrypoint | Status / tier | Static build | Dynamic retry | Counts S/D/U | Deferred sites S/D | Binary bytes | SC codes |
 | --- | --- | --- | --- | --- | ---: | ---: | --- |
-| namespace-rpc-rpcclienterror / effect/rpc/RpcClientError | ready | not run | not run | — | 0/0 | — | — |
+| namespace-rpc-rpcclienterror / effect/rpc/RpcClientError | rejected | refused | refused | ?/?/? | 0/0 | — | SC3004 |
 | remaining-core-rpc--rpcclienterror / effect/rpc/RpcClientError | ready | not run | not run | — | 0/0 | — | — |
 
 remaining-core-rpc--rpcclienterror: Pure protocol-error creation, schema validation and recovered typed failure; no client transport.

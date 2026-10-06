@@ -1,0 +1,9 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-httpstatus.ts
+
+  statements analyzed   3
+  compile statically    3  (100%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  fully static — this program has no dynamic remainder.

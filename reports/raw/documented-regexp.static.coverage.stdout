@@ -1,0 +1,10 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts
+
+  statements analyzed   65
+  compile statically    64  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  blockers:
+      ×1  constructing values other than classes declared in the program  SC1090

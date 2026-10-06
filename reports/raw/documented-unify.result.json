@@ -1,0 +1,121 @@
+{
+  "id": "documented-unify",
+  "module": "Unify",
+  "entrypoint": "effect/Unify",
+  "family": "Unify",
+  "file": "cases/documented-unify.ts",
+  "status": "ready",
+  "api": [
+    "Unify.unify"
+  ],
+  "expectedStdout": "[\"test\",\"value-1\"]\n",
+  "declaration": "node_modules/effect/dist/Unify.d.ts",
+  "declarationSha256": "aee87669fc378a6ebd9b91dcce9d2991545df840e43005749b4c5a7b7cfb9e04",
+  "exampleIndex": 1,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "8b7c87b2a0bb562f3ba6a31893fd448d29ef0b9368e0fe1c22eff1ab9ae934bf",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-unify.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 230.896,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-unify.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 306.644,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-unify.ts\n\n  statements analyzed   65\n  compile statically    65  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXVuaWZ5LnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA2NQogIGNvbXBpbGUgc3RhdGljYWxseSAgICA2NSAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 65,
+        "static": 65,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-unify.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-unify"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 565.056,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-unify\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtdW5pZnkK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-unify",
+    "binarySize": 315776,
+    "binarySha256": "386903540eb0d919947c344d861828a223315a495939f4f636ae269a942df892"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

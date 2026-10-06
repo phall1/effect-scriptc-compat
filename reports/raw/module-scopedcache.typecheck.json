@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+    "--ignoreConfig",
+    "--noEmit",
+    "--strict",
+    "--target",
+    "ES2025",
+    "--module",
+    "ESNext",
+    "--moduleResolution",
+    "Bundler",
+    "--allowImportingTsExtensions",
+    "--verbatimModuleSyntax",
+    "--types",
+    "node",
+    "cases/module-scopedcache.ts"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 455.286,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "",
+  "stdoutBase64": "",
+  "stderrBase64": ""
+}

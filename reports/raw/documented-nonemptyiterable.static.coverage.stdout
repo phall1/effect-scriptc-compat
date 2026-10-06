@@ -1,0 +1,19 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-nonemptyiterable.ts
+
+  statements analyzed   1505
+  compile statically    1503  (99%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   7 sites (JS statements that throw their fence if executed)
+      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043
+      ×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090
+      ×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090
+      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m20.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020
+      ×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020
+      ×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020
+      ×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020
+
+  blockers:
+      ×1  'Array.from with this argument shape' is part of the standard library types but has no scriptc lowering yet  SC2020

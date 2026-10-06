@@ -1,0 +1,8 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts:6:17 - error SC1090: constructing values other than classes declared in the program is not supported yet
+
+  5 | 
+  6 | const pattern = new RegExp.RegExp("hello", "i")
+    |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  7 | __compatObserved.push(pattern)
+
+1 error.

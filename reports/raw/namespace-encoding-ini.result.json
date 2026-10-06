@@ -1,0 +1,137 @@
+{
+  "id": "namespace-encoding-ini",
+  "module": "encoding/Ini",
+  "entrypoint": "effect/encoding/Ini",
+  "family": "encoding/Ini",
+  "file": "cases/namespace-encoding-ini.ts",
+  "status": "ready",
+  "api": [
+    "parse"
+  ],
+  "expectedStdout": "{\"name\":\"fixture\",\"server\":{\"port\":\"3000\"}}\n",
+  "declaration": "node_modules/effect/dist/encoding/Ini.d.ts",
+  "declarationSha256": "544715fe026ff583f7f36f64441b7ab428ebb2d40c105f11ecd8c5e52284353a",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "48a1a32bd51eb18324a73abf2633a219d1041742cf7172d36e159c1805e2c002",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-encoding-ini.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 212.58,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-encoding-ini.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 291.592,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ini.ts\n\n  statements analyzed   88\n  compile statically    87  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  a runtime-optional capture whose narrowed value type is not representable is not supported yet (instantiating 'parse' with (string))  SC1090\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtZW5jb2RpbmctaW5pLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA4OAogIGNvbXBpbGUgc3RhdGljYWxseSAgICA4NyAgKDk4JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBkZWZlcnJlZCB0byBydW50aW1lICAgMSBzaXRlIChKUyBzdGF0ZW1lbnRzIHRoYXQgdGhyb3cgdGhlaXIgZmVuY2UgaWYgZXhlY3V0ZWQpCiAgICAgIMOXMSAgYSBydW50aW1lLW9wdGlvbmFsIGNhcHR1cmUgd2hvc2UgbmFycm93ZWQgdmFsdWUgdHlwZSBpcyBub3QgcmVwcmVzZW50YWJsZSBpcyBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAncGFyc2UnIHdpdGggKHN0cmluZykpICBTQzEwOTAKCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 88,
+        "static": 87,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×1  a runtime-optional capture whose narrowed value type is not representable is not supported yet (instantiating 'parse' with (string))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Ini.js:90"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  a runtime-optional capture whose narrowed value type is not representable is not supported yet (instantiating 'parse' with (string))  SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-encoding-ini.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-encoding-ini"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 557.402,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-encoding-ini\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1lbmNvZGluZy1pbmkK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-encoding-ini",
+    "binarySize": 408680,
+    "binarySha256": "4c64a065557d8e5f0ad05756c55f6cd7bb54c8c723069cf8cca2afd12ee8ace8"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Ini.js:90"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  a runtime-optional capture whose narrowed value type is not representable is not supported yet (instantiating 'parse' with (string))  SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

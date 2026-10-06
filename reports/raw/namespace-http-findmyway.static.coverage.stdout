@@ -1,0 +1,11 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-findmyway.ts
+
+  statements analyzed   636
+  compile statically    635  (99%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090
+

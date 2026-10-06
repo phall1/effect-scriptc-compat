@@ -1,0 +1,9 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-primarykey.ts
+
+  statements analyzed   59
+  compile statically    59  (100%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  fully static — this program has no dynamic remainder.

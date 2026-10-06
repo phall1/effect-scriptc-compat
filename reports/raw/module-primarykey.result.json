@@ -1,0 +1,121 @@
+{
+  "id": "module-primarykey",
+  "module": "PrimaryKey",
+  "entrypoint": "effect/PrimaryKey",
+  "family": "PrimaryKey",
+  "file": "cases/module-primarykey.ts",
+  "status": "ready",
+  "api": [
+    "value",
+    "symbol"
+  ],
+  "expectedStdout": "product-42\n",
+  "declaration": "node_modules/effect/dist/PrimaryKey.d.ts",
+  "declarationSha256": "f7e5be6e856a30e0d37991684b5eb65ffb7256af5d8c9524bba5c50821856e99",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "4162570ae331948e01b5ea2664c182969f8c2682ea246d413c484abf1c7cfd47",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-primarykey.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 239.135,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/module-primarykey.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 341.64,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-primarykey.ts\n\n  statements analyzed   59\n  compile statically    59  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9tb2R1bGUtcHJpbWFyeWtleS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNTkKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNTkgICgxMDAlKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGZ1bGx5IHN0YXRpYyDigJQgdGhpcyBwcm9ncmFtIGhhcyBubyBkeW5hbWljIHJlbWFpbmRlci4K",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 59,
+        "static": 59,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/module-primarykey.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-primarykey"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 570.128,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/module-primarykey\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL21vZHVsZS1wcmltYXJ5a2V5Cg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/module-primarykey",
+    "binarySize": 221904,
+    "binarySha256": "c9a116268ae459f016f57c46802acf78b5f1c2bec90c12abd77d6b05ab09cc9c"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

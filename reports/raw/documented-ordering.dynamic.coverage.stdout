@@ -1,0 +1,11 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-ordering.ts
+
+  statements analyzed   75
+  compile statically    71  (94%)
+  compile dynamically   1  (1%) (island sites — the embedded engine runs them)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  blockers:
+      ×2  values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')  SC2001

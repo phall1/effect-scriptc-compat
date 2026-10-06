@@ -1,0 +1,139 @@
+{
+  "id": "documented-redacted",
+  "module": "Redacted",
+  "entrypoint": "effect/Redacted",
+  "family": "Redacted",
+  "file": "cases/documented-redacted.ts",
+  "status": "ready",
+  "api": [
+    "Redacted.make",
+    "Array.of"
+  ],
+  "expectedStdout": "[[\"<redacted>\",\"<redacted>\"]]\n",
+  "declaration": "node_modules/effect/dist/Redacted.d.ts",
+  "declarationSha256": "62241100d9b71070bb626e7880f32343580534fb692a8647cac5b2b6eb188b23",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "8dc6a9119b520c337cb260ba7ad11ec8ab85113401576b98793330bbdda133b4",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-redacted.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 261.95,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-redacted.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1706.211,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-redacted.ts\n\n  statements analyzed   839\n  compile statically    838  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m15.%cx12200.Base, unknown, unknown))  SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXJlZGFjdGVkLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICA4MzkKICBjb21waWxlIHN0YXRpY2FsbHkgICAgODM4ICAoOTklKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICAxIHNpdGUgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cxICAnT2JqZWN0LmRlZmluZVByb3BlcnR5JyBpcyBwYXJ0IG9mIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IHR5cGVzIGJ1dCBoYXMgbm8gc2NyaXB0YyBsb3dlcmluZyB5ZXQgKGluc3RhbnRpYXRpbmcgJ2Fzc2lnblByb3BlcnR5JyB3aXRoIChtMTUuJWN4MTIyMDAuQmFzZSwgdW5rbm93biwgdW5rbm93bikpICBTQzIwMjAKCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 839,
+        "static": 838,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2020",
+          "message": "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m15.%cx12200.Base, unknown, unknown))  SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m15.%cx12200.Base, unknown, unknown))  SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-redacted.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-redacted"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 3848.989,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-redacted\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtcmVkYWN0ZWQK",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-redacted",
+    "binarySize": 967568,
+    "binarySha256": "ad3a7707d84be23c6d98c3f3cb5731fa201f90fc65d004b05380af61afd4abd0"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m15.%cx12200.Base, unknown, unknown))  SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

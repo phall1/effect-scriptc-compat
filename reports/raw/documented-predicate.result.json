@@ -1,0 +1,121 @@
+{
+  "id": "documented-predicate",
+  "module": "Predicate",
+  "entrypoint": "effect/Predicate",
+  "family": "Predicate",
+  "file": "cases/documented-predicate.ts",
+  "status": "ready",
+  "api": [
+    "Predicate.mapInput"
+  ],
+  "expectedStdout": "[true]\n",
+  "declaration": "node_modules/effect/dist/Predicate.d.ts",
+  "declarationSha256": "4db6129fc99fa29e43c347d53b03f03c91a5c5e840db03c9cd7bb42ee34bbafd",
+  "exampleIndex": 10,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "0093322bb2808fdd507796e8b3117c284bbec9e43a03f44d5ff1edc14680b5e8",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-predicate.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 234.836,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "static",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-predicate.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 382.019,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-predicate.ts\n\n  statements analyzed   82\n  compile statically    82  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXByZWRpY2F0ZS50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgODIKICBjb21waWxlIHN0YXRpY2FsbHkgICAgODIgICgxMDAlKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGZ1bGx5IHN0YXRpYyDigJQgdGhpcyBwcm9ncmFtIGhhcyBubyBkeW5hbWljIHJlbWFpbmRlci4K",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 82,
+        "static": 82,
+        "dynamic": 0,
+        "unsupported": 0
+      },
+      "deferredSiteCount": 0,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [],
+      "deferredSites": [],
+      "notes": [
+        "fully static — this program has no dynamic remainder."
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-predicate.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-predicate"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 571.402,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-predicate\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtcHJlZGljYXRlCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-predicate",
+    "binarySize": 333032,
+    "binarySha256": "72478c593870da45631a3f6f6bae283439847e854c4418d7e4536ed2b7d61e53"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [],
+  "sourceLocations": [],
+  "rewriteHints": [],
+  "deferredSites": [],
+  "notes": [
+    "fully static — this program has no dynamic remainder."
+  ]
+}

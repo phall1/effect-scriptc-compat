@@ -1,0 +1,137 @@
+{
+  "id": "module-http--multipartparser--search",
+  "module": "http/MultipartParser/Search",
+  "entrypoint": "effect/http/MultipartParser/Search",
+  "family": "http/MultipartParser/Search",
+  "file": "cases/module-http--multipartparser--search.ts",
+  "status": "ready",
+  "api": [
+    "make"
+  ],
+  "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n",
+  "declaration": "node_modules/effect/dist/http/MultipartParser/Search.d.ts",
+  "declarationSha256": "12b13145aed7de77780ed80615c27316f482dc2fd037885aff1bee6e7c08aaf2",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "552cdd650fc92912fafe357e9d6cbb6b9c2743e5ee3b9873755cded03dd8267e",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-http--multipartparser--search.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 257.023,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/module-http--multipartparser--search.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1107.214,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--multipartparser--search.ts\n\n  statements analyzed   86\n  compile statically    85  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (unknown, unknown, unknown, unknown))  SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1zZWFyY2gudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDg2CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDg1ICAoOTglKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICAxIHNpdGUgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cxICAnQnVmZmVyLnByb3RvdHlwZScgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdtYWtlJyB3aXRoICh1bmtub3duLCB1bmtub3duLCB1bmtub3duLCB1bmtub3duKSkgIFNDMjAyMAoK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 86,
+        "static": 85,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2020",
+          "message": "×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (unknown, unknown, unknown, unknown))  SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/MultipartParser/internal/search.js:31"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (unknown, unknown, unknown, unknown))  SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/module-http--multipartparser--search.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-http--multipartparser--search"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1621.497,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/module-http--multipartparser--search\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL21vZHVsZS1odHRwLS1tdWx0aXBhcnRwYXJzZXItLXNlYXJjaAo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/module-http--multipartparser--search",
+    "binarySize": 356088,
+    "binarySha256": "2eb82009f734d9546bdb01fcba11a1a44d4e8cc21877ce312a491ff13f41bbcb"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/MultipartParser/internal/search.js:31"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (unknown, unknown, unknown, unknown))  SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

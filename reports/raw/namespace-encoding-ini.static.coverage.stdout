@@ -1,0 +1,11 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-ini.ts
+
+  statements analyzed   88
+  compile statically    87  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  a runtime-optional capture whose narrowed value type is not representable is not supported yet (instantiating 'parse' with (string))  SC1090
+

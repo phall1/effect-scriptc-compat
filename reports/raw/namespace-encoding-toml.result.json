@@ -1,0 +1,163 @@
+{
+  "id": "namespace-encoding-toml",
+  "module": "encoding/Toml",
+  "entrypoint": "effect/encoding/Toml",
+  "family": "encoding/Toml",
+  "file": "cases/namespace-encoding-toml.ts",
+  "status": "ready",
+  "api": [
+    "parse"
+  ],
+  "expectedStdout": "{\"name\":\"fixture\",\"server\":{\"port\":3000}}\n",
+  "declaration": "node_modules/effect/dist/encoding/Toml.d.ts",
+  "declarationSha256": "2c156d7f8fbbaf4acd53f975db8c4327f8a2c22f2e102d430fc21936e42ec82f",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "e7cff4657a0aaf54bfad8219d5614b39b0a74c27f92c7bb40c5057fc2239c9f1",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-encoding-toml.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 213.982,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-encoding-toml.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 680.239,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-toml.ts\n\n  statements analyzed   564\n  compile statically    554  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   11 sites (JS statements that throw their fence if executed)\n      ×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012\n      ×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012\n      ×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090\n      ×1  element access on non-array values                                                                                                          SC1090\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtZW5jb2RpbmctdG9tbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNTY0CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDU1NCAgKDk4JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBkZWZlcnJlZCB0byBydW50aW1lICAgMTEgc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5c0ICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAxMgogICAgICDDlzMgICdOdW1iZXIucGFyc2VJbnQnIHJ1bnMgaW4gdGhlIGVtYmVkZGVkIGR5bmFtaWMgZW5naW5lLCB3aGljaCB0aGlzIGJ1aWxkIGRvZXMgbm90IGluY2x1ZGUgKGluc3RhbnRpYXRpbmcgJ3BhcnNlTnVtYmVyJyB3aXRoICh1bmtub3duKSkgICAgICAgU0MyMDEyCiAgICAgIMOXMSAgJ051bWJlci5wYXJzZUludCcgcnVucyBpbiB0aGUgZW1iZWRkZWQgZHluYW1pYyBlbmdpbmUsIHdoaWNoIHRoaXMgYnVpbGQgZG9lcyBub3QgaW5jbHVkZSAoaW5zdGFudGlhdGluZyAncGFyc2VCYXNpY1N0cmluZycgd2l0aCAoYm9vbGVhbikpICBTQzIwMTIKICAgICAgw5cxICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlIChpbnN0YW50aWF0aW5nICdwYXJzZUJhc2ljU3RyaW5nJyB3aXRoICh1bmtub3duKSkgIFNDMjAxMgogICAgICDDlzEgIGVsZW1lbnQgYWNjZXNzIG9uIG5vbi1hcnJheSB2YWx1ZXMgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdwYXJzZU51bWJlcicgd2l0aCAodW5rbm93bikpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgZWxlbWVudCBhY2Nlc3Mgb24gbm9uLWFycmF5IHZhbHVlcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 564,
+        "static": 554,
+        "dynamic": 0,
+        "unsupported": 10
+      },
+      "deferredSiteCount": 11,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2012",
+          "message": "×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012\n×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012\n×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012\n×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:209",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:212",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:215",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:279"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090\n×1  element access on non-array values                                                                                                          SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:206"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012",
+        "×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012",
+        "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012",
+        "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012",
+        "×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090",
+        "×1  element access on non-array values                                                                                                          SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   11 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-encoding-toml.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-encoding-toml"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1584.465,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-encoding-toml\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1lbmNvZGluZy10b21sCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-encoding-toml",
+    "binarySize": 606504,
+    "binarySha256": "923b48b8b67923ddd18d4402dde717d939f504facc75dcf6c5412e8af6dc6367"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC2012",
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:209",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:212",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:215",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:279",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Toml.js:206"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012",
+    "×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012",
+    "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012",
+    "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012",
+    "×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090",
+    "×1  element access on non-array values                                                                                                          SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   11 sites (JS statements that throw their fence if executed)"
+  ]
+}

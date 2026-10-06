@@ -1,0 +1,14 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts
+
+  statements analyzed   65
+  compile statically    62  (95%)
+  compile dynamically   0  (0%) (island sites — the embedded engine runs them)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  'RegExpConstructor' is part of the standard library types but has no scriptc lowering yet  SC2020
+
+  blockers:
+      ×1  constructing values other than classes declared in the program  SC1090

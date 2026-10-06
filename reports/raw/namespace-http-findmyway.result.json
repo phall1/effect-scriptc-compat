@@ -1,0 +1,140 @@
+{
+  "id": "namespace-http-findmyway",
+  "module": "http/FindMyWay",
+  "entrypoint": "effect/http/FindMyWay",
+  "family": "http/FindMyWay",
+  "file": "cases/namespace-http-findmyway.ts",
+  "status": "ready",
+  "api": [
+    "make",
+    "Router.on",
+    "Router.find",
+    "Router.has"
+  ],
+  "expectedStdout": "[{\"handler\":\"read-item\",\"params\":{\"id\":\"42\"},\"searchParams\":{\"view\":\"full\"}},false]\n",
+  "declaration": "node_modules/effect/dist/http/FindMyWay.d.ts",
+  "declarationSha256": "7ddc28274dba1efc23910a44888b68c5ccef3cf587e37f9bc7afcee247a9faec",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "a3b99698a0d4d53f58efdf1c514cffc8e0601ed59de379d5120d289b63e9c691",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-http-findmyway.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 222.757,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-http-findmyway.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 992.085,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-findmyway.ts\n\n  statements analyzed   636\n  compile statically    635  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtaHR0cC1maW5kbXl3YXkudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDYzNgogIGNvbXBpbGUgc3RhdGljYWxseSAgICA2MzUgICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgICcuc3BsaXQoKScgb24gYSAnbTEuUGFyZW50Tm9kZScgc2VwYXJhdG9yIChwYXNzIGEgc3RyaW5nLCBvciBhIHJlZ2V4IGxpdGVyYWwpIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdjcmVhdGVTdGF0aWNDaGlsZCcgd2l0aCAodW5rbm93bikpICBTQzEwOTAKCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 636,
+        "static": 635,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/FindMyWay/internal/router.js:468"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-http-findmyway.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-http-findmyway"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 2374.708,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-http-findmyway\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1odHRwLWZpbmRteXdheQo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-http-findmyway",
+    "binarySize": 697192,
+    "binarySha256": "29acbe36fdb0b23e3d094ed808f17b74d338d8d804c082192d095a2b3c725e2d"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/FindMyWay/internal/router.js:468"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  '.split()' on a 'm1.ParentNode' separator (pass a string, or a regex literal) is not supported yet (instantiating 'createStaticChild' with (unknown))  SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

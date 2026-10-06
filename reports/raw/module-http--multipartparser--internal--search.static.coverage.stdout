@@ -1,0 +1,11 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--multipartparser--internal--search.ts
+
+  statements analyzed   85
+  compile statically    84  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   1 site (JS statements that throw their fence if executed)
+      ×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (string, (unknown, unknown) => number, unknown, unknown))  SC2020
+

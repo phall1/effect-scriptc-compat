@@ -1,0 +1,22 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/namespace-http-api-httpapierror.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/namespace-http-api-httpapierror.dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10237.307,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/namespace-http-api-httpapierror.ts:1:1 - error SC3004: null is not representable in the target union (a value narrowed or asserted past it still held it)\n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvbmFtZXNwYWNlLWh0dHAtYXBpLWh0dHBhcGllcnJvci50czoxOjEgLSBlcnJvciBTQzMwMDQ6IG51bGwgaXMgbm90IHJlcHJlc2VudGFibGUgaW4gdGhlIHRhcmdldCB1bmlvbiAoYSB2YWx1ZSBuYXJyb3dlZCBvciBhc3NlcnRlZCBwYXN0IGl0IHN0aWxsIGhlbGQgaXQpCgoxIGVycm9yLgo="
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/module-http--multipartparser--internal--contenttype.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/module-http--multipartparser--internal--contenttype"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 787.449,
+  "maxRssKb": null,
+  "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/module-http--multipartparser--internal--contenttype\n",
+  "stderr": "",
+  "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL21vZHVsZS1odHRwLS1tdWx0aXBhcnRwYXJzZXItLWludGVybmFsLS1jb250ZW50dHlwZQo=",
+  "stderrBase64": ""
+}

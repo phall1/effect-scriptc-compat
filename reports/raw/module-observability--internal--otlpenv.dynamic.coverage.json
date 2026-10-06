@@ -1,0 +1,20 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/module-observability--internal--otlpenv.ts",
+    "--npm-static=effect",
+    "--dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 15354.584,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "scriptc: expected null | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object | object at $.value, got undefined\n",
+  "stdoutBase64": "",
+  "stderrBase64": "c2NyaXB0YzogZXhwZWN0ZWQgbnVsbCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCB8IG9iamVjdCBhdCAkLnZhbHVlLCBnb3QgdW5kZWZpbmVkCg=="
+}

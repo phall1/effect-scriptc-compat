@@ -1,0 +1,21 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/hashmap-round-trip.ts",
+    "--npm-static=effect",
+    "-o",
+    "bin/hashmap-round-trip"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 10236.468,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/hashmap-round-trip.ts:4:69 - error SC1090: method calls like 'a.localeCompare' is not supported yet\n\n  3 | const values = HashMap.set(HashMap.fromIterable([[\"a\", 1], [\"b\", 2]]), \"c\", 3)\n  4 | console.log(`hashmap:${HashMap.toEntries(values).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => `${k}:${v}`).join(\",\")}`)\n    |                                                                     ^~~~~~~~~~~~~~~~~~\n  5 | \n\n1 error.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvaGFzaG1hcC1yb3VuZC10cmlwLnRzOjQ6NjkgLSBlcnJvciBTQzEwOTA6IG1ldGhvZCBjYWxscyBsaWtlICdhLmxvY2FsZUNvbXBhcmUnIGlzIG5vdCBzdXBwb3J0ZWQgeWV0CgogIDMgfCBjb25zdCB2YWx1ZXMgPSBIYXNoTWFwLnNldChIYXNoTWFwLmZyb21JdGVyYWJsZShbWyJhIiwgMV0sIFsiYiIsIDJdXSksICJjIiwgMykKICA0IHwgY29uc29sZS5sb2coYGhhc2htYXA6JHtIYXNoTWFwLnRvRW50cmllcyh2YWx1ZXMpLnNvcnQoKFthXSwgW2JdKSA9PiBhLmxvY2FsZUNvbXBhcmUoYikpLm1hcCgoW2ssIHZdKSA9PiBgJHtrfToke3Z9YCkuam9pbigiLCIpfWApCiAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn5+CiAgNSB8IAoKMSBlcnJvci4K"
+}

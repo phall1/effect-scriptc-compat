@@ -1,0 +1,15 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-ordering.ts:19:14 - error SC2001: values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')
+
+  18 | const numbers = [3, 1, 4, 1, 5]
+  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)
+     |              ^~~~~~~~~~~~~~
+  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)
+
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-ordering.ts:20:14 - error SC2001: values of type '(a: number, b: number) => Ordering.Ordering' cannot be compiled yet (supported: number, string, boolean, arrays, Maps, Sets, RegExp, read-only Date values, functions, classes, records, unions of those, and 'unknown')
+
+  19 | numbers.sort(compareNumbers) // [1, 1, 3, 4, 5] (ascending)
+  20 | numbers.sort(compareDescending) // [5, 4, 3, 1, 1] (descending)
+     |              ^~~~~~~~~~~~~~~~~
+  21 | 
+
+2 errors.

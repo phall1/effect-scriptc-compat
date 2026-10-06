@@ -1,0 +1,138 @@
+{
+  "id": "module-http--findmyway--internal--querystring",
+  "module": "http/FindMyWay/internal/queryString",
+  "entrypoint": "effect/http/FindMyWay/internal/queryString",
+  "family": "http/FindMyWay/internal/queryString",
+  "file": "cases/module-http--findmyway--internal--querystring.ts",
+  "status": "ready",
+  "api": [
+    "parse",
+    "stringify"
+  ],
+  "expectedStdout": "[{\"a\":\"1\",\"b\":\"two words\"},\"a=1&b=two%20words\"]\n",
+  "declaration": "node_modules/effect/dist/http/FindMyWay/internal/queryString.d.ts",
+  "declarationSha256": "c9fd2008cc5e67bac115399f59382e1e90eb1bb060dd5fa8b2234429ec9195af",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "e5ea531ea329c8c4248603c5c9ffdded70d20f05a1c54fb7c7aa9ccfb924f835",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/module-http--findmyway--internal--querystring.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 235.502,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/module-http--findmyway--internal--querystring.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 320.674,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--findmyway--internal--querystring.ts\n\n  statements analyzed   136\n  compile statically    135  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9tb2R1bGUtaHR0cC0tZmluZG15d2F5LS1pbnRlcm5hbC0tcXVlcnlzdHJpbmcudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDEzNgogIGNvbXBpbGUgc3RhdGljYWxseSAgICAxMzUgICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDEgc2l0ZSAoSlMgc3RhdGVtZW50cyB0aGF0IHRocm93IHRoZWlyIGZlbmNlIGlmIGV4ZWN1dGVkKQogICAgICDDlzEgIGVsZW1lbnQgYWNjZXNzIG9uIG5vbi1hcnJheSB2YWx1ZXMgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdzdHJpbmdpZnknIHdpdGggKHsgYTogc3RyaW5nOyBiOiBzdHJpbmcgfSkpICBTQzEwOTAKCg==",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 136,
+        "static": 135,
+        "dynamic": 0,
+        "unsupported": 1
+      },
+      "deferredSiteCount": 1,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1090",
+          "message": "×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/FindMyWay/internal/queryString.js:174"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090"
+      ],
+      "notes": [
+        "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/module-http--findmyway--internal--querystring.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/module-http--findmyway--internal--querystring"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 595.782,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/module-http--findmyway--internal--querystring\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL21vZHVsZS1odHRwLS1maW5kbXl3YXktLWludGVybmFsLS1xdWVyeXN0cmluZwo=",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/module-http--findmyway--internal--querystring",
+    "binarySize": 426432,
+    "binarySha256": "ea1245b9b59a586e487324a9719324bab6f05a68cbe992590a85cd0cd5f868db"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1090"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/http/FindMyWay/internal/queryString.js:174"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  element access on non-array values are not supported yet (instantiating 'stringify' with ({ a: string; b: string }))  SC1090"
+  ],
+  "notes": [
+    "deferred to runtime   1 site (JS statements that throw their fence if executed)"
+  ]
+}

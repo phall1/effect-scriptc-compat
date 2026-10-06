@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-regexp.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 322.321,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-regexp.ts\n\n  statements analyzed   65\n  compile statically    64  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×1  constructing values other than classes declared in the program  SC1090\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLXJlZ2V4cC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNjUKICBjb21waWxlIHN0YXRpY2FsbHkgICAgNjQgICg5OCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgY29uc3RydWN0aW5nIHZhbHVlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gIFNDMTA5MAo=",
+  "stderrBase64": ""
+}

@@ -1,0 +1,176 @@
+{
+  "id": "namespace-encoding-yaml",
+  "module": "encoding/Yaml",
+  "entrypoint": "effect/encoding/Yaml",
+  "family": "encoding/Yaml",
+  "file": "cases/namespace-encoding-yaml.ts",
+  "status": "ready",
+  "api": [
+    "parse"
+  ],
+  "expectedStdout": "{\"name\":\"fixture\",\"items\":[\"first\",\"second\"]}\n",
+  "declaration": "node_modules/effect/dist/encoding/Yaml.d.ts",
+  "declarationSha256": "732f7a63294025dd3a29daf50fad324d72a3da419903e8e7a75e2ade5cf9a486",
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "6d4942b00142f047cb59fcfc0e6b5d13caa94228cfc71b87ecaaefe737e05e74",
+  "sourceSha256": "e0857ed94148b29ba1c63b6c62dd0a9d6c8d5b54b42cdd0669543454473760f0",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/namespace-encoding-yaml.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 214.111,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/namespace-encoding-yaml.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 801.166,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-yaml.ts\n\n  statements analyzed   685\n  compile statically    677  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   13 sites (JS statements that throw their fence if executed)\n      ×2  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseScalar' with (unknown))                                                            SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBlockScalar' with (unknown, unknown))                                              SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseDoubleQuoted' with (unknown))                                                      SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                                                                         SC2012\n      ×3  element access on non-array values are not supported yet (instantiating 'parseScalar' with (unknown))                                                                                            SC1090\n      ×3  uses of 'quote' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                 SC2004\n      ×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseQuotedValue' with (string, unknown))  SC1090\n      ×1  uses of 'end' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                   SC2004\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtZW5jb2RpbmcteWFtbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNjg1CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDY3NyAgKDk4JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBkZWZlcnJlZCB0byBydW50aW1lICAgMTMgc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cyICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlIChpbnN0YW50aWF0aW5nICdwYXJzZVNjYWxhcicgd2l0aCAodW5rbm93bikpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDEyCiAgICAgIMOXMSAgJ051bWJlci5wYXJzZUludCcgcnVucyBpbiB0aGUgZW1iZWRkZWQgZHluYW1pYyBlbmdpbmUsIHdoaWNoIHRoaXMgYnVpbGQgZG9lcyBub3QgaW5jbHVkZSAoaW5zdGFudGlhdGluZyAncGFyc2VCbG9ja1NjYWxhcicgd2l0aCAodW5rbm93biwgdW5rbm93bikpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAxMgogICAgICDDlzEgICdOdW1iZXIucGFyc2VJbnQnIHJ1bnMgaW4gdGhlIGVtYmVkZGVkIGR5bmFtaWMgZW5naW5lLCB3aGljaCB0aGlzIGJ1aWxkIGRvZXMgbm90IGluY2x1ZGUgKGluc3RhbnRpYXRpbmcgJ3BhcnNlRG91YmxlUXVvdGVkJyB3aXRoICh1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMTIKICAgICAgw5cxICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDEyCiAgICAgIMOXMyAgZWxlbWVudCBhY2Nlc3Mgb24gbm9uLWFycmF5IHZhbHVlcyBhcmUgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ3BhcnNlU2NhbGFyJyB3aXRoICh1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzMgIHVzZXMgb2YgJ3F1b3RlJyBpbmhlcml0IHRoZSBibG9ja2VyIG9uIGl0cyBkZWNsYXJhdGlvbiAoaW5zdGFudGlhdGluZyAncGFyc2VRdW90ZWRWYWx1ZScgd2l0aCAoc3RyaW5nLCB1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMDQKICAgICAgw5cxICBzdHJpbmcgaW5kZXhpbmcgd2l0aCB0aGlzIGluZGV4L3Jlc3VsdCBzaGFwZSAoZXhwZWN0ZWQgYSBudW1iZXIgaW5kZXggYW5kIGEgc3RyaW5nIG9yIHN0cmluZyB8IHVuZGVmaW5lZCByZXN1bHQpIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdwYXJzZVF1b3RlZFZhbHVlJyB3aXRoIChzdHJpbmcsIHVua25vd24pKSAgU0MxMDkwCiAgICAgIMOXMSAgdXNlcyBvZiAnZW5kJyBpbmhlcml0IHRoZSBibG9ja2VyIG9uIGl0cyBkZWNsYXJhdGlvbiAoaW5zdGFudGlhdGluZyAncGFyc2VRdW90ZWRWYWx1ZScgd2l0aCAoc3RyaW5nLCB1bmtub3duKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAwNAoK",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 685,
+        "static": 677,
+        "dynamic": 0,
+        "unsupported": 8
+      },
+      "deferredSiteCount": 13,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC2012",
+          "message": "×2  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseScalar' with (unknown))                                                            SC2012\n×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBlockScalar' with (unknown, unknown))                                              SC2012\n×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseDoubleQuoted' with (unknown))                                                      SC2012\n×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                                                                         SC2012",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:424",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:121"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×3  element access on non-array values are not supported yet (instantiating 'parseScalar' with (unknown))                                                                                            SC1090\n×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseQuotedValue' with (string, unknown))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:141",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:145",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:149",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:396"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2004",
+          "message": "×3  uses of 'quote' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                 SC2004\n×1  uses of 'end' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                   SC2004",
+          "sourceLocations": [],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×2  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseScalar' with (unknown))                                                            SC2012",
+        "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBlockScalar' with (unknown, unknown))                                              SC2012",
+        "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseDoubleQuoted' with (unknown))                                                      SC2012",
+        "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                                                                         SC2012",
+        "×3  element access on non-array values are not supported yet (instantiating 'parseScalar' with (unknown))                                                                                            SC1090",
+        "×3  uses of 'quote' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                 SC2004",
+        "×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseQuotedValue' with (string, unknown))  SC1090",
+        "×1  uses of 'end' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                   SC2004"
+      ],
+      "notes": [
+        "deferred to runtime   13 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/namespace-encoding-yaml.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/namespace-encoding-yaml"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 1735.382,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/namespace-encoding-yaml\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL25hbWVzcGFjZS1lbmNvZGluZy15YW1sCg==",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/namespace-encoding-yaml",
+    "binarySize": 628072,
+    "binarySha256": "1125ff04f8fe3185e30fa5d9dc91eb1b2da1ae55270c10cc051586d6b1bdaa62"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC2012",
+    "SC1090",
+    "SC2004"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:424",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:121",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:141",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:145",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:149",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/encoding/Yaml.js:396"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×2  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseScalar' with (unknown))                                                            SC2012",
+    "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBlockScalar' with (unknown, unknown))                                              SC2012",
+    "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseDoubleQuoted' with (unknown))                                                      SC2012",
+    "×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                                                                         SC2012",
+    "×3  element access on non-array values are not supported yet (instantiating 'parseScalar' with (unknown))                                                                                            SC1090",
+    "×3  uses of 'quote' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                 SC2004",
+    "×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseQuotedValue' with (string, unknown))  SC1090",
+    "×1  uses of 'end' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                   SC2004"
+  ],
+  "notes": [
+    "deferred to runtime   13 sites (JS statements that throw their fence if executed)"
+  ]
+}

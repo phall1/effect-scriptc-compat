@@ -1,0 +1,16 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-toml.ts
+
+  statements analyzed   564
+  compile statically    554  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   11 sites (JS statements that throw their fence if executed)
+      ×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012
+      ×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012
+      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012
+      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012
+      ×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090
+      ×1  element access on non-array values                                                                                                          SC1090
+

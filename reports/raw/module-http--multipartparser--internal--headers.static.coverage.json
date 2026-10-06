@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/module-http--multipartparser--internal--headers.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 641.18,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--multipartparser--internal--headers.ts\n\n  statements analyzed   143\n  compile statically    143  (100%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  fully static — this program has no dynamic remainder.\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1pbnRlcm5hbC0taGVhZGVycy50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgMTQzCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDE0MyAgKDEwMCUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZnVsbHkgc3RhdGljIOKAlCB0aGlzIHByb2dyYW0gaGFzIG5vIGR5bmFtaWMgcmVtYWluZGVyLgo=",
+  "stderrBase64": ""
+}

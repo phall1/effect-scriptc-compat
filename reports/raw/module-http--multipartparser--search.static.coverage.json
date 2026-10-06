@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/module-http--multipartparser--search.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 1107.214,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/module-http--multipartparser--search.ts\n\n  statements analyzed   86\n  compile statically    85  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   1 site (JS statements that throw their fence if executed)\n      ×1  'Buffer.prototype' is part of the standard library types but has no scriptc lowering yet (instantiating 'make' with (unknown, unknown, unknown, unknown))  SC2020\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9tb2R1bGUtaHR0cC0tbXVsdGlwYXJ0cGFyc2VyLS1zZWFyY2gudHMKCiAgc3RhdGVtZW50cyBhbmFseXplZCAgIDg2CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDg1ICAoOTglKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGRlZmVycmVkIHRvIHJ1bnRpbWUgICAxIHNpdGUgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cxICAnQnVmZmVyLnByb3RvdHlwZScgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdtYWtlJyB3aXRoICh1bmtub3duLCB1bmtub3duLCB1bmtub3duLCB1bmtub3duKSkgIFNDMjAyMAoK",
+  "stderrBase64": ""
+}

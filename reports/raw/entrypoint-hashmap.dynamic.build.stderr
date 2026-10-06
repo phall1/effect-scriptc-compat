@@ -1,0 +1,29 @@
+/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/core.js:173:36 - error SC1090: the reference to 'constEmptyAnnotations' (a binding form with no lowering) is not supported yet
+
+  172 | export class Fail extends ReasonBase {
+  173 |   constructor(error, annotations = constEmptyAnnotations) {
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+  174 |     super("Fail", annotations, error);
+
+/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/core.js:230:37 - error SC1090: the reference to 'constEmptyAnnotations' (a binding form with no lowering) is not supported yet
+
+  229 | export class Die extends ReasonBase {
+  230 |   constructor(defect, annotations = constEmptyAnnotations) {
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+  231 |     super("Die", annotations, defect);
+
+/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/hashMap.js:78:9 - error SC1090: fields assigned outside the constructor's top level ('this._hash' would be undefined until the first assignment runs — assign it unconditionally at the top of the constructor) is not supported yet
+
+  77 |       if (seen === backEdges) {
+  78 |         this._hash = h;
+     |         ^~~~~~~~~~~~~~
+  79 |       }
+
+/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/hashMap.js:85:25 - error SC1090: extending classes not declared in the program ('Node') is not supported yet
+
+  84 | /** @internal */
+  85 | class EmptyNode extends Node {
+     |                         ^~~~
+  86 |   _tag = "EmptyNode";
+
+4 errors.

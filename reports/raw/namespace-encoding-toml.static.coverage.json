@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/namespace-encoding-toml.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 680.239,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-toml.ts\n\n  statements analyzed   564\n  compile statically    554  (98%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   11 sites (JS statements that throw their fence if executed)\n      ×4  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                    SC2012\n      ×3  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseNumber' with (unknown))       SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (boolean))  SC2012\n      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBasicString' with (unknown))  SC2012\n      ×1  element access on non-array values are not supported yet (instantiating 'parseNumber' with (unknown))                                       SC1090\n      ×1  element access on non-array values                                                                                                          SC1090\n\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9uYW1lc3BhY2UtZW5jb2RpbmctdG9tbC50cwoKICBzdGF0ZW1lbnRzIGFuYWx5emVkICAgNTY0CiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDU1NCAgKDk4JSkKCiAgbnBtIHBhY2thZ2VzIGNvbXBpbGVkIHN0YXRpY2FsbHkgKC0tbnBtLXN0YXRpYyk6CiAgICBlZmZlY3QgIHN0YXRpYwoKICBkZWZlcnJlZCB0byBydW50aW1lICAgMTEgc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5c0ICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAxMgogICAgICDDlzMgICdOdW1iZXIucGFyc2VJbnQnIHJ1bnMgaW4gdGhlIGVtYmVkZGVkIGR5bmFtaWMgZW5naW5lLCB3aGljaCB0aGlzIGJ1aWxkIGRvZXMgbm90IGluY2x1ZGUgKGluc3RhbnRpYXRpbmcgJ3BhcnNlTnVtYmVyJyB3aXRoICh1bmtub3duKSkgICAgICAgU0MyMDEyCiAgICAgIMOXMSAgJ051bWJlci5wYXJzZUludCcgcnVucyBpbiB0aGUgZW1iZWRkZWQgZHluYW1pYyBlbmdpbmUsIHdoaWNoIHRoaXMgYnVpbGQgZG9lcyBub3QgaW5jbHVkZSAoaW5zdGFudGlhdGluZyAncGFyc2VCYXNpY1N0cmluZycgd2l0aCAoYm9vbGVhbikpICBTQzIwMTIKICAgICAgw5cxICAnTnVtYmVyLnBhcnNlSW50JyBydW5zIGluIHRoZSBlbWJlZGRlZCBkeW5hbWljIGVuZ2luZSwgd2hpY2ggdGhpcyBidWlsZCBkb2VzIG5vdCBpbmNsdWRlIChpbnN0YW50aWF0aW5nICdwYXJzZUJhc2ljU3RyaW5nJyB3aXRoICh1bmtub3duKSkgIFNDMjAxMgogICAgICDDlzEgIGVsZW1lbnQgYWNjZXNzIG9uIG5vbi1hcnJheSB2YWx1ZXMgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdwYXJzZU51bWJlcicgd2l0aCAodW5rbm93bikpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgZWxlbWVudCBhY2Nlc3Mgb24gbm9uLWFycmF5IHZhbHVlcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKCg==",
+  "stderrBase64": ""
+}

@@ -1,0 +1,18 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/namespace-encoding-yaml.ts
+
+  statements analyzed   685
+  compile statically    677  (98%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   13 sites (JS statements that throw their fence if executed)
+      ×2  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseScalar' with (unknown))                                                            SC2012
+      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseBlockScalar' with (unknown, unknown))                                              SC2012
+      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include (instantiating 'parseDoubleQuoted' with (unknown))                                                      SC2012
+      ×1  'Number.parseInt' runs in the embedded dynamic engine, which this build does not include                                                                                                         SC2012
+      ×3  element access on non-array values are not supported yet (instantiating 'parseScalar' with (unknown))                                                                                            SC1090
+      ×3  uses of 'quote' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                 SC2004
+      ×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseQuotedValue' with (string, unknown))  SC1090
+      ×1  uses of 'end' inherit the blocker on its declaration (instantiating 'parseQuotedValue' with (string, unknown))                                                                                   SC2004
+
