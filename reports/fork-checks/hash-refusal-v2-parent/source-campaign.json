@@ -1,0 +1,748 @@
+{
+  "sourceSha": "d5cdca0e8c6dea870761dade26c2dbb4d317dd8a",
+  "sourceDiffSha256": "91b38c412c2b85dfba6f849508e32d773050c109b5aa2864d8dbac168752a586",
+  "untrackedSource": [
+    [
+      "packages/compiler/src/frontend/lowering/array-membership.test.ts",
+      "0df3165fdfb848504aab82c453be5f55c50f9b68398112df6e46ef52cd3762f8"
+    ],
+    [
+      "packages/compiler/src/frontend/lowering/array-membership.ts",
+      "326169b1175c4493e358b97af9cab9ca998b96869005d63f983a1d58ddef278f"
+    ],
+    [
+      "packages/compiler/src/frontend/lowering/array-values.test.ts",
+      "cefe7fad2662835f0c7dd7cbf15595e07d2261d250a647eed73fcbb3bca85e2c"
+    ],
+    [
+      "packages/runtime/src/scr_array_methods.h",
+      "b803d3e857f53b1ef00c275cbc57fd0f247de744caa96dd8f6f642b8fe07d320"
+    ]
+  ],
+  "compilerIdentity": "45a03da99be4ef018da1fb2e44934a429772498a7ed47760bc2abb400a2d104b",
+  "environment": {
+    "HOME": "/Users/phall",
+    "TMPDIR": "/var/folders/6k/_cy0x5fn1c53gx23j8s3_mnm0000gn/T/",
+    "PATH": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/phall/.local/share/mise/shims:/opt/homebrew/bin",
+    "DEVELOPER_DIR": "/Applications/Xcode.app/Contents/Developer",
+    "CC": "/usr/bin/clang",
+    "CXX": "/usr/bin/clang++",
+    "AR": "/usr/bin/ar",
+    "SCRIPTC_LINKER": "/usr/bin/clang",
+    "SCRIPTC_CACHE_DIR": "/Users/phall/workspace/scriptc-effect/node_modules/.cache/effect-compat"
+  },
+  "target": "arm64-apple-macosx14.0.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "linkerVersion": {
+    "command": "/usr/bin/clang",
+    "args": [
+      "--version"
+    ],
+    "cwd": "/Users/phall/workspace/scriptc-effect",
+    "timeoutMs": 10000,
+    "elapsedMs": 97,
+    "stdoutBase64": "QXBwbGUgY2xhbmcgdmVyc2lvbiAyMS4wLjAgKGNsYW5nLTIxMDAuMy4zNC4yKQpUYXJnZXQ6IGFybTY0LWFwcGxlLWRhcndpbjI3LjAuMApUaHJlYWQgbW9kZWw6IHBvc2l4Ckluc3RhbGxlZERpcjogL0FwcGxpY2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvRGV2ZWxvcGVyL1Rvb2xjaGFpbnMvWGNvZGVEZWZhdWx0LnhjdG9vbGNoYWluL3Vzci9iaW4K",
+    "stderrBase64": "",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null
+  },
+  "resolvedLinkerPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+  "linkerSha256": "1590ac950a3d627817d09ade5cb60b2115f17a72182a3141e010b4bcc482a0c9",
+  "sdkPath": {
+    "command": "/usr/bin/xcrun",
+    "args": [
+      "--show-sdk-path"
+    ],
+    "cwd": "/Users/phall/workspace/scriptc-effect",
+    "timeoutMs": 10000,
+    "elapsedMs": 12,
+    "stdoutBase64": "L0FwcGxpY2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvRGV2ZWxvcGVyL1BsYXRmb3Jtcy9NYWNPU1gucGxhdGZvcm0vRGV2ZWxvcGVyL1NES3MvTWFjT1NYLnNkawo=",
+    "stderrBase64": "",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null
+  },
+  "helperVersion": {
+    "command": "/Users/phall/workspace/scriptc-effect/packages/llvm-darwin-arm64/bin/scriptc-llvm-codegen",
+    "args": [
+      "version",
+      "--format=json"
+    ],
+    "cwd": "/Users/phall/workspace/scriptc-effect",
+    "timeoutMs": 10000,
+    "elapsedMs": 10,
+    "stdoutBase64": "eyJkYXRhX2xheW91dCI6ImUtbTpvLXAyNzA6MzI6MzItcDI3MTozMjozMi1wMjcyOjY0OjY0LWk2NDo2NC1pMTI4OjEyOC1uMzI6NjQtUzEyOC1GbjMyIiwiZGVmYXVsdF90YXJnZXQiOiJhcm02NC1hcHBsZS1tYWNvc3gxNC4wLjAiLCJob3N0X3RyaXBsZSI6ImFybTY0LWFwcGxlLWRhcndpbjI3LjAuMCIsImxsdm1fdmVyc2lvbiI6IjIyLjEuOCIsIm9rIjp0cnVlLCJwcm90b2NvbF92ZXJzaW9uIjoiMSIsInNjcmlwdGNfcGFja2FnZV92ZXJzaW9uIjoiMC4yLjQiLCJzdXBwb3J0ZWRfdGFyZ2V0cyI6WyJhcm02NC1hcHBsZS1tYWNvc3gxNC4wLjAiLCJ4ODZfNjQtYXBwbGUtbWFjb3N4MTQuMC4wIiwieDg2XzY0LXVua25vd24tbGludXgtZ251IiwiYWFyY2g2NC11bmtub3duLWxpbnV4LWdudSIsIng4Nl82NC11bmtub3duLWxpbnV4LW11c2wiLCJhYXJjaDY0LXVua25vd24tbGludXgtbXVzbCIsIng4Nl82NC1wYy13aW5kb3dzLW1zdmMiLCJ3YXNtMzItdW5rbm93bi13YXNpIiwiYXJtNjQtYXBwbGUtaW9zMTUuMC4wIiwiYXJtNjQtYXBwbGUtaW9zMTUuMC4wLXNpbXVsYXRvciIsImFhcmNoNjQtdW5rbm93bi1saW51eC1hbmRyb2lkMjYiXSwidGFyZ2V0cyI6WyJBQXJjaDY0IiwiWDg2IiwiV2ViQXNzZW1ibHkiXX0K",
+    "stderrBase64": "",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null
+  },
+  "effectContentsSha256": "c688a9a6ae705978a58bc08f78682b8e1ebe4ca6d3c9caa0108ec9b2d559a9ba",
+  "publishedIntegrity": "sha512-b1VlQG9g8fwxE5QnIZuPoOP/0MsqHJSRKxUijjoM80E5q95FXrX5yWtY5XI8G+GJsBQAVSDbLS458z9a++uVvw==",
+  "publishedTarSha256": "717bd819cd9656eec72df3789031a50610b8617aac9c2611bedae1090b36be91",
+  "node": "v24.19.0",
+  "nodePath": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+  "nodeSha256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+  "effectVersion": "4.0.1",
+  "manifestSha256": "a74eb45dcb3ef6e4c0a786d8da7b9b6107499d489ca8d9e8f60bead0c583bb1a",
+  "denominator": 404,
+  "selected": [
+    "concurrency-all",
+    "concurrency-timeout",
+    "documented-hash",
+    "effect-gen",
+    "effect-succeed",
+    "error-cause",
+    "layer-succeed",
+    "resource-acquire-release",
+    "schema-decode",
+    "stream-map"
+  ],
+  "optimization": "dev",
+  "dynamic": false,
+  "sanitized": false,
+  "startedAt": "2026-10-06T22:02:54.002Z",
+  "results": [
+    {
+      "id": "concurrency-all",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-all.ts",
+      "sourceSha256": "4314dc05a1e7d7e31c4a5bb49da6109b7163b7f6968ab8d8a76f8d0e509ed696",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-all.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-all/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 31232,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvY29uY3VycmVuY3ktYWxsL3Byb2dyYW0K",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-all.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 812,
+        "stdoutBase64": "YWxsOjEsMiwzCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-all/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 101,
+        "stdoutBase64": "YWxsOjEsMiwzCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-all/program",
+      "binarySha256": "ae47fbab25d57ddbd8019784e29740fa27eab87932c4802a621d16d101eeb221",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "concurrency-timeout",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-timeout.ts",
+      "sourceSha256": "d82dca7d78b45077b3a14f3c35120ad9ce22aa8ed217c0c6d6ab4bd508d500ea",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-timeout.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-timeout/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 45481,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvY29uY3VycmVuY3ktdGltZW91dC9wcm9ncmFtCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/concurrency-timeout.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 780,
+        "stdoutBase64": "VGltZW91dEVycm9yCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-timeout/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 99,
+        "stdoutBase64": "VGltZW91dEVycm9yCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/concurrency-timeout/program",
+      "binarySha256": "95d21bcfbc048b07efdb8c2c2eed93ec65a96d7c0cf1645ae57b743ac483cc44",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "documented-hash",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-hash.ts",
+      "sourceSha256": "71f324ff54e4757f3a3e3cdae65fa285410b59673ea65c5c7658bf2e6dafec9f",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-hash.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/documented-hash/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 5621,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvZG9jdW1lbnRlZC1oYXNoL3Byb2dyYW0K",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/documented-hash.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 184,
+        "stdoutBase64": "W3RydWUsdHJ1ZSx0cnVlXQo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/documented-hash/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 56,
+        "stdoutBase64": "W3RydWUsdHJ1ZSx0cnVlXQo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/documented-hash/program",
+      "binarySha256": "bc3404a427e801baf41e4dd52fd2c3d81ec8ac4d5bfac2ddccbcdcb104914c68",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "effect-gen",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/effect-gen.ts",
+      "sourceSha256": "9e709892dc4c482f036721ed5a9b13c117f5c0acd19fa6eb9cb02b749946c72b",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/effect-gen.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-gen/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 30894,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvZWZmZWN0LWdlbi9wcm9ncmFtCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/effect-gen.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 808,
+        "stdoutBase64": "Z2VuOjQyCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-gen/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 99,
+        "stdoutBase64": "Z2VuOjQyCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-gen/program",
+      "binarySha256": "5cfc29f6c5f2f10f55a643e9ecd7626e9ce9bea010e426ba568a053b30f83fea",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "effect-succeed",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/effect-succeed.ts",
+      "sourceSha256": "b0b9644dcc91fc38aaa239b676c833141f0b48347fe05a74d92a40233f8c6e51",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/effect-succeed.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-succeed/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 24554,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvZWZmZWN0LXN1Y2NlZWQvcHJvZ3JhbQo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/effect-succeed.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 454,
+        "stdoutBase64": "c3VjY2VlZDo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-succeed/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 87,
+        "stdoutBase64": "c3VjY2VlZDo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/effect-succeed/program",
+      "binarySha256": "6615f6cbc7dfbf74d9d59d65d1c273f59e60ab1316146fcdb1669356b3a3740e",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "error-cause",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/error-cause.ts",
+      "sourceSha256": "cec7c8e9245fdaef2cc7db563992cde01e19a1d10285fa9da734dfddc96cd6c4",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/error-cause.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/error-cause/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 32775,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvZXJyb3ItY2F1c2UvcHJvZ3JhbQo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/error-cause.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 554,
+        "stdoutBase64": "Q2F1c2VGYWlsdXJlCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/error-cause/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 101,
+        "stdoutBase64": "Q2F1c2VGYWlsdXJlCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/error-cause/program",
+      "binarySha256": "03a2cf89faf210ee18fd1848ca3933156ab247a59b6945a42164647f41deb8e9",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "layer-succeed",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/layer-succeed.ts",
+      "sourceSha256": "3793a8a7a5a3b9e71959231355ab62e47ce048b3b41a09a47de0b275cd241d46",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/layer-succeed.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/layer-succeed/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 30375,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvbGF5ZXItc3VjY2VlZC9wcm9ncmFtCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/layer-succeed.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 715,
+        "stdoutBase64": "bGF5ZXIuc3VjY2VlZDo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/layer-succeed/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 101,
+        "stdoutBase64": "bGF5ZXIuc3VjY2VlZDo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/layer-succeed/program",
+      "binarySha256": "87e560becf74b2227b49978bc6ee8ea495b7cf830a135c918b8b27a5edd520a2",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "resource-acquire-release",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/resource-acquire-release.ts",
+      "sourceSha256": "669f411e58770dcf7f48a7caad717e4a1d4773e6b5045fa83db0bc4d675bfcd9",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/resource-acquire-release.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/resource-acquire-release/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 27276,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvcmVzb3VyY2UtYWNxdWlyZS1yZWxlYXNlL3Byb2dyYW0K",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/resource-acquire-release.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 643,
+        "stdoutBase64": "YWNxdWlyZXx1c2U6NDJ8cmVsZWFzZTo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/resource-acquire-release/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 119,
+        "stdoutBase64": "YWNxdWlyZXx1c2U6NDJ8cmVsZWFzZTo0Mgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/resource-acquire-release/program",
+      "binarySha256": "2314f04062fbb0847c911fdaabf6176959d60067e7d8be0850abd77b86774349",
+      "differences": [],
+      "equal": true
+    },
+    {
+      "id": "schema-decode",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/schema-decode.ts",
+      "sourceSha256": "307324f322acfd6e10a5c3a4618522c5d432ae1b702d16388bd1197d2840f10c",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/schema-decode.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/schema-decode/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 35938,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvc2NoZW1hLWRlY29kZS9wcm9ncmFtCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/schema-decode.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 561,
+        "stdoutBase64": "ZGVjb2RlOjQyCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/schema-decode/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 129,
+        "stdoutBase64": "",
+        "stderrBase64": "VW5jYXVnaHQgRXJyb3I6ICdzdHJpbmcnIHZhbHVlcyB3aGVyZSAnVVJMJyBpcyBleHBlY3RlZCBpcyBub3Qgc3VwcG9ydGVkIHlldCBbU0MxMDkwIGF0IC9Vc2Vycy9waGFsbC93b3Jrc3BhY2UvZWZmZWN0LXNjcmlwdGMtY29tcGF0L25vZGVfbW9kdWxlcy8ucG5wbS9lZmZlY3RANC4wLjEvbm9kZV9tb2R1bGVzL2VmZmVjdC9kaXN0L1NjaGVtYS5qczo1ODcwXQo=",
+        "exitCode": 1,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/schema-decode/program",
+      "binarySha256": "e6c1e9a17af3890e48a9affc60310699a5b1ade870aa24a12e38b3826ae93803",
+      "differences": [
+        "stdoutBase64",
+        "stderrBase64",
+        "exitCode"
+      ],
+      "equal": false
+    },
+    {
+      "id": "stream-map",
+      "file": "/Users/phall/workspace/effect-scriptc-compat/cases/stream-map.ts",
+      "sourceSha256": "88f51086e2fe3c360a46a967dbbb647e93981a284c202bd4d306040cfd6bb9eb",
+      "baselineValid": true,
+      "build": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--max-old-space-size=8192",
+          "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+          "build",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/stream-map.ts",
+          "--npm-static=effect",
+          "--optimization=dev",
+          "--no-keep-llvm",
+          "-o",
+          "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/stream-map/program"
+        ],
+        "cwd": "/Users/phall/workspace/scriptc-effect",
+        "timeoutMs": 600000,
+        "elapsedMs": 19946,
+        "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9zY3JpcHRjLWVmZmVjdC8uZWZmZWN0LWNvbXBhdC9oYXNoLXJlZnVzYWwtdjItcmVwcmVzZW50YXRpdmUvc3RyZWFtLW1hcC9wcm9ncmFtCg==",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "reference": {
+        "command": "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+        "args": [
+          "--experimental-strip-types",
+          "/Users/phall/workspace/effect-scriptc-compat/cases/stream-map.ts"
+        ],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 392,
+        "stdoutBase64": "c3RyZWFtLm1hcDoyLDQsNgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "native": {
+        "command": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/stream-map/program",
+        "args": [],
+        "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+        "timeoutMs": 30000,
+        "elapsedMs": 111,
+        "stdoutBase64": "c3RyZWFtLm1hcDoyLDQsNgo=",
+        "stderrBase64": "",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "spawnError": null
+      },
+      "binary": "/Users/phall/workspace/scriptc-effect/.effect-compat/hash-refusal-v2-representative/stream-map/program",
+      "binarySha256": "ddb030f0e1ca6b42a81b25dbc86792cb3f9893935c48fe9df9320ce94ca2581f",
+      "differences": [],
+      "equal": true
+    }
+  ],
+  "summary": {
+    "measurementComplete": true,
+    "partial": true,
+    "corpusComplete": false,
+    "corpusParity": false,
+    "measured": 10,
+    "equal": 9,
+    "rejected": 0,
+    "mismatched": 1,
+    "invalidBaselines": 0
+  },
+  "finishedAt": "2026-10-06T22:08:03.141Z"
+}
