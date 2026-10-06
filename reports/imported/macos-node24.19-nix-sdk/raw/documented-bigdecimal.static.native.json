@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/bin/documented-bigdecimal"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 80.218,
+  "maxRssKb": null,
+  "stdout": "[false,true,false,false]\n",
+  "stderr": "",
+  "stdoutBase64": "W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2VdCg==",
+  "stderrBase64": ""
+}

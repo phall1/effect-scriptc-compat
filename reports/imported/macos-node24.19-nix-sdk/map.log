@@ -1,0 +1,19 @@
+$ node scripts/map.ts
+chunk-round-trip: deferred
+concurrency-all: rejected
+concurrency-for-each: rejected
+callback-microtask: rejected
+concurrency-race: rejected
+documented-ai--aierror: rejected
+documented-ai--chat: rejected
+concurrency-timeout: rejected
+documented-ai--idgenerator: rejected
+documented-ai--languagemodel: rejected
+documented-ai--telemetry: rejected
+documented-ai--model: rejected
+documented-ai--response: rejected
+documented-bigdecimal: deferred
+documented-boolean: rejected
+documented-ai--tool: rejected
+documented-ai--toolkit: rejected
+documented-cache: rejected

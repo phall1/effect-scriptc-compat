@@ -1,0 +1,14 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-boolean.ts
+
+  statements analyzed   158
+  compile statically    152  (96%)
+  compile dynamically   2  (1%) (island sites — the embedded engine runs them)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  deferred to runtime   2 sites (JS statements that throw their fence if executed)
+      ×2  spread arguments  SC1090
+
+  blockers:
+      ×2  'number' values where 'string' is expected  SC1090

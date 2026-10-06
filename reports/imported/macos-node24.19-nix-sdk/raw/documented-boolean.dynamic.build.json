@@ -1,0 +1,22 @@
+{
+  "command": [
+    "scriptc",
+    "build",
+    "cases/documented-boolean.ts",
+    "--npm-static=effect",
+    "--dynamic",
+    "-o",
+    "bin/documented-boolean.dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 480.713,
+  "maxRssKb": null,
+  "stdout": "",
+  "stderr": "/Users/phall/workspace/effect-scriptc-compat/cases/documented-boolean.ts:6:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  5 | \n  6 | __compatObserved.push(Boolean.Boolean(1))\n    |                                       ^\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n\n/Users/phall/workspace/effect-scriptc-compat/cases/documented-boolean.ts:8:39 - error SC1090: 'number' values where 'string' is expected is not supported yet\n\n  7 | __compatObserved.push(Boolean.Boolean(\"false\"))\n  8 | __compatObserved.push(Boolean.Boolean(0))\n    |                                       ^\n  9 | console.log(JSON.stringify(__compatObserved))\n\n2 errors.\n",
+  "stdoutBase64": "",
+  "stderrBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1ib29sZWFuLnRzOjY6MzkgLSBlcnJvciBTQzEwOTA6ICdudW1iZXInIHZhbHVlcyB3aGVyZSAnc3RyaW5nJyBpcyBleHBlY3RlZCBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICA1IHwgCiAgNiB8IF9fY29tcGF0T2JzZXJ2ZWQucHVzaChCb29sZWFuLkJvb2xlYW4oMSkpCiAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXgogIDcgfCBfX2NvbXBhdE9ic2VydmVkLnB1c2goQm9vbGVhbi5Cb29sZWFuKCJmYWxzZSIpKQoKL1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvY2FzZXMvZG9jdW1lbnRlZC1ib29sZWFuLnRzOjg6MzkgLSBlcnJvciBTQzEwOTA6ICdudW1iZXInIHZhbHVlcyB3aGVyZSAnc3RyaW5nJyBpcyBleHBlY3RlZCBpcyBub3Qgc3VwcG9ydGVkIHlldAoKICA3IHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEJvb2xlYW4uQm9vbGVhbigiZmFsc2UiKSkKICA4IHwgX19jb21wYXRPYnNlcnZlZC5wdXNoKEJvb2xlYW4uQm9vbGVhbigwKSkKICAgIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBeCiAgOSB8IGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KF9fY29tcGF0T2JzZXJ2ZWQpKQoKMiBlcnJvcnMuCg=="
+}
