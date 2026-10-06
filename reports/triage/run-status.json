@@ -1,0 +1,9 @@
+{
+  "phase": "map-stopped",
+  "exitCode": 130,
+  "updatedAt": "2026-10-06T00:45:55.248Z",
+  "sourceCommit": "bd97f4abcf8eed855b2088069736efe9212e4bdd",
+  "pausedAt": "2026-10-06T01:49:25.223Z",
+  "reason": "Deliberate cost-bound stop after durable checkpoint; no exhaustive reduction.",
+  "stoppedAt": "2026-10-06T02:05:30.769Z"
+}

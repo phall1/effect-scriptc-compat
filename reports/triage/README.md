@@ -1,4 +1,4 @@
-# Focused blocker triage — bulk pipeline paused
+# Focused blocker triage — bulk pipeline stopped
 
 The reference sweep was paused at 323/404 measured cases: 26 static, 36 deferred, 261 rejected, 81 unmeasured. Of the rejected cases, 253 show the same SC3004 `null is not representable in the target union` message in at least one build. No compiler deadlines were reached in the inspected records; time was spent repeating coverage/build in static and dynamic modes, not waiting on hangs.
 
@@ -9,4 +9,4 @@ Two small persisted diagnostics were independently executed on reference Node 24
 
 `initialization.json` and per-command raw artifacts retain exact source hashes, provenance, command, status and bytes. The import-only file is a diagnosis of import-graph/compiler processing, **not** added compatibility coverage. These observations show that hundreds of refusals need not represent hundreds of independent API defects; the common blocker already occurs without an Effect call. They do not prove every SC3004 wrapper has the same underlying cause.
 
-The original native process group is frozen, not completed. No broad all-signature reduction should be resumed automatically. Preserve the 62 successful builds and existing verified Hash runtime trap; investigate representative shared blockers rather than reducing every API-family copy. Dependencies and upstream packages remain unmodified. No upstream issue or PR was opened.
+The original native process group was first frozen, then terminated after validating the durable checkpoint and confirming that all compiler children had exited. Its terminal was removed; no worker or automatic reducer remains. `run-status.json` records the deliberate stop (not a successful full sweep). Partial command output for four RPC probes is retained in `reports/raw/`; none has a completed result record, and all four remain pending. No broad all-signature reduction should be resumed automatically. Preserve the 62 successful builds and existing verified Hash runtime trap; investigate representative shared blockers rather than reducing every API-family copy. Dependencies and upstream packages remain unmodified. No upstream issue or PR was opened.
