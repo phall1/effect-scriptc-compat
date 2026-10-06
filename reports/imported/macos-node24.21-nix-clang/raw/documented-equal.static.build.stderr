@@ -1,0 +1,10 @@
+/Users/phall/workspace/effect-scriptc-compat/cases/documented-equal.ts:13:36 - error SC1101: converting typed values to 'unknown' is not supported yet
+
+  12 | 
+  13 | __compatObserved.push(Equal.equals(new Date("2024-01-01"), new Date("2024-01-01")))
+     |                                    ^~~~~~~~~~~~~~~~~~~~~~
+  14 | 
+
+  hint: numbers, strings, booleans, JSON-safe records/arrays/unions (a deep copy), functions, program class instances, and supported native handles convert into 'unknown' slots; functions, exact-class round trips, and handles preserve identity, while this value's type has no dynamic representation yet
+
+1 error.

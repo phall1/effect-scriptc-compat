@@ -1,0 +1,10 @@
+scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-equal.ts
+
+  statements analyzed   322
+  compile statically    321  (99%)
+
+  npm packages compiled statically (--npm-static):
+    effect  static
+
+  blockers:
+      ×1  converting typed values to 'unknown'  SC1101

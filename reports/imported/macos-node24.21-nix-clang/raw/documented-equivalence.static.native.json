@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/phall/workspace/effect-scriptc-compat/bin/documented-equivalence"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 50.576,
+  "maxRssKb": null,
+  "stdout": "[true,false,true]\n",
+  "stderr": "",
+  "stdoutBase64": "W3RydWUsZmFsc2UsdHJ1ZV0K",
+  "stderrBase64": ""
+}

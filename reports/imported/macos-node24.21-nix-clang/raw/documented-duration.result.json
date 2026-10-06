@@ -1,0 +1,219 @@
+{
+  "id": "documented-duration",
+  "module": "Duration",
+  "entrypoint": "effect/Duration",
+  "family": "Duration",
+  "file": "cases/documented-duration.ts",
+  "status": "ready",
+  "api": [
+    "Duration.fromInputUnsafe"
+  ],
+  "expectedStdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
+  "declaration": "node_modules/effect/dist/Duration.d.ts",
+  "declarationSha256": "fda414d1e97aaad5aee9633f178d732bc439efaa1a5c25fe52d47e5a83a4e13e",
+  "exampleIndex": 0,
+  "effectVersion": "4.0.1",
+  "scriptcVersion": "0.2.3",
+  "cacheIdentity": "4480ac25449474c3be29d238d6f6d5b98ee24e9cdd173254a3999606bb7f8b5f",
+  "sourceSha256": "90e6f79b55fa901f97e2caed3cfa328f44c32c9710615c0e120f1d280eacade9",
+  "typecheck": {
+    "command": [
+      "/Users/phall/workspace/effect-scriptc-compat/node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--noEmit",
+      "--strict",
+      "--target",
+      "ES2025",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--allowImportingTsExtensions",
+      "--verbatimModuleSyntax",
+      "--types",
+      "node",
+      "cases/documented-duration.ts"
+    ],
+    "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 428.544,
+    "maxRssKb": null,
+    "stdout": "",
+    "stderr": "",
+    "stdoutBase64": "",
+    "stderrBase64": ""
+  },
+  "tier": "deferred",
+  "staticAttempt": {
+    "mode": "static",
+    "coverage": {
+      "command": [
+        "scriptc",
+        "coverage",
+        "cases/documented-duration.ts",
+        "--npm-static=effect"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 4098.947,
+      "maxRssKb": null,
+      "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-duration.ts\n\n  statements analyzed   1190\n  compile statically    1188  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   21 sites (JS statements that throw their fence if executed)\n      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043\n      ×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                          SC1043\n      ×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090\n      ×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090\n      ×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseNanos' with (string, bigint))                                                                                                      SC1090\n      ×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'make' with (bigint))                                                                                                                                                                                          SC1090\n      ×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                        SC1090\n      ×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (bigint))                                                                                                                                                                                                SC1090\n      ×1  'in' on 'bigint' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (bigint))  SC1090\n      ×1  record shapes must match exactly or width-coerce: expected 'number', got '{ seconds: number }' (instantiating 'make' with ({ seconds: number }))                                                                                                                                              SC2002\n      ×1  record shapes must match exactly or width-coerce: expected 'number', got '{ days: number }' (instantiating 'make' with ({ days: number }))                                                                                                                                                    SC2002\n      ×1  record shapes must match exactly or width-coerce: expected 'number', got '{ nanoseconds: number; seconds: number }' (instantiating 'make' with ({ nanoseconds: number; seconds: number }))                                                                                                    SC2002\n      ×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m17.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020\n      ×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020\n      ×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n      ×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020\n      ×1  'bigint.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                                   SC2020\n      ×1  'bigint.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                               SC2020\n      ×1  '{ seconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ seconds: number }))                                                                                                                              SC2020\n      ×1  '{ days: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ days: number }))                                                                                                                                    SC2020\n      ×1  '{ seconds: number; nanoseconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ nanoseconds: number; seconds: number }))                                                                                    SC2020\n\n",
+      "stderr": "",
+      "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWR1cmF0aW9uLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAxMTkwCiAgY29tcGlsZSBzdGF0aWNhbGx5ICAgIDExODggICg5OSUpCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDIxIHNpdGVzIChKUyBzdGF0ZW1lbnRzIHRoYXQgdGhyb3cgdGhlaXIgZmVuY2UgaWYgZXhlY3V0ZWQpCiAgICAgIMOXMSAgY29tcGFyaW5nIG5vbi1udW1iZXIsIG5vbi1zdHJpbmcgdmFsdWVzIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnbnVtYmVyJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA0MwogICAgICDDlzEgIGNvbXBhcmluZyBub24tbnVtYmVyLCBub24tc3RyaW5nIHZhbHVlcyBhcmUgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ251bWJlcicgd2l0aCAoYmlnaW50KSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwNDMKICAgICAgw5cxICAnc3RyaW5nJyB2YWx1ZXMgd2hlcmUgJ251bWJlcicgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ251bWJlcicgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luJyBvbiAnc3RyaW5nJyByZWNlaXZlcnMgKG9ubHkgcHJvY2Vzcy5lbnYsIEVycm9yIGluc3RhbmNlcywgcmVjb3JkLXR5cGVkIHZhbHVlcywgYW5kIHVuaW9ucyBvZiBmaXhlZCByZWNvcmQgc2hhcGVzIGFuc3dlcjsgbmFycm93IGZpcnN0OiBjaGVjayBhIGRpc2NyaW1pbmFudCBmaWVsZCwgb3IgY29tcGFyZSB3aXRoICchPT0gdW5kZWZpbmVkJy8nIT09IG51bGwnIGZvciB1bml0IGFybXMpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgIFNDMTA5MAogICAgICDDlzEgIHN0cmluZyBpbmRleGluZyB3aXRoIHRoaXMgaW5kZXgvcmVzdWx0IHNoYXBlIChleHBlY3RlZCBhIG51bWJlciBpbmRleCBhbmQgYSBzdHJpbmcgb3Igc3RyaW5nIHwgdW5kZWZpbmVkIHJlc3VsdCkgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ3BhcnNlTmFub3MnIHdpdGggKHN0cmluZywgYmlnaW50KSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKICAgICAgw5cxICAnYmlnaW50JyB2YWx1ZXMgd2hlcmUgJ251bWJlcicgaXMgZXhwZWN0ZWQgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ21ha2UnIHdpdGggKGJpZ2ludCkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2JpZ2ludCcgdmFsdWVzIHdoZXJlICdudW1iZXInIGlzIGV4cGVjdGVkIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdudW1iZXInIHdpdGggKGJpZ2ludCkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMTA5MAogICAgICDDlzEgIG1ldGhvZCBjYWxscyBsaWtlICdzdHIuY2hhckNvZGVBdCcgaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ3N0cmluZycgd2l0aCAoYmlnaW50KSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKICAgICAgw5cxICAnaW4nIG9uICdiaWdpbnQnIHJlY2VpdmVycyAob25seSBwcm9jZXNzLmVudiwgRXJyb3IgaW5zdGFuY2VzLCByZWNvcmQtdHlwZWQgdmFsdWVzLCBhbmQgdW5pb25zIG9mIGZpeGVkIHJlY29yZCBzaGFwZXMgYW5zd2VyOyBuYXJyb3cgZmlyc3Q6IGNoZWNrIGEgZGlzY3JpbWluYW50IGZpZWxkLCBvciBjb21wYXJlIHdpdGggJyE9PSB1bmRlZmluZWQnLychPT0gbnVsbCcgZm9yIHVuaXQgYXJtcykgYXJlIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChiaWdpbnQpKSAgU0MxMDkwCiAgICAgIMOXMSAgcmVjb3JkIHNoYXBlcyBtdXN0IG1hdGNoIGV4YWN0bHkgb3Igd2lkdGgtY29lcmNlOiBleHBlY3RlZCAnbnVtYmVyJywgZ290ICd7IHNlY29uZHM6IG51bWJlciB9JyAoaW5zdGFudGlhdGluZyAnbWFrZScgd2l0aCAoeyBzZWNvbmRzOiBudW1iZXIgfSkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAwMgogICAgICDDlzEgIHJlY29yZCBzaGFwZXMgbXVzdCBtYXRjaCBleGFjdGx5IG9yIHdpZHRoLWNvZXJjZTogZXhwZWN0ZWQgJ251bWJlcicsIGdvdCAneyBkYXlzOiBudW1iZXIgfScgKGluc3RhbnRpYXRpbmcgJ21ha2UnIHdpdGggKHsgZGF5czogbnVtYmVyIH0pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMDIKICAgICAgw5cxICByZWNvcmQgc2hhcGVzIG11c3QgbWF0Y2ggZXhhY3RseSBvciB3aWR0aC1jb2VyY2U6IGV4cGVjdGVkICdudW1iZXInLCBnb3QgJ3sgbmFub3NlY29uZHM6IG51bWJlcjsgc2Vjb25kczogbnVtYmVyIH0nIChpbnN0YW50aWF0aW5nICdtYWtlJyB3aXRoICh7IG5hbm9zZWNvbmRzOiBudW1iZXI7IHNlY29uZHM6IG51bWJlciB9KSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDAyCiAgICAgIMOXMSAgJ09iamVjdC5kZWZpbmVQcm9wZXJ0eScgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdhc3NpZ25Qcm9wZXJ0eScgd2l0aCAobTE3LiVjeDEyMjAwLkJhc2UsIHVua25vd24sIHVua25vd24pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICdzdHJpbmcudG9TdHJpbmcnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAnc3RyaW5nLmdldFRpbWUnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnaGFzaCcgd2l0aCAoc3RyaW5nKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgJ3N0cmluZy50b0lTT1N0cmluZycgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICdiaWdpbnQuZ2V0VGltZScgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdoYXNoJyB3aXRoIChiaWdpbnQpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAnYmlnaW50LnRvSVNPU3RyaW5nJyBpcyBwYXJ0IG9mIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IHR5cGVzIGJ1dCBoYXMgbm8gc2NyaXB0YyBsb3dlcmluZyB5ZXQgKGluc3RhbnRpYXRpbmcgJ2hhc2gnIHdpdGggKGJpZ2ludCkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCiAgICAgIMOXMSAgJ3sgc2Vjb25kczogbnVtYmVyOyB9Lmxlbmd0aCcgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdmcm9tSW5wdXRVbnNhZmUnIHdpdGggKHsgc2Vjb25kczogbnVtYmVyIH0pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgICd7IGRheXM6IG51bWJlcjsgfS5sZW5ndGgnIGlzIHBhcnQgb2YgdGhlIHN0YW5kYXJkIGxpYnJhcnkgdHlwZXMgYnV0IGhhcyBubyBzY3JpcHRjIGxvd2VyaW5nIHlldCAoaW5zdGFudGlhdGluZyAnZnJvbUlucHV0VW5zYWZlJyB3aXRoICh7IGRheXM6IG51bWJlciB9KSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzIwMjAKICAgICAgw5cxICAneyBzZWNvbmRzOiBudW1iZXI7IG5hbm9zZWNvbmRzOiBudW1iZXI7IH0ubGVuZ3RoJyBpcyBwYXJ0IG9mIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IHR5cGVzIGJ1dCBoYXMgbm8gc2NyaXB0YyBsb3dlcmluZyB5ZXQgKGluc3RhbnRpYXRpbmcgJ2Zyb21JbnB1dFVuc2FmZScgd2l0aCAoeyBuYW5vc2Vjb25kczogbnVtYmVyOyBzZWNvbmRzOiBudW1iZXIgfSkpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MyMDIwCgo=",
+      "stderrBase64": ""
+    },
+    "parsedCoverage": {
+      "parsed": true,
+      "counts": {
+        "total": 1190,
+        "static": 1188,
+        "dynamic": 0,
+        "unsupported": 2
+      },
+      "deferredSiteCount": 21,
+      "countScope": "scriptc-program-statements-including-unreached-remainder",
+      "diagnostics": [
+        {
+          "code": "SC1043",
+          "message": "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043\n×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                          SC1043",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC1090",
+          "message": "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090\n×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090\n×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseNanos' with (string, bigint))                                                                                                      SC1090\n×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'make' with (bigint))                                                                                                                                                                                          SC1090\n×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                        SC1090\n×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (bigint))                                                                                                                                                                                                SC1090\n×1  'in' on 'bigint' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (bigint))  SC1090",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:37",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:254",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:329"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2002",
+          "message": "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ seconds: number }' (instantiating 'make' with ({ seconds: number }))                                                                                                                                              SC2002\n×1  record shapes must match exactly or width-coerce: expected 'number', got '{ days: number }' (instantiating 'make' with ({ days: number }))                                                                                                                                                    SC2002\n×1  record shapes must match exactly or width-coerce: expected 'number', got '{ nanoseconds: number; seconds: number }' (instantiating 'make' with ({ nanoseconds: number; seconds: number }))                                                                                                    SC2002",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:254"
+          ],
+          "rewriteHints": []
+        },
+        {
+          "code": "SC2020",
+          "message": "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m17.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020\n×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020\n×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020\n×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020\n×1  'bigint.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                                   SC2020\n×1  'bigint.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                               SC2020\n×1  '{ seconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ seconds: number }))                                                                                                                              SC2020\n×1  '{ days: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ days: number }))                                                                                                                                    SC2020\n×1  '{ seconds: number; nanoseconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ nanoseconds: number; seconds: number }))                                                                                    SC2020",
+          "sourceLocations": [
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81",
+            "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:127"
+          ],
+          "rewriteHints": []
+        }
+      ],
+      "deferredSites": [
+        "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043",
+        "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                          SC1043",
+        "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090",
+        "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090",
+        "×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseNanos' with (string, bigint))                                                                                                      SC1090",
+        "×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'make' with (bigint))                                                                                                                                                                                          SC1090",
+        "×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                        SC1090",
+        "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (bigint))                                                                                                                                                                                                SC1090",
+        "×1  'in' on 'bigint' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (bigint))  SC1090",
+        "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ seconds: number }' (instantiating 'make' with ({ seconds: number }))                                                                                                                                              SC2002",
+        "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ days: number }' (instantiating 'make' with ({ days: number }))                                                                                                                                                    SC2002",
+        "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ nanoseconds: number; seconds: number }' (instantiating 'make' with ({ nanoseconds: number; seconds: number }))                                                                                                    SC2002",
+        "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m17.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020",
+        "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020",
+        "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+        "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020",
+        "×1  'bigint.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                                   SC2020",
+        "×1  'bigint.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                               SC2020",
+        "×1  '{ seconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ seconds: number }))                                                                                                                              SC2020",
+        "×1  '{ days: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ days: number }))                                                                                                                                    SC2020",
+        "×1  '{ seconds: number; nanoseconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ nanoseconds: number; seconds: number }))                                                                                    SC2020"
+      ],
+      "notes": [
+        "deferred to runtime   21 sites (JS statements that throw their fence if executed)"
+      ]
+    },
+    "build": {
+      "command": [
+        "scriptc",
+        "build",
+        "cases/documented-duration.ts",
+        "--npm-static=effect",
+        "-o",
+        "bin/documented-duration"
+      ],
+      "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "spawnError": null,
+      "durationMs": 5378.569,
+      "maxRssKb": null,
+      "stdout": "/Users/phall/workspace/effect-scriptc-compat/bin/documented-duration\n",
+      "stderr": "",
+      "stdoutBase64": "L1VzZXJzL3BoYWxsL3dvcmtzcGFjZS9lZmZlY3Qtc2NyaXB0Yy1jb21wYXQvYmluL2RvY3VtZW50ZWQtZHVyYXRpb24K",
+      "stderrBase64": ""
+    },
+    "diagnostics": [],
+    "binary": "bin/documented-duration",
+    "binarySize": 1172368,
+    "binarySha256": "f7e2bd230ea5747d5154685f80869362c567cd15c52100b6f084274b24acf2a9"
+  },
+  "dynamicAttempt": null,
+  "scCodes": [
+    "SC1043",
+    "SC1090",
+    "SC2002",
+    "SC2020"
+  ],
+  "sourceLocations": [
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:290",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:103",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:37",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:254",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:329",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/internal/record.js:4",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:72",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Hash.js:81",
+    "/Users/phall/workspace/effect-scriptc-compat/node_modules/.pnpm/effect@4.0.1/node_modules/effect/dist/Duration.js:127"
+  ],
+  "rewriteHints": [],
+  "deferredSites": [
+    "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (string))                                                                                                                                                                                          SC1043",
+    "×1  comparing non-number, non-string values are not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                          SC1043",
+    "×1  'string' values where 'number' is expected is not supported yet (instantiating 'number' with (string))                                                                                                                                                                                        SC1090",
+    "×1  'in' on 'string' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (string))  SC1090",
+    "×1  string indexing with this index/result shape (expected a number index and a string or string | undefined result) is not supported yet (instantiating 'parseNanos' with (string, bigint))                                                                                                      SC1090",
+    "×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'make' with (bigint))                                                                                                                                                                                          SC1090",
+    "×1  'bigint' values where 'number' is expected is not supported yet (instantiating 'number' with (bigint))                                                                                                                                                                                        SC1090",
+    "×1  method calls like 'str.charCodeAt' is not supported yet (instantiating 'string' with (bigint))                                                                                                                                                                                                SC1090",
+    "×1  'in' on 'bigint' receivers (only process.env, Error instances, record-typed values, and unions of fixed record shapes answer; narrow first: check a discriminant field, or compare with '!== undefined'/'!== null' for unit arms) are not supported yet (instantiating 'hash' with (bigint))  SC1090",
+    "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ seconds: number }' (instantiating 'make' with ({ seconds: number }))                                                                                                                                              SC2002",
+    "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ days: number }' (instantiating 'make' with ({ days: number }))                                                                                                                                                    SC2002",
+    "×1  record shapes must match exactly or width-coerce: expected 'number', got '{ nanoseconds: number; seconds: number }' (instantiating 'make' with ({ nanoseconds: number; seconds: number }))                                                                                                    SC2002",
+    "×1  'Object.defineProperty' is part of the standard library types but has no scriptc lowering yet (instantiating 'assignProperty' with (m17.%cx12200.Base, unknown, unknown))                                                                                                                     SC2020",
+    "×1  'string.toString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                  SC2020",
+    "×1  'string.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                                   SC2020",
+    "×1  'string.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (string))                                                                                                                                                               SC2020",
+    "×1  'bigint.getTime' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                                   SC2020",
+    "×1  'bigint.toISOString' is part of the standard library types but has no scriptc lowering yet (instantiating 'hash' with (bigint))                                                                                                                                                               SC2020",
+    "×1  '{ seconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ seconds: number }))                                                                                                                              SC2020",
+    "×1  '{ days: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ days: number }))                                                                                                                                    SC2020",
+    "×1  '{ seconds: number; nanoseconds: number; }.length' is part of the standard library types but has no scriptc lowering yet (instantiating 'fromInputUnsafe' with ({ nanoseconds: number; seconds: number }))                                                                                    SC2020"
+  ],
+  "notes": [
+    "deferred to runtime   21 sites (JS statements that throw their fence if executed)"
+  ]
+}

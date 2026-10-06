@@ -1,0 +1,13 @@
+$ node scripts/diff.ts
+file:///Users/phall/workspace/effect-scriptc-compat/scripts/common.ts:139
+    if (expected[key] !== actual[key]) throw new Error(`Stale map: ${key} changed (${expected[key]} -> ${actual[key]}). Run pnpm map again.`);
+                                             ^
+
+Error: Stale map: nodeVersion changed (v24.21.0 -> v24.19.0). Run pnpm map again.
+    at assertProvenance (file:///Users/phall/workspace/effect-scriptc-compat/scripts/common.ts:139:46)
+    at main (file:///Users/phall/workspace/effect-scriptc-compat/scripts/diff.ts:24:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Users/phall/workspace/effect-scriptc-compat/scripts/diff.ts:58:84
+
+Node.js v24.19.0
+[ELIFECYCLE] Command failed with exit code 1.

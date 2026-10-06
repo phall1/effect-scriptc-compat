@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-equal.ts",
+    "--npm-static=effect"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 713.077,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-equal.ts\n\n  statements analyzed   322\n  compile statically    321  (99%)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  blockers:\n      ×1  converting typed values to 'unknown'  SC1101\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWVxdWFsLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAzMjIKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMzIxICAoOTklKQoKICBucG0gcGFja2FnZXMgY29tcGlsZWQgc3RhdGljYWxseSAoLS1ucG0tc3RhdGljKToKICAgIGVmZmVjdCAgc3RhdGljCgogIGJsb2NrZXJzOgogICAgICDDlzEgIGNvbnZlcnRpbmcgdHlwZWQgdmFsdWVzIHRvICd1bmtub3duJyAgU0MxMTAxCg==",
+  "stderrBase64": ""
+}

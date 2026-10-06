@@ -1,0 +1,20 @@
+{
+  "command": [
+    "scriptc",
+    "coverage",
+    "cases/documented-equal.ts",
+    "--npm-static=effect",
+    "--dynamic"
+  ],
+  "cwd": "/Users/phall/workspace/effect-scriptc-compat",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "spawnError": null,
+  "durationMs": 638.868,
+  "maxRssKb": null,
+  "stdout": "scriptc coverage /Users/phall/workspace/effect-scriptc-compat/cases/documented-equal.ts\n\n  statements analyzed   282\n  compile statically    244  (86%)\n  compile dynamically   29  (10%) (island sites — the embedded engine runs them)\n\n  npm packages compiled statically (--npm-static):\n    effect  static\n\n  deferred to runtime   8 sites (JS statements that throw their fence if executed)\n      ×2  spread arguments                                                                                                                                          SC1090\n      ×2  'Object.getPrototypeOf' is part of the standard library types but has no scriptc lowering yet (instantiating 'getAllObjectKeys' with (unknown))           SC2020\n      ×1  string methods as values (call 'charCodeAt' directly) are not supported yet (instantiating 'string' with (string))                                        SC1090\n      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'hash' with (unknown))                       SC1090\n      ×1  'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'compareStructure' with (unknown, unknown))  SC1090\n      ×1  operators on 'unknown' values are not supported yet (instantiating 'compareObjects' with (unknown, unknown))                                              SC1100\n\n  blockers:\n      ×1  converting typed values to 'unknown'  SC1101\n",
+  "stderr": "",
+  "stdoutBase64": "c2NyaXB0YyBjb3ZlcmFnZSAvVXNlcnMvcGhhbGwvd29ya3NwYWNlL2VmZmVjdC1zY3JpcHRjLWNvbXBhdC9jYXNlcy9kb2N1bWVudGVkLWVxdWFsLnRzCgogIHN0YXRlbWVudHMgYW5hbHl6ZWQgICAyODIKICBjb21waWxlIHN0YXRpY2FsbHkgICAgMjQ0ICAoODYlKQogIGNvbXBpbGUgZHluYW1pY2FsbHkgICAyOSAgKDEwJSkgKGlzbGFuZCBzaXRlcyDigJQgdGhlIGVtYmVkZGVkIGVuZ2luZSBydW5zIHRoZW0pCgogIG5wbSBwYWNrYWdlcyBjb21waWxlZCBzdGF0aWNhbGx5ICgtLW5wbS1zdGF0aWMpOgogICAgZWZmZWN0ICBzdGF0aWMKCiAgZGVmZXJyZWQgdG8gcnVudGltZSAgIDggc2l0ZXMgKEpTIHN0YXRlbWVudHMgdGhhdCB0aHJvdyB0aGVpciBmZW5jZSBpZiBleGVjdXRlZCkKICAgICAgw5cyICBzcHJlYWQgYXJndW1lbnRzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMiAgJ09iamVjdC5nZXRQcm90b3R5cGVPZicgaXMgcGFydCBvZiB0aGUgc3RhbmRhcmQgbGlicmFyeSB0eXBlcyBidXQgaGFzIG5vIHNjcmlwdGMgbG93ZXJpbmcgeWV0IChpbnN0YW50aWF0aW5nICdnZXRBbGxPYmplY3RLZXlzJyB3aXRoICh1bmtub3duKSkgICAgICAgICAgIFNDMjAyMAogICAgICDDlzEgIHN0cmluZyBtZXRob2RzIGFzIHZhbHVlcyAoY2FsbCAnY2hhckNvZGVBdCcgZGlyZWN0bHkpIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnc3RyaW5nJyB3aXRoIChzdHJpbmcpKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzEwOTAKICAgICAgw5cxICAnaW5zdGFuY2VvZicgcmlnaHQtaGFuZCBzaWRlcyBvdGhlciB0aGFuIGNsYXNzZXMgZGVjbGFyZWQgaW4gdGhlIHByb2dyYW0gaXMgbm90IHN1cHBvcnRlZCB5ZXQgKGluc3RhbnRpYXRpbmcgJ2hhc2gnIHdpdGggKHVua25vd24pKSAgICAgICAgICAgICAgICAgICAgICAgU0MxMDkwCiAgICAgIMOXMSAgJ2luc3RhbmNlb2YnIHJpZ2h0LWhhbmQgc2lkZXMgb3RoZXIgdGhhbiBjbGFzc2VzIGRlY2xhcmVkIGluIHRoZSBwcm9ncmFtIGlzIG5vdCBzdXBwb3J0ZWQgeWV0IChpbnN0YW50aWF0aW5nICdjb21wYXJlU3RydWN0dXJlJyB3aXRoICh1bmtub3duLCB1bmtub3duKSkgIFNDMTA5MAogICAgICDDlzEgIG9wZXJhdG9ycyBvbiAndW5rbm93bicgdmFsdWVzIGFyZSBub3Qgc3VwcG9ydGVkIHlldCAoaW5zdGFudGlhdGluZyAnY29tcGFyZU9iamVjdHMnIHdpdGggKHVua25vd24sIHVua25vd24pKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTQzExMDAKCiAgYmxvY2tlcnM6CiAgICAgIMOXMSAgY29udmVydGluZyB0eXBlZCB2YWx1ZXMgdG8gJ3Vua25vd24nICBTQzExMDEK",
+  "stderrBase64": ""
+}

@@ -1,0 +1,9 @@
+$ node scripts/diff.ts
+documented-bigdecimal (static): equal
+documented-combiner (static): equal
+chunk-round-trip (static): equal
+documented-duration (static): equal
+documented-equivalence (static): equal
+documented-formatter (static): equal
+documented-filter (static): equal
+{"binaries":7,"equal":7,"mismatched":0,"invalidNodeBaselines":0,"hangs":0}

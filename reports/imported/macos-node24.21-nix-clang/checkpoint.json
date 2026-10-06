@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-10-06T00:23:31.379Z",
+  "status": "partial",
+  "reportPath": "reports/coverage-map.json",
+  "cacheIdentity": "4480ac25449474c3be29d238d6f6d5b98ee24e9cdd173254a3999606bb7f8b5f",
+  "summary": {
+    "cases": 456,
+    "modules": 414,
+    "ready": 404,
+    "completed": 44,
+    "pending": 360,
+    "caseTiers": {
+      "static": 3,
+      "deferred": 4,
+      "dynamic-fallback": 0,
+      "rejected": 37
+    },
+    "skippedNeedsIo": 14,
+    "uncovered": 38,
+    "moduleTiers": {
+      "static": 3,
+      "deferred": 4,
+      "dynamic-fallback": 0,
+      "rejected": 33,
+      "pending": 324,
+      "uncovered": 38,
+      "skipped-needs-io": 12
+    },
+    "scCodesByCaseFrequency": {
+      "SC3004": 35,
+      "SC1090": 6,
+      "SC2020": 5,
+      "SC1043": 4,
+      "SC2002": 1,
+      "SC1101": 1,
+      "SC1100": 1
+    }
+  },
+  "executionContext": "Completed exact-source/toolchain records only; pending cases are unmeasured."
+}
