@@ -1,0 +1,2244 @@
+{
+  "scope": "Independent Schema WIP default-param TDZ/const-alias diagnostic, outside404denominator",
+  "sourceCommit": "6ab60f8df1c0cb46f7ff4ab8a536f8fe17d59741",
+  "before": {
+    "packages/compiler/src/frontend/lowering/builtin-constructor-identity.ts": "61d360633ae7e5b6ceb433584e78856b725e7b262006abe7a037f5a31b1032ef",
+    "packages/compiler/src/frontend/lowering/generic-functions.ts": "f6e1553debbae7707b56985b49eeb7cc53ac8a841f55b6597d5b9cf4e6abfb14",
+    "packages/compiler/dist/frontend/lowering/builtin-constructor-identity.js": "6a8fe915810e4ba476b55b5ed21eeaf6f5bc08294b71bb94b2d366df5159b851",
+    "packages/compiler/dist/frontend/lowering/generic-functions.js": "d8bab279a3e09c4ba09133a3fbad21caee897ea44d1a2314f0036f6865e59517",
+    "packages/cli/dist/main.js": "1e1d82da065b447f69336e910613a4d1eef66128215f59888f1198b129d16a39"
+  },
+  "environment": [
+    "/usr/bin/env",
+    "-i",
+    "HOME=/Users/phall",
+    "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+    "SCRIPTC_LINKER=/usr/bin/clang",
+    "CC=/usr/bin/clang",
+    "CXX=/usr/bin/clang++",
+    "AR=/usr/bin/ar",
+    "SCRIPTC_NO_CACHE=1",
+    "TZ=UTC",
+    "LC_ALL=C"
+  ],
+  "source": "export function defaultTDZ(value, flag = value instanceof C, C) { return flag; }\nexport function aliasPredicate(C) { const Alias = C; return u => u instanceof Alias; }\nexport function result() {\n  try { console.log(\"tdz\", defaultTDZ({}, undefined, globalThis.URL)); } catch (e) { console.log(\"tdz\", e.name); }\n  try { console.log(\"alias\", aliasPredicate(globalThis.URL)(new globalThis.URL(\"https://example.com\"))); } catch (e) { console.log(\"alias\", e.name); }\n}\n",
+  "entry": "import { result } from \"deltaprobe\"; result();\n",
+  "packageJson": {
+    "name": "deltaprobe",
+    "version": "1.0.0",
+    "type": "module",
+    "exports": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "declaration": "export declare function result(): void;\n",
+  "sourceSha256": "5b91e5b97802eda5e4c910867e5b65a01216e62cf5767754458be0e1793e1c4b",
+  "entrySha256": "017043063d1f39cb1273cec9ba4b808431a63a99023b9b54669897db7d5bee17",
+  "reference": {
+    "command": [
+      "/usr/bin/env",
+      "-i",
+      "HOME=/Users/phall",
+      "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+      "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+      "SCRIPTC_LINKER=/usr/bin/clang",
+      "CC=/usr/bin/clang",
+      "CXX=/usr/bin/clang++",
+      "AR=/usr/bin/ar",
+      "SCRIPTC_NO_CACHE=1",
+      "TZ=UTC",
+      "LC_ALL=C",
+      "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+      "--experimental-strip-types",
+      "/tmp/parent-schema-delta-JGsxHq/entry.ts"
+    ],
+    "cwd": "/tmp/parent-schema-delta-JGsxHq",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 127.093,
+    "maxRssKb": null,
+    "stdout": "tdz ReferenceError\nalias true\n",
+    "stderr": "",
+    "stdoutBase64": "dGR6IFJlZmVyZW5jZUVycm9yCmFsaWFzIHRydWUK",
+    "stderrBase64": ""
+  },
+  "build": {
+    "command": [
+      "/usr/bin/env",
+      "-i",
+      "HOME=/Users/phall",
+      "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+      "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+      "SCRIPTC_LINKER=/usr/bin/clang",
+      "CC=/usr/bin/clang",
+      "CXX=/usr/bin/clang++",
+      "AR=/usr/bin/ar",
+      "SCRIPTC_NO_CACHE=1",
+      "TZ=UTC",
+      "LC_ALL=C",
+      "/Users/phall/.local/share/mise/installs/node/24.19.0/bin/node",
+      "/Users/phall/workspace/scriptc-effect/packages/cli/dist/main.js",
+      "build",
+      "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+      "--npm-static=deltaprobe",
+      "--optimization=dev",
+      "--emit-ir",
+      "--no-keep-llvm",
+      "-o",
+      "/tmp/parent-schema-delta-JGsxHq/program"
+    ],
+    "cwd": "/tmp/parent-schema-delta-JGsxHq",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 710.885,
+    "maxRssKb": null,
+    "stdout": "/tmp/parent-schema-delta-JGsxHq/program\n",
+    "stderr": "scriptc: warning: --emit-ir is deprecated; use --emit=ir for IR as the primary output\n",
+    "stdoutBase64": "L3RtcC9wYXJlbnQtc2NoZW1hLWRlbHRhLUpHc3hIcS9wcm9ncmFtCg==",
+    "stderrBase64": "c2NyaXB0Yzogd2FybmluZzogLS1lbWl0LWlyIGlzIGRlcHJlY2F0ZWQ7IHVzZSAtLWVtaXQ9aXIgZm9yIElSIGFzIHRoZSBwcmltYXJ5IG91dHB1dAo="
+  },
+  "binarySha256": "8758c57299f70c2a604b8e9c7094a11c401a120165d3c4155b764e9f30dd6b8a",
+  "native": {
+    "command": [
+      "/usr/bin/env",
+      "-i",
+      "HOME=/Users/phall",
+      "PATH=/Users/phall/.local/share/mise/installs/node/24.19.0/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+      "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+      "SCRIPTC_LINKER=/usr/bin/clang",
+      "CC=/usr/bin/clang",
+      "CXX=/usr/bin/clang++",
+      "AR=/usr/bin/ar",
+      "SCRIPTC_NO_CACHE=1",
+      "TZ=UTC",
+      "LC_ALL=C",
+      "/tmp/parent-schema-delta-JGsxHq/program"
+    ],
+    "cwd": "/tmp/parent-schema-delta-JGsxHq",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "spawnError": null,
+    "durationMs": 49.93,
+    "maxRssKb": null,
+    "stdout": "tdz false\nalias Error\n",
+    "stderr": "",
+    "stdoutBase64": "dGR6IGZhbHNlCmFsaWFzIEVycm9yCg==",
+    "stderrBase64": ""
+  },
+  "exact": false,
+  "ir": {
+    "irVersion": 13,
+    "sourceFile": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+    "functions": [
+      {
+        "name": "%m0.result",
+        "sourceName": "result",
+        "ownsPrototype": true,
+        "params": [],
+        "returnType": {
+          "kind": "void"
+        },
+        "locals": [
+          {
+            "id": "e.0",
+            "name": "e",
+            "type": {
+              "kind": "caught"
+            },
+            "mutable": false,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 275,
+                "end": 276
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 268,
+                "end": 309
+              }
+            }
+          },
+          {
+            "id": "%urlArgument.0",
+            "name": "%urlArgument",
+            "type": {
+              "kind": "string"
+            },
+            "mutable": false
+          },
+          {
+            "id": "%urlInput.0",
+            "name": "%urlInput",
+            "type": {
+              "kind": "string"
+            },
+            "mutable": false
+          },
+          {
+            "id": "e.1",
+            "name": "e",
+            "type": {
+              "kind": "caught"
+            },
+            "mutable": false,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 424,
+                "end": 425
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 417,
+                "end": 460
+              }
+            }
+          }
+        ],
+        "body": [
+          {
+            "kind": "tryCatch",
+            "tryBody": [
+              {
+                "kind": "exprStmt",
+                "expr": {
+                  "kind": "intrinsic",
+                  "name": "console.log",
+                  "args": [
+                    {
+                      "kind": "strLit",
+                      "value": "tdz",
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 215,
+                        "end": 220
+                      }
+                    },
+                    {
+                      "kind": "call",
+                      "callee": "%m0.defaultTDZ%0",
+                      "args": [
+                        {
+                          "kind": "dynObjLit",
+                          "fields": [],
+                          "type": {
+                            "kind": "dyn"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 233,
+                            "end": 235
+                          }
+                        },
+                        {
+                          "kind": "dynFrom",
+                          "value": {
+                            "kind": "unitLit",
+                            "unit": "undefined",
+                            "type": {
+                              "kind": "undefinedT"
+                            },
+                            "loc": {
+                              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                              "start": 237,
+                              "end": 246
+                            }
+                          },
+                          "type": {
+                            "kind": "dyn"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 237,
+                            "end": 246
+                          }
+                        },
+                        {
+                          "kind": "strLit",
+                          "value": "[builtin URL]",
+                          "type": {
+                            "kind": "string"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 248,
+                            "end": 262
+                          }
+                        }
+                      ],
+                      "type": {
+                        "kind": "bool"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 222,
+                        "end": 263
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "void"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 203,
+                    "end": 264
+                  }
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 203,
+                  "end": 264
+                }
+              }
+            ],
+            "catchBody": [
+              {
+                "kind": "exprStmt",
+                "expr": {
+                  "kind": "intrinsic",
+                  "name": "console.log",
+                  "args": [
+                    {
+                      "kind": "strLit",
+                      "value": "tdz",
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 292,
+                        "end": 297
+                      }
+                    },
+                    {
+                      "kind": "libCall",
+                      "fn": "insp.dynS",
+                      "args": [
+                        {
+                          "kind": "call",
+                          "callee": "%dyn.class.property.0",
+                          "args": [
+                            {
+                              "kind": "caughtToDyn",
+                              "value": {
+                                "kind": "varRef",
+                                "localId": "e.0",
+                                "type": {
+                                  "kind": "caught"
+                                },
+                                "loc": {
+                                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                  "start": 299,
+                                  "end": 300
+                                }
+                              },
+                              "type": {
+                                "kind": "dyn"
+                              },
+                              "loc": {
+                                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                "start": 299,
+                                "end": 300
+                              }
+                            }
+                          ],
+                          "type": {
+                            "kind": "dyn"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 299,
+                            "end": 305
+                          }
+                        },
+                        {
+                          "kind": "numLit",
+                          "value": 2,
+                          "type": {
+                            "kind": "f64"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 280,
+                            "end": 306
+                          }
+                        }
+                      ],
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 280,
+                        "end": 306
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "void"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 280,
+                    "end": 306
+                  }
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 280,
+                  "end": 306
+                }
+              }
+            ],
+            "catchLocalId": "e.0",
+            "finallyBody": null,
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 197,
+              "end": 309
+            }
+          },
+          {
+            "kind": "tryCatch",
+            "tryBody": [
+              {
+                "kind": "exprStmt",
+                "expr": {
+                  "kind": "intrinsic",
+                  "name": "console.log",
+                  "args": [
+                    {
+                      "kind": "strLit",
+                      "value": "alias",
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 330,
+                        "end": 337
+                      }
+                    },
+                    {
+                      "kind": "callValue",
+                      "callee": {
+                        "kind": "call",
+                        "callee": "%m0.aliasPredicate%0",
+                        "args": [
+                          {
+                            "kind": "strLit",
+                            "value": "[builtin URL]",
+                            "type": {
+                              "kind": "string"
+                            },
+                            "loc": {
+                              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                              "start": 354,
+                              "end": 368
+                            }
+                          }
+                        ],
+                        "type": {
+                          "kind": "func",
+                          "params": [
+                            {
+                              "kind": "dyn"
+                            }
+                          ],
+                          "ret": {
+                            "kind": "bool"
+                          }
+                        },
+                        "loc": {
+                          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                          "start": 339,
+                          "end": 369
+                        }
+                      },
+                      "args": [
+                        {
+                          "kind": "dynFrom",
+                          "value": {
+                            "kind": "seqExpr",
+                            "stmts": [
+                              {
+                                "kind": "varDecl",
+                                "localId": "%urlArgument.0",
+                                "init": {
+                                  "kind": "strLit",
+                                  "value": "https://example.com",
+                                  "type": {
+                                    "kind": "string"
+                                  },
+                                  "loc": {
+                                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                    "start": 389,
+                                    "end": 410
+                                  }
+                                },
+                                "loc": {
+                                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                  "start": 389,
+                                  "end": 410
+                                }
+                              },
+                              {
+                                "kind": "varDecl",
+                                "localId": "%urlInput.0",
+                                "init": {
+                                  "kind": "varRef",
+                                  "localId": "%urlArgument.0",
+                                  "type": {
+                                    "kind": "string"
+                                  },
+                                  "loc": {
+                                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                    "start": 389,
+                                    "end": 410
+                                  }
+                                },
+                                "loc": {
+                                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                  "start": 370,
+                                  "end": 411
+                                }
+                              }
+                            ],
+                            "result": {
+                              "kind": "libCall",
+                              "fn": "url.new",
+                              "args": [
+                                {
+                                  "kind": "varRef",
+                                  "localId": "%urlInput.0",
+                                  "type": {
+                                    "kind": "string"
+                                  },
+                                  "loc": {
+                                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                    "start": 370,
+                                    "end": 411
+                                  }
+                                }
+                              ],
+                              "type": {
+                                "kind": "url"
+                              },
+                              "loc": {
+                                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                "start": 370,
+                                "end": 411
+                              }
+                            },
+                            "type": {
+                              "kind": "url"
+                            },
+                            "loc": {
+                              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                              "start": 370,
+                              "end": 411
+                            }
+                          },
+                          "type": {
+                            "kind": "dyn"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 370,
+                            "end": 411
+                          }
+                        }
+                      ],
+                      "type": {
+                        "kind": "bool"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 339,
+                        "end": 412
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "void"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 318,
+                    "end": 413
+                  }
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 318,
+                  "end": 413
+                }
+              }
+            ],
+            "catchBody": [
+              {
+                "kind": "exprStmt",
+                "expr": {
+                  "kind": "intrinsic",
+                  "name": "console.log",
+                  "args": [
+                    {
+                      "kind": "strLit",
+                      "value": "alias",
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 441,
+                        "end": 448
+                      }
+                    },
+                    {
+                      "kind": "libCall",
+                      "fn": "insp.dynS",
+                      "args": [
+                        {
+                          "kind": "call",
+                          "callee": "%dyn.class.property.0",
+                          "args": [
+                            {
+                              "kind": "caughtToDyn",
+                              "value": {
+                                "kind": "varRef",
+                                "localId": "e.1",
+                                "type": {
+                                  "kind": "caught"
+                                },
+                                "loc": {
+                                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                  "start": 450,
+                                  "end": 451
+                                }
+                              },
+                              "type": {
+                                "kind": "dyn"
+                              },
+                              "loc": {
+                                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                                "start": 450,
+                                "end": 451
+                              }
+                            }
+                          ],
+                          "type": {
+                            "kind": "dyn"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 450,
+                            "end": 456
+                          }
+                        },
+                        {
+                          "kind": "numLit",
+                          "value": 2,
+                          "type": {
+                            "kind": "f64"
+                          },
+                          "loc": {
+                            "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                            "start": 429,
+                            "end": 457
+                          }
+                        }
+                      ],
+                      "type": {
+                        "kind": "string"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 429,
+                        "end": 457
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "void"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 429,
+                    "end": 457
+                  }
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 429,
+                  "end": 457
+                }
+              }
+            ],
+            "catchLocalId": "e.1",
+            "finallyBody": null,
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 312,
+              "end": 460
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 168,
+          "end": 462
+        }
+      },
+      {
+        "name": "%init.0",
+        "params": [],
+        "returnType": {
+          "kind": "void"
+        },
+        "locals": [],
+        "body": [
+          {
+            "kind": "if",
+            "cond": {
+              "kind": "varRef",
+              "localId": "%g.m0.%loaded",
+              "type": {
+                "kind": "bool"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 0,
+                "end": 0
+              }
+            },
+            "then": [
+              {
+                "kind": "return",
+                "value": null,
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 0,
+                  "end": 0
+                }
+              }
+            ],
+            "else_": null,
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 0,
+              "end": 0
+            }
+          },
+          {
+            "kind": "assign",
+            "localId": "%g.m0.%loaded",
+            "value": {
+              "kind": "boolLit",
+              "value": true,
+              "type": {
+                "kind": "bool"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 0,
+                "end": 0
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 0,
+              "end": 0
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%init.1",
+        "params": [],
+        "returnType": {
+          "kind": "void"
+        },
+        "locals": [],
+        "body": [
+          {
+            "kind": "if",
+            "cond": {
+              "kind": "varRef",
+              "localId": "%g.e.%loaded",
+              "type": {
+                "kind": "bool"
+              },
+              "loc": {
+                "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                "start": 0,
+                "end": 0
+              }
+            },
+            "then": [
+              {
+                "kind": "return",
+                "value": null,
+                "loc": {
+                  "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                  "start": 0,
+                  "end": 0
+                }
+              }
+            ],
+            "else_": null,
+            "loc": {
+              "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+              "start": 0,
+              "end": 0
+            }
+          },
+          {
+            "kind": "assign",
+            "localId": "%g.e.%loaded",
+            "value": {
+              "kind": "boolLit",
+              "value": true,
+              "type": {
+                "kind": "bool"
+              },
+              "loc": {
+                "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                "start": 0,
+                "end": 0
+              }
+            },
+            "loc": {
+              "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+              "start": 0,
+              "end": 0
+            }
+          },
+          {
+            "kind": "exprStmt",
+            "expr": {
+              "kind": "call",
+              "callee": "%init.0",
+              "args": [],
+              "type": {
+                "kind": "void"
+              },
+              "loc": {
+                "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                "start": 0,
+                "end": 36
+              }
+            },
+            "loc": {
+              "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+              "start": 0,
+              "end": 36
+            }
+          },
+          {
+            "kind": "exprStmt",
+            "expr": {
+              "kind": "call",
+              "callee": "%m0.result",
+              "args": [],
+              "type": {
+                "kind": "void"
+              },
+              "loc": {
+                "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                "start": 37,
+                "end": 45
+              }
+            },
+            "loc": {
+              "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+              "start": 37,
+              "end": 45
+            }
+          }
+        ],
+        "loc": {
+          "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%main",
+        "params": [],
+        "returnType": {
+          "kind": "void"
+        },
+        "locals": [],
+        "body": [
+          {
+            "kind": "exprStmt",
+            "expr": {
+              "kind": "call",
+              "callee": "%init.1",
+              "args": [],
+              "type": {
+                "kind": "void"
+              },
+              "loc": {
+                "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+                "start": 0,
+                "end": 0
+              }
+            },
+            "loc": {
+              "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+              "start": 0,
+              "end": 0
+            }
+          }
+        ],
+        "loc": {
+          "file": "/tmp/parent-schema-delta-JGsxHq/entry.ts",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%fn0",
+        "params": [
+          {
+            "localId": "%pf0",
+            "name": "%pf0",
+            "type": {
+              "kind": "dyn"
+            }
+          }
+        ],
+        "returnType": {
+          "kind": "bool"
+        },
+        "locals": [
+          {
+            "id": "%pf0",
+            "name": "%pf0",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": false
+          }
+        ],
+        "body": [
+          {
+            "kind": "runtimeFence",
+            "code": "SC1090",
+            "message": "'instanceof' right-hand sides other than classes declared in the program is not supported yet (instantiating 'aliasPredicate' with (string)) [SC1090 at /private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js:2]",
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 141,
+              "end": 164
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 141,
+          "end": 164
+        },
+        "captures": []
+      },
+      {
+        "name": "%dyn.class.properties",
+        "params": [
+          {
+            "localId": "p.0",
+            "name": "value",
+            "type": {
+              "kind": "dyn"
+            }
+          }
+        ],
+        "returnType": {
+          "kind": "dyn"
+        },
+        "locals": [
+          {
+            "id": "p.0",
+            "name": "value",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": false
+          }
+        ],
+        "body": [
+          {
+            "kind": "return",
+            "value": {
+              "kind": "varRef",
+              "localId": "p.0",
+              "type": {
+                "kind": "dyn"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 168,
+                "end": 462
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 168,
+              "end": 462
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 168,
+          "end": 462
+        },
+        "speculativeDispatch": true
+      },
+      {
+        "name": "%dyn.class.property.0",
+        "params": [
+          {
+            "localId": "p.0",
+            "name": "p0",
+            "type": {
+              "kind": "dyn"
+            }
+          }
+        ],
+        "returnType": {
+          "kind": "dyn"
+        },
+        "locals": [
+          {
+            "id": "p.0",
+            "name": "p0",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": false
+          }
+        ],
+        "body": [
+          {
+            "kind": "return",
+            "value": {
+              "kind": "ternary",
+              "cond": {
+                "kind": "dynScalarEq",
+                "left": {
+                  "kind": "call",
+                  "callee": "%dyn.class.properties",
+                  "args": [
+                    {
+                      "kind": "varRef",
+                      "localId": "p.0",
+                      "type": {
+                        "kind": "dyn"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 299,
+                        "end": 305
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "dyn"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 299,
+                    "end": 305
+                  }
+                },
+                "right": {
+                  "kind": "varRef",
+                  "localId": "p.0",
+                  "type": {
+                    "kind": "dyn"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 299,
+                    "end": 305
+                  }
+                },
+                "type": {
+                  "kind": "bool"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 299,
+                  "end": 305
+                }
+              },
+              "then": {
+                "kind": "dynKeyGet",
+                "key": {
+                  "kind": "strLit",
+                  "value": "name",
+                  "type": {
+                    "kind": "string"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 301,
+                    "end": 305
+                  }
+                },
+                "value": {
+                  "kind": "call",
+                  "callee": "%dyn.class.properties",
+                  "args": [
+                    {
+                      "kind": "varRef",
+                      "localId": "p.0",
+                      "type": {
+                        "kind": "dyn"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 299,
+                        "end": 305
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "dyn"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 299,
+                    "end": 305
+                  }
+                },
+                "type": {
+                  "kind": "dyn"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 299,
+                  "end": 305
+                }
+              },
+              "else_": {
+                "kind": "libCall",
+                "fn": "dyn.bagGet",
+                "args": [
+                  {
+                    "kind": "call",
+                    "callee": "%dyn.class.properties",
+                    "args": [
+                      {
+                        "kind": "varRef",
+                        "localId": "p.0",
+                        "type": {
+                          "kind": "dyn"
+                        },
+                        "loc": {
+                          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                          "start": 299,
+                          "end": 305
+                        }
+                      }
+                    ],
+                    "type": {
+                      "kind": "dyn"
+                    },
+                    "loc": {
+                      "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                      "start": 299,
+                      "end": 305
+                    }
+                  },
+                  {
+                    "kind": "strLit",
+                    "value": "name",
+                    "type": {
+                      "kind": "string"
+                    },
+                    "loc": {
+                      "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                      "start": 301,
+                      "end": 305
+                    }
+                  },
+                  {
+                    "kind": "varRef",
+                    "localId": "p.0",
+                    "type": {
+                      "kind": "dyn"
+                    },
+                    "loc": {
+                      "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                      "start": 299,
+                      "end": 305
+                    }
+                  }
+                ],
+                "type": {
+                  "kind": "dyn"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 299,
+                  "end": 305
+                }
+              },
+              "type": {
+                "kind": "dyn"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 299,
+                "end": 305
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 299,
+              "end": 305
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 299,
+          "end": 305
+        },
+        "speculativeDispatch": true
+      },
+      {
+        "name": "%m0.defaultTDZ%0",
+        "sourceName": "defaultTDZ",
+        "ownsPrototype": true,
+        "params": [
+          {
+            "localId": "value.0",
+            "name": "value",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "localId": "flag.0",
+            "name": "flag",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "localId": "C.0",
+            "name": "C",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "returnType": {
+          "kind": "bool"
+        },
+        "locals": [
+          {
+            "id": "value.0",
+            "name": "value",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": true,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 27,
+                "end": 32
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 0,
+                "end": 80
+              }
+            }
+          },
+          {
+            "id": "flag.0",
+            "name": "flag",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": false
+          },
+          {
+            "id": "flag.1",
+            "name": "flag",
+            "type": {
+              "kind": "dyn"
+            },
+            "mutable": true,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 34,
+                "end": 38
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 0,
+                "end": 80
+              }
+            }
+          },
+          {
+            "id": "C.0",
+            "name": "C",
+            "type": {
+              "kind": "string"
+            },
+            "mutable": true,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 61,
+                "end": 62
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 0,
+                "end": 80
+              }
+            }
+          }
+        ],
+        "body": [
+          {
+            "kind": "varDecl",
+            "localId": "flag.1",
+            "init": {
+              "kind": "ternary",
+              "cond": {
+                "kind": "dynTest",
+                "test": "undefined",
+                "value": {
+                  "kind": "varRef",
+                  "localId": "flag.0",
+                  "type": {
+                    "kind": "dyn"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 34,
+                    "end": 59
+                  }
+                },
+                "type": {
+                  "kind": "bool"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 34,
+                  "end": 59
+                }
+              },
+              "then": {
+                "kind": "dynFrom",
+                "value": {
+                  "kind": "libCall",
+                  "fn": "dyn.nativeUrlIs",
+                  "args": [
+                    {
+                      "kind": "varRef",
+                      "localId": "value.0",
+                      "type": {
+                        "kind": "dyn"
+                      },
+                      "loc": {
+                        "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                        "start": 41,
+                        "end": 46
+                      }
+                    }
+                  ],
+                  "type": {
+                    "kind": "bool"
+                  },
+                  "loc": {
+                    "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                    "start": 41,
+                    "end": 59
+                  }
+                },
+                "type": {
+                  "kind": "dyn"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 41,
+                  "end": 59
+                }
+              },
+              "else_": {
+                "kind": "varRef",
+                "localId": "flag.0",
+                "type": {
+                  "kind": "dyn"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 34,
+                  "end": 59
+                }
+              },
+              "type": {
+                "kind": "dyn"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 34,
+                "end": 59
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 34,
+              "end": 59
+            }
+          },
+          {
+            "kind": "return",
+            "value": {
+              "kind": "dynCheck",
+              "value": {
+                "kind": "varRef",
+                "localId": "flag.1",
+                "type": {
+                  "kind": "dyn"
+                },
+                "loc": {
+                  "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                  "start": 73,
+                  "end": 77
+                }
+              },
+              "type": {
+                "kind": "bool"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 73,
+                "end": 77
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 66,
+              "end": 78
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 0,
+          "end": 80
+        }
+      },
+      {
+        "name": "%m0.aliasPredicate%0",
+        "sourceName": "aliasPredicate",
+        "ownsPrototype": true,
+        "params": [
+          {
+            "localId": "C.0",
+            "name": "C",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "returnType": {
+          "kind": "func",
+          "params": [
+            {
+              "kind": "dyn"
+            }
+          ],
+          "ret": {
+            "kind": "bool"
+          }
+        },
+        "locals": [
+          {
+            "id": "C.0",
+            "name": "C",
+            "type": {
+              "kind": "string"
+            },
+            "mutable": true,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 112,
+                "end": 113
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 81,
+                "end": 167
+              }
+            }
+          },
+          {
+            "id": "Alias.0",
+            "name": "Alias",
+            "type": {
+              "kind": "string"
+            },
+            "mutable": false,
+            "source": {
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 123,
+                "end": 128
+              },
+              "scope": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 115,
+                "end": 167
+              }
+            },
+            "boxed": true
+          }
+        ],
+        "body": [
+          {
+            "kind": "varDecl",
+            "localId": "Alias.0",
+            "init": {
+              "kind": "varRef",
+              "localId": "C.0",
+              "type": {
+                "kind": "string"
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 131,
+                "end": 132
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 123,
+              "end": 132
+            }
+          },
+          {
+            "kind": "return",
+            "value": {
+              "kind": "closure",
+              "fnName": "%fn0",
+              "captures": [],
+              "type": {
+                "kind": "func",
+                "params": [
+                  {
+                    "kind": "dyn"
+                  }
+                ],
+                "ret": {
+                  "kind": "bool"
+                }
+              },
+              "loc": {
+                "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+                "start": 141,
+                "end": 164
+              }
+            },
+            "loc": {
+              "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+              "start": 134,
+              "end": 165
+            }
+          }
+        ],
+        "loc": {
+          "file": "/private/tmp/parent-schema-delta-JGsxHq/node_modules/deltaprobe/index.js",
+          "start": 81,
+          "end": 167
+        }
+      }
+    ],
+    "classes": [
+      {
+        "name": "%Error",
+        "runtime": true,
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%TypeError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%RangeError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%SyntaxError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%DOMException",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%ReferenceError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%EvalError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      },
+      {
+        "name": "%URIError",
+        "runtime": true,
+        "base": "%Error",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "message",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%code",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%cause",
+            "type": {
+              "kind": "dyn"
+            }
+          },
+          {
+            "name": "%causeEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messagePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%messageEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%namePresent",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%nameEnumerable",
+            "type": {
+              "kind": "bool"
+            }
+          },
+          {
+            "name": "%stackFrames",
+            "type": {
+              "kind": "string"
+            }
+          },
+          {
+            "name": "%stack",
+            "type": {
+              "kind": "string"
+            }
+          }
+        ],
+        "loc": {
+          "file": "<builtin>",
+          "start": 0,
+          "end": 0
+        }
+      }
+    ],
+    "records": [],
+    "unions": [],
+    "globals": [
+      {
+        "id": "%g.m0.%loaded",
+        "name": "%loaded",
+        "type": {
+          "kind": "bool"
+        },
+        "mutable": true
+      },
+      {
+        "id": "%g.e.%loaded",
+        "name": "%loaded",
+        "type": {
+          "kind": "bool"
+        },
+        "mutable": true
+      }
+    ],
+    "entry": "%main"
+  },
+  "irSha256": "715a0c0a98f350afb45b5095a5802d0b635f4369e894150bc50cb86464f22113",
+  "after": {
+    "packages/compiler/src/frontend/lowering/builtin-constructor-identity.ts": "61d360633ae7e5b6ceb433584e78856b725e7b262006abe7a037f5a31b1032ef",
+    "packages/compiler/src/frontend/lowering/generic-functions.ts": "f6e1553debbae7707b56985b49eeb7cc53ac8a841f55b6597d5b9cf4e6abfb14",
+    "packages/compiler/dist/frontend/lowering/builtin-constructor-identity.js": "6a8fe915810e4ba476b55b5ed21eeaf6f5bc08294b71bb94b2d366df5159b851",
+    "packages/compiler/dist/frontend/lowering/generic-functions.js": "d8bab279a3e09c4ba09133a3fbad21caee897ea44d1a2314f0036f6865e59517",
+    "packages/cli/dist/main.js": "1e1d82da065b447f69336e910613a4d1eef66128215f59888f1198b129d16a39"
+  },
+  "loadBearingSourceAndArtifactsStable": true,
+  "scratchRemoved": true,
+  "nodeExecutableSha256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1"
+}

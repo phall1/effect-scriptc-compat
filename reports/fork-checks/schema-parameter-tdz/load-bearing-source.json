@@ -1,0 +1,10 @@
+{
+  "packages/compiler/src/frontend/lowering/builtin-constructor-identity.ts": {
+    "sha256": "61d360633ae7e5b6ceb433584e78856b725e7b262006abe7a037f5a31b1032ef",
+    "snapshotUnavailable": "Source moved after probe; no substitute snapshot claimed"
+  },
+  "packages/compiler/src/frontend/lowering/generic-functions.ts": {
+    "sha256": "f6e1553debbae7707b56985b49eeb7cc53ac8a841f55b6597d5b9cf4e6abfb14",
+    "snapshotUnavailable": "Source moved after probe; no substitute snapshot claimed"
+  }
+}
