@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxHashSet.d.ts, example 19.
-// SHA-256: d3cd3bb5c7c3931aa3545ed940a358e30a26ec93bf2707d54fb2cd3f14d5a25e
+// SHA-256: 5c8e094ad279a21b1ed590e4e9c69d3a0e6510075c21a17f92e558c6cf665df7
 const __compatObserved: unknown[] = []
 import * as TxHashSet from "effect/TxHashSet"
 import { Effect } from "effect"

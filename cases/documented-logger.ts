@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Logger.d.ts, example 2.
-// SHA-256: 5dfe53a49833cd40e3e82db69f6be685e0d0b8b307c0d54b792080aabae7a45b
+// SHA-256: 2ea6ce978c691df7ae8dde5228aca474ae667d0a92eefb850a600e00c6b80ddf
 const __compatObserved: unknown[] = []
 import * as Logger from "effect/Logger"
 

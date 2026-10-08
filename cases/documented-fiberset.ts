@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/FiberSet.d.ts, example 0.
-// SHA-256: a794b64b88500cdd86c126deb74875694bc3cfc269654a49c7f6b38f32b7604e
+// SHA-256: 53405b4c00442a934332d3032b190e06eb2273d83a6516c6406c828a540b6280
 const __compatObserved: unknown[] = []
 import * as FiberSet from "effect/FiberSet"
 import { Effect } from "effect"

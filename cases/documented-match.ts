@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Match.d.ts, example 0.
-// SHA-256: ba8bde7d56f06d794deba0ed46799ba7afab392f3ab7657960fbb477e47c37cb
+// SHA-256: fb25e689d453630ef61dd3845e4232952ec9d90c1fc055496d566aa7dbdfe6c0
 const __compatObserved: unknown[] = []
 import * as Match from "effect/Match"
 

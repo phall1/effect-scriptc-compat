@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Deferred.d.ts, example 0.
-// SHA-256: d12e03fe6a9d0b096b162ac7a0d67ea7674d5983754bc1273b191050f995f734
+// SHA-256: 69fe9798ecd63c9c1495a1982e593ded300d4723b6557aae903ad4da3150ba9c
 const __compatObserved: unknown[] = []
 import * as Deferred from "effect/Deferred"
 import { Effect, Fiber } from "effect"

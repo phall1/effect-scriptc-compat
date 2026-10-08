@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/ErrorReporter.d.ts, example 0.
-// SHA-256: 92e89914be5f78fbedf4d40a0b2f6a5bedda004a7706603d4aa144e029532d61
+// SHA-256: 1758646019744ceed25239d7af2aee55488fbd913f0f393d98dc96850daf0f31
 const __compatObserved: unknown[] = []
 import * as ErrorReporter from "effect/ErrorReporter"
 import { Effect } from "effect"

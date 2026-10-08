@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/ManagedRuntime.d.ts, example 0.
-// SHA-256: 2311a85b78eea5e2ef936d36e4252ef85a65bbee91c386f085c60f280860d932
+// SHA-256: dfb0a1eef59a8ccb9f87555abb8db0819c6c13cdb4089082c24b238d61b60473
 const __compatObserved: unknown[] = []
 import * as ManagedRuntime from "effect/ManagedRuntime"
 import { Context, Effect, Layer } from "effect"

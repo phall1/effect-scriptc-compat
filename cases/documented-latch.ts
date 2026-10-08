@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Latch.d.ts, example 0.
-// SHA-256: 41f97a043cfd5e183878adbbd2af2758b55491ed124d89436396d07b431fec41
+// SHA-256: d97823b4e6fcfaaaf16976c0909d6197659a9bb723bcb3f9b3d2b745a9806855
 const __compatObserved: unknown[] = []
 import * as Latch from "effect/Latch"
 import { Effect, Fiber } from "effect"

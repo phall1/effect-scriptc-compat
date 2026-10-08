@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Config.d.ts, example 0.
-// SHA-256: a2c0d99071453dcae6ac7593b3b59a7aec8c7048a06abd779786d7c539edff59
+// SHA-256: ff6b879355580345429d17389eb9e334698aa830d26c20b8e1e0ef93023d89ec
 const __compatObserved: unknown[] = []
 import * as Config from "effect/Config"
 

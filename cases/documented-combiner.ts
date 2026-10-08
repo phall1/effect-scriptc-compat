@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Combiner.d.ts, example 0.
-// SHA-256: 98034f3c137df14454b79f662596ef7c97783edc876df396c97a6bcf4786948f
+// SHA-256: ce1b8c0f87a0404512f967d4b1e89d8442c765c4407d7904ed1ea7467d89034a
 const __compatObserved: unknown[] = []
 import * as Combiner from "effect/Combiner"
 

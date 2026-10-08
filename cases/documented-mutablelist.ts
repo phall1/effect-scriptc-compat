@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/MutableList.d.ts, example 0.
-// SHA-256: 17158507f29ec11120bc1cada5c79b9471d2debd18e1ee755898bd2317fdd040
+// SHA-256: 3d39f7afb1b77a51a8a3278cc9757f64325469ffe14ba812fb6bfc512bf53ce5
 const __compatObserved: unknown[] = []
 import * as MutableList from "effect/MutableList"
 

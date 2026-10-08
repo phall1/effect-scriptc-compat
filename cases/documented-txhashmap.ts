@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxHashMap.d.ts, example 0.
-// SHA-256: 36e1cf24ed72bb883e639911cb85fb72ecd1f8a632f53e08de4f263ef97b6727
+// SHA-256: 6928b86d731d37b365b99dd94788835b6eddfeeaef7bf6e9a64d6942bc0e555e
 const __compatObserved: unknown[] = []
 import * as TxHashMap from "effect/TxHashMap"
 import { Effect, Option } from "effect"

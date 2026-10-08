@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Ordering.d.ts, example 1.
-// SHA-256: ccddb60cdf068c6b8300b1767f8843fee668b41a85d482cd99ffe6993177b25f
+// SHA-256: 9dcdd9800b8b05ad5729b34d9225ec353460ee5763f995b5c439b4bdcc9d81c2
 const __compatObserved: unknown[] = []
 import * as Ordering from "effect/Ordering"
 

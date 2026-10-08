@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Pool.d.ts, example 0.
-// SHA-256: 37e9c2efc9ec01ecc12e6676a0425e0a226b374d9666cfbd54ab919a62f431d8
+// SHA-256: 70cacea5624be310cd68d5f9fe9b1e84c5b1355021e54dfe4e842686c88a1c53
 const __compatObserved: unknown[] = []
 import * as Pool from "effect/Pool"
 import { Duration, Effect } from "effect"

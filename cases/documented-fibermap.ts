@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/FiberMap.d.ts, example 0.
-// SHA-256: d1617527e786d8dcff88ada042f7a3b9fd243bdf33caee66ab1ce0f80e51d490
+// SHA-256: 7e189a5cb88ad52e65c0fb7fa8bbe0904f8d7e33747f9a7abf694dcce0101b37
 const __compatObserved: unknown[] = []
 import * as FiberMap from "effect/FiberMap"
 import { Effect } from "effect"

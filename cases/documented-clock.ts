@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Clock.d.ts, example 1.
-// SHA-256: 5f4b52959650f11b3ab82a82c5931b67366131f27b0558b418e813eb88bbee3f
+// SHA-256: 1ea828f3d5ca5c3dafe2c4d451a62cb3ba1570e8e80dbcedda27283a735169e5
 const __compatObserved: unknown[] = []
 import * as Clock from "effect/Clock"
 import { Effect } from "effect"

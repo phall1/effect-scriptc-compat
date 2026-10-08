@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/LayerMap.d.ts, example 0.
-// SHA-256: b28d754be202cd92ac9b0f62145148688ebde921a223607d46fce99ddff458a3
+// SHA-256: c5f3b3803b8809c23b894747cd7c00950b185d5b66ed423692bbdccbd05d040e
 const __compatObserved: unknown[] = []
 import * as LayerMap from "effect/LayerMap"
 import { Context, Effect, Layer } from "effect"

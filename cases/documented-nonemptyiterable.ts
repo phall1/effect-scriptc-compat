@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/NonEmptyIterable.d.ts, example 0.
-// SHA-256: d30faebd3c50f7865091782066772e7f7465dbc5f67832afefc988f7b75d1b82
+// SHA-256: 00fadc583bdc7f95b37bd3dab6e60af942dd5462474b51be63d0d6c9a67f09a1
 const __compatObserved: unknown[] = []
 import * as NonEmptyIterable from "effect/NonEmptyIterable"
 import { Chunk } from "effect"

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/ai/Telemetry.d.ts, example 2.
-// SHA-256: 70bbf6da7d96f4ebe3da6c0260f7fa977c42a6c866ecb27d569e1fa95e4e466a
+// SHA-256: 867741413bcc12037dcdf503f4ce4c51bcd054d96750cb89cfcca87a2a2e032e
 const __compatObserved: unknown[] = []
 import { Context, Option, String, Tracer } from "effect"
 import * as Telemetry from "effect/ai/Telemetry"

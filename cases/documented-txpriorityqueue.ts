@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxPriorityQueue.d.ts, example 0.
-// SHA-256: 440002da7feecd676c12aca48dfc4bcd0038dc64182d018e463ce6ff53f71eb0
+// SHA-256: ab7c11709880d9691065702c1ca7cba42683ef9d7d2180227ada17c732296244
 const __compatObserved: unknown[] = []
 import * as TxPriorityQueue from "effect/TxPriorityQueue"
 import { Effect, Order } from "effect"

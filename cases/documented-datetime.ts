@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/DateTime.d.ts, example 0.
-// SHA-256: d9dbf8e8b556f78b8c51915d91d38095fcac929c7b943b5cc1b183273da26a45
+// SHA-256: 47486890f4d783d088c2bf138bed424771b3837790e08690fea96f4cc5e5a070
 const __compatObserved: unknown[] = []
 import * as DateTime from "effect/DateTime"
 import { Option } from "effect"

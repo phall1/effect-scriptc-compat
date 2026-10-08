@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/SchemaRepresentation.d.ts, example 1.
-// SHA-256: 2d4173f7c91435f6cdc96ca71585ae58742c64bfa981f71c94c013850700bbc1
+// SHA-256: 0a1bbde2392ac7724443c7332316cb4ccc7694405e70eefee01165e65a447615
 const __compatObserved: unknown[] = []
 import * as SchemaRepresentation from "effect/SchemaRepresentation"
 import { Schema } from "effect"

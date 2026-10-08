@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Unify.d.ts, example 1.
-// SHA-256: aee87669fc378a6ebd9b91dcce9d2991545df840e43005749b4c5a7b7cfb9e04
+// SHA-256: cdf31eee912503a4746f83f542d46f4b74e6c277bd842ef726eba9db7bca9abe
 const __compatObserved: unknown[] = []
 import * as Unify from "effect/Unify"
 

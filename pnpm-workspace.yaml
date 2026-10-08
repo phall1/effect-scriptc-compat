@@ -1,2 +1,2 @@
 minimumReleaseAgeExclude:
-  - effect@4.0.1
+  - effect@4.0.1 || 4.0.2

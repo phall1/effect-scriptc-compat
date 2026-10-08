@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Tuple.d.ts, example 0.
-// SHA-256: 5f0e474d95af7d63a6d635a23f05ac8e4cbe06c562cc75c868cef60097e045a2
+// SHA-256: 87179eb20c46d1f375aea1ebe36becbac78ceb3b4313ee5cf861aeb8497fa971
 const __compatObserved: unknown[] = []
 import * as Tuple from "effect/Tuple"
 

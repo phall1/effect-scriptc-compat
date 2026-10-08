@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Optic.d.ts, example 0.
-// SHA-256: 3ac516f343a10214e32af71a0a74497cf73304cdb786efc6569597fc42367fc9
+// SHA-256: f682406fcd0de4e8e55957df104f6ae86de04caf6fb21fc1b3c16af4ebac91e4
 const __compatObserved: unknown[] = []
 import * as Optic from "effect/Optic"
 

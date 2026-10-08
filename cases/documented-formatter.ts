@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Formatter.d.ts, example 1.
-// SHA-256: 071c35820142e58fe9321e155fe12b1d88d0c97db55efa51f052a962ea6133a0
+// SHA-256: 2bc39b3001e3cb46338294ee681b4e444da661b99dd5a921e50f947713067c9f
 const __compatObserved: unknown[] = []
 import * as Formatter from "effect/Formatter"
 

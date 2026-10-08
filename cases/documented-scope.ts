@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Scope.d.ts, example 0.
-// SHA-256: 388a5c527ab6bf676056498ee2669507c70bd3a1f9a72ab95543ba9d7dd82835
+// SHA-256: edcd8e79c5bed3038b53f7146332caec7a2fd1765760b74e46545f808fcc0474
 const __compatObserved: unknown[] = []
 import * as Scope from "effect/Scope"
 import { Effect, Exit } from "effect"

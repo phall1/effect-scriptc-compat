@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Path.d.ts, example 0.
-// SHA-256: ac2031a92596597248ff91d626bc3d4f96fc8afc4302bd3ca7b6c4f78f2a3e15
+// SHA-256: 292f67c0734e9e60ad42aad2b9690669ceeca94b4fe08c517f90b5252df5ba2c
 const __compatObserved: unknown[] = []
 import * as Path from "effect/Path"
 import { Effect } from "effect"

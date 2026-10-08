@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Cache.d.ts, example 0.
-// SHA-256: 38428f4d2cc00aa38b4827c1fe78a9ad4b3924f04612baa3a324f9c419a1e8e6
+// SHA-256: 081d233900ac077dbda4c97f77880a475ab04b9384565aee3b67506ff226ae76
 const __compatObserved: unknown[] = []
 import * as Cache from "effect/Cache"
 import { Effect } from "effect"

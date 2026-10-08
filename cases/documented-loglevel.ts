@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/LogLevel.d.ts, example 1.
-// SHA-256: ae81882cb1a4ece7995a4a510f1ae11496c638fef5585417963110bd520ec70e
+// SHA-256: d6c7b4e59fb54e96d6c9f35eccf223b6672cbec1e650e77af2fd5a8582beac6a
 const __compatObserved: unknown[] = []
 import * as LogLevel from "effect/LogLevel"
 

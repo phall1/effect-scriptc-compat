@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Metric.d.ts, example 4.
-// SHA-256: 79ff05f62c3659b6d540b17df00120ebd524c0dcbdfca588ef6766c70c9b97fe
+// SHA-256: 39c97a9547948cdaaf2d60a91bb5aab74c2d0bbc9af4689dcdebbe8958598245
 const __compatObserved: unknown[] = []
 import * as Metric from "effect/Metric"
 import { Effect } from "effect"

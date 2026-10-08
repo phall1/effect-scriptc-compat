@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Struct.d.ts, example 3.
-// SHA-256: d48a8e6b6c8cb7b6b99f533ca7393896e66d8a53c2f27bbec276eb6b7468984c
+// SHA-256: 8964f822ef38ae5e5a5d9112b58a73a56914f445af5993d19175e50d5799e372
 const __compatObserved: unknown[] = []
 import * as Struct from "effect/Struct"
 import { pipe } from "effect"

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/PubSub.d.ts, example 0.
-// SHA-256: 54e132614bd61acffef2e4c02ad7aa760cf6ddc8af95e5bc007ae40096bd793f
+// SHA-256: 081a16fe59beb6f3c7fa001e7b2463a640f54ee098ec9d0311d60134c56285fd
 const __compatObserved: unknown[] = []
 import * as PubSub from "effect/PubSub"
 import { Effect } from "effect"

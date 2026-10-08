@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Runtime.d.ts, example 0.
-// SHA-256: 6da881cc87ca3fd93ee9be83df2f133b3f5c5b2de4ba6efea836c5b781ebfc80
+// SHA-256: 9299f7b5c6b59330fa0c85a9f156fd24f6617104cca2613d40fa00b02046fe3c
 const __compatObserved: unknown[] = []
 import * as Runtime from "effect/Runtime"
 import { Effect, Exit } from "effect"

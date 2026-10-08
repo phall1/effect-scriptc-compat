@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/BigDecimal.d.ts, example 1.
-// SHA-256: 427d366852176e5ea24c0139daeb73ade47c1cd17093ebb8791e0a1df3bff707
+// SHA-256: 02e707c6957bb03ca3b853cd7f748c9917954b159c201bea2f034b302612eeaf
 const __compatObserved: unknown[] = []
 import * as BigDecimal from "effect/BigDecimal"
 

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/RequestResolver.d.ts, example 0.
-// SHA-256: bf08b8a7c5588a75c913e893b5f6e8c50e13ae72857dbab92c8476dc0894cc72
+// SHA-256: 787a06edd33f1c17d58ee65e1630159db215f9cba73c14fbe8046f294001edb5
 const __compatObserved: unknown[] = []
 import * as RequestResolver from "effect/RequestResolver"
 import { Effect, Exit, Request } from "effect"

@@ -2,19 +2,19 @@
 
 > **Recovered checkpoint:** the complete 456-case inventory (404 runnable probes) is now checked in. Historical Linux evidence is preserved separately in `reports/imported/linux-checkpoint/`: 122 measured cases, 39 differentials, and five verified packets, explicitly partial. Current-host progress is saved in `reports/map-session.json`, the selected map report, and `reports/checkpoint.json`; historical binaries are not present or reused. See [recovery notes](docs/recovery.md).
 
-Host-first, reproducible probes for the published **effect@4.0.1** package and the **scriptc@0.2.3** npm CLI. This repository discovers compiler/runtime gaps, compares native behavior with Node, and prepares local upstream reports. It does not modify Effect or vendor scriptc.
+Host-first, reproducible probes for the published **effect@4.0.2** package and the **scriptc@0.2.3** npm CLI. This repository discovers compiler/runtime gaps, compares native behavior with Node, and prepares local upstream reports. It does not modify Effect or vendor scriptc. The compiler fixes themselves live on the owned scriptc fork, currently rebased onto upstream v0.2.6.
 
 ## Pins and prerequisites
 
 | Tool | Pin |
 | --- | --- |
-| Effect | `4.0.1`, the only runtime dependency |
+| Effect | `4.0.2`, the only runtime dependency |
 | scriptc global npm CLI | `0.2.3` |
 | scriptc GitHub release | [`v0.2.3`](https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3) |
 | Release commit | `52169979ee3fac98ad6651eb2a717fbbf4ac1f89` |
 | Node / reference TS runner | `24.19.0`, `node --experimental-strip-types` |
 | TypeScript | `7.0.2`, strict / ES2025 / bundler |
-| Node type declarations | `24.10.1` |
+| Node type declarations | `24.19.1` |
 | pnpm | `11.19.0` |
 | Initial host | Linux x64, `x86_64-unknown-linux-gnu` |
 | Initial native linker | Debian Clang `19.1.7 (3+b1)`; exact package hashes in `reports/imported/linux-checkpoint/linker-provenance.json` |

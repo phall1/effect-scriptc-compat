@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxPubSub.d.ts, example 0.
-// SHA-256: 5970817e7103d95f38581423f915d968aa67da3d1227e31bcdc797991910a3ef
+// SHA-256: 7b15d552c5f8c568c66c5a53ee8f7b88bbdbf89ead0e2938ccaa31f8c71bda3d
 const __compatObserved: unknown[] = []
 import * as TxPubSub from "effect/TxPubSub"
 import { Effect, TxQueue } from "effect"

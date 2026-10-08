@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/LayerRef.d.ts, example 0.
-// SHA-256: 76e5e88e01f725165b4a82ff025f78186c9225ccef67467626fa48202936a7a6
+// SHA-256: 87f0a3cecbcd62f19a706e841473a58becf9a9c8aad7466200030954c980fd62
 const __compatObserved: unknown[] = []
 import * as LayerRef from "effect/LayerRef"
 import { Context, Effect, Layer } from "effect"

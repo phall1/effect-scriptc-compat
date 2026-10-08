@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/MutableHashMap.d.ts, example 0.
-// SHA-256: 5eefe1ba2f9582a6be988d0f9a7b101de7d14a53e4fae1567ef945464fb57d1d
+// SHA-256: 0dcee23e26dfd8d4a13b1e93ceaa40c90aa0f3d277bd6d8636b3205801aefd05
 const __compatObserved: unknown[] = []
 import * as MutableHashMap from "effect/MutableHashMap"
 

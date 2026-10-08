@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxSemaphore.d.ts, example 0.
-// SHA-256: 87d3b41f6fd28e7722fe0b250a86ea6bbc68fa08b08ab13051bf89cd4eca170a
+// SHA-256: c9568e7e6c593f35b77566921ca34b0d5d3ea33e8aa028bc02c9d8c8456f830c
 const __compatObserved: unknown[] = []
 import * as TxSemaphore from "effect/TxSemaphore"
 import { Effect } from "effect"

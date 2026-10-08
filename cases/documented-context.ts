@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Context.d.ts, example 0.
-// SHA-256: 91de255cf418741849f2813a6c76dc9948c5dfa8f0986a3eee6e910dfec3961a
+// SHA-256: a95365f0513d3a86768c4b0d1c42b67a3a7c812d431595faa8103b51c66555e3
 const __compatObserved: unknown[] = []
 import * as Context from "effect/Context"
 

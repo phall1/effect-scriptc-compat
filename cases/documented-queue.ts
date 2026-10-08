@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Queue.d.ts, example 0.
-// SHA-256: af123df9ff8c226c6e61e7dd03156cc22bbc68a9475455b9385c20d83a731a1d
+// SHA-256: 20978db7b79c84c066c63fc5133f849c1bcbe2139bea5cd84d6ef5e6fbd4453a
 const __compatObserved: unknown[] = []
 import * as Queue from "effect/Queue"
 import { Effect } from "effect"

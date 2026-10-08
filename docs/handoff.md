@@ -1,5 +1,15 @@
 # Active handoff
 
+## Current state (2026-10-08)
+
+This section is the live next action. The notes below it stay as history of the stopped published-CLI map and must not be relabeled.
+
+- Oracle is published **effect@4.0.2** on Node **24.19.0**. `@types/node` is **24.19.1**. pnpm stays **11.19.0**. The published scriptc CLI pin stays **0.2.3**. Compiler work is the owned fork `8f9991f077eeb7e284ccf3e6b042c1db1f743d9e` on `effect-compat-0.2.6` (upstream v0.2.6 plus the Schema constructor checkpoint). Do not force-push `origin/effect-compat`.
+- Inventory is 459 surfaces: **404 ready**, 41 uncovered, 14 skipped. Three new uncovered placeholders (`effect/Version`, HTTP internal tracing, RPC internal tracing) are not probes and are not a compatibility pass.
+- `pnpm check` passed on this pin: strict typecheck, 35/35 tests, and 404/404 ready fixtures twice on Node 24.19.0. Five observability expected baselines now include Effect 4.0.2 telemetry SDK resource attributes (`telemetry.sdk.*`, `effect.fiberId`, logger scope `effect` / `4.0.2`): `module-observability--otlp`, `module-observability--otlplogger`, `module-observability--otlpmetrics`, `namespace-observability`, `namespace-observability-otlpresource`. Probe source was not rewritten. The other 399 expected stdout values are unchanged. The 2026-10-06 404/404 validation snapshot remains in git history; maps under `reports/` and imported runs stay labeled as their original Effect 4.0.1 evidence.
+- The same ten representative probes are EXACT against this oracle, including `documented-hash` and `schema-decode`. That is 10/404, not corpus parity.
+- Next action is the compiler sweep of all 404 ready probes on this source and oracle. Do not restart the published-CLI map or reduction.
+
 ## Accepted source
 
 - Branch: `resume-harness`, pushed to owned `phall1/effect-scriptc-compat`.

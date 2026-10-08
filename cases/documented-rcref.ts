@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/RcRef.d.ts, example 0.
-// SHA-256: e44f9e94210dea2d9966236743cb9b9b045d61796d9b7800f46375346cf0036f
+// SHA-256: 0579c355318732f5e1ad125569e3a4ab3a5f473cd11705ba67080db9d2a7f37c
 const __compatObserved: unknown[] = []
 import * as RcRef from "effect/RcRef"
 import { Effect } from "effect"

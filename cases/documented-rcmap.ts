@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/RcMap.d.ts, example 0.
-// SHA-256: afcbe81535128f1616c07b4afaddce9cb703c19148b6ed5774c14402c65cac9a
+// SHA-256: feaadbadafd2ba583e221f39c3ddc9de70da594296fb55cd4655a9893bd74801
 const __compatObserved: unknown[] = []
 import * as RcMap from "effect/RcMap"
 import { Effect } from "effect"

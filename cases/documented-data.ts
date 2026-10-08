@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Data.d.ts, example 0.
-// SHA-256: dfe2804d3cea8c8bd2661819cb2ce0afbb092335eb27e6b28a8edb0ee2da1a4f
+// SHA-256: 05d36be2286c1514b5da58ca7422f92c284145750839cffbebb78199257b6cfa
 const __compatObserved: unknown[] = []
 import * as Data from "effect/Data"
 import { Equal } from "effect"

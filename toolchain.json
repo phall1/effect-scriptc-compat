@@ -3,8 +3,8 @@
   "node": "24.19.0",
   "pnpm": "11.19.0",
   "typescript": "7.0.2",
-  "nodeTypes": "24.10.1",
-  "effect": "4.0.1",
+  "nodeTypes": "24.19.1",
+  "effect": "4.0.2",
   "scriptc": {
     "npmVersion": "0.2.3",
     "githubReleaseTag": "v0.2.3",

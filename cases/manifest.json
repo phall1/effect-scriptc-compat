@@ -12,7 +12,7 @@
     ],
     "expectedStdout": "callback:ok\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "chunk-round-trip",
@@ -28,7 +28,7 @@
     ],
     "expectedStdout": "chunk:2,4,6\n",
     "declaration": "node_modules/effect/dist/Chunk.d.ts",
-    "declarationSha256": "cf5bf561a95df7ee64e4b37605a210137cd564fffccbea645d3f26488a315cda"
+    "declarationSha256": "c418886ddf62852b78946bccf26c96052ec1c58db828dbbe050c493aa50a515a"
   },
   {
     "id": "concurrency-all",
@@ -43,7 +43,7 @@
     ],
     "expectedStdout": "all:1,2,3\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "concurrency-for-each",
@@ -58,7 +58,7 @@
     ],
     "expectedStdout": "forEach:2,4,6\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "concurrency-race",
@@ -75,7 +75,7 @@
     ],
     "expectedStdout": "race:winner\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "concurrency-timeout",
@@ -92,7 +92,7 @@
     ],
     "expectedStdout": "TimeoutError\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "documented-ai--aierror",
@@ -229,7 +229,7 @@
     ],
     "expectedStdout": "[[\"custom.ai.model_name\",\"custom.ai.max_tokens\"]]\n",
     "declaration": "node_modules/effect/dist/ai/Telemetry.d.ts",
-    "declarationSha256": "70bbf6da7d96f4ebe3da6c0260f7fa977c42a6c866ecb27d569e1fa95e4e466a",
+    "declarationSha256": "867741413bcc12037dcdf503f4ce4c51bcd054d96750cb89cfcca87a2a2e032e",
     "exampleIndex": 2
   },
   {
@@ -308,7 +308,7 @@
     ],
     "expectedStdout": "[false,true,false,false]\n",
     "declaration": "node_modules/effect/dist/BigDecimal.d.ts",
-    "declarationSha256": "427d366852176e5ea24c0139daeb73ade47c1cd17093ebb8791e0a1df3bff707",
+    "declarationSha256": "02e707c6957bb03ca3b853cd7f748c9917954b159c201bea2f034b302612eeaf",
     "exampleIndex": 1
   },
   {
@@ -323,7 +323,7 @@
     ],
     "expectedStdout": "[true,true,false]\n",
     "declaration": "node_modules/effect/dist/Boolean.d.ts",
-    "declarationSha256": "6fbf588ecc66a4b4b02ef791193902cbf9cf88e1685a87f3a3d7459f9bd7bb05",
+    "declarationSha256": "c7217b61eed822d64fb2e4b891111d13f8a4a61649492159f16e2e85cbb4af22",
     "exampleIndex": 0
   },
   {
@@ -342,7 +342,7 @@
     ],
     "expectedStdout": "[[5,5,5]]\n",
     "declaration": "node_modules/effect/dist/Cache.d.ts",
-    "declarationSha256": "38428f4d2cc00aa38b4827c1fe78a9ad4b3924f04612baa3a324f9c419a1e8e6",
+    "declarationSha256": "081d233900ac077dbda4c97f77880a475ab04b9384565aee3b67506ff226ae76",
     "exampleIndex": 0
   },
   {
@@ -358,7 +358,7 @@
     ],
     "expectedStdout": "[true,false]\n",
     "declaration": "node_modules/effect/dist/Channel.d.ts",
-    "declarationSha256": "f87f908aa53088d994dc70d4a6a2f1bda08fdcbfbbe389c63a6c9653ff95ed65",
+    "declarationSha256": "8693b30c688b6cc860014a42c149203410a6c0a8d53a6e050ae76265f5500a46",
     "exampleIndex": 0
   },
   {
@@ -470,7 +470,7 @@
     ],
     "expectedStdout": "[1000]\n",
     "declaration": "node_modules/effect/dist/Clock.d.ts",
-    "declarationSha256": "5f4b52959650f11b3ab82a82c5931b67366131f27b0558b418e813eb88bbee3f",
+    "declarationSha256": "1ea828f3d5ca5c3dafe2c4d451a62cb3ba1570e8e80dbcedda27283a735169e5",
     "exampleIndex": 1
   },
   {
@@ -486,7 +486,7 @@
     ],
     "expectedStdout": "[7]\n",
     "declaration": "node_modules/effect/dist/Combiner.d.ts",
-    "declarationSha256": "98034f3c137df14454b79f662596ef7c97783edc876df396c97a6bcf4786948f",
+    "declarationSha256": "ce1b8c0f87a0404512f967d4b1e89d8442c765c4407d7904ed1ea7467d89034a",
     "exampleIndex": 0
   },
   {
@@ -502,7 +502,7 @@
     ],
     "expectedStdout": "[true,false]\n",
     "declaration": "node_modules/effect/dist/Config.d.ts",
-    "declarationSha256": "a2c0d99071453dcae6ac7593b3b59a7aec8c7048a06abd779786d7c539edff59",
+    "declarationSha256": "ff6b879355580345429d17389eb9e334698aa830d26c20b8e1e0ef93023d89ec",
     "exampleIndex": 0
   },
   {
@@ -517,7 +517,7 @@
     ],
     "expectedStdout": "[{\"_tag\":\"Value\",\"value\":\"3000\"}]\n",
     "declaration": "node_modules/effect/dist/ConfigProvider.d.ts",
-    "declarationSha256": "c85d6f01b92b273ea6f277fac831276df7fa81d9263e0c9788bab255dee0589a",
+    "declarationSha256": "4af9c0e1952f8388dbca6474b5c27907cec23f5e2e0353479b2cb40e342ddb1e",
     "exampleIndex": 0
   },
   {
@@ -538,7 +538,7 @@
     ],
     "expectedStdout": "[[\"This will be logged as an error\"]]\n",
     "declaration": "node_modules/effect/dist/Console.d.ts",
-    "declarationSha256": "ef05abaa093da47fe79fcebec7c1f6a008719f850547ed734aff184eb183e05a",
+    "declarationSha256": "ca4f55931220a397791221e372182478b752b3a7a01642ae19d54b54b2d9164c",
     "exampleIndex": 2
   },
   {
@@ -555,7 +555,7 @@
     ],
     "expectedStdout": "[\"Result: SELECT 1\"]\n",
     "declaration": "node_modules/effect/dist/Context.d.ts",
-    "declarationSha256": "91de255cf418741849f2813a6c76dc9948c5dfa8f0986a3eee6e910dfec3961a",
+    "declarationSha256": "a95365f0513d3a86768c4b0d1c42b67a3a7c812d431595faa8103b51c66555e3",
     "exampleIndex": 0
   },
   {
@@ -572,7 +572,7 @@
     ],
     "expectedStdout": "[true]\n",
     "declaration": "node_modules/effect/dist/Cron.d.ts",
-    "declarationSha256": "d59a8fdf62d2514b261f0e8ac8853513a16d695c464aa2e4bfbc64fa582655ba",
+    "declarationSha256": "3c6fd570c49ece5bf9c42727880cb4dd3567e81ac6b48031593379ff5805c128",
     "exampleIndex": 0
   },
   {
@@ -593,7 +593,7 @@
     ],
     "expectedStdout": "[[16,36,16]]\n",
     "declaration": "node_modules/effect/dist/Crypto.d.ts",
-    "declarationSha256": "17a63f37bcac12f159dc6540ca0721ff8ae79553ce7cffee6eebcf0216bf41a6",
+    "declarationSha256": "0062d585996b45536ab739e38660801b14e280c137f8bda444905aadf6f04b1d",
     "exampleIndex": 1
   },
   {
@@ -609,7 +609,7 @@
     ],
     "expectedStdout": "[true]\n",
     "declaration": "node_modules/effect/dist/Data.d.ts",
-    "declarationSha256": "dfe2804d3cea8c8bd2661819cb2ce0afbb092335eb27e6b28a8edb0ee2da1a4f",
+    "declarationSha256": "05d36be2286c1514b5da58ca7422f92c284145750839cffbebb78199257b6cfa",
     "exampleIndex": 0
   },
   {
@@ -627,7 +627,7 @@
     ],
     "expectedStdout": "[\"2025-11-02T05:30:00.000Z\",\"2025-11-02T06:30:00.000Z\",\"2025-03-09T06:30:00.000Z\",\"2025-03-09T07:30:00.000Z\"]\n",
     "declaration": "node_modules/effect/dist/DateTime.d.ts",
-    "declarationSha256": "d9dbf8e8b556f78b8c51915d91d38095fcac929c7b943b5cc1b183273da26a45",
+    "declarationSha256": "47486890f4d783d088c2bf138bed424771b3837790e08690fea96f4cc5e5a070",
     "exampleIndex": 0
   },
   {
@@ -649,7 +649,7 @@
     ],
     "expectedStdout": "[\"Hello, World!\"]\n",
     "declaration": "node_modules/effect/dist/Deferred.d.ts",
-    "declarationSha256": "d12e03fe6a9d0b096b162ac7a0d67ea7674d5983754bc1273b191050f995f734",
+    "declarationSha256": "69fe9798ecd63c9c1495a1982e593ded300d4723b6557aae903ad4da3150ba9c",
     "exampleIndex": 0
   },
   {
@@ -664,7 +664,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":30000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":86400000},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"1000000500\"}]\n",
     "declaration": "node_modules/effect/dist/Duration.d.ts",
-    "declarationSha256": "fda414d1e97aaad5aee9633f178d732bc439efaa1a5c25fe52d47e5a83a4e13e",
+    "declarationSha256": "e557a8dd8cb12a1654864f8ce9809332c53d753608c22ece8aa75a3e0704e715",
     "exampleIndex": 0
   },
   {
@@ -679,7 +679,7 @@
     ],
     "expectedStdout": "[true,true,false,true,true,true,true,true,false]\n",
     "declaration": "node_modules/effect/dist/Equal.d.ts",
-    "declarationSha256": "ed89a6ffa0487c3cf15575d0ea990610b9ca3720053b9bb575299e5b5f84378f",
+    "declarationSha256": "8c0127a9fd09d3ec5e91d47501a1228ba7940ad8aa7c8344c7bbe206b0ba32ce",
     "exampleIndex": 2
   },
   {
@@ -694,7 +694,7 @@
     ],
     "expectedStdout": "[true,false,true]\n",
     "declaration": "node_modules/effect/dist/Equivalence.d.ts",
-    "declarationSha256": "186fdadd3c630ca1e5406fedad4ea7ea815d62999a0d7d4ca1f8d3c01e7e3973",
+    "declarationSha256": "635fd78303b202bd1ecea48b4b0b74e241dc969f490116667b43c6cb46707fa0",
     "exampleIndex": 3
   },
   {
@@ -715,7 +715,7 @@
     ],
     "expectedStdout": "[[{\"message\":\"boom\",\"severity\":\"Info\",\"attributes\":{}}]]\n",
     "declaration": "node_modules/effect/dist/ErrorReporter.d.ts",
-    "declarationSha256": "92e89914be5f78fbedf4d40a0b2f6a5bedda004a7706603d4aa144e029532d61",
+    "declarationSha256": "1758646019744ceed25239d7af2aee55488fbd913f0f393d98dc96850daf0f31",
     "exampleIndex": 0
   },
   {
@@ -732,7 +732,7 @@
     ],
     "expectedStdout": "[[2,1]]\n",
     "declaration": "node_modules/effect/dist/ExecutionPlan.d.ts",
-    "declarationSha256": "def832320d210b120c47e8a68d6264b270270e0650edafc0fc3a52e48a1d53e7",
+    "declarationSha256": "e8b05159a4424d900d835193e0cec00f5f97e889528a85c6dd1629ec68c53571",
     "exampleIndex": 0
   },
   {
@@ -749,7 +749,7 @@
     ],
     "expectedStdout": "[true,true,false]\n",
     "declaration": "node_modules/effect/dist/Exit.d.ts",
-    "declarationSha256": "0a122ebc42d759904c0868b873882288a02b1fef9b481d2a9d8f39199000b71a",
+    "declarationSha256": "ea4ee2d5e533e8033279065e49d6cd2408574308840b34d8e737de6948c9b752",
     "exampleIndex": 3
   },
   {
@@ -770,7 +770,7 @@
     ],
     "expectedStdout": "[\"hello\"]\n",
     "declaration": "node_modules/effect/dist/FiberHandle.d.ts",
-    "declarationSha256": "f2670b517fef69d5ee230119c9837008199be4922069dd6ba05ae36b07a866a3",
+    "declarationSha256": "1eea47f89caa01cefac7647dae56d786dca11cfc202ba5bbb903fd9a36977c9f",
     "exampleIndex": 0
   },
   {
@@ -791,7 +791,7 @@
     ],
     "expectedStdout": "[2]\n",
     "declaration": "node_modules/effect/dist/FiberMap.d.ts",
-    "declarationSha256": "d1617527e786d8dcff88ada042f7a3b9fd243bdf33caee66ab1ce0f80e51d490",
+    "declarationSha256": "7e189a5cb88ad52e65c0fb7fa8bbe0904f8d7e33747f9a7abf694dcce0101b37",
     "exampleIndex": 0
   },
   {
@@ -813,7 +813,7 @@
     ],
     "expectedStdout": "[0]\n",
     "declaration": "node_modules/effect/dist/FiberSet.d.ts",
-    "declarationSha256": "a794b64b88500cdd86c126deb74875694bc3cfc269654a49c7f6b38f32b7604e",
+    "declarationSha256": "53405b4c00442a934332d3032b190e06eb2273d83a6516c6406c828a540b6280",
     "exampleIndex": 0
   },
   {
@@ -830,7 +830,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"OK\"}]\n",
     "declaration": "node_modules/effect/dist/Filter.d.ts",
-    "declarationSha256": "ced2ba25448068160b19040c860e566ce1c30c1314e435cc3fbd424530553661",
+    "declarationSha256": "a17ab1ad0d39e10821373458cfc617e450efef5e624fdcdcf4ff16f93beb0410",
     "exampleIndex": 2
   },
   {
@@ -845,7 +845,7 @@
     ],
     "expectedStdout": "[\"{\\\"a\\\":1,\\\"b\\\":[2,3]}\"]\n",
     "declaration": "node_modules/effect/dist/Formatter.d.ts",
-    "declarationSha256": "071c35820142e58fe9321e155fe12b1d88d0c97db55efa51f052a962ea6133a0",
+    "declarationSha256": "2bc39b3001e3cb46338294ee681b4e444da661b99dd5a921e50f947713067c9f",
     "exampleIndex": 1
   },
   {
@@ -860,7 +860,7 @@
     ],
     "expectedStdout": "[5,5]\n",
     "declaration": "node_modules/effect/dist/Function.d.ts",
-    "declarationSha256": "b4bc459b681edb3382564e649e73c29696b1983b651b6104a76a9cc3050a89e1",
+    "declarationSha256": "f3acae8510da25c4e941bd85506eaaf945ac58b78e803ffc5b5f4b56b7757c7e",
     "exampleIndex": 1
   },
   {
@@ -876,7 +876,7 @@
     ],
     "expectedStdout": "[3]\n",
     "declaration": "node_modules/effect/dist/Graph.d.ts",
-    "declarationSha256": "303cb8d22a0ab7b56e5673f8126d73fa71b6c46ec593a46e81ea1a16efbce0cd",
+    "declarationSha256": "b14e462d6ff04a23ba310ae9d68264b15e76d948b23958513da3c55f2ea0c8f5",
     "exampleIndex": 0
   },
   {
@@ -891,7 +891,7 @@
     ],
     "expectedStdout": "[true,true,true]\n",
     "declaration": "node_modules/effect/dist/Hash.d.ts",
-    "declarationSha256": "187c6da3cf1e02c4585108043e31f7b300f6858c860448aa7399c4d6d4d23b94",
+    "declarationSha256": "394d4f71147f8db18659eb74e322acda0f88d1060108e7d76330168c5ce40524",
     "exampleIndex": 1
   },
   {
@@ -949,7 +949,7 @@
     ],
     "expectedStdout": "[\"\\\"[toJSON threw]\\\"\"]\n",
     "declaration": "node_modules/effect/dist/Inspectable.d.ts",
-    "declarationSha256": "91232559e0c9c3dcf8e7dafd3ad500118fed81900bc8a6e11dfbfa7e4b37b67b",
+    "declarationSha256": "68825518d7e42fc8a9fa5f931cb050f15a88bdfa5b5140f8d583c90d74bb760f",
     "exampleIndex": 3
   },
   {
@@ -966,7 +966,7 @@
     ],
     "expectedStdout": "[[0,2,4,6,8],[0,1,4,9],[0,1,2,3,4,5,6,7,8,9]]\n",
     "declaration": "node_modules/effect/dist/Iterable.d.ts",
-    "declarationSha256": "02e39d71b94bd236e68990d6bf6a719443b0046c5f56e7163a337b1808ada737",
+    "declarationSha256": "7ac3adbdded2ef9385a4a44fca1674feac2fe3cef2b7a446d7df7773a3f9077d",
     "exampleIndex": 0
   },
   {
@@ -982,7 +982,7 @@
     ],
     "expectedStdout": "[{\"items\":[\"apple\"],\"count\":5}]\n",
     "declaration": "node_modules/effect/dist/JsonPatch.d.ts",
-    "declarationSha256": "f6a08e5d6e0c8ffa255783e571bc7830ba95ca9fc4db2cf5f3d041b480c3d8b3",
+    "declarationSha256": "9fd9cc054fce66b2f5814d808a1e212d080e036c252895d672f74932a4f5c6c8",
     "exampleIndex": 1
   },
   {
@@ -997,7 +997,7 @@
     ],
     "expectedStdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\"]\n",
     "declaration": "node_modules/effect/dist/JsonPointer.d.ts",
-    "declarationSha256": "3eb3b0501cfebc202b082c1fe614e42c2a4514ed374f67002968fa2deb18f5e2",
+    "declarationSha256": "ac58365c43d346b3b8d20e3ced776df061a2fad9807946ddb4c8d48697fc958a",
     "exampleIndex": 0
   },
   {
@@ -1013,7 +1013,7 @@
     ],
     "expectedStdout": "[\"draft-2020-12\",{\"type\":\"string\"},{\"Trimmed\":{\"type\":\"string\",\"minLength\":1}}]\n",
     "declaration": "node_modules/effect/dist/JsonSchema.d.ts",
-    "declarationSha256": "b628d2c2d97f5a2ef889a3382b93dca59c51d34ad17e1d489833ceab0eccee5c",
+    "declarationSha256": "0789e45a54de7c5d0b0da2a92932ed00b5e7ffb6c6c8635f2fa891179a61aa5c",
     "exampleIndex": 0
   },
   {
@@ -1033,7 +1033,7 @@
     ],
     "expectedStdout": "[\"opened\"]\n",
     "declaration": "node_modules/effect/dist/Latch.d.ts",
-    "declarationSha256": "41f97a043cfd5e183878adbbd2af2758b55491ed124d89436396d07b431fec41",
+    "declarationSha256": "d97823b4e6fcfaaaf16976c0909d6197659a9bb723bcb3f9b3d2b745a9806855",
     "exampleIndex": 0
   },
   {
@@ -1060,7 +1060,7 @@
     ],
     "expectedStdout": "[{\"development\":\"development: SELECT 1\",\"production\":\"production: SELECT 1\"}]\n",
     "declaration": "node_modules/effect/dist/LayerMap.d.ts",
-    "declarationSha256": "b28d754be202cd92ac9b0f62145148688ebde921a223607d46fce99ddff458a3",
+    "declarationSha256": "c5f3b3803b8809c23b894747cd7c00950b185d5b66ed423692bbdccbd05d040e",
     "exampleIndex": 0
   },
   {
@@ -1083,7 +1083,7 @@
     ],
     "expectedStdout": "[\"result\"]\n",
     "declaration": "node_modules/effect/dist/LayerRef.d.ts",
-    "declarationSha256": "76e5e88e01f725165b4a82ff025f78186c9225ccef67467626fa48202936a7a6",
+    "declarationSha256": "87f0a3cecbcd62f19a706e841473a58becf9a9c8aad7466200030954c980fd62",
     "exampleIndex": 0
   },
   {
@@ -1099,7 +1099,7 @@
     ],
     "expectedStdout": "[true,false,false]\n",
     "declaration": "node_modules/effect/dist/Logger.d.ts",
-    "declarationSha256": "5dfe53a49833cd40e3e82db69f6be685e0d0b8b307c0d54b792080aabae7a45b",
+    "declarationSha256": "2ea6ce978c691df7ae8dde5228aca474ae667d0a92eefb850a600e00c6b80ddf",
     "exampleIndex": 2
   },
   {
@@ -1114,7 +1114,7 @@
     ],
     "expectedStdout": "[1,-1,0]\n",
     "declaration": "node_modules/effect/dist/LogLevel.d.ts",
-    "declarationSha256": "ae81882cb1a4ece7995a4a510f1ae11496c638fef5585417963110bd520ec70e",
+    "declarationSha256": "d6c7b4e59fb54e96d6c9f35eccf223b6672cbec1e650e77af2fd5a8582beac6a",
     "exampleIndex": 1
   },
   {
@@ -1138,7 +1138,7 @@
     ],
     "expectedStdout": "[[\"Hello, world!\"]]\n",
     "declaration": "node_modules/effect/dist/ManagedRuntime.d.ts",
-    "declarationSha256": "2311a85b78eea5e2ef936d36e4252ef85a65bbee91c386f085c60f280860d932",
+    "declarationSha256": "dfb0a1eef59a8ccb9f87555abb8db0819c6c13cdb4089082c24b238d61b60473",
     "exampleIndex": 0
   },
   {
@@ -1157,7 +1157,7 @@
     ],
     "expectedStdout": "[\"string: some input\"]\n",
     "declaration": "node_modules/effect/dist/Match.d.ts",
-    "declarationSha256": "ba8bde7d56f06d794deba0ed46799ba7afab392f3ab7657960fbb477e47c37cb",
+    "declarationSha256": "fb25e689d453630ef61dd3845e4232952ec9d90c1fc055496d566aa7dbdfe6c0",
     "exampleIndex": 0
   },
   {
@@ -1180,7 +1180,7 @@
     ],
     "expectedStdout": "[[[\"200\",3],[\"click\",3]]]\n",
     "declaration": "node_modules/effect/dist/Metric.d.ts",
-    "declarationSha256": "79ff05f62c3659b6d540b17df00120ebd524c0dcbdfca588ef6766c70c9b97fe",
+    "declarationSha256": "39c97a9547948cdaaf2d60a91bb5aab74c2d0bbc9af4689dcdebbe8958598245",
     "exampleIndex": 4
   },
   {
@@ -1197,7 +1197,7 @@
     ],
     "expectedStdout": "[[[\"count\",42],[\"total\",100]]]\n",
     "declaration": "node_modules/effect/dist/MutableHashMap.d.ts",
-    "declarationSha256": "5eefe1ba2f9582a6be988d0f9a7b101de7d14a53e4fae1567ef945464fb57d1d",
+    "declarationSha256": "0dcee23e26dfd8d4a13b1e93ceaa40c90aa0f3d277bd6d8636b3205801aefd05",
     "exampleIndex": 0
   },
   {
@@ -1217,7 +1217,7 @@
     ],
     "expectedStdout": "[true,false,[\"apple\",\"banana\",\"cherry\"],3]\n",
     "declaration": "node_modules/effect/dist/MutableHashSet.d.ts",
-    "declarationSha256": "14e3bdf77741788a3bbbc2562a9843343056f7565bce3b262cdf375ee94e57cd",
+    "declarationSha256": "9ae37271fb44da1e0bc11230885f93517b9a44a803483d09ddf18c3f17e0381d",
     "exampleIndex": 0
   },
   {
@@ -1236,7 +1236,7 @@
     ],
     "expectedStdout": "[[0,1,2],0]\n",
     "declaration": "node_modules/effect/dist/MutableList.d.ts",
-    "declarationSha256": "17158507f29ec11120bc1cada5c79b9471d2debd18e1ee755898bd2317fdd040",
+    "declarationSha256": "3d39f7afb1b77a51a8a3278cc9757f64325469ffe14ba812fb6bfc512bf53ce5",
     "exampleIndex": 0
   },
   {
@@ -1253,7 +1253,7 @@
     ],
     "expectedStdout": "[42,42,100,{\"timeout\":10000,\"retries\":5}]\n",
     "declaration": "node_modules/effect/dist/MutableRef.d.ts",
-    "declarationSha256": "357f8eac8759da206331043fbd0f743aa4539c55a2c285e4d61a1ffce2385822",
+    "declarationSha256": "cbff36d1666eb8a0b2af6fdcb6a314aa363b523efd92f9f17296cfe01e538c5c",
     "exampleIndex": 0
   },
   {
@@ -1270,7 +1270,7 @@
     ],
     "expectedStdout": "[\"hello\"]\n",
     "declaration": "node_modules/effect/dist/Newtype.d.ts",
-    "declarationSha256": "7a689e0c65f3467c279a22517826427252dd4e11042e436b9f84636c6de51a1d",
+    "declarationSha256": "e645d1ba3857f895477b1be0777f3f1d1b78d0877a3fec4ed13b17a2b04eaf1d",
     "exampleIndex": 1
   },
   {
@@ -1288,7 +1288,7 @@
     ],
     "expectedStdout": "[1,[2,3]]\n",
     "declaration": "node_modules/effect/dist/NonEmptyIterable.d.ts",
-    "declarationSha256": "d30faebd3c50f7865091782066772e7f7465dbc5f67832afefc988f7b75d1b82",
+    "declarationSha256": "00fadc583bdc7f95b37bd3dab6e60af942dd5462474b51be63d0d6c9a67f09a1",
     "exampleIndex": 0
   },
   {
@@ -1342,7 +1342,7 @@
     ],
     "expectedStdout": "[212,0]\n",
     "declaration": "node_modules/effect/dist/Optic.d.ts",
-    "declarationSha256": "3ac516f343a10214e32af71a0a74497cf73304cdb786efc6569597fc42367fc9",
+    "declarationSha256": "f682406fcd0de4e8e55957df104f6ae86de04caf6fb21fc1b3c16af4ebac91e4",
     "exampleIndex": 0
   },
   {
@@ -1359,7 +1359,7 @@
     ],
     "expectedStdout": "[true,true,false]\n",
     "declaration": "node_modules/effect/dist/Option.d.ts",
-    "declarationSha256": "84761f98c987b6f45080533ca816a36d9ebb3df419becf7d19f6b1fd6f3ab4e1",
+    "declarationSha256": "8316bb522f845a47ca6de18ec0423395199c6448e1243e810d196b7449839cbd",
     "exampleIndex": 3
   },
   {
@@ -1374,7 +1374,7 @@
     ],
     "expectedStdout": "[1,-1]\n",
     "declaration": "node_modules/effect/dist/Order.d.ts",
-    "declarationSha256": "29ddd287af75b90ef536471496ec7089016f447d91bfd8844481c599098ba61c",
+    "declarationSha256": "bb4b09943b169fe2e4eeeed43056382ddd85f6385f42e02437eefdf00521bcfc",
     "exampleIndex": 1
   },
   {
@@ -1390,7 +1390,7 @@
     ],
     "expectedStdout": "[-1,1,0]\n",
     "declaration": "node_modules/effect/dist/Ordering.d.ts",
-    "declarationSha256": "ccddb60cdf068c6b8300b1767f8843fee668b41a85d482cd99ffe6993177b25f",
+    "declarationSha256": "9dcdd9800b8b05ad5729b34d9225ec353460ee5763f995b5c439b4bdcc9d81c2",
     "exampleIndex": 1
   },
   {
@@ -1409,7 +1409,7 @@
     ],
     "expectedStdout": "[\"home/user/documents\",\"to/file.txt\",\"file.txt\",\"/path/to\",\".txt\",true,\"file\",\"../../to/path\",\"/base/relative/path\"]\n",
     "declaration": "node_modules/effect/dist/Path.d.ts",
-    "declarationSha256": "ac2031a92596597248ff91d626bc3d4f96fc8afc4302bd3ca7b6c4f78f2a3e15",
+    "declarationSha256": "292f67c0734e9e60ad42aad2b9690669ceeca94b4fe08c517f90b5252df5ba2c",
     "exampleIndex": 0
   },
   {
@@ -1455,7 +1455,7 @@
     ],
     "expectedStdout": "[[\"executed: select 1\"]]\n",
     "declaration": "node_modules/effect/dist/Pool.d.ts",
-    "declarationSha256": "37e9c2efc9ec01ecc12e6676a0425e0a226b374d9666cfbd54ab919a62f431d8",
+    "declarationSha256": "70cacea5624be310cd68d5f9fe9b1e84c5b1355021e54dfe4e842686c88a1c53",
     "exampleIndex": 0
   },
   {
@@ -1470,7 +1470,7 @@
     ],
     "expectedStdout": "[true]\n",
     "declaration": "node_modules/effect/dist/Predicate.d.ts",
-    "declarationSha256": "4db6129fc99fa29e43c347d53b03f03c91a5c5e840db03c9cd7bb42ee34bbafd",
+    "declarationSha256": "bc712433e89e58d36bdc447227e7500854fda77f378410875c0cb8e9803b10c2",
     "exampleIndex": 10
   },
   {
@@ -1491,7 +1491,7 @@
     ],
     "expectedStdout": "[[\"Hello\",\"World\"]]\n",
     "declaration": "node_modules/effect/dist/PubSub.d.ts",
-    "declarationSha256": "54e132614bd61acffef2e4c02ad7aa760cf6ddc8af95e5bc007ae40096bd793f",
+    "declarationSha256": "081a16fe59beb6f3c7fa001e7b2463a640f54ee098ec9d0311d60134c56285fd",
     "exampleIndex": 0
   },
   {
@@ -1509,7 +1509,7 @@
     ],
     "expectedStdout": "[\"Stream halted with: stream ended\"]\n",
     "declaration": "node_modules/effect/dist/Pull.d.ts",
-    "declarationSha256": "0e96e768cb021f2ddc6eba96350cae9842c4b40d13cdb0071d4716c99ae07679",
+    "declarationSha256": "e119a9421f90330e4fc752a4c342949478a95ff1f2988283802f37a1811fa6c2",
     "exampleIndex": 0
   },
   {
@@ -1530,7 +1530,7 @@
     ],
     "expectedStdout": "[[\"hello\",\"world\",\"!\"]]\n",
     "declaration": "node_modules/effect/dist/Queue.d.ts",
-    "declarationSha256": "af123df9ff8c226c6e61e7dd03156cc22bbc68a9475455b9385c20d83a731a1d",
+    "declarationSha256": "20978db7b79c84c066c63fc5133f849c1bcbe2139bea5cd84d6ef5e6fbd4453a",
     "exampleIndex": 0
   },
   {
@@ -1551,7 +1551,7 @@
     ],
     "expectedStdout": "[10]\n",
     "declaration": "node_modules/effect/dist/RcMap.d.ts",
-    "declarationSha256": "afcbe81535128f1616c07b4afaddce9cb703c19148b6ed5774c14402c65cac9a",
+    "declarationSha256": "feaadbadafd2ba583e221f39c3ddc9de70da594296fb55cd4655a9893bd74801",
     "exampleIndex": 0
   },
   {
@@ -1573,7 +1573,7 @@
     ],
     "expectedStdout": "[[true,[\"closed Connected to postgres://localhost\"]]]\n",
     "declaration": "node_modules/effect/dist/RcRef.d.ts",
-    "declarationSha256": "e44f9e94210dea2d9966236743cb9b9b045d61796d9b7800f46375346cf0036f",
+    "declarationSha256": "0579c355318732f5e1ad125569e3a4ab3a5f473cd11705ba67080db9d2a7f37c",
     "exampleIndex": 0
   },
   {
@@ -1589,7 +1589,7 @@
     ],
     "expectedStdout": "[true]\n",
     "declaration": "node_modules/effect/dist/reactivity/Atom.d.ts",
-    "declarationSha256": "71829942f6b286e95e631f0456ac2598d9dcc812134a3398211b2997110d6628",
+    "declarationSha256": "d47b614a9749d48723fa70b9578f4d6da3eb9991fa8a588fff207242caf45d0c",
     "exampleIndex": 0
   },
   {
@@ -1605,7 +1605,7 @@
     ],
     "expectedStdout": "[{},{\"count\":42}]\n",
     "declaration": "node_modules/effect/dist/Record.d.ts",
-    "declarationSha256": "54d7906581efd26405ce63da1222e2b5a42e15dc3dde2dccbdf654a1a1c07fb3",
+    "declarationSha256": "0671a4762dd5606f1866785fce5d6ed0406157d54f98f556927606a4ea9f8428",
     "exampleIndex": 5
   },
   {
@@ -1621,7 +1621,7 @@
     ],
     "expectedStdout": "[[\"<redacted>\",\"<redacted>\"]]\n",
     "declaration": "node_modules/effect/dist/Redacted.d.ts",
-    "declarationSha256": "62241100d9b71070bb626e7880f32343580534fb692a8647cac5b2b6eb188b23",
+    "declarationSha256": "81d8ab5e28d5e39609cd2ce45a88bbc0e7b5cdb7558a99f2758719a62239d06b",
     "exampleIndex": 0
   },
   {
@@ -1637,7 +1637,7 @@
     ],
     "expectedStdout": "[\"hello world\"]\n",
     "declaration": "node_modules/effect/dist/Reducer.d.ts",
-    "declarationSha256": "f66a888acfb5fad5489717a94e65620d247d6788a7f1941771e80d05ed742cff",
+    "declarationSha256": "1e2ceb148c0cdede7ed50463fae03f51b199ab3e7b769c343a74c568759c3510",
     "exampleIndex": 0
   },
   {
@@ -1656,7 +1656,7 @@
     ],
     "expectedStdout": "[[0,1]]\n",
     "declaration": "node_modules/effect/dist/Ref.d.ts",
-    "declarationSha256": "cb8ab988cc5f9c9649e191511e0f672ea154523cca86cb99c09c0c72fcab6261",
+    "declarationSha256": "2be52bec055168edd150d2fdf8a64aa46d24a4e2055dde45b3cf744d388fad9a",
     "exampleIndex": 0
   },
   {
@@ -1675,7 +1675,7 @@
     ],
     "expectedStdout": "[[0,[\"req-123\",\"user-456\",\"1.0.0\"],[\"data-sync\",1234567890]]]\n",
     "declaration": "node_modules/effect/dist/References.d.ts",
-    "declarationSha256": "450c698bc48782d560741478a2f57a20c0f93327df2b72339857c9a398d98563",
+    "declarationSha256": "cac5c56dbbcbdaf43e942c04db29399234dce2819d5763380598a11aff7dc0f8",
     "exampleIndex": 0
   },
   {
@@ -1690,7 +1690,7 @@
     ],
     "expectedStdout": "[{},true,false]\n",
     "declaration": "node_modules/effect/dist/RegExp.d.ts",
-    "declarationSha256": "764d803bd2755e629af51f94c2cbdba197135bdfce34ed3a3864bb398c5143b7",
+    "declarationSha256": "8d1dafb3a78f4ea2798c6df13992bf255d20a9c76a7e56540a3f16619532e72a",
     "exampleIndex": 0
   },
   {
@@ -1707,7 +1707,7 @@
     ],
     "expectedStdout": "[\"GetUser\",123]\n",
     "declaration": "node_modules/effect/dist/Request.d.ts",
-    "declarationSha256": "5160656dfe09d5b2169170b0b2f6030ef7c55f62d623301b466caa025fcb1bee",
+    "declarationSha256": "743c39f277fede7e10316f38ae1dc74011b29efb630d2916956aa0fcbbf0975f",
     "exampleIndex": 1
   },
   {
@@ -1728,7 +1728,7 @@
     ],
     "expectedStdout": "[\"User 1\"]\n",
     "declaration": "node_modules/effect/dist/RequestResolver.d.ts",
-    "declarationSha256": "bf08b8a7c5588a75c913e893b5f6e8c50e13ae72857dbab92c8476dc0894cc72",
+    "declarationSha256": "787a06edd33f1c17d58ee65e1630159db215f9cba73c14fbe8046f294001edb5",
     "exampleIndex": 0
   },
   {
@@ -1743,7 +1743,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":42}]\n",
     "declaration": "node_modules/effect/dist/Result.d.ts",
-    "declarationSha256": "a4fc0e2fc3eae5b5dda7584bcfb5f870ef2cee9be357c51ef98cda13ce243e37",
+    "declarationSha256": "0467cba6681de5c3ffe2e53238e1aab00b56a0e3edfb505eb0f0b4259433b91e",
     "exampleIndex": 4
   },
   {
@@ -1762,7 +1762,7 @@
     ],
     "expectedStdout": "[[{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":\"Hello, World!\"},0]]\n",
     "declaration": "node_modules/effect/dist/Runtime.d.ts",
-    "declarationSha256": "6da881cc87ca3fd93ee9be83df2f133b3f5c5b2de4ba6efea836c5b781ebfc80",
+    "declarationSha256": "9299f7b5c6b59330fa0c85a9f156fd24f6617104cca2613d40fa00b02046fe3c",
     "exampleIndex": 0
   },
   {
@@ -1777,7 +1777,7 @@
     ],
     "expectedStdout": "[\"active\"]\n",
     "declaration": "node_modules/effect/dist/SchemaAST.d.ts",
-    "declarationSha256": "423449946d829ce7b7181b69dfec4a70ae030511156dd5c384ed06ec5ab88c30",
+    "declarationSha256": "b65e86370811e2f307ad308028fdb2200c13953b6350f7ae5b100735b850b15f",
     "exampleIndex": 0
   },
   {
@@ -1796,7 +1796,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42}]\n",
     "declaration": "node_modules/effect/dist/SchemaGetter.d.ts",
-    "declarationSha256": "0c26fe5f784810a82b41543f1b8d18c8a80b4327dead17f4dd5402b570bf5e1c",
+    "declarationSha256": "dedef255f63b545d5ed0e363a42f1624f25ac5d487bd94a80f168781df106343",
     "exampleIndex": 0
   },
   {
@@ -1812,7 +1812,7 @@
     ],
     "expectedStdout": "[true,false]\n",
     "declaration": "node_modules/effect/dist/SchemaIssue.d.ts",
-    "declarationSha256": "9098144358e2dff4b90c0ca0c603f53577cbf8cef336a32b4df775991639cd34",
+    "declarationSha256": "0ca2e64bed333dbdeeae13a9269071b27648108772ccc99d761dc69e717e623e",
     "exampleIndex": 0
   },
   {
@@ -1835,7 +1835,7 @@
     ],
     "expectedStdout": "[{\"name\":\"Ada\"}]\n",
     "declaration": "node_modules/effect/dist/SchemaRepresentation.d.ts",
-    "declarationSha256": "2d4173f7c91435f6cdc96ca71585ae58742c64bfa981f71c94c013850700bbc1",
+    "declarationSha256": "0a1bbde2392ac7724443c7332316cb4ccc7694405e70eefee01165e65a447615",
     "exampleIndex": 1
   },
   {
@@ -1856,7 +1856,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"fallback\"}]\n",
     "declaration": "node_modules/effect/dist/SchemaTransformation.d.ts",
-    "declarationSha256": "0e2e587187e77f8179510ea91d4f1b4b4ff36065acf04064432e341d5cea5b4a",
+    "declarationSha256": "92524ff632eadcf9f885de43439c70e64aec665b56cd3d12c39f38f007ed9f3e",
     "exampleIndex": 0
   },
   {
@@ -1875,7 +1875,7 @@
     ],
     "expectedStdout": "[[[\"sequential\",\"Empty\"],\"Closed\"]]\n",
     "declaration": "node_modules/effect/dist/Scope.d.ts",
-    "declarationSha256": "388a5c527ab6bf676056498ee2669507c70bd3a1f9a72ab95543ba9d7dd82835",
+    "declarationSha256": "edcd8e79c5bed3038b53f7146332caec7a2fd1765760b74e46545f808fcc0474",
     "exampleIndex": 0
   },
   {
@@ -1893,7 +1893,7 @@
     ],
     "expectedStdout": "[\"Resource accessed\"]\n",
     "declaration": "node_modules/effect/dist/Semaphore.d.ts",
-    "declarationSha256": "b808373f04d5f3dd72043f063c23c91e33104ef47811980c592a8f762cf5e442",
+    "declarationSha256": "2a83efb61275a87eb068dc81ecd4156306b01425408720f2bf79b511ba5cad1e",
     "exampleIndex": 0
   },
   {
@@ -1912,7 +1912,7 @@
     ],
     "expectedStdout": "[42]\n",
     "declaration": "node_modules/effect/dist/Sink.d.ts",
-    "declarationSha256": "438b523b406fbc260ca295c3faf67e7058a2416cf73e84df135c97ab96f1b39b",
+    "declarationSha256": "d33695861881890dffc57f8252cca6dc7dfd3552fd193d543eaad0ca23cf8e64",
     "exampleIndex": 0
   },
   {
@@ -1927,7 +1927,7 @@
     ],
     "expectedStdout": "[\"Alice\"]\n",
     "declaration": "node_modules/effect/dist/Struct.d.ts",
-    "declarationSha256": "d48a8e6b6c8cb7b6b99f533ca7393896e66d8a53c2f27bbec276eb6b7468984c",
+    "declarationSha256": "8964f822ef38ae5e5a5d9112b58a73a56914f445af5993d19175e50d5799e372",
     "exampleIndex": 3
   },
   {
@@ -1955,7 +1955,7 @@
     ],
     "expectedStdout": "[[0,1,2]]\n",
     "declaration": "node_modules/effect/dist/SubscriptionRef.d.ts",
-    "declarationSha256": "4823df1a54e889d87063665273b2013794ad8733002491d8e5284d7a968da147",
+    "declarationSha256": "a52add88ea3c64af4dc1d380d4889850ba360c0fe78aea3b9b9548ed4bac743a",
     "exampleIndex": 0
   },
   {
@@ -1971,7 +1971,7 @@
     ],
     "expectedStdout": "[true,false]\n",
     "declaration": "node_modules/effect/dist/Symbol.d.ts",
-    "declarationSha256": "5a93bd5426a0955182607cccaf10bb48a994dc1602cc9e7345cc1a0dfc4c26d5",
+    "declarationSha256": "4ce6f260f4969b2408c4e172d0a56ba855d4461093862d59f34050f1557ec191",
     "exampleIndex": 0
   },
   {
@@ -2006,7 +2006,7 @@
     ],
     "expectedStdout": "[[\"span-123\",\"trace-456\"]]\n",
     "declaration": "node_modules/effect/dist/Tracer.d.ts",
-    "declarationSha256": "60893fbc52d56d426093b897c99d5c8e293193d668a8dfa704ec74042acc1034",
+    "declarationSha256": "713d6ce4a6627632323a1716f67b0a3c3e545482b9b6b020b83813cc0db35855",
     "exampleIndex": 1
   },
   {
@@ -2027,7 +2027,7 @@
     ],
     "expectedStdout": "[{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},[\"app\",\"apple\",\"application\"],[[\"app\",2],[\"apple\",1],[\"application\",3],[\"banana\",4]],true,4]\n",
     "declaration": "node_modules/effect/dist/Trie.d.ts",
-    "declarationSha256": "fb6c1bb045e9ce779db2f8a357ce1ac96677ca13c139d1822b2047892c9285d6",
+    "declarationSha256": "b7b3dcb6838c389b53ec755902ab5c45f13ad565c07e1d3dacdad2d49efeaa5a",
     "exampleIndex": 0
   },
   {
@@ -2042,7 +2042,7 @@
     ],
     "expectedStdout": "[[10,20,\"red\"]]\n",
     "declaration": "node_modules/effect/dist/Tuple.d.ts",
-    "declarationSha256": "5f0e474d95af7d63a6d635a23f05ac8e4cbe06c562cc75c868cef60097e045a2",
+    "declarationSha256": "87179eb20c46d1f375aea1ebe36becbac78ceb3b4313ee5cf861aeb8497fa971",
     "exampleIndex": 0
   },
   {
@@ -2065,7 +2065,7 @@
     ],
     "expectedStdout": "[[[1,2,3,4],[0,1,2,3,4,5]]]\n",
     "declaration": "node_modules/effect/dist/TxChunk.d.ts",
-    "declarationSha256": "d9ecb2e566f432b9dd26d48901e612ae2ebe1d8b34b2bb1e805b2edee1afdefa",
+    "declarationSha256": "55de9e331ac5acd76d1c3510339a5a0c08334162ed96fb7027f9c4e3f611b083",
     "exampleIndex": 0
   },
   {
@@ -2084,7 +2084,7 @@
     ],
     "expectedStdout": "[[true,false,42]]\n",
     "declaration": "node_modules/effect/dist/TxDeferred.d.ts",
-    "declarationSha256": "8625b52b991d154ca0e97f45a56106014770b7d7b7a4f4db587e20edee18ad52",
+    "declarationSha256": "fd649a78d5be93e70abc9335e9e7dc9f885735867aab19b90e64800c8031040d",
     "exampleIndex": 0
   },
   {
@@ -2107,7 +2107,7 @@
     ],
     "expectedStdout": "[2]\n",
     "declaration": "node_modules/effect/dist/TxHashMap.d.ts",
-    "declarationSha256": "36e1cf24ed72bb883e639911cb85fb72ecd1f8a632f53e08de4f263ef97b6727",
+    "declarationSha256": "6928b86d731d37b365b99dd94788835b6eddfeeaef7bf6e9a64d6942bc0e555e",
     "exampleIndex": 0
   },
   {
@@ -2126,7 +2126,7 @@
     ],
     "expectedStdout": "[[false,true]]\n",
     "declaration": "node_modules/effect/dist/TxHashSet.d.ts",
-    "declarationSha256": "d3cd3bb5c7c3931aa3545ed940a358e30a26ec93bf2707d54fb2cd3f14d5a25e",
+    "declarationSha256": "5c8e094ad279a21b1ed590e4e9c69d3a0e6510075c21a17f92e558c6cf665df7",
     "exampleIndex": 19
   },
   {
@@ -2146,7 +2146,7 @@
     ],
     "expectedStdout": "[1]\n",
     "declaration": "node_modules/effect/dist/TxPriorityQueue.d.ts",
-    "declarationSha256": "440002da7feecd676c12aca48dfc4bcd0038dc64182d018e463ce6ff53f71eb0",
+    "declarationSha256": "ab7c11709880d9691065702c1ca7cba42683ef9d7d2180227ada17c732296244",
     "exampleIndex": 0
   },
   {
@@ -2167,7 +2167,7 @@
     ],
     "expectedStdout": "[\"hello\"]\n",
     "declaration": "node_modules/effect/dist/TxPubSub.d.ts",
-    "declarationSha256": "5970817e7103d95f38581423f915d968aa67da3d1227e31bcdc797991910a3ef",
+    "declarationSha256": "7b15d552c5f8c568c66c5a53ee8f7b88bbdbf89ead0e2938ccaa31f8c71bda3d",
     "exampleIndex": 0
   },
   {
@@ -2189,7 +2189,7 @@
     ],
     "expectedStdout": "[true]\n",
     "declaration": "node_modules/effect/dist/TxQueue.d.ts",
-    "declarationSha256": "95720cf32febdc56e09cc257e686886badd33ce6731eb2c491e550ca0ba38fc2",
+    "declarationSha256": "acf7b145d6196ec7761ab713d0e0410033d59b2207af5a28685f0d042bdc5094",
     "exampleIndex": 1
   },
   {
@@ -2209,7 +2209,7 @@
     ],
     "expectedStdout": "[[\"reading\",\"writing\"]]\n",
     "declaration": "node_modules/effect/dist/TxReentrantLock.d.ts",
-    "declarationSha256": "7cc350146911d8cb97086473b97ce4c8626e0fc6608371014c23f0c457012aa8",
+    "declarationSha256": "498a352ed3b2692ec5615165470759892b529c435521d9812cca53d852986543",
     "exampleIndex": 0
   },
   {
@@ -2230,7 +2230,7 @@
     ],
     "expectedStdout": "[1]\n",
     "declaration": "node_modules/effect/dist/TxRef.d.ts",
-    "declarationSha256": "3a7714d6e7bdf742de0b28149c56b38ca9eea3899cf741710ec583c1902808af",
+    "declarationSha256": "b9bf56df30b4fd58aa97960d1b643fad16c27fe8972d87f368cd4c601d0f9807",
     "exampleIndex": 0
   },
   {
@@ -2250,7 +2250,7 @@
     ],
     "expectedStdout": "[[2,3]]\n",
     "declaration": "node_modules/effect/dist/TxSemaphore.d.ts",
-    "declarationSha256": "87d3b41f6fd28e7722fe0b250a86ea6bbc68fa08b08ab13051bf89cd4eca170a",
+    "declarationSha256": "c9568e7e6c593f35b77566921ca34b0d5d3ea33e8aa028bc02c9d8c8456f830c",
     "exampleIndex": 0
   },
   {
@@ -2271,7 +2271,7 @@
     ],
     "expectedStdout": "[[0,1]]\n",
     "declaration": "node_modules/effect/dist/TxSubscriptionRef.d.ts",
-    "declarationSha256": "78e482c2578af62b57777ea8270fbcb211d46dc62acbec9eeabb5ad91ac455f2",
+    "declarationSha256": "f1f421a07529e51794f3ab46b326bdd6eaf35143510cd080f3c03df014a1772f",
     "exampleIndex": 0
   },
   {
@@ -2286,7 +2286,7 @@
     ],
     "expectedStdout": "[\"test\",\"value-1\"]\n",
     "declaration": "node_modules/effect/dist/Unify.d.ts",
-    "declarationSha256": "aee87669fc378a6ebd9b91dcce9d2991545df840e43005749b4c5a7b7cfb9e04",
+    "declarationSha256": "cdf31eee912503a4746f83f542d46f4b74e6c277bd842ef726eba9db7bca9abe",
     "exampleIndex": 1
   },
   {
@@ -2301,7 +2301,7 @@
     ],
     "expectedStdout": "[\"hello\",42]\n",
     "declaration": "node_modules/effect/dist/Utils.d.ts",
-    "declarationSha256": "a25598d47e74a63b2bac539ef9258d640856eac0e49be34f4c27e916c350cfed",
+    "declarationSha256": "4967105ca66bed313305fec1010aa4a8ebdd9d76343526303d02bede8c0bc6c2",
     "exampleIndex": 0
   },
   {
@@ -2345,7 +2345,7 @@
     ],
     "expectedStdout": "ExpectedFailure\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-fn",
@@ -2361,7 +2361,7 @@
     ],
     "expectedStdout": "fn:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-fn-untraced",
@@ -2377,7 +2377,7 @@
     ],
     "expectedStdout": "fnUntraced:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-gen",
@@ -2393,7 +2393,7 @@
     ],
     "expectedStdout": "gen:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-log",
@@ -2409,7 +2409,7 @@
     ],
     "expectedStdout": "log:ok\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-provide",
@@ -2423,7 +2423,7 @@
     ],
     "expectedStdout": "provide:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-run-promise",
@@ -2438,7 +2438,7 @@
     ],
     "expectedStdout": "runPromise:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-run-sync",
@@ -2454,7 +2454,7 @@
     ],
     "expectedStdout": "runSync:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "effect-succeed",
@@ -2469,7 +2469,7 @@
     ],
     "expectedStdout": "succeed:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "entrypoint-cause",
@@ -2483,7 +2483,7 @@
     ],
     "expectedStdout": "CauseFailure\n",
     "declaration": "node_modules/effect/dist/Cause.d.ts",
-    "declarationSha256": "d01c61b11df719aeb56a6ee3acccbc215d8b164a930c29a7022f8b701c157680"
+    "declarationSha256": "da70f659f2b296695368ceddbbb965e1c4a8a8e05802d96d36967f82722f9cc6"
   },
   {
     "id": "entrypoint-chunk",
@@ -2499,7 +2499,7 @@
     ],
     "expectedStdout": "chunk:2,4,6\n",
     "declaration": "node_modules/effect/dist/Chunk.d.ts",
-    "declarationSha256": "cf5bf561a95df7ee64e4b37605a210137cd564fffccbea645d3f26488a315cda"
+    "declarationSha256": "c418886ddf62852b78946bccf26c96052ec1c58db828dbbe050c493aa50a515a"
   },
   {
     "id": "entrypoint-effect",
@@ -2514,7 +2514,7 @@
     ],
     "expectedStdout": "succeed:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "entrypoint-fiber",
@@ -2528,7 +2528,7 @@
     ],
     "expectedStdout": "interrupt:ok\n",
     "declaration": "node_modules/effect/dist/Fiber.d.ts",
-    "declarationSha256": "2efe717aebe2a0b9e9a1b417c0848340d8ff7b90a082e2e10f2ecb0ab19f9e7d"
+    "declarationSha256": "d424bd0234377304cc3b12a8e0bd9387a77b04b85538575924c6ce501818f8f7"
   },
   {
     "id": "entrypoint-hashmap",
@@ -2544,7 +2544,7 @@
     ],
     "expectedStdout": "hashmap:a:1,b:2,c:3\n",
     "declaration": "node_modules/effect/dist/HashMap.d.ts",
-    "declarationSha256": "ca10f1c020f0003afcc70b3f2055578f229532281c1c0da69dfb3bd959dd583e"
+    "declarationSha256": "36871d1d75ce3f3c11cd2ae355d28407875c47667eeb3e0ac0f3611a132a1060"
   },
   {
     "id": "entrypoint-hashset",
@@ -2560,7 +2560,7 @@
     ],
     "expectedStdout": "hashset:2,3\n",
     "declaration": "node_modules/effect/dist/HashSet.d.ts",
-    "declarationSha256": "9265996326716090c3d1e6c2caac3efb07a050e0b79d6e06055b52cd70a41086"
+    "declarationSha256": "1219a5708a2d57dc5fd27a36a721a1dee96619cce9ab2ba2ff69833e4a37b669"
   },
   {
     "id": "entrypoint-layer",
@@ -2574,7 +2574,7 @@
     ],
     "expectedStdout": "layer.succeed:42\n",
     "declaration": "node_modules/effect/dist/Layer.d.ts",
-    "declarationSha256": "51a54a57bfe05f33b7a011ccbf696d248a57fcc0e4854105c91d2809b166f7a4"
+    "declarationSha256": "f40c5671d8a806d13bc21429cb86519d876f78b4801a06dd6695e3406fb2a12c"
   },
   {
     "id": "entrypoint-schedule",
@@ -2588,7 +2588,7 @@
     ],
     "expectedStdout": "retry:3\n",
     "declaration": "node_modules/effect/dist/Schedule.d.ts",
-    "declarationSha256": "b90f7a350f711a13a88acd4ebe1d46fcff78e57e6c74377b9c7a9054c407db4c"
+    "declarationSha256": "90b745bd58fd52c88f8994e3edaca8e7c8146cbed35170fdc0b5f31cca859a41"
   },
   {
     "id": "entrypoint-schema",
@@ -2603,7 +2603,7 @@
     ],
     "expectedStdout": "decode:42\n",
     "declaration": "node_modules/effect/dist/Schema.d.ts",
-    "declarationSha256": "51fc13a9cf280cb188f63623056c1d8edfa33e2f02d0f2723ed0b9c3bdb002d1"
+    "declarationSha256": "356c80679cd044a92476bce70fb0494b49f8ef0a9fc2e2d1356fecc077e8361a"
   },
   {
     "id": "entrypoint-stream",
@@ -2618,7 +2618,7 @@
     ],
     "expectedStdout": "stream:1,2,3\n",
     "declaration": "node_modules/effect/dist/Stream.d.ts",
-    "declarationSha256": "cbe37b2b970a5a8bb32c8bb913eb7b6d54b98d06ade1c075ae35235afdd8d3b5"
+    "declarationSha256": "3b25ae798dd16e5ce729db973e7abeaf59e669b361e583d77a3ea68e694e5828"
   },
   {
     "id": "error-catch",
@@ -2632,7 +2632,7 @@
     ],
     "expectedStdout": "Caught\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "error-cause",
@@ -2646,7 +2646,7 @@
     ],
     "expectedStdout": "CauseFailure\n",
     "declaration": "node_modules/effect/dist/Cause.d.ts",
-    "declarationSha256": "d01c61b11df719aeb56a6ee3acccbc215d8b164a930c29a7022f8b701c157680"
+    "declarationSha256": "da70f659f2b296695368ceddbbb965e1c4a8a8e05802d96d36967f82722f9cc6"
   },
   {
     "id": "error-or-else",
@@ -2660,7 +2660,7 @@
     ],
     "expectedStdout": "Fallback\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "fiber-interrupt",
@@ -2674,7 +2674,7 @@
     ],
     "expectedStdout": "interrupt:ok\n",
     "declaration": "node_modules/effect/dist/Fiber.d.ts",
-    "declarationSha256": "2efe717aebe2a0b9e9a1b417c0848340d8ff7b90a082e2e10f2ecb0ab19f9e7d"
+    "declarationSha256": "d424bd0234377304cc3b12a8e0bd9387a77b04b85538575924c6ce501818f8f7"
   },
   {
     "id": "hashmap-round-trip",
@@ -2690,7 +2690,7 @@
     ],
     "expectedStdout": "hashmap:a:1,b:2,c:3\n",
     "declaration": "node_modules/effect/dist/HashMap.d.ts",
-    "declarationSha256": "ca10f1c020f0003afcc70b3f2055578f229532281c1c0da69dfb3bd959dd583e"
+    "declarationSha256": "36871d1d75ce3f3c11cd2ae355d28407875c47667eeb3e0ac0f3611a132a1060"
   },
   {
     "id": "hashset-round-trip",
@@ -2706,7 +2706,7 @@
     ],
     "expectedStdout": "hashset:2,3\n",
     "declaration": "node_modules/effect/dist/HashSet.d.ts",
-    "declarationSha256": "9265996326716090c3d1e6c2caac3efb07a050e0b79d6e06055b52cd70a41086"
+    "declarationSha256": "1219a5708a2d57dc5fd27a36a721a1dee96619cce9ab2ba2ff69833e4a37b669"
   },
   {
     "id": "layer-effect",
@@ -2720,7 +2720,7 @@
     ],
     "expectedStdout": "layer.effect:42\n",
     "declaration": "node_modules/effect/dist/Layer.d.ts",
-    "declarationSha256": "51a54a57bfe05f33b7a011ccbf696d248a57fcc0e4854105c91d2809b166f7a4"
+    "declarationSha256": "f40c5671d8a806d13bc21429cb86519d876f78b4801a06dd6695e3406fb2a12c"
   },
   {
     "id": "layer-succeed",
@@ -2734,7 +2734,7 @@
     ],
     "expectedStdout": "layer.succeed:42\n",
     "declaration": "node_modules/effect/dist/Layer.d.ts",
-    "declarationSha256": "51a54a57bfe05f33b7a011ccbf696d248a57fcc0e4854105c91d2809b166f7a4"
+    "declarationSha256": "f40c5671d8a806d13bc21429cb86519d876f78b4801a06dd6695e3406fb2a12c"
   },
   {
     "id": "module-arbitrary",
@@ -2765,7 +2765,7 @@
     ],
     "expectedStdout": "array:2,4,6\n",
     "declaration": "node_modules/effect/dist/Array.d.ts",
-    "declarationSha256": "8f4f71a55235193b5009d208a302a0280c78e171060f457a902a6e9709a1c7f0"
+    "declarationSha256": "125c19909b422e1746914314f349d823d4b771bd80e66d339efccb26e8e1e3a1"
   },
   {
     "id": "module-bigint",
@@ -2779,7 +2779,7 @@
     ],
     "expectedStdout": "bigint:42\n",
     "declaration": "node_modules/effect/dist/BigInt.d.ts",
-    "declarationSha256": "82f4dbead8ad1c592810c31069dec0d7cc99e50401e30d98a08275c598b733d6"
+    "declarationSha256": "9b18f9aa924ad70bc16ca8355da0af76e124b4729c56d94d6a56611e127da5d0"
   },
   {
     "id": "module-brand",
@@ -2793,7 +2793,7 @@
     ],
     "expectedStdout": "brand:42\n",
     "declaration": "node_modules/effect/dist/Brand.d.ts",
-    "declarationSha256": "bd0087ac745ee42a0d6bd26eafbc5b0ef62e31b791ed18285a7aa725e5b4a55f"
+    "declarationSha256": "e40619a2c3c10c88f46d64d31b0cfc4aabb078e717b8e0dbf0c57b2c6fa30fb0"
   },
   {
     "id": "module-bytesize",
@@ -2808,7 +2808,7 @@
     ],
     "expectedStdout": "bytes:2048\n",
     "declaration": "node_modules/effect/dist/ByteSize.d.ts",
-    "declarationSha256": "cc557861e6bea952ec168f28fb4e5023236c7f66fafce2335fcdf156fff74432"
+    "declarationSha256": "a5f1791e82298b5959b4859c4eb41ff44b52d8ecaadca222b4a6264a16fbf40c"
   },
   {
     "id": "module-channelschema",
@@ -2822,7 +2822,7 @@
     ],
     "expectedStdout": "channelSchema:1,2\n",
     "declaration": "node_modules/effect/dist/ChannelSchema.d.ts",
-    "declarationSha256": "d58e1ea6a528cc0004f945dafaa7d4b73902972818645ae0f87c4d2b112afcd0"
+    "declarationSha256": "d5efe51f60208287ed71ee731f1239254028cf2ddd997f5f7faf729adf3910a0"
   },
   {
     "id": "module-effectable",
@@ -2836,7 +2836,7 @@
     ],
     "expectedStdout": "effectable:42\n",
     "declaration": "node_modules/effect/dist/Effectable.d.ts",
-    "declarationSha256": "74aadb765199d3347f905d1b91c22c6451ccdee78177159ecd228f5a53e3e116"
+    "declarationSha256": "545a08cb11fbff569fbe115054d5baa800ad139a0fa4dda8f98ee9c82e6dba71"
   },
   {
     "id": "module-filesystem",
@@ -2850,7 +2850,7 @@
     ],
     "expectedStdout": "filesystem.fake:true\n",
     "declaration": "node_modules/effect/dist/FileSystem.d.ts",
-    "declarationSha256": "cc1f3a0d5d1ac4d24e81eda99f6a7f8487bdbe333773c93bf43d7d0e530f85ad"
+    "declarationSha256": "effdbe0bdd4c6d0234ae08eb565c020615a361a34d8c3ca52b01148904cf289e"
   },
   {
     "id": "module-hashring",
@@ -2866,7 +2866,7 @@
     ],
     "expectedStdout": "ring:node-a\n",
     "declaration": "node_modules/effect/dist/HashRing.d.ts",
-    "declarationSha256": "5b91f525a7bcf1a53095cdf322bd8e1f098932dde61dbf2007615dc081ad75d7"
+    "declarationSha256": "de4f08455841a0e5a3584e10a9653db0f80b73782aa0664160187b80db4ea0ae"
   },
   {
     "id": "module-http--findmyway--internal--querystring",
@@ -2895,7 +2895,7 @@
     ],
     "expectedStdout": "[200,\"handled\"]\n",
     "declaration": "node_modules/effect/dist/http/HttpEffect.d.ts",
-    "declarationSha256": "d1de72830962ed772f6662b6e7c93ab01b78dfe81f70d3348c1522460330a8e1"
+    "declarationSha256": "508583ac7ba86b5a1c2c0ac52d4c51e9fcf4c34f8c1ed2750a60cb4df8a4a459"
   },
   {
     "id": "module-http--httpincomingmessage",
@@ -2923,7 +2923,7 @@
     ],
     "expectedStdout": "[\"https://client.test\",\"cors\"]\n",
     "declaration": "node_modules/effect/dist/http/HttpMiddleware.d.ts",
-    "declarationSha256": "3c663ce40c35d2b8c6b4c4e503c03e957934c67850a34e005e8ed69f046329ab"
+    "declarationSha256": "7ba2bf3fb90c1c8b6e771593290056b63c80b3b094c865e78089f8116f069016"
   },
   {
     "id": "module-http--httpplatform",
@@ -3162,7 +3162,7 @@
     ],
     "expectedStdout": "number:42\n",
     "declaration": "node_modules/effect/dist/Number.d.ts",
-    "declarationSha256": "2428bb4113209f57ffdff711023a7ff65acc72819c1402028fd32c5189ae993d"
+    "declarationSha256": "7a9d22892acbbca10ef6e174aee7e5445b51933d8131570c4f0b29de87171a0c"
   },
   {
     "id": "module-observability--internal--otlpenv",
@@ -3189,7 +3189,7 @@
     "api": [
       "layerJson"
     ],
-    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n",
+    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"effect\",\"version\":\"4.0.2\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"effect.fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n",
     "declaration": "node_modules/effect/dist/observability/Otlp.d.ts",
     "declarationSha256": "155f78cc070f552a98929a9db70c6dbbfc61bdbd8fbc324ed305ccd688204314"
   },
@@ -3203,7 +3203,7 @@
     "api": [
       "layer"
     ],
-    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]}]\n",
+    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"effect\",\"version\":\"4.0.2\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"effect.fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]}]\n",
     "declaration": "node_modules/effect/dist/observability/OtlpLogger.d.ts",
     "declarationSha256": "4024e3c7c17fe3e8d9c8e7b810e3f40ecd94a2bd5158900c217e093c31b0b003"
   },
@@ -3217,9 +3217,9 @@
     "api": [
       "layer"
     ],
-    "expectedStdout": "[{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n",
+    "expectedStdout": "[{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n",
     "declaration": "node_modules/effect/dist/observability/OtlpMetrics.d.ts",
-    "declarationSha256": "f91f2d92943455afe9e82fd5e11f12b098640521f2086b36c8db20339ec9702f"
+    "declarationSha256": "2cbd2407ee1745d06caf275075fe50429ab8bb7a2ee705cc5c815f6119361bc4"
   },
   {
     "id": "module-observability--otlptracer",
@@ -3234,7 +3234,7 @@
     "reason": "Exercises unsampled span lifecycle and attributes with explicit fixed nanoseconds; no random trace/span IDs are read or generated, and no transport export is expected.",
     "expectedStdout": "[[\"unsampled\",\"Ended\",[[\"fixed\",42]]],0]\n",
     "declaration": "node_modules/effect/dist/observability/OtlpTracer.d.ts",
-    "declarationSha256": "f1264d62de7e7d4eb810b871b805b72879ef459035bfed84013c6b6bbdef0b16"
+    "declarationSha256": "9cf16870bb8287680ebc7011ff57cdb62f395ba45079fbc2512ab5d5b8c7a8dc"
   },
   {
     "id": "module-partitionedsemaphore",
@@ -3249,7 +3249,7 @@
     ],
     "expectedStdout": "partitioned:ok\n",
     "declaration": "node_modules/effect/dist/PartitionedSemaphore.d.ts",
-    "declarationSha256": "6631b0aac6fade9144dc71732b9ed272cd9ea66ca7237286b04d6412c10115df"
+    "declarationSha256": "d60379339604c7872859305e6ca8862a12431b43907a21dbbc15aa77274798a0"
   },
   {
     "id": "module-pipeable",
@@ -3263,7 +3263,7 @@
     ],
     "expectedStdout": "pipeable:42\n",
     "declaration": "node_modules/effect/dist/Pipeable.d.ts",
-    "declarationSha256": "3dbf3eba83c8ab7356a827bb7aadb75b1e8bc1f97575f2b9add629447f24d943"
+    "declarationSha256": "bc148a72b480c5ee634d720a211f6db3c4d0cf57fe8fff85ab2c0ea6e14ae488"
   },
   {
     "id": "module-platformerror",
@@ -3277,7 +3277,7 @@
     ],
     "expectedStdout": "platformError:true\n",
     "declaration": "node_modules/effect/dist/PlatformError.d.ts",
-    "declarationSha256": "484d8d5a859b63ea8f34c7723242a1506785dec9903a90963c5f286f1d7ba901"
+    "declarationSha256": "644d657fca9488a2db9e49fd40d68f5d04bc5e36356823d35d09d7ab061c60c0"
   },
   {
     "id": "module-primarykey",
@@ -3292,7 +3292,7 @@
     ],
     "expectedStdout": "product-42\n",
     "declaration": "node_modules/effect/dist/PrimaryKey.d.ts",
-    "declarationSha256": "f7e5be6e856a30e0d37991684b5eb65ffb7256af5d8c9524bba5c50821856e99"
+    "declarationSha256": "db006ae71944aebd3164d2b2483545a1f53d83429239078b457685be88b93f8a"
   },
   {
     "id": "module-redactable",
@@ -3307,7 +3307,7 @@
     ],
     "expectedStdout": "redacted-value\n",
     "declaration": "node_modules/effect/dist/Redactable.d.ts",
-    "declarationSha256": "e45f60cb2a664e7f92772974406104af02ae74483885130af829d4112956764d"
+    "declarationSha256": "9615804ca8db17c3497ce3a57609ff92e3053c530674b3c965acf0cb5d9c9bc3"
   },
   {
     "id": "module-resource",
@@ -3323,7 +3323,7 @@
     ],
     "expectedStdout": "resource:1,2\n",
     "declaration": "node_modules/effect/dist/Resource.d.ts",
-    "declarationSha256": "1981395be99bc78937af95d232cba30868004a92f830e4bdc5943fdcfa639ade"
+    "declarationSha256": "1e75475aa25041aaea34723ae682a1f7bb87d0850d477fb52aa11207988b2187"
   },
   {
     "id": "module-scheduler",
@@ -3337,7 +3337,7 @@
     ],
     "expectedStdout": "scheduler:42\n",
     "declaration": "node_modules/effect/dist/Scheduler.d.ts",
-    "declarationSha256": "d797e0f4c47caf657ba633c83df0a76d09a3b7ab7f55b3401cc20333af6cd96e"
+    "declarationSha256": "7b0c70caacfeae853e4dba12043d208fd2f819d2c89ea8482d1f1f9c1b72d23a"
   },
   {
     "id": "module-schemaparser",
@@ -3351,7 +3351,7 @@
     ],
     "expectedStdout": "schemaParser:42\n",
     "declaration": "node_modules/effect/dist/SchemaParser.d.ts",
-    "declarationSha256": "89f3b45fd10142240673349c6a40feb35b3debc1df74c0fb2b2d20ed60c91837"
+    "declarationSha256": "7ce207918858fa3d719f80490dfdc1c1f6ab1fddb95ec196c2a7a3586be5182f"
   },
   {
     "id": "module-scopedcache",
@@ -3366,7 +3366,7 @@
     ],
     "expectedStdout": "cache:3,3:1\n",
     "declaration": "node_modules/effect/dist/ScopedCache.d.ts",
-    "declarationSha256": "c3796568054c56a5e02cad2bf27d0ba933d3c19f4f21fd3534adcb5a1f145fc4"
+    "declarationSha256": "2527567dabda601c3e284cee8cb261c4e902029cbb4874d892885e78629a0aae"
   },
   {
     "id": "module-scopedref",
@@ -3382,7 +3382,7 @@
     ],
     "expectedStdout": "scopedRef:42\n",
     "declaration": "node_modules/effect/dist/ScopedRef.d.ts",
-    "declarationSha256": "24a70e3f6100bea24f6851079685e64eb0fc73191df4e7f8ffdb3f8223881abc"
+    "declarationSha256": "a7f1587f869062cf349d47a353fc16d675eaf2735d5f0b0e8d5f37d007e6426c"
   },
   {
     "id": "module-string",
@@ -3396,7 +3396,7 @@
     ],
     "expectedStdout": "string:STABLE\n",
     "declaration": "node_modules/effect/dist/String.d.ts",
-    "declarationSha256": "6b8f26764b7817e3e79d967ccf565e0ba38736a755727f08eb90c41d1c4ab697"
+    "declarationSha256": "1d36dba902364505285875a79ad8d556e64e9f496e6c80529ed68e8be9da6c7c"
   },
   {
     "id": "module-synchronizedref",
@@ -3412,7 +3412,7 @@
     ],
     "expectedStdout": "synchronizedRef:42\n",
     "declaration": "node_modules/effect/dist/SynchronizedRef.d.ts",
-    "declarationSha256": "4e2d8ee9dbf972db0285cb26832d0551ea5fcf2741b7d919e58de88484c39904"
+    "declarationSha256": "9092888d6de2d358cff180df797cd370ad113b42c00525a241670165af05becd"
   },
   {
     "id": "module-take",
@@ -3426,7 +3426,7 @@
     ],
     "expectedStdout": "take:1,2,3\n",
     "declaration": "node_modules/effect/dist/Take.d.ts",
-    "declarationSha256": "572606cf50e0defdaa53ca657c5ae90f6969f1c9bb0b82d4367505f46502599e"
+    "declarationSha256": "5aee837d31ca35e4678528de2ce3d1cbbc33c1ebc204bda7d5d200d67682e4dd"
   },
   {
     "id": "module-undefinedor",
@@ -3441,7 +3441,7 @@
     ],
     "expectedStdout": "undefinedOr:42\n",
     "declaration": "node_modules/effect/dist/UndefinedOr.d.ts",
-    "declarationSha256": "d22e1444f8c6a653ef777d7901a984aa0607da50ada23537ef9d3f2f9610b044"
+    "declarationSha256": "a32ae72ba6fa4f04b2f724ac2e9bfbc15fa648709d4a79268f094d074709407f"
   },
   {
     "id": "namespace-ai",
@@ -3505,7 +3505,7 @@
     ],
     "expectedStdout": "[[{\"text\":\"help\"}],\"support\",0.8,4,\"InvalidOutputError\"]\n",
     "declaration": "node_modules/effect/dist/ai/DecisionModel.d.ts",
-    "declarationSha256": "12ccccaa86688d5917a8070ecfc133e85882b5a1b6cb9e11803a974e0d6cb349"
+    "declarationSha256": "1f7887c25330ae4ff3a9979b3316e057bbdeda8903b46ea7158ca9f2413f3fec"
   },
   {
     "id": "namespace-ai-embeddingmodel",
@@ -3569,7 +3569,7 @@
     ],
     "expectedStdout": "[[[\"fixture://message\",\"updated\",\"text/plain\"]],[[\"greet\",[\"name\"]]],0]\n",
     "declaration": "node_modules/effect/dist/ai/McpServer.d.ts",
-    "declarationSha256": "3d49426ec6fbbbc5ed5e0b8120b973e643eb1efb034b0b89967caa4e4c04c393"
+    "declarationSha256": "56fd6171c7b8dc0f1440639ff3658f0eb51c8a639ad069066e827bd935b3584a"
   },
   {
     "id": "namespace-ai-openaistructuredoutput",
@@ -4309,7 +4309,7 @@
     ],
     "expectedStdout": "[\"RWZmZWN0\",\"Effect\",\"YT8\",\"4f4b\"]\n",
     "declaration": "node_modules/effect/dist/encoding/index.d.ts",
-    "declarationSha256": "4c9d14dac43cd50e1360dfeb72887b03ef23dcb10f7d5b34e79d49486ef850d3"
+    "declarationSha256": "1a58d349b1888e822be9f5d600f09215f98bda0c173b4fd1176f168953ed084b"
   },
   {
     "id": "namespace-encoding-base64",
@@ -4325,7 +4325,7 @@
     ],
     "expectedStdout": "[\"aGVsbG8=\",\"hello\",true]\n",
     "declaration": "node_modules/effect/dist/encoding/Base64.d.ts",
-    "declarationSha256": "0dd66e88b9598bf9a62886c94bcb4226ab698e1ef7e28a7598f61c3fda472c72"
+    "declarationSha256": "c8473c08d60d1d28ace0e4ab9866947b1981cb2da80547d198f9c8fd4b1e3d4f"
   },
   {
     "id": "namespace-encoding-base64url",
@@ -4341,7 +4341,7 @@
     ],
     "expectedStdout": "[\"aGVsbG8\",\"hello\",true]\n",
     "declaration": "node_modules/effect/dist/encoding/Base64Url.d.ts",
-    "declarationSha256": "7aa36f0fcb5bcc04ec41a58ce256c62745870df5b9cfa4ee4da1723fcb951a9a"
+    "declarationSha256": "3611204e2cbfdb5accf6d95e2f452ed6291d6cef0d99c91770e19687a82c78af"
   },
   {
     "id": "namespace-encoding-encodingerror",
@@ -4356,7 +4356,7 @@
     ],
     "expectedStdout": "[true,\"Decode\",\"fixture\",\"invalid\"]\n",
     "declaration": "node_modules/effect/dist/encoding/EncodingError.d.ts",
-    "declarationSha256": "37786d8efff92ee5d2c9eef1dac3dcad3c9d6fad57d648b7b29bda5749b43bfe"
+    "declarationSha256": "63de951928f886460652600e65d0a9251eb638eaec3f0fae3d0fba78539868e2"
   },
   {
     "id": "namespace-encoding-hex",
@@ -4372,7 +4372,7 @@
     ],
     "expectedStdout": "[\"68656c6c6f\",\"hello\",true]\n",
     "declaration": "node_modules/effect/dist/encoding/Hex.d.ts",
-    "declarationSha256": "f292f78a6464df1470892b7b61053b184a231b4700f67514d3347f7f2dbf7995"
+    "declarationSha256": "f13da26552b0a5526a35b55a9799bca29a7b3c27ab4efda73060543506f33853"
   },
   {
     "id": "namespace-encoding-ini",
@@ -4599,7 +4599,7 @@
     ],
     "expectedStdout": "\"https://example.invalid/items/a%20b?q=x+y\"\n",
     "declaration": "node_modules/effect/dist/http-api/HttpApiClient.d.ts",
-    "declarationSha256": "e15ed18c0305cabf4d2a50d3a6e626db62c68739bfebdbed4316211c6c4e439b"
+    "declarationSha256": "85db0cfbb0e0d2d11345b152ef85298eda15eeda3c9a324ecbfdd2e48dd297e4"
   },
   {
     "id": "namespace-http-api-httpapiendpoint",
@@ -4627,7 +4627,7 @@
     ],
     "expectedStdout": "[\"NotFound\",{\"_tag\":\"NotFound\"}]\n",
     "declaration": "node_modules/effect/dist/http-api/HttpApiError.d.ts",
-    "declarationSha256": "f82595add2e89419a7707321c359c8fd3e2c5e23d09b24a57b5f98801df318b8"
+    "declarationSha256": "2d70e8f3aff699a1ad8c6ad2eaf7015281fce12f7bedce8bf4716a5b2e0cb5a9"
   },
   {
     "id": "namespace-http-api-httpapigroup",
@@ -4674,7 +4674,7 @@
     ],
     "expectedStdout": "[\"Http\",\"Basic\",\"ApiKey\",\"x-api-key\",\"header\"]\n",
     "declaration": "node_modules/effect/dist/http-api/HttpApiSecurity.d.ts",
-    "declarationSha256": "f08d9fb2965052bcc8560c79a4d28c21a598a3d64ee268f945f7d0caf037355e"
+    "declarationSha256": "ab6b40506059fc374ce26b4700bf5123d88d5c1747a147df233bc56c796f8b4f"
   },
   {
     "id": "namespace-http-api-openapi",
@@ -4770,7 +4770,7 @@
     ],
     "expectedStdout": "[true,\"second\",false]\n",
     "declaration": "node_modules/effect/dist/http/Headers.d.ts",
-    "declarationSha256": "cdc91c80ed9759b5dc1d788174c60c6f4fb734379b96e5e4871e1a96fb67b6ed"
+    "declarationSha256": "99a1ef8a1d797d36b4b0d3d2cb3f80c8ca274874f4b7961ab741531fbb7f59a2"
   },
   {
     "id": "namespace-http-httpbody",
@@ -4800,7 +4800,7 @@
     ],
     "expectedStdout": "{\"ok\":true}\n",
     "declaration": "node_modules/effect/dist/http/HttpClient.d.ts",
-    "declarationSha256": "b90e7948aefc6b9303dd5d29f4ff8f9570944e1f019191ceddb71b85c542b3a2"
+    "declarationSha256": "40a0fd282c892e4fd1a44e8183a8a2b7d91dff581b6b1c064ad144ca6ff3e17f"
   },
   {
     "id": "namespace-http-httpclienterror",
@@ -4876,7 +4876,7 @@
     ],
     "expectedStdout": "\"http://127.0.0.1:3000\"\n",
     "declaration": "node_modules/effect/dist/http/HttpServer.d.ts",
-    "declarationSha256": "e17437f7689abc2d380561b8f94ba92c9d1e5fd824470e5aaf28fb4dee1f5fa9"
+    "declarationSha256": "4e458e3d958618fd45eb6808fbe2cebc0b76a10944ad11f12840983daaf31fa4"
   },
   {
     "id": "namespace-http-httpservererror",
@@ -5086,7 +5086,7 @@
       "OtlpResource.make",
       "OtlpResource.serviceNameUnsafe"
     ],
-    "expectedStdout": "[\"fixture\",[{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n",
+    "expectedStdout": "[\"fixture\",[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n",
     "declaration": "node_modules/effect/dist/observability/index.d.ts",
     "declarationSha256": "b81c1573cec89d9984596125faceae0497dee2af8507394e1de7e1fb3c49cfe5"
   },
@@ -5101,9 +5101,9 @@
       "OtlpResource.make",
       "OtlpResource.serviceNameUnsafe"
     ],
-    "expectedStdout": "[\"fixture\",[{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n",
+    "expectedStdout": "[\"fixture\",[{\"key\":\"telemetry.sdk.name\",\"value\":{\"stringValue\":\"effect\"}},{\"key\":\"telemetry.sdk.language\",\"value\":{\"stringValue\":\"nodejs\"}},{\"key\":\"telemetry.sdk.version\",\"value\":{\"stringValue\":\"4.0.2\"}},{\"key\":\"region\",\"value\":{\"stringValue\":\"test\"}},{\"key\":\"ready\",\"value\":{\"boolValue\":true}},{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}},{\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.0\"}}],0]\n",
     "declaration": "node_modules/effect/dist/observability/OtlpResource.d.ts",
-    "declarationSha256": "71070d7b831cb9a756a8b8df604cf3322e297b85037e8e8f82a991066a3c5662"
+    "declarationSha256": "291a00c483eaf82cb554e0b00f72bbed066ba77675064420e61a744b68c9a8bd"
   },
   {
     "id": "namespace-observability-otlpserialization",
@@ -5278,7 +5278,7 @@
     ],
     "expectedStdout": "[{\"count\":5},10,false]\n",
     "declaration": "node_modules/effect/dist/reactivity/AsyncResult.d.ts",
-    "declarationSha256": "c37154ce6e9b81a051fc769c8db319ea71a46875f68ff349ef4e172d58fdc66d"
+    "declarationSha256": "6b1501d904d99b408c8ff03d87ffdfb484b487aeb653b38e2c8f448857142bf5"
   },
   {
     "id": "namespace-reactivity-atomref",
@@ -5311,7 +5311,7 @@
     ],
     "expectedStdout": "[5,true]\n",
     "declaration": "node_modules/effect/dist/reactivity/AtomRegistry.d.ts",
-    "declarationSha256": "bdab803fb7c8a4ce4ff54ab98d778c68eac1e058565c249523090a7fa9165216"
+    "declarationSha256": "28755b4298a67194a3fc896fcdd223ee07141af986f353963a72abbc86c080af"
   },
   {
     "id": "namespace-rpc",
@@ -5666,7 +5666,7 @@
     ],
     "reason": "makeStorage/layerStorage construct SQL-backed unencrypted server storage and require SqlClient. No concrete database/driver is installed; this persistence backend cannot run without SQL IO.",
     "declaration": "node_modules/effect/dist/eventlog/SqlEventLogServerUnencrypted.d.ts",
-    "declarationSha256": "d9cd120ecbd8e03615b1d26d24dd09a5c8baf059c47982d9dbf7609edcecebd0"
+    "declarationSha256": "bb36a87d9d00bf58c796df997f0b98b9cdcbd8c4d90b97e3cbabf734833cbea1"
   },
   {
     "id": "namespace-skipped-process-childprocessspawner",
@@ -5852,7 +5852,7 @@
     ],
     "expectedStdout": "[true,[\"SELECT \\\"name\\\" FROM \\\"items\\\" WHERE id = ?\",[7]]]\n",
     "declaration": "node_modules/effect/dist/sql/Statement.d.ts",
-    "declarationSha256": "3557a08bc73303f7f62e5ef1f5bc2452fee0ad7c18f4e7f2980297f0ebc46bd1"
+    "declarationSha256": "0c2eebbea42b2f1c57c3619286f9c633903583bab058600ba7332a4bc5e87196"
   },
   {
     "id": "namespace-testing",
@@ -5868,7 +5868,7 @@
     ],
     "expectedStdout": "[1234,\"1234000000\"]\n",
     "declaration": "node_modules/effect/dist/testing/index.d.ts",
-    "declarationSha256": "603ca36f61cf772a315cb148869f0a065f47546fae08415842ecfd4c5a07cba3"
+    "declarationSha256": "cafb3a083c8a5daa5e29fbb6621c3504e4a4ad88d26948d07d3045b4577a26e7"
   },
   {
     "id": "namespace-testing-testclock",
@@ -5884,7 +5884,7 @@
     ],
     "expectedStdout": "[1234,\"1234000000\"]\n",
     "declaration": "node_modules/effect/dist/testing/TestClock.d.ts",
-    "declarationSha256": "cb19125bab7b5fa50c7adf5259206bca4b572646cb4e8258225c52389954c7d0"
+    "declarationSha256": "48534cff60050ac7d505f9359f9e4fd7f0cd7a073f015fa73d812e773155f6ec"
   },
   {
     "id": "namespace-testing-testconsole",
@@ -5901,7 +5901,7 @@
     ],
     "expectedStdout": "[[\"fixture\",1],[\"handled\"]]\n",
     "declaration": "node_modules/effect/dist/testing/TestConsole.d.ts",
-    "declarationSha256": "6d770ae07cb65fea0814b3695775ac8c33465555d2c365066562f77006d1fe2a"
+    "declarationSha256": "02bf685de65471a31f4d62d7c381916a9495e739a1729659c118260de32fc69a"
   },
   {
     "id": "namespace-workers",
@@ -6099,7 +6099,7 @@
     "reason": "Type-only contract: dist/Differ.d.ts exports only interface Differ<T, Patch>; dist/Differ.js contains export {}. No runtime primary API exists.",
     "api": [],
     "declaration": "node_modules/effect/dist/Differ.d.ts",
-    "declarationSha256": "ef69b215587ac1c8f496cf343ea6bf89c8913448e57c717d8b4dce320cc54926"
+    "declarationSha256": "275eaac82533847df7063a7d947258f4f661401a110a97060af37c021c569e22"
   },
   {
     "id": "remaining-core-eventlog--eventjournal",
@@ -6229,7 +6229,7 @@
     "reason": "Type-level HKT machinery: dist/HKT.d.ts declares URI as a unique symbol plus TypeClass, TypeLambda and Kind, but dist/HKT.js contains only export {}. URI is not a real runtime export; importing it would not be a valid compatibility probe.",
     "api": [],
     "declaration": "node_modules/effect/dist/HKT.d.ts",
-    "declarationSha256": "32d8d9992a343538831aaf6f8db5d5e556e8a4546bab2274c4fa5cb66fae57cf"
+    "declarationSha256": "0267f6335f1013c53921e8cf7f6677ef813693b548c7f42a8b6c0e217625163f"
   },
   {
     "id": "remaining-core-persistence--persistable",
@@ -6349,7 +6349,7 @@
     "reason": "Empty input takes the NoSuchElementError branch before consulting Random or sampling: dist/Random.js choice lines212-214. No random numbers are generated.",
     "expectedStdout": "[\"NoSuchElementError\",\"Cannot select a random element from an empty array\"]\n",
     "declaration": "node_modules/effect/dist/Random.d.ts",
-    "declarationSha256": "1a0014bffdc342fbb0a01a6488b6f488e3b3a91bd720ae4bf572a6dd6eea3093"
+    "declarationSha256": "6c4d4524b9cda3a6e2001d1cc5124bc5b384f5f4286b5bb4d03a3602507a37fd"
   },
   {
     "id": "remaining-core-reactivity--atomhttpapi",
@@ -6368,7 +6368,7 @@
     "reason": "A real typed API atom query completes over HttpClient.make with an in-memory request runner and fixed Web Response; records the encoded route, performs no fetch, and disables tracing.",
     "expectedStdout": "[{\"value\":42},[\"https://fixture.invalid/items/one\"]]\n",
     "declaration": "node_modules/effect/dist/reactivity/AtomHttpApi.d.ts",
-    "declarationSha256": "65af8af5ec2e15c73173bb7bb4fa9f3c8bcdb0d6663a3d53c12eeeb8e8f6f172"
+    "declarationSha256": "9dcefe321bc11ddea90d3076fb42d402468a69b544fdd4d54e14513fe6182a66"
   },
   {
     "id": "remaining-core-reactivity--atomrpc",
@@ -6438,7 +6438,7 @@
     "reason": "Direct decoded client/server APIs exchange real requests and typed success/failure responses in memory; no transport IO and tracing disabled.",
     "expectedStdout": "[42,\"negative\"]\n",
     "declaration": "node_modules/effect/dist/rpc/RpcClient.d.ts",
-    "declarationSha256": "34d0a8b246026adb38da0439497a2e8b7a473c36780570d08714e2bfc4694799"
+    "declarationSha256": "d0af0bac25cee543307289edb965489c237ae8fe082178240524d59846e57e8b"
   },
   {
     "id": "remaining-core-rpc--rpcclienterror",
@@ -6692,7 +6692,7 @@
     "reason": "Type-only Standard Schema v1 contracts: dist/StandardSchema.d.ts exposes interfaces and type namespaces; dist/StandardSchema.js contains export {}. No runtime primary API exists.",
     "api": [],
     "declaration": "node_modules/effect/dist/StandardSchema.d.ts",
-    "declarationSha256": "277b6120004ac5cb7915898138f7ad92dd52da7d593eff7548a2c46cd047b952"
+    "declarationSha256": "bd93f9565109133014cc9d7e7f8ebb702086d934e11488e41df455b0c1b745f5"
   },
   {
     "id": "remaining-core-stdio",
@@ -6708,7 +6708,7 @@
     "reason": "Uses the documented process-local layerTest with draining sinks and empty input; no OS handles are opened.",
     "expectedStdout": "[[\"--mode\",\"test\"],[false,false],0]\n",
     "declaration": "node_modules/effect/dist/Stdio.d.ts",
-    "declarationSha256": "a6abb7d902fc83e30d7c5a12ac3e897cf9f1f3e78d2a1bf98fdd9333bfaeb596"
+    "declarationSha256": "bc0f95889ba67341e8f71ed1a7d920dba7ac009d0d63b1a59d4d460c4ea7258e"
   },
   {
     "id": "remaining-core-terminal",
@@ -6724,7 +6724,7 @@
     "reason": "Pure typed cancellation/error API only; interactive terminal service operations are not exercised.",
     "expectedStdout": "[\"QuitError\",true,false]\n",
     "declaration": "node_modules/effect/dist/Terminal.d.ts",
-    "declarationSha256": "75cec753a10580f17f9d2ad26868ad93a0241ce9581d0306595e0c99c206736d"
+    "declarationSha256": "8f049d46188b8c572f27eaa1fe574b90497cca71ffde61f948f105cb499f6f80"
   },
   {
     "id": "remaining-core-types",
@@ -6736,7 +6736,7 @@
     "reason": "Type-only utilities: dist/Types.d.ts exports type aliases, interfaces and type namespaces; dist/Types.js contains export {}. No runtime primary API exists.",
     "api": [],
     "declaration": "node_modules/effect/dist/Types.d.ts",
-    "declarationSha256": "a584b19c557e009d3684f8cedd5548d3a9af0f2dbf68092e71df54af7088399e"
+    "declarationSha256": "4159beaf9445d7b9942e44a595917d058021162f6f731e913a5fec48a0c7e7e7"
   },
   {
     "id": "resource-acquire-release",
@@ -6751,7 +6751,7 @@
     ],
     "expectedStdout": "acquire|use:42|release:42\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "resource-scoped-use",
@@ -6766,7 +6766,7 @@
     ],
     "expectedStdout": "use|finalize\n",
     "declaration": "node_modules/effect/dist/Effect.d.ts",
-    "declarationSha256": "29f785ca2ea8969cb4a0bf962331e2c5cacf8cf6f5c90889d00771bec96bac98"
+    "declarationSha256": "47b27d4e84b97bbe3721f6b4e6c3a25cafca3b01c09864098b5d2f67d364ad91"
   },
   {
     "id": "retry-exhausted",
@@ -6780,7 +6780,7 @@
     ],
     "expectedStdout": "RetryExhausted:3\n",
     "declaration": "node_modules/effect/dist/Schedule.d.ts",
-    "declarationSha256": "b90f7a350f711a13a88acd4ebe1d46fcff78e57e6c74377b9c7a9054c407db4c"
+    "declarationSha256": "90b745bd58fd52c88f8994e3edaca8e7c8146cbed35170fdc0b5f31cca859a41"
   },
   {
     "id": "retry-success",
@@ -6794,7 +6794,7 @@
     ],
     "expectedStdout": "retry:3\n",
     "declaration": "node_modules/effect/dist/Schedule.d.ts",
-    "declarationSha256": "b90f7a350f711a13a88acd4ebe1d46fcff78e57e6c74377b9c7a9054c407db4c"
+    "declarationSha256": "90b745bd58fd52c88f8994e3edaca8e7c8146cbed35170fdc0b5f31cca859a41"
   },
   {
     "id": "schema-class",
@@ -6809,7 +6809,7 @@
     ],
     "expectedStdout": "Person:Ada:42\n",
     "declaration": "node_modules/effect/dist/Schema.d.ts",
-    "declarationSha256": "51fc13a9cf280cb188f63623056c1d8edfa33e2f02d0f2723ed0b9c3bdb002d1"
+    "declarationSha256": "356c80679cd044a92476bce70fb0494b49f8ef0a9fc2e2d1356fecc077e8361a"
   },
   {
     "id": "schema-decode",
@@ -6824,7 +6824,7 @@
     ],
     "expectedStdout": "decode:42\n",
     "declaration": "node_modules/effect/dist/Schema.d.ts",
-    "declarationSha256": "51fc13a9cf280cb188f63623056c1d8edfa33e2f02d0f2723ed0b9c3bdb002d1"
+    "declarationSha256": "356c80679cd044a92476bce70fb0494b49f8ef0a9fc2e2d1356fecc077e8361a"
   },
   {
     "id": "schema-encode",
@@ -6839,7 +6839,7 @@
     ],
     "expectedStdout": "encode:42\n",
     "declaration": "node_modules/effect/dist/Schema.d.ts",
-    "declarationSha256": "51fc13a9cf280cb188f63623056c1d8edfa33e2f02d0f2723ed0b9c3bdb002d1"
+    "declarationSha256": "356c80679cd044a92476bce70fb0494b49f8ef0a9fc2e2d1356fecc077e8361a"
   },
   {
     "id": "schema-failure",
@@ -6853,7 +6853,7 @@
     ],
     "expectedStdout": "SchemaError\n",
     "declaration": "node_modules/effect/dist/Schema.d.ts",
-    "declarationSha256": "51fc13a9cf280cb188f63623056c1d8edfa33e2f02d0f2723ed0b9c3bdb002d1"
+    "declarationSha256": "356c80679cd044a92476bce70fb0494b49f8ef0a9fc2e2d1356fecc077e8361a"
   },
   {
     "id": "stream-failing-element",
@@ -6868,7 +6868,7 @@
     ],
     "expectedStdout": "ElementFailure\n",
     "declaration": "node_modules/effect/dist/Stream.d.ts",
-    "declarationSha256": "cbe37b2b970a5a8bb32c8bb913eb7b6d54b98d06ade1c075ae35235afdd8d3b5"
+    "declarationSha256": "3b25ae798dd16e5ce729db973e7abeaf59e669b361e583d77a3ea68e694e5828"
   },
   {
     "id": "stream-from-iterable",
@@ -6883,7 +6883,7 @@
     ],
     "expectedStdout": "stream:1,2,3\n",
     "declaration": "node_modules/effect/dist/Stream.d.ts",
-    "declarationSha256": "cbe37b2b970a5a8bb32c8bb913eb7b6d54b98d06ade1c075ae35235afdd8d3b5"
+    "declarationSha256": "3b25ae798dd16e5ce729db973e7abeaf59e669b361e583d77a3ea68e694e5828"
   },
   {
     "id": "stream-map",
@@ -6899,7 +6899,7 @@
     ],
     "expectedStdout": "stream.map:2,4,6\n",
     "declaration": "node_modules/effect/dist/Stream.d.ts",
-    "declarationSha256": "cbe37b2b970a5a8bb32c8bb913eb7b6d54b98d06ade1c075ae35235afdd8d3b5"
+    "declarationSha256": "3b25ae798dd16e5ce729db973e7abeaf59e669b361e583d77a3ea68e694e5828"
   },
   {
     "id": "uncovered-ai--internal--codec-transformer",
@@ -7202,6 +7202,18 @@
     "declarationSha256": "bdc0cfde915a0d1463c1e628b5c8ce5569a3722fba119b6de6cf8272c2b9903e"
   },
   {
+    "id": "uncovered-http--internal--tracing",
+    "module": "http/internal/tracing",
+    "entrypoint": "effect/http/internal/tracing",
+    "family": "http/internal/tracing",
+    "file": "cases/uncovered-http--internal--tracing.ts",
+    "status": "uncovered",
+    "reason": "Published .d.ts exposes no callable/value API, although the wildcard permits this internal JS module; hidden JS exports cannot be tested against published types. Recorded as no-public-value-declaration, not a compatibility pass.",
+    "api": [],
+    "declaration": "node_modules/effect/dist/http/internal/tracing.d.ts",
+    "declarationSha256": "01b3c1c4ebc25bd05ba98ea5011cf0dd410af6e9fda3f81dcbeca7fbf0a27c1e"
+  },
+  {
     "id": "uncovered-http-api--internal--html",
     "module": "http-api/internal/html",
     "entrypoint": "effect/http-api/internal/html",
@@ -7284,6 +7296,30 @@
     "api": [],
     "declaration": "node_modules/effect/dist/observability/internal/protobuf.d.ts",
     "declarationSha256": "f09ceb8bdc1e3d0c24ca69bbfdfa5c947729a275c3e0125ff29f1801b6e040f1"
+  },
+  {
+    "id": "uncovered-rpc--internal--tracing",
+    "module": "rpc/internal/tracing",
+    "entrypoint": "effect/rpc/internal/tracing",
+    "family": "rpc/internal/tracing",
+    "file": "cases/uncovered-rpc--internal--tracing.ts",
+    "status": "uncovered",
+    "reason": "Published .d.ts exposes no callable/value API, although the wildcard permits this internal JS module; hidden JS exports cannot be tested against published types. Recorded as no-public-value-declaration, not a compatibility pass.",
+    "api": [],
+    "declaration": "node_modules/effect/dist/rpc/internal/tracing.d.ts",
+    "declarationSha256": "01b3c1c4ebc25bd05ba98ea5011cf0dd410af6e9fda3f81dcbeca7fbf0a27c1e"
+  },
+  {
+    "id": "uncovered-version",
+    "module": "Version",
+    "entrypoint": "effect/Version",
+    "family": "Version",
+    "file": "cases/uncovered-version.ts",
+    "status": "uncovered",
+    "reason": "No deterministic, typechecked terminal-value case has been selected from the published declarations; explicit corpus gap, not a compiler finding.",
+    "api": [],
+    "declaration": "node_modules/effect/dist/Version.d.ts",
+    "declarationSha256": "c77fff822e37d7ae01c65d4f89bd0cbc503ab22c2895c33b2ec5c7bd109b78ba"
   },
   {
     "id": "uncovered-workflow--internal--crypto",

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Duration.d.ts, example 0.
-// SHA-256: fda414d1e97aaad5aee9633f178d732bc439efaa1a5c25fe52d47e5a83a4e13e
+// SHA-256: e557a8dd8cb12a1654864f8ce9809332c53d753608c22ece8aa75a3e0704e715
 const __compatObserved: unknown[] = []
 import * as Duration from "effect/Duration"
 

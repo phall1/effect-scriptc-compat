@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxDeferred.d.ts, example 0.
-// SHA-256: 8625b52b991d154ca0e97f45a56106014770b7d7b7a4f4db587e20edee18ad52
+// SHA-256: fd649a78d5be93e70abc9335e9e7dc9f885735867aab19b90e64800c8031040d
 const __compatObserved: unknown[] = []
 import * as TxDeferred from "effect/TxDeferred"
 import { Effect } from "effect"

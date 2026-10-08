@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/MutableRef.d.ts, example 0.
-// SHA-256: 357f8eac8759da206331043fbd0f743aa4539c55a2c285e4d61a1ffce2385822
+// SHA-256: cbff36d1666eb8a0b2af6fdcb6a314aa363b523efd92f9f17296cfe01e538c5c
 const __compatObserved: unknown[] = []
 import * as MutableRef from "effect/MutableRef"
 

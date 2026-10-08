@@ -15,8 +15,9 @@ function writeJson(path: string, value: unknown): void {
   renameSync(temporary, path)
 }
 const packageRoot = join(root, "node_modules/effect")
+const pins = JSON.parse(readFileSync(join(root, "toolchain.json"), "utf8")) as { effect: string }
 const pkg = JSON.parse(readFileSync(join(packageRoot, "package.json"), "utf8"))
-if (pkg.version !== "4.0.1") throw new Error(`Expected effect@4.0.1, got ${pkg.version}`)
+if (pkg.version !== pins.effect) throw new Error(`Expected effect@${pins.effect}, got ${pkg.version}`)
 const dist = join(packageRoot, "dist")
 const exportsMap = pkg.exports as Record<string, string | null>
 mkdirSync(join(root, "cases"), { recursive: true })

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/References.d.ts, example 0.
-// SHA-256: 450c698bc48782d560741478a2f57a20c0f93327df2b72339857c9a398d98563
+// SHA-256: cac5c56dbbcbdaf43e942c04db29399234dce2819d5763380598a11aff7dc0f8
 const __compatObserved: unknown[] = []
 import * as References from "effect/References"
 import { Effect } from "effect"

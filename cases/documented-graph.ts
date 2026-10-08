@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Graph.d.ts, example 0.
-// SHA-256: 303cb8d22a0ab7b56e5673f8126d73fa71b6c46ec593a46e81ea1a16efbce0cd
+// SHA-256: b14e462d6ff04a23ba310ae9d68264b15e76d948b23958513da3c55f2ea0c8f5
 const __compatObserved: unknown[] = []
 import * as Graph from "effect/Graph"
 

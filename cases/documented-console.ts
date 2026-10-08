@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Console.d.ts, example 2.
-// SHA-256: ef05abaa093da47fe79fcebec7c1f6a008719f850547ed734aff184eb183e05a
+// SHA-256: ca4f55931220a397791221e372182478b752b3a7a01642ae19d54b54b2d9164c
 const __compatObserved: unknown[] = []
 import * as Console from "effect/Console"
 import { Effect } from "effect"

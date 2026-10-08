@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/SubscriptionRef.d.ts, example 0.
-// SHA-256: 4823df1a54e889d87063665273b2013794ad8733002491d8e5284d7a968da147
+// SHA-256: a52add88ea3c64af4dc1d380d4889850ba360c0fe78aea3b9b9548ed4bac743a
 const __compatObserved: unknown[] = []
 import * as SubscriptionRef from "effect/SubscriptionRef"
 import { Deferred, Effect, Fiber, Stream } from "effect"

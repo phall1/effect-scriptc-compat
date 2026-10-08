@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/JsonPointer.d.ts, example 0.
-// SHA-256: 3eb3b0501cfebc202b082c1fe614e42c2a4514ed374f67002968fa2deb18f5e2
+// SHA-256: ac58365c43d346b3b8d20e3ced776df061a2fad9807946ddb4c8d48697fc958a
 const __compatObserved: unknown[] = []
 import * as JsonPointer from "effect/JsonPointer"
 

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxChunk.d.ts, example 0.
-// SHA-256: d9ecb2e566f432b9dd26d48901e612ae2ebe1d8b34b2bb1e805b2edee1afdefa
+// SHA-256: 55de9e331ac5acd76d1c3510339a5a0c08334162ed96fb7027f9c4e3f611b083
 const __compatObserved: unknown[] = []
 import * as TxChunk from "effect/TxChunk"
 import { Chunk, Effect } from "effect"

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Predicate.d.ts, example 10.
-// SHA-256: 4db6129fc99fa29e43c347d53b03f03c91a5c5e840db03c9cd7bb42ee34bbafd
+// SHA-256: bc712433e89e58d36bdc447227e7500854fda77f378410875c0cb8e9803b10c2
 const __compatObserved: unknown[] = []
 import * as Predicate from "effect/Predicate"
 

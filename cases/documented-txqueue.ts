@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxQueue.d.ts, example 1.
-// SHA-256: 95720cf32febdc56e09cc257e686886badd33ce6731eb2c491e550ca0ba38fc2
+// SHA-256: acf7b145d6196ec7761ab713d0e0410033d59b2207af5a28685f0d042bdc5094
 const __compatObserved: unknown[] = []
 import * as TxQueue from "effect/TxQueue"
 import { Effect } from "effect"

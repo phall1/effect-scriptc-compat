@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Newtype.d.ts, example 1.
-// SHA-256: 7a689e0c65f3467c279a22517826427252dd4e11042e436b9f84636c6de51a1d
+// SHA-256: e645d1ba3857f895477b1be0777f3f1d1b78d0877a3fec4ed13b17a2b04eaf1d
 const __compatObserved: unknown[] = []
 import * as Newtype from "effect/Newtype"
 

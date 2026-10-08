@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/FiberHandle.d.ts, example 0.
-// SHA-256: f2670b517fef69d5ee230119c9837008199be4922069dd6ba05ae36b07a866a3
+// SHA-256: 1eea47f89caa01cefac7647dae56d786dca11cfc202ba5bbb903fd9a36977c9f
 const __compatObserved: unknown[] = []
 import * as FiberHandle from "effect/FiberHandle"
 import { Effect, Fiber } from "effect"

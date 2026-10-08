@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Inspectable.d.ts, example 3.
-// SHA-256: 91232559e0c9c3dcf8e7dafd3ad500118fed81900bc8a6e11dfbfa7e4b37b67b
+// SHA-256: 68825518d7e42fc8a9fa5f931cb050f15a88bdfa5b5140f8d583c90d74bb760f
 const __compatObserved: unknown[] = []
 import * as Inspectable from "effect/Inspectable"
 

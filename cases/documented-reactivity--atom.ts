@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/reactivity/Atom.d.ts, example 0.
-// SHA-256: 71829942f6b286e95e631f0456ac2598d9dcc812134a3398211b2997110d6628
+// SHA-256: d47b614a9749d48723fa70b9578f4d6da3eb9991fa8a588fff207242caf45d0c
 const __compatObserved: unknown[] = []
 import * as Atom from "effect/reactivity/Atom"
 

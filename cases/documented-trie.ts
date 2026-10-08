@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Trie.d.ts, example 0.
-// SHA-256: fb6c1bb045e9ce779db2f8a357ce1ac96677ca13c139d1822b2047892c9285d6
+// SHA-256: b7b3dcb6838c389b53ec755902ab5c45f13ad565c07e1d3dacdad2d49efeaa5a
 const __compatObserved: unknown[] = []
 import * as Trie from "effect/Trie"
 import { Option } from "effect"

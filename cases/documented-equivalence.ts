@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Equivalence.d.ts, example 3.
-// SHA-256: 186fdadd3c630ca1e5406fedad4ea7ea815d62999a0d7d4ca1f8d3c01e7e3973
+// SHA-256: 635fd78303b202bd1ecea48b4b0b74e241dc969f490116667b43c6cb46707fa0
 const __compatObserved: unknown[] = []
 import * as Equivalence from "effect/Equivalence"
 

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/RegExp.d.ts, example 0.
-// SHA-256: 764d803bd2755e629af51f94c2cbdba197135bdfce34ed3a3864bb398c5143b7
+// SHA-256: 8d1dafb3a78f4ea2798c6df13992bf255d20a9c76a7e56540a3f16619532e72a
 const __compatObserved: unknown[] = []
 import * as RegExp from "effect/RegExp"
 

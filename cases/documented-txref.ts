@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxRef.d.ts, example 0.
-// SHA-256: 3a7714d6e7bdf742de0b28149c56b38ca9eea3899cf741710ec583c1902808af
+// SHA-256: b9bf56df30b4fd58aa97960d1b643fad16c27fe8972d87f368cd4c601d0f9807
 const __compatObserved: unknown[] = []
 import * as TxRef from "effect/TxRef"
 import { Effect } from "effect"

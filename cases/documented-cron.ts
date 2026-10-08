@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Cron.d.ts, example 0.
-// SHA-256: d59a8fdf62d2514b261f0e8ac8853513a16d695c464aa2e4bfbc64fa582655ba
+// SHA-256: 3c6fd570c49ece5bf9c42727880cb4dd3567e81ac6b48031593379ff5805c128
 const __compatObserved: unknown[] = []
 import * as Cron from "effect/Cron"
 import { DateTime } from "effect"

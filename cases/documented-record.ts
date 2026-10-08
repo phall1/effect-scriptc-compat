@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Record.d.ts, example 5.
-// SHA-256: 54d7906581efd26405ce63da1222e2b5a42e15dc3dde2dccbdf654a1a1c07fb3
+// SHA-256: 0671a4762dd5606f1866785fce5d6ed0406157d54f98f556927606a4ea9f8428
 const __compatObserved: unknown[] = []
 import * as Record from "effect/Record"
 

@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/SchemaTransformation.d.ts, example 0.
-// SHA-256: 0e2e587187e77f8179510ea91d4f1b4b4ff36065acf04064432e341d5cea5b4a
+// SHA-256: 92524ff632eadcf9f885de43439c70e64aec665b56cd3d12c39f38f007ed9f3e
 const __compatObserved: unknown[] = []
 import * as SchemaTransformation from "effect/SchemaTransformation"
 import { Effect, Option, SchemaIssue } from "effect"

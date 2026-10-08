@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxReentrantLock.d.ts, example 0.
-// SHA-256: 7cc350146911d8cb97086473b97ce4c8626e0fc6608371014c23f0c457012aa8
+// SHA-256: 498a352ed3b2692ec5615165470759892b529c435521d9812cca53d852986543
 const __compatObserved: unknown[] = []
 import * as TxReentrantLock from "effect/TxReentrantLock"
 import { Effect } from "effect"

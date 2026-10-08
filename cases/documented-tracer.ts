@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Tracer.d.ts, example 1.
-// SHA-256: 60893fbc52d56d426093b897c99d5c8e293193d668a8dfa704ec74042acc1034
+// SHA-256: 713d6ce4a6627632323a1716f67b0a3c3e545482b9b6b020b83813cc0db35855
 const __compatObserved: unknown[] = []
 import * as Tracer from "effect/Tracer"
 import { Effect } from "effect"

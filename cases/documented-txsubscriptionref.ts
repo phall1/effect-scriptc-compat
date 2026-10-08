@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/TxSubscriptionRef.d.ts, example 0.
-// SHA-256: 78e482c2578af62b57777ea8270fbcb211d46dc62acbec9eeabb5ad91ac455f2
+// SHA-256: f1f421a07529e51794f3ab46b326bdd6eaf35143510cd080f3c03df014a1772f
 const __compatObserved: unknown[] = []
 import * as TxSubscriptionRef from "effect/TxSubscriptionRef"
 import { Effect, TxQueue } from "effect"

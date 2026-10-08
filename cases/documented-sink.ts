@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Sink.d.ts, example 0.
-// SHA-256: 438b523b406fbc260ca295c3faf67e7058a2416cf73e84df135c97ab96f1b39b
+// SHA-256: d33695861881890dffc57f8252cca6dc7dfd3552fd193d543eaad0ca23cf8e64
 const __compatObserved: unknown[] = []
 import * as Sink from "effect/Sink"
 import { Effect, Stream } from "effect"

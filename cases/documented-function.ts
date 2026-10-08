@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/Function.d.ts, example 1.
-// SHA-256: b4bc459b681edb3382564e649e73c29696b1983b651b6104a76a9cc3050a89e1
+// SHA-256: f3acae8510da25c4e941bd85506eaaf945ac58b78e803ffc5b5f4b56b7757c7e
 const __compatObserved: unknown[] = []
 import * as Function from "effect/Function"
 import { pipe } from "effect"

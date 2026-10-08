@@ -1,5 +1,5 @@
 // Generated from node_modules/effect/dist/SchemaAST.d.ts, example 0.
-// SHA-256: 423449946d829ce7b7181b69dfec4a70ae030511156dd5c384ed06ec5ab88c30
+// SHA-256: b65e86370811e2f307ad308028fdb2200c13953b6350f7ae5b100735b850b15f
 const __compatObserved: unknown[] = []
 import * as SchemaAST from "effect/SchemaAST"
 
