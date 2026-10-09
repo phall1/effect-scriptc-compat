@@ -2,7 +2,7 @@
 
 Owned fork: https://github.com/phall1/scriptc
 
-Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range.
+Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range. Later fix `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` sits on top of that note. Cherry-pick it by SHA after `871e8140`. It is outside the six-commit range because the note is in between. Mission note `bfc5ee98beb82acf77b47c82da33d8ec9c0e5890` records the hex re-proof and is not a cherry-pick.
 
 Base: upstream `main` `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1` (tag `v0.2.7` is `9131a3498c877e3a6b8e24a95f1bedf4d031fc5d`, plus the three commits after that tag).
 
@@ -22,8 +22,9 @@ Native numbers below were measured on the pre-rebase SHAs, Node 24.19.0, publish
 | `07926fce11b78ebb359a6de9481b95efdae8e890` | `8f9991f077eeb7e284ccf3e6b042c1db1f743d9e` | Builtin constructors for Effect Schema | Yes, after re-proof. |
 | `871e81405016be85db60f89d99f60d2cb1db2223` | `158ec4205dd5bc9a73a7c11a4bbc1c29292b9852` | Re-exported primitive constructors and unmapped string indexes | Yes, after re-proof. |
 | `2852286fdf612823b862e9f2248a96cd9543e9dc` | `a5507c95cfa804abee9fae00f602efcf941692eb` | `Object.isFrozen` and generic string indexes | Yes, after re-proof. |
+| `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` | none (new on this branch) | Number `toString` uses the receiver and the radix | Yes. Cherry-pick this SHA after `871e8140`. |
 
-Range to format a later PR stack: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`.
+Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`. Then `git cherry-pick f926b6d2663bb17ea4cbe716c65ddeb651d26b67`. Leave out `a038fb90`, `0aed51e9`, and `bfc5ee98`.
 
 ## What each code commit changes
 
@@ -37,6 +38,8 @@ Range to format a later PR stack: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..285
 
 `2852286f` answers `Object.isFrozen` for typed references, ordinary objects, and typed-to-dyn snapshots. Typed arrays and functions answer false. Handles, promises, and island values still fence. A generic body whose checker type did not map, but whose value is a string, uses the string-index lowering (`Base64.decode`'s `stripped[length - 1]`). Checker-typed strings keep upstream's in-bounds `charAt` proof from `b26d4409`; out-of-range numeric indexes stay optional.
 
+`f926b6d2` stops the constructor-name lookup from inheriting `Object.prototype.toString`. A method whose symbol is named `toString` was treated as a `String` or `Number` constructor call, so `(79).toString(16)` lowered to the decimal text of the radix. The lookup now accepts only `StringConstructor`, `NumberConstructor`, and `BooleanConstructor`. One-argument number `toString` emits `num.toStringRadix` of the receiver. Zero-argument `toString` still formats the receiver. Re-exported constructor calls are unchanged.
+
 ## Probe evidence (pre-rebase only)
 
 | Campaign | Source | Result |
@@ -46,6 +49,9 @@ Range to format a later PR stack: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..285
 | `effect-402-regression-v1` | `158ec420` | 10/10 EXACT: `concurrency-all`, `concurrency-timeout`, `documented-hash`, `effect-gen`, `effect-succeed`, `error-cause`, `layer-succeed`, `resource-acquire-release`, `schema-decode`, `stream-map`. |
 | `effect-402-isfrozen-v3` and `effect-402-isfrozen-v3b` | `a5507c95` | 5/5 EXACT: `namespace-http-api`, `namespace-http-api-httpapi`, `namespace-http-api-httpapiendpoint`, `namespace-http-api-httpapigroup`, `namespace-http-api-openapi`. |
 | `effect-402-base64-v1` | `a5507c95` | 6/7 EXACT. `namespace-encoding` runs and mismatches only `Hex.encode("OK")`: native `1616`, Node `4f4b`. |
+
+| `effect-402-rebase-027-v1` | `0aed51e9` | Node v24.21.0. 13 measured, 12 exact, 1 mismatch, 0 rejected. The mismatch is `namespace-encoding`: native `Hex.encode("OK")` is `1616`, Node is `4f4b`. Not a new 404 count. |
+| `effect-402-hex-radix-v1` | `f926b6d2` | Node v24.21.0. 7/7 EXACT: `namespace-encoding`, `namespace-encoding-base64`, `namespace-encoding-base64url`, `documented-boolean`, `documented-hash`, `schema-decode`, `namespace-http-api`. Not a new 404 count. |
 
 Do not reuse those campaign directories. `effect-402-isfrozen-v1` and `effect-402-isfrozen-v2` failed on a stale runtime pack and are not evidence about the dispatcher.
 
