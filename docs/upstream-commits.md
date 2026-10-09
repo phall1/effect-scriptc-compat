@@ -2,7 +2,7 @@
 
 Owned fork: https://github.com/phall1/scriptc
 
-Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range. Later fix `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` sits on top of that note. Cherry-pick it by SHA after `871e8140`. It is outside the six-commit range because the note is in between. Mission note `bfc5ee98beb82acf77b47c82da33d8ec9c0e5890` records the hex re-proof and is not a cherry-pick. Call-heritage fix `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` is the next code commit. Cherry-pick that SHA after `f926b6d2`. Mission note `3655ed7cc8c0fa4fc6d8ee0fa974b7a0701dcd64` records that re-proof and is not a cherry-pick. URI fix `dbec30d4969a1ffd8d479e10bf8c51005a544f02` is the next code commit after that. Cherry-pick it after `ce9d169b`. Mission note `dda6231f97aa34f63b714d00988f8dc339ccb20e` records the header re-proof and is not a cherry-pick. Array-key fix `610463e7bbe5640adf4139e6669526469e666ac0` is the next code commit. Cherry-pick it after `dbec30d4`. Mission note `d121385cd1fdbd3deb70209714a3296a3910f1eb` records the asDouble re-proof and is not a cherry-pick.
+Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range. Later fix `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` sits on top of that note. Cherry-pick it by SHA after `871e8140`. It is outside the six-commit range because the note is in between. Mission note `bfc5ee98beb82acf77b47c82da33d8ec9c0e5890` records the hex re-proof and is not a cherry-pick. Call-heritage fix `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` is the next code commit. Cherry-pick that SHA after `f926b6d2`. Mission note `3655ed7cc8c0fa4fc6d8ee0fa974b7a0701dcd64` records that re-proof and is not a cherry-pick. URI fix `dbec30d4969a1ffd8d479e10bf8c51005a544f02` is the next code commit after that. Cherry-pick it after `ce9d169b`. Mission note `dda6231f97aa34f63b714d00988f8dc339ccb20e` records the header re-proof and is not a cherry-pick. Array-key fix `610463e7bbe5640adf4139e6669526469e666ac0` is the next code commit. Cherry-pick it after `dbec30d4`. Mission note `d121385cd1fdbd3deb70209714a3296a3910f1eb` records the asDouble re-proof and is not a cherry-pick. Symbol-key fix `52bc6c0eb7d6fcf97fa3adb6b05f1ed8eeb8d917` is the next code commit. Cherry-pick it after `610463e7`. Mission note `4b975eec4b9ec2e3191ad0592fa7f035a8c8478a` records the Headers re-proof and is not a cherry-pick. That commit changes the C runtime. A checkout needs a rebuilt `@scriptc/runtime-darwin-arm64@0.2.7` pack before the native probe matches. The pack stays gitignored.
 
 Base: upstream `main` `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1` (tag `v0.2.7` is `9131a3498c877e3a6b8e24a95f1bedf4d031fc5d`, plus the three commits after that tag).
 
@@ -26,8 +26,9 @@ Native numbers below were measured on the pre-rebase SHAs, Node 24.19.0, publish
 | `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` | none (new on this branch) | Call-expression class bases lower at emit when collection misses | Yes. Cherry-pick this SHA after `f926b6d2`. |
 | `dbec30d4969a1ffd8d479e10bf8c51005a544f02` | none (new on this branch) | `globalThis` URI calls use the string intrinsics | Yes. Cherry-pick this SHA after `ce9d169b`. |
 | `610463e7bbe5640adf4139e6669526469e666ac0` | none (new on this branch) | JavaScript arrays keep an object opened by a later key | Yes. Cherry-pick this SHA after `dbec30d4`. |
+| `52bc6c0eb7d6fcf97fa3adb6b05f1ed8eeb8d917` | none (new on this branch) | `Object.defineProperties` defines enumerable symbol keys | Yes. Cherry-pick this SHA after `610463e7`. Rebuild the local runtime pack after it. |
 
-Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`. Then `git cherry-pick f926b6d2663bb17ea4cbe716c65ddeb651d26b67`, `git cherry-pick ce9d169b79c9bafc10b22a9ab96b15bd12efbac9`, `git cherry-pick dbec30d4969a1ffd8d479e10bf8c51005a544f02`, and `git cherry-pick 610463e7bbe5640adf4139e6669526469e666ac0`. Leave out `a038fb90`, `0aed51e9`, `bfc5ee98`, `3655ed7c`, `dda6231f`, and `d121385c`.
+Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`. Then `git cherry-pick f926b6d2663bb17ea4cbe716c65ddeb651d26b67`, `git cherry-pick ce9d169b79c9bafc10b22a9ab96b15bd12efbac9`, `git cherry-pick dbec30d4969a1ffd8d479e10bf8c51005a544f02`, `git cherry-pick 610463e7bbe5640adf4139e6669526469e666ac0`, and `git cherry-pick 52bc6c0eb7d6fcf97fa3adb6b05f1ed8eeb8d917`. Leave out `a038fb90`, `0aed51e9`, `bfc5ee98`, `3655ed7c`, `dda6231f`, `d121385c`, and `4b975eec`.
 
 ## What each code commit changes
 
@@ -49,6 +50,8 @@ Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2
 
 `610463e7` keeps a JavaScript array dynamic when one element is an object binding that a later write opened with a new key. The checker still types that array as the original record, and checking the dynamic object back onto that record dropped the key. Effect's OTLP number data point assigns `asDouble` after the literal and then stores the object in `dataPoints: [dataPoint]`. The array now keeps that object. An explicit array destination and TypeScript literals still project onto the record. A later write to a key the record already had, or a `const` array whose inferred element type is that record, still copies.
 
+`52bc6c0e` makes `Object.defineProperties` define enumerable symbol keys after the string keys. String own-key enumeration never returned those symbols, so Effect's `Headers` prototype never received `Symbol.for("~effect/http/Headers")` and `isHeaders` was false. `Object.defineProperty` on one symbol key already worked. The Darwin arm64 runtime pack was rebuilt locally after this commit. The pack is gitignored, so a later checkout must rebuild `@scriptc/runtime-darwin-arm64` before the native probe matches.
+
 ## Probe evidence (pre-rebase only)
 
 | Campaign | Source | Result |
@@ -64,6 +67,7 @@ Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2
 | `effect-402-opaque-v1` | `ce9d169b` | Node v24.21.0. 3/3 EXACT: `namespace-ai-mcpprotocol`, `namespace-ai-mcpschema`, `namespace-ai-mcpserver`. Not a new 404 count. |
 | `effect-402-otlp-headers-v1` | `dbec30d4` | Node v24.21.0. 1/1 EXACT: `module-observability--internal--otlpenv`. Not a new 404 count. A local `module-observability--otlpmetrics` run on the same dist still drops `asDouble` and is not part of this campaign. |
 | `effect-402-asdouble-v1` | `610463e7` | Node v24.21.0. 2/2 EXACT: `module-observability--otlp`, `module-observability--otlpmetrics`. Not a new 404 count. |
+| `effect-402-symbol-headers-v1` | `52bc6c0e` | Node v24.21.0. 1/1 EXACT: `namespace-http-headers`. Not a new 404 count. Measured after rebuilding the local Darwin arm64 runtime pack. |
 
 Do not reuse those campaign directories. `effect-402-isfrozen-v1` and `effect-402-isfrozen-v2` failed on a stale runtime pack and are not evidence about the dispatcher.
 
