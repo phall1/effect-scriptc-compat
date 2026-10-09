@@ -2,7 +2,7 @@
 
 Owned fork: https://github.com/phall1/scriptc
 
-Current branch: `effect-compat-0.2.7` at `2852286fdf612823b862e9f2248a96cd9543e9dc`.
+Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range.
 
 Base: upstream `main` `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1` (tag `v0.2.7` is `9131a3498c877e3a6b8e24a95f1bedf4d031fc5d`, plus the three commits after that tag).
 
