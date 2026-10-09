@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "node": "24.19.0",
-  "pnpm": "11.19.0",
+  "node": "24.21.0",
+  "pnpm": "11.28.2",
   "typescript": "7.0.2",
   "nodeTypes": "24.19.1",
   "effect": "4.0.2",

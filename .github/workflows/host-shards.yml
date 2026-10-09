@@ -76,7 +76,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '24.19.0'
+          node-version: '24.21.0'
           package-manager-cache: false
       - name: Validate manual inputs and freeze corpus
         id: plan
@@ -129,7 +129,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '24.19.0'
+          node-version: '24.21.0'
           package-manager-cache: false
       - name: Verify snapshot and isolate this host's evidence
         id: prepare
@@ -138,10 +138,10 @@ jobs:
         id: install
         timeout-minutes: 10
         run: |
-          npm install --global --no-audit --no-fund pnpm@11.19.0 scriptc@0.2.3 2>&1 | tee reports/ci/install-global.log
+          npm install --global --no-audit --no-fund pnpm@11.28.2 scriptc@0.2.3 2>&1 | tee reports/ci/install-global.log
           pnpm install --frozen-lockfile --ignore-scripts 2>&1 | tee reports/ci/install-dependencies.log
           npm view scriptc@0.2.3 dist --json > reports/ci/npm-scriptc-dist.json
-          npm view pnpm@11.19.0 dist --json > reports/ci/npm-pnpm-dist.json
+          npm view pnpm@11.28.2 dist --json > reports/ci/npm-pnpm-dist.json
           test -x "$SCRIPTC_LINKER"
           dpkg-query -W clang-18 libllvm18 binutils > reports/ci/linker-packages.txt
           node .github/scripts/host-shards.mjs provenance
@@ -233,7 +233,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '24.19.0'
+          node-version: '24.21.0'
           package-manager-cache: false
       - name: Clear checked-in evidence from aggregation output
         run: |

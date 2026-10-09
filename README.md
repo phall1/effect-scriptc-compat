@@ -2,7 +2,7 @@
 
 > **Recovered checkpoint:** the complete 456-case inventory (404 runnable probes) is now checked in. Historical Linux evidence is preserved separately in `reports/imported/linux-checkpoint/`: 122 measured cases, 39 differentials, and five verified packets, explicitly partial. Current-host progress is saved in `reports/map-session.json`, the selected map report, and `reports/checkpoint.json`; historical binaries are not present or reused. See [recovery notes](docs/recovery.md).
 
-Host-first, reproducible probes for the published **effect@4.0.2** package and the **scriptc@0.2.3** npm CLI. This repository discovers compiler/runtime gaps, compares native behavior with Node, and prepares local upstream reports. It does not modify Effect or vendor scriptc. The compiler fixes themselves live on the owned scriptc fork, currently rebased onto upstream v0.2.6.
+Host-first, reproducible probes for the published **effect@4.0.2** package and the **scriptc@0.2.3** npm CLI. This repository discovers compiler/runtime gaps, compares native behavior with Node, and prepares local upstream reports. It does not modify Effect or vendor scriptc. The compiler fixes themselves live on the owned scriptc fork, branch `effect-compat-0.2.7`, replayed onto upstream `2476844e` (v0.2.7 plus the three commits after that tag). Commit-by-commit upstream packets are in [docs/upstream-commits.md](docs/upstream-commits.md).
 
 ## Pins and prerequisites
 
@@ -12,10 +12,10 @@ Host-first, reproducible probes for the published **effect@4.0.2** package and t
 | scriptc global npm CLI | `0.2.3` |
 | scriptc GitHub release | [`v0.2.3`](https://github.com/vercel-labs/scriptc/releases/tag/v0.2.3) |
 | Release commit | `52169979ee3fac98ad6651eb2a717fbbf4ac1f89` |
-| Node / reference TS runner | `24.19.0`, `node --experimental-strip-types` |
+| Node / reference TS runner | `24.21.0`, `node --experimental-strip-types` |
 | TypeScript | `7.0.2`, strict / ES2025 / bundler |
 | Node type declarations | `24.19.1` |
-| pnpm | `11.19.0` |
+| pnpm | `11.28.2` |
 | Initial host | Linux x64, `x86_64-unknown-linux-gnu` |
 | Initial native linker | Debian Clang `19.1.7 (3+b1)`; exact package hashes in `reports/imported/linux-checkpoint/linker-provenance.json` |
 
@@ -26,7 +26,7 @@ Shared terminal workers inherit their server's environment; changing cwd does no
 A supported Clang toolchain and native system libraries must be installed. On Linux, install your distribution's Clang package; on macOS arm64, install the host Command Line Tools. `SCRIPTC_LINKER=/absolute/path/to/clang` is scriptc's supported override. The harness builds and differentially checks a non-Effect control before the map, so missing linkers do not masquerade as Effect findings.
 
 ```sh
-npm install --global pnpm@11.19.0 scriptc@0.2.3
+npm install --global pnpm@11.28.2 scriptc@0.2.3
 pnpm install
 pnpm generate
 pnpm check

@@ -10,7 +10,7 @@ const digest = data => createHash('sha256').update(data).digest('hex');
 const read = path => JSON.parse(readFileSync(path, 'utf8'));
 const save = (path, data) => { mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, JSON.stringify(data, null, 2) + '\n'); };
 const command = (name, args, cwd) => execFileSync(name, args, { cwd, encoding: 'utf8', timeout: 60_000 }).trim();
-const pins = { node: '24.19.0', pnpm: '11.19.0', effect: '4.0.2', typescript: '7.0.2', scriptc: '0.2.3' };
+const pins = { node: '24.21.0', pnpm: '11.28.2', effect: '4.0.2', typescript: '7.0.2', scriptc: '0.2.3' };
 
 function integer(value, label, min, max) {
   if (!/^(0|[1-9][0-9]*)$/.test(String(value))) throw new Error(`${label} must be a decimal integer`);

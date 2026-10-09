@@ -160,8 +160,8 @@ test('workflow is manual-only, SHA-pinned, non-publishing, and preserves failure
   assert.match(yaml, /fail-fast: false/);
   assert.match(yaml, /timeout-minutes: \$\{\{ fromJSON\(needs.plan.outputs.config\).jobMinutes \}\}/);
   assert.match(yaml, /Upload evidence even when[\s\S]*?if: \$\{\{ always\(\)/);
-  assert.match(yaml, /node-version: '24\.19\.0'/);
-  assert.match(yaml, /pnpm@11\.19\.0 scriptc@0\.2\.3/);
+  assert.match(yaml, /node-version: '24\.21\.0'/);
+  assert.match(yaml, /pnpm@11\.28\.2 scriptc@0\.2\.3/);
   assert.match(yaml, /env -u MAP_SHARD_INDEX -u MAP_SHARD_TOTAL -u MAP_SHARD_NAME -u MAP_RESUME/);
   assert.match(yaml, /-u MAP_REPORT -u DIFF_REPORT pnpm check/);
   assert.doesNotMatch(yaml, /git push|workflow run|actions: write|contents: write|secrets\./);

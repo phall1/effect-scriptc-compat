@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Pinned host-first Effect 4 compatibility and differential harness for scriptc",
-  "packageManager": "pnpm@11.19.0",
+  "packageManager": "pnpm@11.28.2",
   "engines": {
     "node": ">=24"
   },
