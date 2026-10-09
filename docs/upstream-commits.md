@@ -2,7 +2,7 @@
 
 Owned fork: https://github.com/phall1/scriptc
 
-Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range. Later fix `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` sits on top of that note. Cherry-pick it by SHA after `871e8140`. It is outside the six-commit range because the note is in between. Mission note `bfc5ee98beb82acf77b47c82da33d8ec9c0e5890` records the hex re-proof and is not a cherry-pick. Call-heritage fix `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` is the next code commit. Cherry-pick that SHA after `f926b6d2`. Mission note `3655ed7cc8c0fa4fc6d8ee0fa974b7a0701dcd64` records that re-proof and is not a cherry-pick. URI fix `dbec30d4969a1ffd8d479e10bf8c51005a544f02` is the next code commit after that. Cherry-pick it after `ce9d169b`. Mission note `dda6231f97aa34f63b714d00988f8dc339ccb20e` records the header re-proof and is not a cherry-pick.
+Current branch: `effect-compat-0.2.7`. The six replayed commits end at `2852286fdf612823b862e9f2248a96cd9543e9dc`. Local mission note `0aed51e9` records that replay and is not in the cherry-pick range. Later fix `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` sits on top of that note. Cherry-pick it by SHA after `871e8140`. It is outside the six-commit range because the note is in between. Mission note `bfc5ee98beb82acf77b47c82da33d8ec9c0e5890` records the hex re-proof and is not a cherry-pick. Call-heritage fix `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` is the next code commit. Cherry-pick that SHA after `f926b6d2`. Mission note `3655ed7cc8c0fa4fc6d8ee0fa974b7a0701dcd64` records that re-proof and is not a cherry-pick. URI fix `dbec30d4969a1ffd8d479e10bf8c51005a544f02` is the next code commit after that. Cherry-pick it after `ce9d169b`. Mission note `dda6231f97aa34f63b714d00988f8dc339ccb20e` records the header re-proof and is not a cherry-pick. Array-key fix `610463e7bbe5640adf4139e6669526469e666ac0` is the next code commit. Cherry-pick it after `dbec30d4`. Mission note `d121385cd1fdbd3deb70209714a3296a3910f1eb` records the asDouble re-proof and is not a cherry-pick.
 
 Base: upstream `main` `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1` (tag `v0.2.7` is `9131a3498c877e3a6b8e24a95f1bedf4d031fc5d`, plus the three commits after that tag).
 
@@ -25,8 +25,9 @@ Native numbers below were measured on the pre-rebase SHAs, Node 24.19.0, publish
 | `f926b6d2663bb17ea4cbe716c65ddeb651d26b67` | none (new on this branch) | Number `toString` uses the receiver and the radix | Yes. Cherry-pick this SHA after `871e8140`. |
 | `ce9d169b79c9bafc10b22a9ab96b15bd12efbac9` | none (new on this branch) | Call-expression class bases lower at emit when collection misses | Yes. Cherry-pick this SHA after `f926b6d2`. |
 | `dbec30d4969a1ffd8d479e10bf8c51005a544f02` | none (new on this branch) | `globalThis` URI calls use the string intrinsics | Yes. Cherry-pick this SHA after `ce9d169b`. |
+| `610463e7bbe5640adf4139e6669526469e666ac0` | none (new on this branch) | JavaScript arrays keep an object opened by a later key | Yes. Cherry-pick this SHA after `dbec30d4`. |
 
-Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`. Then `git cherry-pick f926b6d2663bb17ea4cbe716c65ddeb651d26b67`, `git cherry-pick ce9d169b79c9bafc10b22a9ab96b15bd12efbac9`, and `git cherry-pick dbec30d4969a1ffd8d479e10bf8c51005a544f02`. Leave out `a038fb90`, `0aed51e9`, `bfc5ee98`, `3655ed7c`, and `dda6231f`.
+Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2852286fdf612823b862e9f2248a96cd9543e9dc`. Then `git cherry-pick f926b6d2663bb17ea4cbe716c65ddeb651d26b67`, `git cherry-pick ce9d169b79c9bafc10b22a9ab96b15bd12efbac9`, `git cherry-pick dbec30d4969a1ffd8d479e10bf8c51005a544f02`, and `git cherry-pick 610463e7bbe5640adf4139e6669526469e666ac0`. Leave out `a038fb90`, `0aed51e9`, `bfc5ee98`, `3655ed7c`, `dda6231f`, and `d121385c`.
 
 ## What each code commit changes
 
@@ -46,6 +47,8 @@ Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2
 
 `dbec30d4` lowers `globalThis.encodeURIComponent`, `encodeURI`, `decodeURIComponent`, and `decodeURI` through the same string intrinsics as the bare names. Effect's OTEL header schema calls `globalThis.decodeURIComponent`. The stored-global read threw inside that schema's catch, the config fell through to `undefined`, and `JSON.stringify` printed `null`.
 
+`610463e7` keeps a JavaScript array dynamic when one element is an object binding that a later write opened with a new key. The checker still types that array as the original record, and checking the dynamic object back onto that record dropped the key. Effect's OTLP number data point assigns `asDouble` after the literal and then stores the object in `dataPoints: [dataPoint]`. The array now keeps that object. An explicit array destination and TypeScript literals still project onto the record. A later write to a key the record already had, or a `const` array whose inferred element type is that record, still copies.
+
 ## Probe evidence (pre-rebase only)
 
 | Campaign | Source | Result |
@@ -60,6 +63,7 @@ Range for the six replayed commits: `2476844e13c7b2d85ce0c1ce5d0dfafe70c449e1..2
 | `effect-402-hex-radix-v1` | `f926b6d2` | Node v24.21.0. 7/7 EXACT: `namespace-encoding`, `namespace-encoding-base64`, `namespace-encoding-base64url`, `documented-boolean`, `documented-hash`, `schema-decode`, `namespace-http-api`. Not a new 404 count. |
 | `effect-402-opaque-v1` | `ce9d169b` | Node v24.21.0. 3/3 EXACT: `namespace-ai-mcpprotocol`, `namespace-ai-mcpschema`, `namespace-ai-mcpserver`. Not a new 404 count. |
 | `effect-402-otlp-headers-v1` | `dbec30d4` | Node v24.21.0. 1/1 EXACT: `module-observability--internal--otlpenv`. Not a new 404 count. A local `module-observability--otlpmetrics` run on the same dist still drops `asDouble` and is not part of this campaign. |
+| `effect-402-asdouble-v1` | `610463e7` | Node v24.21.0. 2/2 EXACT: `module-observability--otlp`, `module-observability--otlpmetrics`. Not a new 404 count. |
 
 Do not reuse those campaign directories. `effect-402-isfrozen-v1` and `effect-402-isfrozen-v2` failed on a stale runtime pack and are not evidence about the dispatcher.
 
