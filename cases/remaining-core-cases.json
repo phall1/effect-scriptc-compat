@@ -465,6 +465,22 @@
     "expectedStdout": "[\"SchemaError\",true]\n"
   },
   {
+    "id": "remaining-core-sql--sqlmodel-roundtrip",
+    "module": "sql/SqlModel",
+    "entrypoint": "effect/sql/SqlModel",
+    "family": "sql/SqlModel",
+    "file": "cases/remaining-core-sql--sqlmodel-roundtrip.ts",
+    "status": "ready",
+    "api": [
+      "SqlModel.makeRepository",
+      "Repository.insert",
+      "Repository.findById",
+      "Repository.delete"
+    ],
+    "reason": "Published insert, find, and delete statements run on an in-memory Connection. The connection records SQL and returns fixed rows. No database driver or file is opened.",
+    "expectedStdout": "[{\"id\":1,\"name\":\"fixture\"},{\"id\":1,\"name\":\"fixture\"},[\"insert into \\\"items\\\" (\\\"id\\\",\\\"name\\\") VALUES (?,?) RETURNING *\",\"select * from \\\"items\\\" where \\\"id\\\" = ?\",\"delete from \\\"items\\\" where \\\"id\\\" = ?\"]]\n"
+  },
+  {
     "id": "remaining-core-eventlog--eventjournal",
     "module": "eventlog/EventJournal",
     "entrypoint": "effect/eventlog/EventJournal",

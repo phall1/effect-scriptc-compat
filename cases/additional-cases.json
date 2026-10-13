@@ -1,5 +1,181 @@
 [
   {
+    "id": "module-arbitrary",
+    "module": "Arbitrary",
+    "entrypoint": "effect/Arbitrary",
+    "family": "Arbitrary",
+    "file": "cases/module-arbitrary.ts",
+    "status": "ready",
+    "api": [
+      "Constant",
+      "isArbitrary"
+    ],
+    "reason": "Only constant arbitrary construction and its documented guard are exercised; random generation is intentionally excluded.",
+    "expectedStdout": "arbitrary.constant:true\n"
+  },
+  {
+    "id": "module-array",
+    "module": "Array",
+    "entrypoint": "effect/Array",
+    "family": "Array",
+    "file": "cases/module-array.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "map"
+    ],
+    "expectedStdout": "array:2,4,6\n"
+  },
+  {
+    "id": "module-array-surface",
+    "module": "Array",
+    "entrypoint": "effect/Array",
+    "family": "Array",
+    "file": "cases/module-array-surface.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "makeBy",
+      "range",
+      "replicate",
+      "fromIterable",
+      "ensure",
+      "fromOption",
+      "prepend",
+      "prependAll",
+      "append",
+      "appendAll",
+      "scan",
+      "scanRight",
+      "isArray",
+      "isArrayEmpty",
+      "isReadonlyArrayEmpty",
+      "isArrayNonEmpty",
+      "isReadonlyArrayNonEmpty",
+      "length",
+      "get",
+      "getUnsafe",
+      "unprepend",
+      "unappend",
+      "head",
+      "headNonEmpty",
+      "last",
+      "lastNonEmpty",
+      "tail",
+      "tailNonEmpty",
+      "init",
+      "initNonEmpty",
+      "take",
+      "takeRight",
+      "takeWhile",
+      "span",
+      "drop",
+      "dropRight",
+      "dropWhile",
+      "findFirstIndex",
+      "findLastIndex",
+      "findFirst",
+      "findFirstWithIndex",
+      "findLast",
+      "insertAt",
+      "replace",
+      "remove",
+      "reverse",
+      "sort",
+      "sortWith",
+      "zip",
+      "zipWith",
+      "unzip",
+      "intersperse",
+      "modifyHeadNonEmpty",
+      "setHeadNonEmpty",
+      "modifyLastNonEmpty",
+      "setLastNonEmpty",
+      "rotate",
+      "splitAt",
+      "splitAtNonEmpty",
+      "split",
+      "splitWhere",
+      "pad",
+      "chunksOf",
+      "group",
+      "unionWith",
+      "union",
+      "intersection",
+      "difference",
+      "of",
+      "map",
+      "flatMap",
+      "flatten",
+      "getSomes",
+      "getFailures",
+      "getSuccesses",
+      "filterMap",
+      "filter",
+      "separate",
+      "reduce",
+      "reduceRight",
+      "fromNullishOr",
+      "flatMapNullishOr",
+      "every",
+      "some",
+      "extend",
+      "min",
+      "max",
+      "unfold",
+      "dedupeWith",
+      "dedupe",
+      "dedupeAdjacentWith",
+      "dedupeAdjacent",
+      "join",
+      "mapAccum",
+      "cartesianWith",
+      "cartesian",
+      "bindTo",
+      "countBy"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[[1,2,3],[0,2,4,6,8],[1,2,3],[\"a\",\"a\",\"a\"],[1,2,3],[\"a\"],[\"a\",\"b\",\"c\"],[1],[],[1,2,3,4],[0,1,2,3],[1,2,3,4],[1,2,3,4],[0,1,3,6,10],[10,9,7,4,0],false,true,true,false,true,false,false,true,false,true,3,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":2},{\"_id\":\"Option\",\"_tag\":\"None\"},2,[1,[2,3,4]],[[1,2,3],4],{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},1,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":3},{\"_id\":\"Option\",\"_tag\":\"None\"},4,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[2,3,4]},{\"_id\":\"Option\",\"_tag\":\"None\"},[2,3,4],{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[1,2,3]},{\"_id\":\"Option\",\"_tag\":\"None\"},[1,2,3],[1,2,3],[3,4,5],[1,3,2],[[1,3],[2,4,5]],[3,4,5],[1,2,3],[4,5],{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":2},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":4},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[4,3]},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":4},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[\"a\",\"b\",\"c\",\"d\",\"e\"]},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[1,4,3]},[1,2,4],[1,2,3,4],[4,3,2,1],[1,1,3,4,5],[\"b\",\"cc\",\"aaa\"],[[1,\"a\"],[2,\"b\"]],[5,7,9],[[1,2,3],[\"a\",\"b\",\"c\"]],[1,0,2,0,3],[10,2,3],[10,2,3],[1,2,6],[1,2,4],[\"c\",\"d\",\"a\",\"b\"],[[1,2,3],[4,5]],[[\"a\",\"b\",\"c\"],[\"d\",\"e\"]],[[1,2,3],[4,5,6],[7,8]],[[1,2,3],[4,5]],[1,2,3,0,0,0],[[1,2],[3,4],[5]],[[1,1],[2,2,2],[3],[1]],[1,2,3],[1,2,3],[1,3],[1],[1],[2,4,6],[1,2,2,4,3,6],[1,2,3,4,5,6],[1,2],[\"err\"],[1,2],[20,40],[2,4],[[1,2],[\"error\"]],6,6,[1],[],[],[1,3],true,false,true,false,[3,2,1],1,3,[1,2,3,4,5],[1,2,3],[1,2,3,4],[1,2,3],[1,2,3],\"a-b-c\",[6,[1,3,6]],[\"1-a\",\"1-b\",\"2-a\",\"2-b\"],[[1,\"a\"],[1,\"b\"],[2,\"a\"],[2,\"b\"]],[{\"x\":1},{\"x\":2},{\"x\":3}],2]\n"
+  },
+  {
+    "id": "module-bigint",
+    "module": "BigInt",
+    "entrypoint": "effect/BigInt",
+    "family": "BigInt",
+    "file": "cases/module-bigint.ts",
+    "status": "ready",
+    "api": [
+      "sum"
+    ],
+    "expectedStdout": "bigint:42\n"
+  },
+  {
+    "id": "module-boolean-surface",
+    "module": "Boolean",
+    "entrypoint": "effect/Boolean",
+    "family": "Boolean",
+    "file": "cases/module-boolean-surface.ts",
+    "status": "ready",
+    "api": [
+      "Boolean",
+      "isBoolean",
+      "Order",
+      "Equivalence",
+      "not",
+      "and",
+      "nand",
+      "or",
+      "nor",
+      "xor",
+      "eqv",
+      "implies",
+      "every",
+      "some"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,false,true,false,-1,1,0,true,false,false,true,true,false,false,false,false,true,true,true,true,true,true,false,false,false,false,true,false,true,true,false,true,false,false,true,true,false,true,true,true,false,true,false]\n"
+  },
+  {
     "id": "module-brand",
     "module": "Brand",
     "entrypoint": "effect/Brand",
@@ -37,6 +213,135 @@
     "expectedStdout": "channelSchema:1,2\n"
   },
   {
+    "id": "module-chunk-surface",
+    "module": "Chunk",
+    "entrypoint": "effect/Chunk",
+    "family": "Chunk",
+    "file": "cases/module-chunk-surface.ts",
+    "status": "ready",
+    "api": [
+      "isChunk",
+      "size",
+      "empty",
+      "toArray",
+      "make",
+      "of",
+      "fromIterable",
+      "isEmpty",
+      "isNonEmpty",
+      "head",
+      "last",
+      "map",
+      "makeBy",
+      "range",
+      "join"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[false,0,[1,2,3,4],[\"hello\"],[1,2,3],true,false,false,true,{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":3},[2,3],3,[0,2,4,6,8],[1,2,3,4,5],\"hello\"]\n"
+  },
+  {
+    "id": "module-cli--primitive-surface",
+    "module": "cli/Primitive",
+    "entrypoint": "effect/cli/Primitive",
+    "family": "cli/Primitive",
+    "file": "cases/module-cli--primitive-surface.ts",
+    "status": "ready",
+    "api": [
+      "getTypeName",
+      "String",
+      "Int",
+      "Boolean",
+      "Date",
+      "KeyValuePair"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[\"string\",\"integer\",\"boolean\",\"date\",\"key=value\"]\n"
+  },
+  {
+    "id": "module-cron-surface",
+    "module": "Cron",
+    "entrypoint": "effect/Cron",
+    "family": "Cron",
+    "file": "cases/module-cron-surface.ts",
+    "status": "ready",
+    "api": [
+      "isCron",
+      "parse",
+      "isCronParseError"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[false,false,{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":{\"message\":\"Invalid number of segments in cron expression\",\"input\":\"invalid expression\",\"_tag\":\"CronParseError\",\"~effect/Cron/CronParseError\":\"~effect/Cron/CronParseError\"}},false,false]\n"
+  },
+  {
+    "id": "module-duration-surface",
+    "module": "Duration",
+    "entrypoint": "effect/Duration",
+    "family": "Duration",
+    "file": "cases/module-duration-surface.ts",
+    "status": "ready",
+    "api": [
+      "fromInputUnsafe",
+      "fromInput",
+      "isDuration",
+      "seconds",
+      "isFinite",
+      "infinity",
+      "isZero",
+      "zero",
+      "isNegative",
+      "negativeInfinity",
+      "isPositive",
+      "abs",
+      "negate",
+      "toMillis",
+      "nanos",
+      "micros",
+      "millis",
+      "minutes",
+      "hours",
+      "days",
+      "weeks",
+      "toSeconds",
+      "toMinutes",
+      "toHours",
+      "toDays",
+      "toWeeks",
+      "toNanosUnsafe",
+      "toNanos",
+      "toHrTime",
+      "Equivalence",
+      "min",
+      "max",
+      "divide",
+      "divideUnsafe",
+      "times",
+      "subtract",
+      "sum",
+      "isLessThan",
+      "isGreaterThan",
+      "equals",
+      "format"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":1000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":5000},{\"_id\":\"Duration\",\"_tag\":\"Infinity\"},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"2500000000\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":1000}},true,false,true,false,true,false,true,false,true,true,false,true,{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":5000},{\"_id\":\"Duration\",\"_tag\":\"Infinity\"},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":-5000},{\"_id\":\"Duration\",\"_tag\":\"NegativeInfinity\"},0,null,null,{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"500000000\"},{\"_id\":\"Duration\",\"_tag\":\"Nanos\",\"nanos\":\"500000000\"},1000,30000,300000,7200000,86400000,604800000,5000,120000,5,120,2,60,2,24,2,7,2,1,\"2000000000n\",{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"1000000000n\"},{\"_id\":\"Option\",\"_tag\":\"None\"},[1,500000000],true,{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":3000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":5000},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":5000}},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":5000},{\"_id\":\"Duration\",\"_tag\":\"Infinity\"},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":10000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":7000},{\"_id\":\"Duration\",\"_tag\":\"Millis\",\"millis\":8000},true,true,true,\"1s\",\"1s 1ms\"]\n"
+  },
+  {
+    "id": "module-effect-surface",
+    "module": "Effect",
+    "entrypoint": "effect/Effect",
+    "family": "Effect",
+    "file": "cases/module-effect-surface.ts",
+    "status": "ready",
+    "api": [
+      "isEffect",
+      "succeed",
+      "runSyncExit",
+      "fail"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,false,{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"my error\"}]}}]\n"
+  },
+  {
     "id": "module-effectable",
     "module": "Effectable",
     "entrypoint": "effect/Effectable",
@@ -49,6 +354,71 @@
     "expectedStdout": "effectable:42\n"
   },
   {
+    "id": "module-equal-surface",
+    "module": "Equal",
+    "entrypoint": "effect/Equal",
+    "family": "Equal",
+    "file": "cases/module-equal-surface.ts",
+    "status": "ready",
+    "api": [
+      "equals",
+      "isEqual"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,false,true,true,false]\n"
+  },
+  {
+    "id": "module-equivalence-surface",
+    "module": "Equivalence",
+    "entrypoint": "effect/Equivalence",
+    "family": "Equivalence",
+    "file": "cases/module-equivalence-surface.ts",
+    "status": "ready",
+    "api": [
+      "String",
+      "Number",
+      "Boolean",
+      "BigInt"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,false,true,false,true,true,false,true,false]\n"
+  },
+  {
+    "id": "module-exit-surface",
+    "module": "Exit",
+    "entrypoint": "effect/Exit",
+    "family": "Exit",
+    "file": "cases/module-exit-surface.ts",
+    "status": "ready",
+    "api": [
+      "isExit",
+      "succeed",
+      "fail",
+      "failCause",
+      "die",
+      "interrupt",
+      "void",
+      "hasFails",
+      "hasDies",
+      "hasInterrupts",
+      "filterSuccess",
+      "filterValue",
+      "filterFailure",
+      "filterCause",
+      "findError",
+      "findDefect",
+      "map",
+      "mapError",
+      "asVoid",
+      "asVoidAll",
+      "getSuccess",
+      "getCause",
+      "findErrorOption"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,false,{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":42},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"Something went wrong\"}]}},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"Something went wrong\"}]}},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Die\",\"defect\":\"Unexpected error\"}]}},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Interrupt\",\"fiberId\":123}]}},{\"_id\":\"Exit\",\"_tag\":\"Success\"},true,false,false,true,false,false,true,false,false,{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":42}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":42},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"err\"}]}}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"err\"}]}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"not found\"},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Die\",\"defect\":\"bug\"}]}}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"boom\"},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"err\"}]}}},{\"_id\":\"Exit\",\"_tag\":\"Success\",\"value\":42},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"BAD INPUT\"}]}},{\"_id\":\"Exit\",\"_tag\":\"Success\"},{\"_id\":\"Exit\",\"_tag\":\"Success\"},{\"_id\":\"Exit\",\"_tag\":\"Failure\",\"cause\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"err\"}]}},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":{\"_id\":\"Cause\",\"failures\":[{\"_tag\":\"Fail\",\"error\":\"err\"}]}},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"err\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"None\"}]\n"
+  },
+  {
     "id": "module-filesystem",
     "module": "FileSystem",
     "entrypoint": "effect/FileSystem",
@@ -59,6 +429,55 @@
       "makeNoop"
     ],
     "expectedStdout": "filesystem.fake:true\n"
+  },
+  {
+    "id": "module-filter-surface",
+    "module": "Filter",
+    "entrypoint": "effect/Filter",
+    "family": "Filter",
+    "file": "cases/module-filter-surface.ts",
+    "status": "ready",
+    "api": [
+      "string",
+      "number"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"hello\"},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":42},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":42},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":\"42\"}]\n"
+  },
+  {
+    "id": "module-function-surface",
+    "module": "Function",
+    "entrypoint": "effect/Function",
+    "family": "Function",
+    "file": "cases/module-function-surface.ts",
+    "status": "ready",
+    "api": [
+      "constTrue",
+      "constFalse",
+      "constNull",
+      "constUndefined",
+      "constVoid",
+      "SK"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,false,null,null,null,\"hello\"]\n"
+  },
+  {
+    "id": "module-hash-surface",
+    "module": "Hash",
+    "entrypoint": "effect/Hash",
+    "family": "Hash",
+    "file": "cases/module-hash-surface.ts",
+    "status": "ready",
+    "api": [
+      "hash",
+      "optimize",
+      "isHash",
+      "number",
+      "string"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,true,160826066,false,false,true,true,true,181380007,164394279,5381,true]\n"
   },
   {
     "id": "module-hashring",
@@ -75,234 +494,25 @@
     "expectedStdout": "ring:node-a\n"
   },
   {
-    "id": "module-partitionedsemaphore",
-    "module": "PartitionedSemaphore",
-    "entrypoint": "effect/PartitionedSemaphore",
-    "family": "PartitionedSemaphore",
-    "file": "cases/module-partitionedsemaphore.ts",
+    "id": "module-hashset-surface",
+    "module": "HashSet",
+    "entrypoint": "effect/HashSet",
+    "family": "HashSet",
+    "file": "cases/module-hashset-surface.ts",
     "status": "ready",
     "api": [
       "make",
-      "withPermit"
+      "fromIterable",
+      "isHashSet",
+      "size",
+      "isEmpty",
+      "union",
+      "intersection",
+      "difference",
+      "filter"
     ],
-    "expectedStdout": "partitioned:ok\n"
-  },
-  {
-    "id": "module-pipeable",
-    "module": "Pipeable",
-    "entrypoint": "effect/Pipeable",
-    "family": "Pipeable",
-    "file": "cases/module-pipeable.ts",
-    "status": "ready",
-    "api": [
-      "Class"
-    ],
-    "expectedStdout": "pipeable:42\n"
-  },
-  {
-    "id": "module-platformerror",
-    "module": "PlatformError",
-    "entrypoint": "effect/PlatformError",
-    "family": "PlatformError",
-    "file": "cases/module-platformerror.ts",
-    "status": "ready",
-    "api": [
-      "badArgument"
-    ],
-    "expectedStdout": "platformError:true\n"
-  },
-  {
-    "id": "module-primarykey",
-    "module": "PrimaryKey",
-    "entrypoint": "effect/PrimaryKey",
-    "family": "PrimaryKey",
-    "file": "cases/module-primarykey.ts",
-    "status": "ready",
-    "api": [
-      "value",
-      "symbol"
-    ],
-    "expectedStdout": "product-42\n"
-  },
-  {
-    "id": "module-redactable",
-    "module": "Redactable",
-    "entrypoint": "effect/Redactable",
-    "family": "Redactable",
-    "file": "cases/module-redactable.ts",
-    "status": "ready",
-    "api": [
-      "redact",
-      "symbolRedactable"
-    ],
-    "expectedStdout": "redacted-value\n"
-  },
-  {
-    "id": "module-resource",
-    "module": "Resource",
-    "entrypoint": "effect/Resource",
-    "family": "Resource",
-    "file": "cases/module-resource.ts",
-    "status": "ready",
-    "api": [
-      "manual",
-      "refresh",
-      "get"
-    ],
-    "expectedStdout": "resource:1,2\n"
-  },
-  {
-    "id": "module-scheduler",
-    "module": "Scheduler",
-    "entrypoint": "effect/Scheduler",
-    "family": "Scheduler",
-    "file": "cases/module-scheduler.ts",
-    "status": "ready",
-    "api": [
-      "MixedScheduler"
-    ],
-    "expectedStdout": "scheduler:42\n"
-  },
-  {
-    "id": "module-schemaparser",
-    "module": "SchemaParser",
-    "entrypoint": "effect/SchemaParser",
-    "family": "SchemaParser",
-    "file": "cases/module-schemaparser.ts",
-    "status": "ready",
-    "api": [
-      "decodeUnknownSync"
-    ],
-    "expectedStdout": "schemaParser:42\n"
-  },
-  {
-    "id": "module-scopedcache",
-    "module": "ScopedCache",
-    "entrypoint": "effect/ScopedCache",
-    "family": "ScopedCache",
-    "file": "cases/module-scopedcache.ts",
-    "status": "ready",
-    "api": [
-      "make",
-      "get"
-    ],
-    "expectedStdout": "cache:3,3:1\n"
-  },
-  {
-    "id": "module-scopedref",
-    "module": "ScopedRef",
-    "entrypoint": "effect/ScopedRef",
-    "family": "ScopedRef",
-    "file": "cases/module-scopedref.ts",
-    "status": "ready",
-    "api": [
-      "make",
-      "set",
-      "get"
-    ],
-    "expectedStdout": "scopedRef:42\n"
-  },
-  {
-    "id": "module-synchronizedref",
-    "module": "SynchronizedRef",
-    "entrypoint": "effect/SynchronizedRef",
-    "family": "SynchronizedRef",
-    "file": "cases/module-synchronizedref.ts",
-    "status": "ready",
-    "api": [
-      "make",
-      "updateEffect",
-      "get"
-    ],
-    "expectedStdout": "synchronizedRef:42\n"
-  },
-  {
-    "id": "module-take",
-    "module": "Take",
-    "entrypoint": "effect/Take",
-    "family": "Take",
-    "file": "cases/module-take.ts",
-    "status": "ready",
-    "api": [
-      "toPull"
-    ],
-    "expectedStdout": "take:1,2,3\n"
-  },
-  {
-    "id": "module-undefinedor",
-    "module": "UndefinedOr",
-    "entrypoint": "effect/UndefinedOr",
-    "family": "UndefinedOr",
-    "file": "cases/module-undefinedor.ts",
-    "status": "ready",
-    "api": [
-      "map",
-      "getOrThrow"
-    ],
-    "expectedStdout": "undefinedOr:42\n"
-  },
-  {
-    "id": "module-arbitrary",
-    "module": "Arbitrary",
-    "entrypoint": "effect/Arbitrary",
-    "family": "Arbitrary",
-    "file": "cases/module-arbitrary.ts",
-    "status": "ready",
-    "api": [
-      "Constant",
-      "isArbitrary"
-    ],
-    "reason": "Only constant arbitrary construction and its documented guard are exercised; random generation is intentionally excluded.",
-    "expectedStdout": "arbitrary.constant:true\n"
-  },
-  {
-    "id": "module-array",
-    "module": "Array",
-    "entrypoint": "effect/Array",
-    "family": "Array",
-    "file": "cases/module-array.ts",
-    "status": "ready",
-    "api": [
-      "make",
-      "map"
-    ],
-    "expectedStdout": "array:2,4,6\n"
-  },
-  {
-    "id": "module-bigint",
-    "module": "BigInt",
-    "entrypoint": "effect/BigInt",
-    "family": "BigInt",
-    "file": "cases/module-bigint.ts",
-    "status": "ready",
-    "api": [
-      "sum"
-    ],
-    "expectedStdout": "bigint:42\n"
-  },
-  {
-    "id": "module-number",
-    "module": "Number",
-    "entrypoint": "effect/Number",
-    "family": "Number",
-    "file": "cases/module-number.ts",
-    "status": "ready",
-    "api": [
-      "sum"
-    ],
-    "expectedStdout": "number:42\n"
-  },
-  {
-    "id": "module-string",
-    "module": "String",
-    "entrypoint": "effect/String",
-    "family": "String",
-    "file": "cases/module-string.ts",
-    "status": "ready",
-    "api": [
-      "toUpperCase"
-    ],
-    "expectedStdout": "string:STABLE\n"
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[{\"_id\":\"HashSet\",\"values\":[\"banana\",\"apple\",\"cherry\"]},{\"_id\":\"HashSet\",\"values\":[1,2,3]},{\"_id\":\"HashSet\",\"values\":[\"hello\",42,true]},{\"_id\":\"HashSet\",\"values\":[\"a\",\"c\",\"b\"]},{\"_id\":\"HashSet\",\"values\":[1,2,3]},{\"_id\":\"HashSet\",\"values\":[\"e\",\"l\",\"o\",\"h\"]},false,2,3,false,{\"_id\":\"HashSet\",\"values\":[\"a\",\"c\",\"b\"]},{\"_id\":\"HashSet\",\"values\":[\"c\",\"b\"]},{\"_id\":\"HashSet\",\"values\":[\"a\",\"c\"]},{\"_id\":\"HashSet\",\"values\":[2,4,6]}]\n"
   },
   {
     "id": "module-http--findmyway--internal--querystring",
@@ -391,23 +601,23 @@
     "expectedStdout": "[[\"json\",\"map\"],[\"txt\",\"text\",\"conf\",\"def\",\"list\",\"log\",\"in\",\"ini\"]]\n"
   },
   {
+    "id": "module-http--multipart",
+    "module": "http/Multipart",
+    "entrypoint": "effect/http/Multipart",
+    "family": "http/Multipart",
+    "file": "cases/module-http--multipart.ts",
+    "status": "ready",
+    "api": [
+      "makeChannel"
+    ],
+    "expectedStdout": "[[\"answer\",\"42\"]]\n"
+  },
+  {
     "id": "module-http--multipartparser",
     "module": "http/MultipartParser",
     "entrypoint": "effect/http/MultipartParser",
     "family": "http/MultipartParser",
     "file": "cases/module-http--multipartparser.ts",
-    "status": "ready",
-    "api": [
-      "make"
-    ],
-    "expectedStdout": "[\"answer:42\",\"done\"]\n"
-  },
-  {
-    "id": "module-http--multipartparser--internal--multipart",
-    "module": "http/MultipartParser/internal/multipart",
-    "entrypoint": "effect/http/MultipartParser/internal/multipart",
-    "family": "http/MultipartParser/internal/multipart",
-    "file": "cases/module-http--multipartparser--internal--multipart.ts",
     "status": "ready",
     "api": [
       "make"
@@ -427,18 +637,6 @@
     "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n"
   },
   {
-    "id": "module-http--multipartparser--internal--headers",
-    "module": "http/MultipartParser/internal/headers",
-    "entrypoint": "effect/http/MultipartParser/internal/headers",
-    "family": "http/MultipartParser/internal/headers",
-    "file": "cases/module-http--multipartparser--internal--headers.ts",
-    "status": "ready",
-    "api": [
-      "make"
-    ],
-    "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n"
-  },
-  {
     "id": "module-http--multipartparser--internal--contenttype",
     "module": "http/MultipartParser/internal/contentType",
     "entrypoint": "effect/http/MultipartParser/internal/contentType",
@@ -451,16 +649,28 @@
     "expectedStdout": "{\"value\":\"text/plain\",\"parameters\":{\"charset\":\"utf-8\"}}\n"
   },
   {
-    "id": "module-http--multipartparser--search",
-    "module": "http/MultipartParser/Search",
-    "entrypoint": "effect/http/MultipartParser/Search",
-    "family": "http/MultipartParser/Search",
-    "file": "cases/module-http--multipartparser--search.ts",
+    "id": "module-http--multipartparser--internal--headers",
+    "module": "http/MultipartParser/internal/headers",
+    "entrypoint": "effect/http/MultipartParser/internal/headers",
+    "family": "http/MultipartParser/internal/headers",
+    "file": "cases/module-http--multipartparser--internal--headers.ts",
     "status": "ready",
     "api": [
       "make"
     ],
-    "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n"
+    "expectedStdout": "{\"_tag\":\"Headers\",\"headers\":{\"content-type\":\"text/plain\",\"x-fixed\":\"yes\"},\"endPosition\":42}\n"
+  },
+  {
+    "id": "module-http--multipartparser--internal--multipart",
+    "module": "http/MultipartParser/internal/multipart",
+    "entrypoint": "effect/http/MultipartParser/internal/multipart",
+    "family": "http/MultipartParser/internal/multipart",
+    "file": "cases/module-http--multipartparser--internal--multipart.ts",
+    "status": "ready",
+    "api": [
+      "make"
+    ],
+    "expectedStdout": "[\"answer:42\",\"done\"]\n"
   },
   {
     "id": "module-http--multipartparser--internal--search",
@@ -475,29 +685,16 @@
     "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n"
   },
   {
-    "id": "module-http--multipart",
-    "module": "http/Multipart",
-    "entrypoint": "effect/http/Multipart",
-    "family": "http/Multipart",
-    "file": "cases/module-http--multipart.ts",
+    "id": "module-http--multipartparser--search",
+    "module": "http/MultipartParser/Search",
+    "entrypoint": "effect/http/MultipartParser/Search",
+    "family": "http/MultipartParser/Search",
+    "file": "cases/module-http--multipartparser--search.ts",
     "status": "ready",
     "api": [
-      "makeChannel"
+      "make"
     ],
-    "expectedStdout": "[[\"answer\",\"42\"]]\n"
-  },
-  {
-    "id": "module-observability--internal--otlpenv",
-    "module": "observability/internal/otlpEnv",
-    "entrypoint": "effect/observability/internal/otlpEnv",
-    "family": "observability/internal/otlpEnv",
-    "file": "cases/module-observability--internal--otlpenv.ts",
-    "status": "ready",
-    "api": [
-      "headers",
-      "endpoint"
-    ],
-    "expectedStdout": "[{\"x-key\":\"fixed\"},\"https://example.test/logs\"]\n"
+    "expectedStdout": "[[0,\"a\"],[1,\"b\"],[2,\"c\"]]\n"
   },
   {
     "id": "module-http-api--httpapibuilder",
@@ -508,18 +705,6 @@
     "status": "ready",
     "api": [
       "group"
-    ],
-    "expectedStdout": "hello-api\n"
-  },
-  {
-    "id": "module-http-api--httpapitest",
-    "module": "http-api/HttpApiTest",
-    "entrypoint": "effect/http-api/HttpApiTest",
-    "family": "http-api/HttpApiTest",
-    "file": "cases/module-http-api--httpapitest.ts",
-    "status": "ready",
-    "api": [
-      "groups"
     ],
     "expectedStdout": "hello-api\n"
   },
@@ -560,6 +745,141 @@
     "expectedStdout": "[200,\"text/html\",1939427,true]\n"
   },
   {
+    "id": "module-http-api--httpapitest",
+    "module": "http-api/HttpApiTest",
+    "entrypoint": "effect/http-api/HttpApiTest",
+    "family": "http-api/HttpApiTest",
+    "file": "cases/module-http-api--httpapitest.ts",
+    "status": "ready",
+    "api": [
+      "groups"
+    ],
+    "expectedStdout": "hello-api\n"
+  },
+  {
+    "id": "module-jsonpointer-surface",
+    "module": "JsonPointer",
+    "entrypoint": "effect/JsonPointer",
+    "family": "JsonPointer",
+    "file": "cases/module-jsonpointer-surface.ts",
+    "status": "ready",
+    "api": [
+      "escapeToken",
+      "unescapeToken",
+      "parseUriFragment",
+      "formatUriFragment"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[\"a~1b\",\"c~0d\",\"path~1to~0key\",\"a/b\",\"c~d\",\"path/to~key\",[\"users\",\"a/b\"],[\"café\"],null,null,\"#/users/a~1b/Rate%25\"]\n"
+  },
+  {
+    "id": "module-logger-surface",
+    "module": "Logger",
+    "entrypoint": "effect/Logger",
+    "family": "Logger",
+    "file": "cases/module-logger-surface.ts",
+    "status": "ready",
+    "api": [
+      "isLogger",
+      "defaultLogger",
+      "consoleLogFmt",
+      "consoleStructured",
+      "consoleJson"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[false,true,true,true,true]\n"
+  },
+  {
+    "id": "module-loglevel-surface",
+    "module": "LogLevel",
+    "entrypoint": "effect/LogLevel",
+    "family": "LogLevel",
+    "file": "cases/module-loglevel-surface.ts",
+    "status": "ready",
+    "api": [
+      "Order",
+      "Equivalence",
+      "isGreaterThan",
+      "isGreaterThanOrEqualTo",
+      "isLessThan",
+      "isLessThanOrEqualTo"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[1,-1,0,true,false,true,false,true,true,false,true,false,true,true,false]\n"
+  },
+  {
+    "id": "module-number",
+    "module": "Number",
+    "entrypoint": "effect/Number",
+    "family": "Number",
+    "file": "cases/module-number.ts",
+    "status": "ready",
+    "api": [
+      "sum"
+    ],
+    "expectedStdout": "number:42\n"
+  },
+  {
+    "id": "module-number-surface",
+    "module": "Number",
+    "entrypoint": "effect/Number",
+    "family": "Number",
+    "file": "cases/module-number-surface.ts",
+    "status": "ready",
+    "api": [
+      "isNumber",
+      "sum",
+      "multiply",
+      "subtract",
+      "divide",
+      "divideUnsafe",
+      "increment",
+      "decrement",
+      "Order",
+      "Equivalence",
+      "isLessThan",
+      "isLessThanOrEqualTo",
+      "isGreaterThan",
+      "isGreaterThanOrEqualTo",
+      "min",
+      "max",
+      "sign",
+      "sumAll",
+      "multiplyAll",
+      "remainder",
+      "nextPow2",
+      "parse",
+      "round"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,false,5,6,-1,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":2},{\"_id\":\"Option\",\"_tag\":\"None\"},2,3,2,-1,1,0,true,false,true,true,false,false,true,true,false,false,false,true,false,true,true,2,3,-1,0,1,9,24,0,1,0,8,32,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":3.14},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":null},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":null},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":null},{\"_id\":\"Option\",\"_tag\":\"None\"},1.12,1.57]\n"
+  },
+  {
+    "id": "module-observability--internal--otlpenv",
+    "module": "observability/internal/otlpEnv",
+    "entrypoint": "effect/observability/internal/otlpEnv",
+    "family": "observability/internal/otlpEnv",
+    "file": "cases/module-observability--internal--otlpenv.ts",
+    "status": "ready",
+    "api": [
+      "headers",
+      "endpoint"
+    ],
+    "expectedStdout": "[{\"x-key\":\"fixed\"},\"https://example.test/logs\"]\n"
+  },
+  {
+    "id": "module-observability--otlp",
+    "module": "observability/Otlp",
+    "entrypoint": "effect/observability/Otlp",
+    "family": "observability/Otlp",
+    "file": "cases/module-observability--otlp.ts",
+    "status": "ready",
+    "api": [
+      "layerJson"
+    ],
+    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n"
+  },
+  {
     "id": "module-observability--otlplogger",
     "module": "observability/OtlpLogger",
     "entrypoint": "effect/observability/OtlpLogger",
@@ -584,18 +904,6 @@
     "expectedStdout": "[{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n"
   },
   {
-    "id": "module-observability--otlp",
-    "module": "observability/Otlp",
-    "entrypoint": "effect/observability/Otlp",
-    "family": "observability/Otlp",
-    "file": "cases/module-observability--otlp.ts",
-    "status": "ready",
-    "api": [
-      "layerJson"
-    ],
-    "expectedStdout": "[{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeLogs\":[{\"scope\":{\"name\":\"fixture\"},\"logRecords\":[{\"severityNumber\":9,\"severityText\":\"Info\",\"timeUnixNano\":\"0\",\"observedTimeUnixNano\":\"0\",\"attributes\":[{\"key\":\"fiberId\",\"value\":{\"intValue\":1}}],\"body\":{\"stringValue\":\"fixed\"},\"droppedAttributesCount\":0}]}]}]},{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"fixture\"}}],\"droppedAttributesCount\":0},\"scopeMetrics\":[{\"scope\":{\"name\":\"fixture\"},\"metrics\":[{\"name\":\"fixed_counter\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":2,\"isMonotonic\":false,\"dataPoints\":[{\"attributes\":[],\"startTimeUnixNano\":\"0\",\"timeUnixNano\":\"0\",\"asDouble\":2}]}}]}]}]}]\n"
-  },
-  {
     "id": "module-observability--otlptracer",
     "module": "observability/OtlpTracer",
     "entrypoint": "effect/observability/OtlpTracer",
@@ -607,5 +915,332 @@
     ],
     "reason": "Exercises unsampled span lifecycle and attributes with explicit fixed nanoseconds; no random trace/span IDs are read or generated, and no transport export is expected.",
     "expectedStdout": "[[\"unsampled\",\"Ended\",[[\"fixed\",42]]],0]\n"
+  },
+  {
+    "id": "module-option-surface",
+    "module": "Option",
+    "entrypoint": "effect/Option",
+    "family": "Option",
+    "file": "cases/module-option-surface.ts",
+    "status": "ready",
+    "api": [
+      "isOption",
+      "some",
+      "none",
+      "isNone",
+      "isSome",
+      "fromIterable",
+      "getSuccess",
+      "getFailure",
+      "fromNullishOr",
+      "fromUndefinedOr",
+      "fromNullOr",
+      "getOrNull",
+      "getOrUndefined",
+      "getOrThrowWith",
+      "getOrThrow",
+      "map",
+      "as",
+      "asVoid",
+      "void",
+      "andThen",
+      "flatten",
+      "zipRight",
+      "zipLeft",
+      "product",
+      "toArray"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,false,false,true,true,false,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"ok\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"err\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":1},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":null},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42},1,null,1,null,1,1,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":4},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"new value\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":10},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"hello\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"value\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"hello\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"hello\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":[\"hello\",42]},{\"_id\":\"Option\",\"_tag\":\"None\"},[1],[]]\n"
+  },
+  {
+    "id": "module-order-surface",
+    "module": "Order",
+    "entrypoint": "effect/Order",
+    "family": "Order",
+    "file": "cases/module-order-surface.ts",
+    "status": "ready",
+    "api": [
+      "String",
+      "Number",
+      "Boolean",
+      "BigInt"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[-1,1,0,0,-1,1,0,-1,-1,1,0,-1,1,0]\n"
+  },
+  {
+    "id": "module-partitionedsemaphore",
+    "module": "PartitionedSemaphore",
+    "entrypoint": "effect/PartitionedSemaphore",
+    "family": "PartitionedSemaphore",
+    "file": "cases/module-partitionedsemaphore.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "withPermit"
+    ],
+    "expectedStdout": "partitioned:ok\n"
+  },
+  {
+    "id": "module-pipeable",
+    "module": "Pipeable",
+    "entrypoint": "effect/Pipeable",
+    "family": "Pipeable",
+    "file": "cases/module-pipeable.ts",
+    "status": "ready",
+    "api": [
+      "Class"
+    ],
+    "expectedStdout": "pipeable:42\n"
+  },
+  {
+    "id": "module-platformerror",
+    "module": "PlatformError",
+    "entrypoint": "effect/PlatformError",
+    "family": "PlatformError",
+    "file": "cases/module-platformerror.ts",
+    "status": "ready",
+    "api": [
+      "badArgument"
+    ],
+    "expectedStdout": "platformError:true\n"
+  },
+  {
+    "id": "module-predicate-surface",
+    "module": "Predicate",
+    "entrypoint": "effect/Predicate",
+    "family": "Predicate",
+    "file": "cases/module-predicate-surface.ts",
+    "status": "ready",
+    "api": [
+      "isNever",
+      "isUnknown",
+      "isObjectOrArray",
+      "isObject",
+      "isObjectKeyword"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[false,true,true,false,true,false]\n"
+  },
+  {
+    "id": "module-primarykey",
+    "module": "PrimaryKey",
+    "entrypoint": "effect/PrimaryKey",
+    "family": "PrimaryKey",
+    "file": "cases/module-primarykey.ts",
+    "status": "ready",
+    "api": [
+      "value",
+      "symbol"
+    ],
+    "expectedStdout": "product-42\n"
+  },
+  {
+    "id": "module-record-surface",
+    "module": "Record",
+    "entrypoint": "effect/Record",
+    "family": "Record",
+    "file": "cases/module-record-surface.ts",
+    "status": "ready",
+    "api": [
+      "isEmptyRecord",
+      "isEmptyReadonlyRecord",
+      "fromIterableWith",
+      "fromEntries",
+      "singleton"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[true,true,{\"1\":2,\"2\":4,\"3\":6,\"4\":8},{\"a\":1,\"b\":2},{\"a\":1}]\n"
+  },
+  {
+    "id": "module-redactable",
+    "module": "Redactable",
+    "entrypoint": "effect/Redactable",
+    "family": "Redactable",
+    "file": "cases/module-redactable.ts",
+    "status": "ready",
+    "api": [
+      "redact",
+      "symbolRedactable"
+    ],
+    "expectedStdout": "redacted-value\n"
+  },
+  {
+    "id": "module-resource",
+    "module": "Resource",
+    "entrypoint": "effect/Resource",
+    "family": "Resource",
+    "file": "cases/module-resource.ts",
+    "status": "ready",
+    "api": [
+      "manual",
+      "refresh",
+      "get"
+    ],
+    "expectedStdout": "resource:1,2\n"
+  },
+  {
+    "id": "module-result-surface",
+    "module": "Result",
+    "entrypoint": "effect/Result",
+    "family": "Result",
+    "file": "cases/module-result-surface.ts",
+    "status": "ready",
+    "api": [
+      "succeed",
+      "fail",
+      "failVoid",
+      "fromNullishOr",
+      "fromOption",
+      "try",
+      "isResult",
+      "getSuccess",
+      "getFailure",
+      "merge",
+      "getOrElse",
+      "getOrNull",
+      "getOrUndefined",
+      "getOrThrowWith",
+      "getOrThrow",
+      "all",
+      "flip",
+      "transposeOption",
+      "succeedNone",
+      "succeedSome"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":42},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":\"Something went wrong\"},{\"_id\":\"Result\",\"_tag\":\"Failure\"},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":\"fallback\"},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":1},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":\"missing\"},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"name\":\"Alice\"}},true,{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"ok\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"None\"},{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":\"err\"},42,\"error\",1,0,1,null,1,null,1,1,{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":[1,\"two\"]},{\"_id\":\"Result\",\"_tag\":\"Failure\",\"failure\":42},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":\"error\"},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Option\",\"_tag\":\"None\"}},{\"_id\":\"Result\",\"_tag\":\"Success\",\"value\":{\"_id\":\"Option\",\"_tag\":\"Some\",\"value\":42}}]\n"
+  },
+  {
+    "id": "module-schedule-surface",
+    "module": "Schedule",
+    "entrypoint": "effect/Schedule",
+    "family": "Schedule",
+    "file": "cases/module-schedule-surface.ts",
+    "status": "ready",
+    "api": [
+      "isSchedule",
+      "duration",
+      "during"
+    ],
+    "reason": "Published one-line examples from the declaration. One JSON line, with no clock, network, or filesystem.",
+    "expectedStdout": "[false,false,true,true]\n"
+  },
+  {
+    "id": "module-scheduler",
+    "module": "Scheduler",
+    "entrypoint": "effect/Scheduler",
+    "family": "Scheduler",
+    "file": "cases/module-scheduler.ts",
+    "status": "ready",
+    "api": [
+      "MixedScheduler"
+    ],
+    "expectedStdout": "scheduler:42\n"
+  },
+  {
+    "id": "module-schemaparser",
+    "module": "SchemaParser",
+    "entrypoint": "effect/SchemaParser",
+    "family": "SchemaParser",
+    "file": "cases/module-schemaparser.ts",
+    "status": "ready",
+    "api": [
+      "decodeUnknownSync"
+    ],
+    "expectedStdout": "schemaParser:42\n"
+  },
+  {
+    "id": "module-scopedcache",
+    "module": "ScopedCache",
+    "entrypoint": "effect/ScopedCache",
+    "family": "ScopedCache",
+    "file": "cases/module-scopedcache.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "get"
+    ],
+    "expectedStdout": "cache:3,3:1\n"
+  },
+  {
+    "id": "module-scopedref",
+    "module": "ScopedRef",
+    "entrypoint": "effect/ScopedRef",
+    "family": "ScopedRef",
+    "file": "cases/module-scopedref.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "set",
+      "get"
+    ],
+    "expectedStdout": "scopedRef:42\n"
+  },
+  {
+    "id": "module-string",
+    "module": "String",
+    "entrypoint": "effect/String",
+    "family": "String",
+    "file": "cases/module-string.ts",
+    "status": "ready",
+    "api": [
+      "toUpperCase"
+    ],
+    "expectedStdout": "string:STABLE\n"
+  },
+  {
+    "id": "module-synchronizedref",
+    "module": "SynchronizedRef",
+    "entrypoint": "effect/SynchronizedRef",
+    "family": "SynchronizedRef",
+    "file": "cases/module-synchronizedref.ts",
+    "status": "ready",
+    "api": [
+      "make",
+      "updateEffect",
+      "get"
+    ],
+    "expectedStdout": "synchronizedRef:42\n"
+  },
+  {
+    "id": "module-take",
+    "module": "Take",
+    "entrypoint": "effect/Take",
+    "family": "Take",
+    "file": "cases/module-take.ts",
+    "status": "ready",
+    "api": [
+      "toPull"
+    ],
+    "expectedStdout": "take:1,2,3\n"
+  },
+  {
+    "id": "module-undefinedor",
+    "module": "UndefinedOr",
+    "entrypoint": "effect/UndefinedOr",
+    "family": "UndefinedOr",
+    "file": "cases/module-undefinedor.ts",
+    "status": "ready",
+    "api": [
+      "map",
+      "getOrThrow"
+    ],
+    "expectedStdout": "undefinedOr:42\n"
+  },
+  {
+    "id": "module-version",
+    "module": "Version",
+    "entrypoint": "effect/Version",
+    "family": "Version",
+    "file": "cases/module-version.ts",
+    "status": "ready",
+    "api": [
+      "getCurrentVersion",
+      "setCurrentVersion"
+    ],
+    "reason": "Reads the pinned package version, overrides it, and restores it. No clock, network, or filesystem.",
+    "expectedStdout": "[\"4.0.2\",\"fixture\",\"4.0.2\"]\n"
   }
 ]
