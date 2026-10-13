@@ -89,6 +89,7 @@ const buildEnv = {
   CXX: "/usr/bin/clang++",
   AR: "/usr/bin/ar",
   PATH: `${dirname(nodeBin)}:/Users/phall/.npm-global/bin:/opt/homebrew/bin:/usr/bin:/bin`,
+  SCRIPTC_COMPARE_JOBS: process.env.SCRIPTC_COMPARE_JOBS ?? "8",
 };
 delete buildEnv.SDKROOT;
 delete buildEnv.TOOLCHAINS;
